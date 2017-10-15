@@ -29,8 +29,8 @@ namespace SnTraceViewer
 
             List<DisplayEntry> entries;
 
-            var samplesDirectory = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "SampleFiles");
-            var sampleFile = System.IO.Path.Combine(samplesDirectory, "detailedlog_20171015-062009Z.log");
+            var samplesDirectory = System.IO.Path.GetFullPath(System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\SampleFiles"));
+            var sampleFile = System.IO.Path.Combine(samplesDirectory, "detailedlog_20171015-062009Z.txt");
             using (var reader = Reader.Create(sampleFile))
                 entries = reader.Select(x => new DisplayEntry(x)).ToList();
 
