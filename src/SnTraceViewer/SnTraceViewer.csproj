@@ -96,7 +96,7 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <AppDesigner Include="Properties\" />
-    <None Include="bin\Debug\SampleFiles\detailedlog_20171015-062009Z.log" />
+    <None Include="SampleFiles\detailedlog_20171015-062009Z.log" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
