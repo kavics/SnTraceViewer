@@ -28,10 +28,18 @@ namespace SnTraceViewer
             InitializeComponent();
 
             List<DisplayEntry> entries;
+            var directory = directoryTextBox.Text;
+            if (!System.IO.Path.IsPathRooted(directory))
+                directory = System.IO.Path.GetFullPath(System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, directory));
+            var files = System.IO.Directory.GetFiles(directory);
+            var fileNames = files.Select(x => System.IO.Path.GetFileName(x)).ToArray();
 
-            var samplesDirectory = System.IO.Path.GetFullPath(System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\SampleFiles"));
-            var sampleFile = System.IO.Path.Combine(samplesDirectory, "detailedlog_20171015-062009Z.txt");
-            using (var reader = Reader.Create(sampleFile))
+            fileNamesComboBox.ItemsSource = fileNames;
+            fileNamesComboBox.SelectedIndex = 0;
+            var selectedFile = fileNamesComboBox.SelectedItem;
+
+            var file = System.IO.Path.Combine(directory, selectedFile.ToString());
+            using (var reader = Reader.Create(file))
                 entries = reader.Select(x => new DisplayEntry(x)).ToList();
 
             listView.ItemsSource = entries;
