@@ -6,6 +6,7 @@
 5	2017-10-15 06:20:25.49344	ContentOperation	A:UnitTestAdapter: Running test	T:18	Op:3	Start		NODE.SAVE Id: 0, VersionId: 0, Version: V1.0.A, Name: Indexing_Distributed, ParentPath: /Root
 6	2017-10-15 06:20:25.49544	ContentOperation	A:UnitTestAdapter: Running test	T:18				TreeLock: Checking /Root/Indexing_Distributed
 7	2017-10-15 06:20:25.53755	Index	A:UnitTestAdapter: Running test	T:18	Op:4	Start		Indexing node
+7	2017-10-15 06:20:25.53755	Index	A:UnitTestAdapter: Running test	T:42		ERROR		Sample error
 8	2017-10-15 06:20:25.53856	Index	A:UnitTestAdapter: Running test	T:18	Op:5	Start		DocumentPopulator.CommitPopulateNode. Version: V1.0.A, VersionId: 1239, Path: /Root/Indexing_Distributed
 9	2017-10-15 06:20:25.59972	Index	A:UnitTestAdapter: Running test	T:18				ExecuteCentralizedActivity: #1
 10	2017-10-15 06:20:25.60072	Index	A:UnitTestAdapter: Running test	T:18	Op:5	UNTERMINATED	00:00:00.062166	DocumentPopulator.CommitPopulateNode. Version: V1.0.A, VersionId: 1239, Path: /Root/Indexing_Distributed

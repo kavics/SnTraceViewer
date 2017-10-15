@@ -5,9 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SnTraceViewer"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="1240">
+        Title="MainWindow" Height="350" Width="1300">
     <Grid>
         <ListView x:Name="listView" Margin="0,37,0,0" ItemsSource="{Binding}">
+            <ListView.ItemContainerStyle>
+                <Style TargetType="{x:Type ListViewItem}">
+                    <Setter Property="Background" Value="{Binding StatusColor}" />
+                    <Setter Property="FontWeight" Value="{Binding StatusWeight}" />
+                </Style>
+            </ListView.ItemContainerStyle>
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="Blk" Width="20" DisplayMemberBinding="{Binding BlockStart}" />
@@ -17,8 +23,8 @@
                     <GridViewColumn Header="AppDomain" Width="80" DisplayMemberBinding="{Binding AppDomain}" />
                     <GridViewColumn Header="Thread" Width="50" DisplayMemberBinding="{Binding ThreadId}" />
                     <GridViewColumn Header="OpId" Width="50" DisplayMemberBinding="{Binding OpId}" />
-                    <GridViewColumn Header="OpState" Width="40" DisplayMemberBinding="{Binding Status}" />
-                    <GridViewColumn Header="Duration" Width="100" DisplayMemberBinding="{Binding Duration}" />
+                    <GridViewColumn Header="Status" Width="90" DisplayMemberBinding="{Binding Status}" />
+                    <GridViewColumn Header="Duration" Width="110" DisplayMemberBinding="{Binding Duration}" />
                     <GridViewColumn Header="Message" Width="600" DisplayMemberBinding="{Binding Message}" />
                 </GridView>
             </ListView.View>
