@@ -1,0 +1,22 @@
+----
+>1	2017-10-15 06:20:08.72828	Test	A:UnitTestAdapter: Running test	T:18				START test: Indexing_Centralized
+>2	2017-10-15 06:20:25.41022	Index	A:UnitTestAdapter: Running test	T:18	Op:1	Start		IAQ: InitializeFromIndex. LastIndexedActivityId: 0, LastDatabaseId: 0, TotalUnprocessed: 0
+3	2017-10-15 06:20:25.41323	Index	A:UnitTestAdapter: Running test	T:18	Op:1	End	00:00:00.003007	IAQ: InitializeFromIndex. LastIndexedActivityId: 0, LastDatabaseId: 0, TotalUnprocessed: 0
+4	2017-10-15 06:20:25.48642	ContentOperation	A:UnitTestAdapter: Running test	T:18	Op:2	Start		GC.Save: Mode:RaiseVersion, VId:0, Path:/Root/SystemFolder-20171015062025
+5	2017-10-15 06:20:25.49344	ContentOperation	A:UnitTestAdapter: Running test	T:18	Op:3	Start		NODE.SAVE Id: 0, VersionId: 0, Version: V1.0.A, Name: Indexing_Distributed, ParentPath: /Root
+6	2017-10-15 06:20:25.49544	ContentOperation	A:UnitTestAdapter: Running test	T:18				TreeLock: Checking /Root/Indexing_Distributed
+7	2017-10-15 06:20:25.53755	Index	A:UnitTestAdapter: Running test	T:18	Op:4	Start		Indexing node
+8	2017-10-15 06:20:25.53856	Index	A:UnitTestAdapter: Running test	T:18	Op:5	Start		DocumentPopulator.CommitPopulateNode. Version: V1.0.A, VersionId: 1239, Path: /Root/Indexing_Distributed
+9	2017-10-15 06:20:25.59972	Index	A:UnitTestAdapter: Running test	T:18				ExecuteCentralizedActivity: #1
+10	2017-10-15 06:20:25.60072	Index	A:UnitTestAdapter: Running test	T:18	Op:5	UNTERMINATED	00:00:00.062166	DocumentPopulator.CommitPopulateNode. Version: V1.0.A, VersionId: 1239, Path: /Root/Indexing_Distributed
+11	2017-10-15 06:20:25.60072	Index	A:UnitTestAdapter: Running test	T:18	Op:4	UNTERMINATED	00:00:00.063168	Indexing node
+12	2017-10-15 06:20:25.60072	ContentOperation	A:UnitTestAdapter: Running test	T:18	Op:3	UNTERMINATED	00:00:00.107285	NODE.SAVE Id: 0, VersionId: 0, Version: V1.0.A, Name: Indexing_Distributed, ParentPath: /Root
+13	2017-10-15 06:20:25.60072	ContentOperation	A:UnitTestAdapter: Running test	T:18	Op:2	UNTERMINATED	00:00:00.114303	GC.Save: Mode:RaiseVersion, VId:0, Path:/Root/SystemFolder-20171015062025
+14	2017-10-15 06:20:25.60173	Repository	A:UnitTestAdapter: Running test	T:18				Sending a goodbye message.
+15	2017-10-15 06:20:25.60173	Repository	A:UnitTestAdapter: Running test	T:18				Shutting down ClusterChannelMonitor
+16	2017-10-15 06:20:25.60173	Repository	A:UnitTestAdapter: Running test	T:18				Shutting down SnMaintenance
+17	2017-10-15 06:20:25.60173	Repository	A:UnitTestAdapter: Running test	T:18				Shutting down ExchangeSubscriptionService
+18	2017-10-15 06:20:25.60173	Repository	A:UnitTestAdapter: Running test	T:18				Shutting down VoidChannel
+19	2017-10-15 06:20:25.60273	Repository	A:UnitTestAdapter: Running test	T:18				Shutting down IndexingEngine.
+20	2017-10-15 06:20:25.60273	Repository	A:UnitTestAdapter: Running test	T:18				Repository has stopped. Running time: 0.00:00:16
+>21	2017-10-15 06:20:25.61075	Test	A:UnitTestAdapter: Running test	T:18				END test: Indexing_Centralized
