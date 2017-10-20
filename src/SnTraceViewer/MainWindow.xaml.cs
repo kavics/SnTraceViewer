@@ -42,7 +42,36 @@ namespace SnTraceViewer
             using (var reader = Reader.Create(file))
                 entries = reader.Select(x => new DisplayEntry(x)).ToList();
 
+            _allEntries = entries;
             listView.ItemsSource = entries;
+
+            this.CategoryVisibility = new CategoryVisibility(this);
+
+            this.DataContext = this;
+        }
+
+        public CategoryVisibility CategoryVisibility { get; }
+
+        private IEnumerable<DisplayEntry> _allEntries;
+        public void ApplyCategoryFilters()
+        {
+            var filtered = _allEntries;
+            if (!CategoryVisibility.SystemVisible)
+                filtered = filtered.Where(e => e.Category != "System");
+            if (!CategoryVisibility.Repository)
+                filtered = filtered.Where(e => e.Category != "Repository");
+            if (!CategoryVisibility.ContentOperation)
+                filtered = filtered.Where(e => e.Category != "ContentOperation");
+            if (!CategoryVisibility.Query)
+                filtered = filtered.Where(e => e.Category != "Query");
+            if (!CategoryVisibility.Index)
+                filtered = filtered.Where(e => e.Category != "Index");
+            if (!CategoryVisibility.IndexQueue)
+                filtered = filtered.Where(e => e.Category != "IndexQueue");
+            if (!CategoryVisibility.Test)
+                filtered = filtered.Where(e => e.Category != "Test");
+
+            listView.ItemsSource = filtered.ToArray();
         }
 
         private class DisplayEntry
