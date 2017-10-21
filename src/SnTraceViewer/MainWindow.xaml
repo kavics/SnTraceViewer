@@ -5,22 +5,75 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SnTraceViewer"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="1300">
+        Title="MainWindow" Height="600" Width="1300">
     <Grid>
-        <ListView x:Name="listView" Margin="0,37,0,0" ItemsSource="{Binding}">
+        <ListView x:Name="listView" Margin="0,74,0,0" ItemsSource="{Binding}">
             <ListView.ItemContainerStyle>
                 <Style TargetType="{x:Type ListViewItem}">
-                    <Setter Property="Background" Value="{Binding StatusColor}" />
+                    <EventSetter Event="PreviewMouseLeftButtonDown" Handler="ListViewItem_PreviewMouseLeftButtonDown" />
+                    <EventSetter Event="MouseDoubleClick" Handler="ListViewItem_MouseDoubleClick" />
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type ListViewItem}">
+                                <Border
+                                     BorderBrush="Transparent"
+                                     BorderThickness="0"
+                                     Background="{TemplateBinding Background}">
+                                    <GridViewRowPresenter HorizontalAlignment="Stretch" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Width="Auto" Margin="0" Content="{TemplateBinding Content}"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Setter Property="Background">
+                        <Setter.Value>
+                            <SolidColorBrush Color="{Binding StatusColor}"/>
+                        </Setter.Value>
+                    </Setter>
                     <Setter Property="FontWeight" Value="{Binding StatusWeight}" />
+                    <Setter Property="BorderThickness" Value="0"/>
+                    <Setter Property="Margin" Value="1"/>
+                    <Setter Property="Padding" Value="0"/>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter Property="Background">
+                                <Setter.Value>
+                                    <SolidColorBrush Color="#EEEEEE"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsSelected" Value="true" />
+                                <Condition Property="Selector.IsSelectionActive" Value="true" />
+                            </MultiTrigger.Conditions>
+                            <Setter Property="Background">
+                                <Setter.Value>
+                                    <SolidColorBrush Color="#CCFFCC"/>
+                                </Setter.Value>
+                            </Setter>
+                        </MultiTrigger>
+                    </Style.Triggers>
                 </Style>
             </ListView.ItemContainerStyle>
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="Blk" Width="20" DisplayMemberBinding="{Binding BlockStart}" />
+                    <GridView.ColumnHeaderContainerStyle>
+                        <Style TargetType="GridViewColumnHeader">
+                            <Setter Property="FontSize" Value="14"/>
+                            <Setter Property="FontWeight" Value="Bold"/>
+                            <Setter Property="HorizontalAlignment" Value="Stretch"/>
+                            <Setter Property="Background">
+                                <Setter.Value>
+                                    <SolidColorBrush Color="#DDDDDD"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </GridView.ColumnHeaderContainerStyle>
+                    <GridViewColumn Header="Blk" Width="28" DisplayMemberBinding="{Binding BlockStart}" />
                     <GridViewColumn Header="Line" Width="40" DisplayMemberBinding="{Binding LineId}" TextBlock.TextAlignment="Right" />
                     <GridViewColumn Header="Time" Width="90" DisplayMemberBinding="{Binding Time}" />
                     <GridViewColumn Header="Category" Width="120" DisplayMemberBinding="{Binding Category}" />
-                    <GridViewColumn Header="AppDomain" Width="80" DisplayMemberBinding="{Binding AppDomain}" />
+                    <GridViewColumn Header="AppDomain" Width="84" DisplayMemberBinding="{Binding AppDomain}" />
                     <GridViewColumn Header="Thread" Width="50" DisplayMemberBinding="{Binding ThreadId}" />
                     <GridViewColumn Header="OpId" Width="50" DisplayMemberBinding="{Binding OpId}" />
                     <GridViewColumn Header="Status" Width="90" DisplayMemberBinding="{Binding Status}" />
@@ -29,5 +82,23 @@
                 </GridView>
             </ListView.View>
         </ListView>
+        <Label x:Name="label" Content="Directory:" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="directoryTextBox" HorizontalAlignment="Left" Height="26" Margin="76,0,0,0" TextWrapping="Wrap" Text="..\..\SampleFiles" VerticalAlignment="Top" Width="560" FontSize="12pt"/>
+        <Label x:Name="label1" Content="\" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="636,0,0,0"/>
+        <Button x:Name="button1" Content="&lt;&lt;" HorizontalAlignment="Left" VerticalAlignment="Top" Width="32" Margin="921,0,0,0" Height="26" />
+        <Button x:Name="button2" Content="&lt;" HorizontalAlignment="Left" VerticalAlignment="Top" Width="32" Margin="958,0,0,0" Height="26" />
+        <Button x:Name="button3" Content="&gt;" HorizontalAlignment="Left" Margin="995,0,0,0" VerticalAlignment="Top" Width="32" Height="26" />
+        <Button x:Name="button4" Content="&gt;&gt;" HorizontalAlignment="Left" Margin="1032,0,0,0" VerticalAlignment="Top" Width="32" Height="26" />
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="1069,5,0,0" TextWrapping="Wrap" Text="120/456" VerticalAlignment="Top" />
+        <ComboBox x:Name="fileNamesComboBox" HorizontalAlignment="Left" Margin="651,0,0,0" VerticalAlignment="Top" Width="264" Height="26" />
+        <Grid HorizontalAlignment="Left" Height="38" Margin="10,31,0,0" VerticalAlignment="Top" Width="1044">
+            <CheckBox x:Name="filterCheckBox_System"           Content="System" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"          IsChecked="{Binding Path=CategoryVisibility.SystemVisible, Mode=TwoWay}"/>
+            <CheckBox x:Name="filterCheckBox_Repository"       Content="Repository" HorizontalAlignment="Left" Margin="78,10,0,0" VerticalAlignment="Top"       IsChecked="{Binding Path=CategoryVisibility.Repository, Mode=TwoWay}" />
+            <CheckBox x:Name="filterCheckBox_ContentOperation" Content="ContentOperation" HorizontalAlignment="Left" Margin="164,10,0,0" VerticalAlignment="Top" IsChecked="{Binding Path=CategoryVisibility.ContentOperation, Mode=TwoWay}" />
+            <CheckBox x:Name="filterCheckBox_Query"            Content="Query" HorizontalAlignment="Left" Margin="290,10,0,0" VerticalAlignment="Top"            IsChecked="{Binding Path=CategoryVisibility.Query, Mode=TwoWay}" />
+            <CheckBox x:Name="filterCheckBox_Index"            Content="Index" HorizontalAlignment="Left" Margin="352,10,0,0" VerticalAlignment="Top"            IsChecked="{Binding Path=CategoryVisibility.Index, Mode=TwoWay}"/>
+            <CheckBox x:Name="filterCheckBox_IndexQueue"       Content="IndexQueue" HorizontalAlignment="Left" Margin="411,10,0,0" VerticalAlignment="Top"      IsChecked="{Binding Path=CategoryVisibility.IndexQueue, Mode=TwoWay}"/>
+            <CheckBox x:Name="filterCheckBox_Test"             Content="Test" HorizontalAlignment="Left" Margin="505,10,0,0" VerticalAlignment="Top"             IsChecked="{Binding Path=CategoryVisibility.Test, Mode=TwoWay}"/>
+        </Grid>
     </Grid>
 </Window>

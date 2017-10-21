@@ -122,22 +122,16 @@ namespace SnTraceViewer
             if (boundaries.Length < 2)
                 return;
 
-            listView.SelectionMode = SelectionMode.Multiple;
-
             var bottom = listView.Items.IndexOf(boundaries[0]);
             var top = listView.Items.IndexOf(boundaries[1]);
 
             listView.SelectedItems.Clear();
             for (int i = bottom; i <= top; i++)
                 listView.SelectedItems.Add(_currentlyVisible[i]);
-
-            //listView.UpdateLayout();
         }
 
         private void ListViewItem_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            listView.SelectionMode = SelectionMode.Single;
-
             var selectedItem = sender as ListViewItem;
             var selectedEntry = (DisplayEntry)selectedItem.Content;
 
