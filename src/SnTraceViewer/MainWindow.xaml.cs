@@ -32,7 +32,10 @@ namespace SnTraceViewer
             if (!System.IO.Path.IsPathRooted(directory))
                 directory = System.IO.Path.GetFullPath(System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, directory));
             var files = System.IO.Directory.GetFiles(directory);
-            var fileNames = files.Select(x => System.IO.Path.GetFileName(x)).ToArray();
+            var fileNames = files
+                //.OrderByDescending(x => x)
+                .Select(x => System.IO.Path.GetFileName(x))
+                .ToArray();
 
             fileNamesComboBox.ItemsSource = fileNames;
             fileNamesComboBox.SelectedIndex = 0;
@@ -43,6 +46,7 @@ namespace SnTraceViewer
                 entries = reader.Select(x => new DisplayEntry(x)).ToList();
 
             _allEntries = entries;
+            _currentlyVisible = entries;
             listView.ItemsSource = entries;
 
             this.CategoryVisibility = new CategoryVisibility(this);
@@ -52,12 +56,17 @@ namespace SnTraceViewer
 
         public CategoryVisibility CategoryVisibility { get; }
 
-        private IEnumerable<DisplayEntry> _allEntries;
+        private List<DisplayEntry> _allEntries;
+        private List<DisplayEntry> _currentlyVisible;
         public void ApplyCategoryFilters()
         {
-            var filtered = _allEntries;
+            var filtered = (IEnumerable<DisplayEntry>)_allEntries;
             if (!CategoryVisibility.SystemVisible)
                 filtered = filtered.Where(e => e.Category != "System");
+            if (!CategoryVisibility.Web)
+                filtered = filtered.Where(e => e.Category != "Web");
+            if (!CategoryVisibility.Event)
+                filtered = filtered.Where(e => e.Category != "Event");
             if (!CategoryVisibility.Repository)
                 filtered = filtered.Where(e => e.Category != "Repository");
             if (!CategoryVisibility.ContentOperation)
@@ -68,10 +77,71 @@ namespace SnTraceViewer
                 filtered = filtered.Where(e => e.Category != "Index");
             if (!CategoryVisibility.IndexQueue)
                 filtered = filtered.Where(e => e.Category != "IndexQueue");
+            if (!CategoryVisibility.Database)
+                filtered = filtered.Where(e => e.Category != "Database");
+            if (!CategoryVisibility.Messaging)
+                filtered = filtered.Where(e => e.Category != "Messaging");
+            if (!CategoryVisibility.Workflow)
+                filtered = filtered.Where(e => e.Category != "Workflow");
+            if (!CategoryVisibility.Security)
+                filtered = filtered.Where(e => e.Category != "Security");
+            if (!CategoryVisibility.SecurityQueue)
+                filtered = filtered.Where(e => e.Category != "SecurityQueue");
+            if (!CategoryVisibility.TaskManagement)
+                filtered = filtered.Where(e => e.Category != "TaskManagement");
+            if (!CategoryVisibility.Custom)
+                filtered = filtered.Where(e => e.Category != "Custom");
             if (!CategoryVisibility.Test)
                 filtered = filtered.Where(e => e.Category != "Test");
+            if (!CategoryVisibility.Other)
+                filtered = filtered.Where(e => e.Category != "Other");
 
-            listView.ItemsSource = filtered.ToArray();
+            _currentlyVisible = filtered.ToList();
+            listView.ItemsSource = _currentlyVisible;
+        }
+
+        private void ListViewItem_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            var selectedItem = sender as ListViewItem;
+            var selectedEntry = (DisplayEntry)selectedItem.Content;
+
+            var opId = selectedEntry.OpId;
+            if (opId == 0)
+                return;
+
+            var state = selectedEntry.Status;
+            if (state == "ERROR")
+                return;
+
+            var appDomain = selectedEntry.AppDomain;
+            SelectByOperationAndAppDomain(selectedItem, opId, appDomain, state);
+        }
+        private void SelectByOperationAndAppDomain(ListViewItem selectedItem, int opId, string appDomain, string status)
+        {
+            var boundaries = _currentlyVisible.Where(x => x.OpId == opId && x.AppDomain == appDomain).ToArray();
+            if (boundaries.Length < 2)
+                return;
+
+            listView.SelectionMode = SelectionMode.Multiple;
+
+            var bottom = listView.Items.IndexOf(boundaries[0]);
+            var top = listView.Items.IndexOf(boundaries[1]);
+
+            listView.SelectedItems.Clear();
+            for (int i = bottom; i <= top; i++)
+                listView.SelectedItems.Add(_currentlyVisible[i]);
+
+            //listView.UpdateLayout();
+        }
+
+        private void ListViewItem_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            listView.SelectionMode = SelectionMode.Single;
+
+            var selectedItem = sender as ListViewItem;
+            var selectedEntry = (DisplayEntry)selectedItem.Content;
+
+            listView.SelectedItem = selectedItem;
         }
 
         private class DisplayEntry
