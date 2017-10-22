@@ -93,8 +93,8 @@ namespace SnTraceViewer
                 filtered = filtered.Where(e => e.Category != "Custom");
             if (!CategoryVisibility.Test)
                 filtered = filtered.Where(e => e.Category != "Test");
-            if (!CategoryVisibility.Other)
-                filtered = filtered.Where(e => e.Category != "Other");
+            //if (!CategoryVisibility.Other)
+            //    filtered = filtered.Where(e => e.Category != "Other");
 
             _currentlyVisible = filtered.ToList();
             listView.ItemsSource = _currentlyVisible;
@@ -168,12 +168,12 @@ namespace SnTraceViewer
                     case "Start":
                         status = "Start";
                         statusColor = "#FFFFFF";
-                        statusWeight = "Normal";
+                        statusWeight = "Bold";
                         break;
                     case "End":
                         status = "End";
-                        statusColor = "#FFFFBB";
-                        statusWeight = "Normal";
+                        statusColor = "#FFFFFF";
+                        statusWeight = "Bold";
                         break;
                     case "ERROR":
                         status = "ERROR";
