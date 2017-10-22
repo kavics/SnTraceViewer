@@ -34,6 +34,47 @@ namespace SnTraceViewer
             _other = true;
         }
 
+        internal void AllOn()
+        {
+            SystemVisible = true;
+            Web = true;
+            Event = true;
+            Repository = true;
+            ContentOperation = true;
+            Query = true;
+            Index = true;
+            IndexQueue = true;
+            Database = true;
+            Messaging = true;
+            Workflow = true;
+            Security = true;
+            SecurityQueue = true;
+            TaskManagement = true;
+            Custom = true;
+            Test = true;
+            Other = true;
+        }
+        internal void AllOff()
+        {
+            SystemVisible = false;
+            Web = false;
+            Event = false;
+            Repository = false;
+            ContentOperation = false;
+            Query = false;
+            Index = false;
+            IndexQueue = false;
+            Database = false;
+            Messaging = false;
+            Workflow = false;
+            Security = false;
+            SecurityQueue = false;
+            TaskManagement = false;
+            Custom = false;
+            Test = false;
+            Other = false;
+        }
+
         private bool _system;
         public bool SystemVisible
         {

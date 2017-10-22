@@ -23,6 +23,8 @@ namespace SnTraceViewer
     /// </summary>
     public partial class MainWindow : Window
     {
+        private FiltersWindow _filtersWindow;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -50,6 +52,7 @@ namespace SnTraceViewer
             listView.ItemsSource = entries;
 
             this.CategoryVisibility = new CategoryVisibility(this);
+            _filtersWindow = new FiltersWindow(this.CategoryVisibility);
 
             this.DataContext = this;
         }
@@ -138,6 +141,11 @@ namespace SnTraceViewer
             listView.SelectedItem = selectedItem;
         }
 
+        private void filterButton_Click(object sender, RoutedEventArgs e)
+        {
+            _filtersWindow.Show();
+        }
+
         private class DisplayEntry
         {
             public string BlockStart { get; set; }
@@ -200,6 +208,12 @@ namespace SnTraceViewer
                 Duration = x.Status != "UNTERMINATED" && x.Status != "End" ? "" : x.Duration.ToString(@"hh\:mm\:ss\.ffffff");
                 Message = x.Message;
             }
+        }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            _filtersWindow.Exit();
+            _filtersWindow.Close();
         }
     }
 }
