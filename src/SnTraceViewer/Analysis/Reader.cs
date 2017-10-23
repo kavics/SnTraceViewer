@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.IO;
 
 #pragma warning disable 1591
@@ -40,6 +41,25 @@ namespace SnTraceViewer.Analysis
             return new SessionReader(readers);
         }
 
+        /// <summary>
+        /// Discovers the given directory and returns with full paths of subdirectories that contain files matching the pattern.
+        /// </summary>
+        /// <param name="rootPath">Full path of the root directory.</param>
+        /// <param name="filter">File name pattern. Default: "detailedlog_*.log".</param>
+        public static string[] SearchTraceDirectories(string rootPath, string filter = null)
+        {
+            var paths = new List<string>();
+            var pattern = filter ?? "detailedlog_*.log";
+            CollectPaths(rootPath, pattern, paths);
+            return paths.ToArray();
+        }
+        private static void CollectPaths(string rootPath, string pattern, List<string> paths)
+        {
+            if (Directory.GetFiles(rootPath, pattern).Any())
+                paths.Add(rootPath);
+            foreach (var subPath in Directory.GetDirectories(rootPath))
+                CollectPaths(subPath, pattern, paths);
+        }
 
         public override void Dispose()
         {
