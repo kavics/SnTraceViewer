@@ -1,5 +1,6 @@
 ﻿using SenseNet.Diagnostics;
-using SenseNet.Diagnostics.Analysis;
+using SnTraceViewer.Analysis;
+//using SenseNet.Diagnostics.Analysis;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -44,7 +45,8 @@ namespace SnTraceViewer
             var selectedFile = fileNamesComboBox.SelectedItem;
 
             var file = System.IO.Path.Combine(directory, selectedFile.ToString());
-            using (var reader = Reader.Create(file))
+            //using (var reader = Reader.Create(file))
+            using (var reader = Reader.Create(@"D:\Projects\github\space-bender\SnTraceViewer\src\SnTraceViewer\SampleFiles\session"))
                 entries = reader.Select(x => new DisplayEntry(x)).ToList();
 
             _allEntries = entries;

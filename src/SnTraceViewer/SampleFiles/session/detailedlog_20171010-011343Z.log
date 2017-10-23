@@ -1,0 +1,543 @@
+----
+>1	2017-10-10 01:13:42.22797	Test	A:UnitTestAdapter: Running test	T:11				START test: InMemSearch_Indexing_Create
+2	2017-10-10 01:13:42.85407	System	A:UnitTestAdapter: Running test	T:11				Trace settings were updated. Enabled: Repository, System, Test, Event
+>3	2017-10-10 01:13:59.16153	System	A:UnitTestAdapter: Running test	T:11				BlobProvider found: SenseNet.ContentRepository.Storage.Data.SqlClient.BuiltInBlobProvider
+4	2017-10-10 01:13:59.26781	System	A:UnitTestAdapter: Running test	T:11				Settings tree cache reloaded: 0 items.
+5	2017-10-10 01:13:59.29076	System	A:UnitTestAdapter: Running test	T:11				Trace settings were updated. Enabled: Repository, System, Test, Event
+>6	2017-10-10 01:13:59.46321	Repository	A:UnitTestAdapter: Running test	T:11				Sending a goodbye message.
+7	2017-10-10 01:13:59.46321	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down ClusterChannelMonitor
+8	2017-10-10 01:13:59.46321	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down SnMaintenance
+9	2017-10-10 01:13:59.46321	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down ExchangeSubscriptionService
+10	2017-10-10 01:13:59.46321	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down VoidChannel
+11	2017-10-10 01:13:59.46321	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down IndexingEngine.
+12	2017-10-10 01:13:59.46422	Repository	A:UnitTestAdapter: Running test	T:11				Repository has stopped. Running time: 0.00:00:16
+>13	2017-10-10 01:13:59.46923	Test	A:UnitTestAdapter: Running test	T:11				END test: InMemSearch_Indexing_Create
+>14	2017-10-10 01:13:59.47525	Test	A:UnitTestAdapter: Running test	T:11				START test: InMemSearch_Indexing_Update
+15	2017-10-10 01:13:59.48226	Repository	A:UnitTestAdapter: Running test	T:11				DataProvider configured: SenseNet.ContentRepository.Tests.Implementations.InMemoryDataProvider
+16	2017-10-10 01:13:59.48226	Repository	A:UnitTestAdapter: Running test	T:11				SearchEngine configured: SenseNet.ContentRepository.Tests.Implementations.InMemorySearchEngine
+17	2017-10-10 01:13:59.48226	Repository	A:UnitTestAdapter: Running test	T:11				SecurityDataProvider configured: SenseNet.Security.Data.MemoryDataProvider
+18	2017-10-10 01:13:59.48226	Repository	A:UnitTestAdapter: Running test	T:11				ElevatedModificationVisibilityRuleProvider configured: SenseNet.ContentRepository.Storage.ElevatedModificationVisibilityRule
+19	2017-10-10 01:13:59.48226	Repository	A:UnitTestAdapter: Running test	T:11				CacheProvider configured: SenseNet.ContentRepository.Tests.Implementations.EmptyCache
+20	2017-10-10 01:13:59.48226	System	A:UnitTestAdapter: Running test	T:11				Trace settings were updated. Enabled: Repository, System, Test, Event
+21	2017-10-10 01:13:59.53741	System	A:UnitTestAdapter: Running test	T:11				Trace settings were updated. Enabled: Repository, System, Test, Event
+22	2017-10-10 01:13:59.85233	Repository	A:UnitTestAdapter: Running test	T:11				Sending a goodbye message.
+23	2017-10-10 01:13:59.85233	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down ClusterChannelMonitor
+24	2017-10-10 01:13:59.85233	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down SnMaintenance
+25	2017-10-10 01:13:59.85233	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down ExchangeSubscriptionService
+26	2017-10-10 01:13:59.85233	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down VoidChannel
+27	2017-10-10 01:13:59.85233	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down IndexingEngine.
+28	2017-10-10 01:13:59.85233	Repository	A:UnitTestAdapter: Running test	T:11				Repository has stopped. Running time: 0.00:00:00
+>29	2017-10-10 01:13:59.85532	Test	A:UnitTestAdapter: Running test	T:11				END test: InMemSearch_Indexing_Update
+>30	2017-10-10 01:13:59.85732	Test	A:UnitTestAdapter: Running test	T:11				START test: InMemSearch_Indexing_Delete
+31	2017-10-10 01:13:59.86133	Repository	A:UnitTestAdapter: Running test	T:11				DataProvider configured: SenseNet.ContentRepository.Tests.Implementations.InMemoryDataProvider
+32	2017-10-10 01:13:59.86133	Repository	A:UnitTestAdapter: Running test	T:11				SearchEngine configured: SenseNet.ContentRepository.Tests.Implementations.InMemorySearchEngine
+33	2017-10-10 01:13:59.86133	Repository	A:UnitTestAdapter: Running test	T:11				SecurityDataProvider configured: SenseNet.Security.Data.MemoryDataProvider
+34	2017-10-10 01:13:59.86133	Repository	A:UnitTestAdapter: Running test	T:11				ElevatedModificationVisibilityRuleProvider configured: SenseNet.ContentRepository.Storage.ElevatedModificationVisibilityRule
+35	2017-10-10 01:13:59.86133	Repository	A:UnitTestAdapter: Running test	T:11				CacheProvider configured: SenseNet.ContentRepository.Tests.Implementations.EmptyCache
+36	2017-10-10 01:13:59.86133	System	A:UnitTestAdapter: Running test	T:11				Trace settings were updated. Enabled: Repository, System, Test, Event
+37	2017-10-10 01:13:59.91650	System	A:UnitTestAdapter: Running test	T:11				Trace settings were updated. Enabled: Repository, System, Test, Event
+38	2017-10-10 01:14:00.23386	Repository	A:UnitTestAdapter: Running test	T:11				Cache invalidated by path: /root/node1
+39	2017-10-10 01:14:00.23386	Repository	A:UnitTestAdapter: Running test	T:11				Cache invalidated by path: /root/node1
+40	2017-10-10 01:14:00.23386	Repository	A:UnitTestAdapter: Running test	T:11				Cache invalidated by path: /root/node1
+41	2017-10-10 01:14:00.23486	Repository	A:UnitTestAdapter: Running test	T:11				Cache invalidated by path: /root/node1
+42	2017-10-10 01:14:00.23486	Repository	A:UnitTestAdapter: Running test	T:11				Cache invalidated by path: /root/node1
+43	2017-10-10 01:14:00.23486	Repository	A:UnitTestAdapter: Running test	T:11				Cache invalidated by path: /root/node1
+44	2017-10-10 01:14:00.23486	Repository	A:UnitTestAdapter: Running test	T:11				Cache invalidated by path: /root/node1
+45	2017-10-10 01:14:00.23486	Repository	A:UnitTestAdapter: Running test	T:11				Cache invalidated by path: /root/node1
+46	2017-10-10 01:14:00.23486	Repository	A:UnitTestAdapter: Running test	T:11				Cache invalidated by path: /root/node1
+47	2017-10-10 01:14:00.23486	Repository	A:UnitTestAdapter: Running test	T:11				Cache invalidated by path: /root/node1
+48	2017-10-10 01:14:00.23486	Repository	A:UnitTestAdapter: Running test	T:11				Cache invalidated by path: /root/node1
+49	2017-10-10 01:14:00.23486	Repository	A:UnitTestAdapter: Running test	T:11				Cache invalidated by path: /root/node1
+50	2017-10-10 01:14:00.23486	Repository	A:UnitTestAdapter: Running test	T:11				Cache invalidated by path: /root/node1
+51	2017-10-10 01:14:00.23486	Repository	A:UnitTestAdapter: Running test	T:11				Cache invalidated by path: /root/node1
+52	2017-10-10 01:14:00.23486	Repository	A:UnitTestAdapter: Running test	T:11				Cache invalidated by path: /root/node1
+53	2017-10-10 01:14:00.23486	Repository	A:UnitTestAdapter: Running test	T:11				Cache invalidated by path: /root/node1
+54	2017-10-10 01:14:00.23486	Repository	A:UnitTestAdapter: Running test	T:11				Cache invalidated by path: /root/node1
+55	2017-10-10 01:14:00.23486	Repository	A:UnitTestAdapter: Running test	T:11				Cache invalidated by path: /root/node1
+56	2017-10-10 01:14:00.23486	Repository	A:UnitTestAdapter: Running test	T:11				Cache invalidated by path: /root/node1
+57	2017-10-10 01:14:00.23486	Repository	A:UnitTestAdapter: Running test	T:11				Cache invalidated by path: /root/node1
+58	2017-10-10 01:14:00.23486	Repository	A:UnitTestAdapter: Running test	T:11				Cache invalidated by path: /root/node1
+59	2017-10-10 01:14:00.23486	Repository	A:UnitTestAdapter: Running test	T:11				Cache invalidated by path: /root/node1
+60	2017-10-10 01:14:00.23486	Repository	A:UnitTestAdapter: Running test	T:11				Cache invalidated by path: /root/node1
+61	2017-10-10 01:14:00.23486	Repository	A:UnitTestAdapter: Running test	T:11				Cache invalidated by path: /root/node1
+62	2017-10-10 01:14:00.23486	Repository	A:UnitTestAdapter: Running test	T:11				Cache invalidated by path: /root/node1
+63	2017-10-10 01:14:00.23486	Repository	A:UnitTestAdapter: Running test	T:11				Cache invalidated by path: /root/node1
+64	2017-10-10 01:14:00.23586	System	A:UnitTestAdapter: Running test	T:11				Settings tree cache reloaded: 0 items.
+65	2017-10-10 01:14:00.23586	Repository	A:UnitTestAdapter: Running test	T:11				Sending a goodbye message.
+66	2017-10-10 01:14:00.23586	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down ClusterChannelMonitor
+67	2017-10-10 01:14:00.23586	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down SnMaintenance
+68	2017-10-10 01:14:00.23586	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down ExchangeSubscriptionService
+69	2017-10-10 01:14:00.23586	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down VoidChannel
+70	2017-10-10 01:14:00.23586	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down IndexingEngine.
+71	2017-10-10 01:14:00.23586	Repository	A:UnitTestAdapter: Running test	T:11				Repository has stopped. Running time: 0.00:00:00
+>72	2017-10-10 01:14:00.23884	Test	A:UnitTestAdapter: Running test	T:11				END test: InMemSearch_Indexing_Delete
+>73	2017-10-10 01:14:00.24088	Test	A:UnitTestAdapter: Running test	T:11				START test: InMemSearch_Indexing_Rename
+74	2017-10-10 01:14:00.24689	Repository	A:UnitTestAdapter: Running test	T:11				DataProvider configured: SenseNet.ContentRepository.Tests.Implementations.InMemoryDataProvider
+75	2017-10-10 01:14:00.24689	Repository	A:UnitTestAdapter: Running test	T:11				SearchEngine configured: SenseNet.ContentRepository.Tests.Implementations.InMemorySearchEngine
+76	2017-10-10 01:14:00.24689	Repository	A:UnitTestAdapter: Running test	T:11				SecurityDataProvider configured: SenseNet.Security.Data.MemoryDataProvider
+77	2017-10-10 01:14:00.24689	Repository	A:UnitTestAdapter: Running test	T:11				ElevatedModificationVisibilityRuleProvider configured: SenseNet.ContentRepository.Storage.ElevatedModificationVisibilityRule
+78	2017-10-10 01:14:00.24689	Repository	A:UnitTestAdapter: Running test	T:11				CacheProvider configured: SenseNet.ContentRepository.Tests.Implementations.EmptyCache
+79	2017-10-10 01:14:00.24689	Repository	A:UnitTestAdapter: Running test	T:11				CacheProvider configured: SenseNet.ContentRepository.Tests.Implementations.EmptyCache
+80	2017-10-10 01:14:00.24689	System	A:UnitTestAdapter: Running test	T:11				Trace settings were updated. Enabled: Repository, System, Test, Event
+81	2017-10-10 01:14:00.30203	System	A:UnitTestAdapter: Running test	T:11				Trace settings were updated. Enabled: Repository, System, Test, Event
+82	2017-10-10 01:14:00.62893	System	A:UnitTestAdapter: Running test	T:11				Settings tree cache reloaded: 0 items.
+83	2017-10-10 01:14:00.62991	Repository	A:UnitTestAdapter: Running test	T:11				Sending a goodbye message.
+84	2017-10-10 01:14:00.62991	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down ClusterChannelMonitor
+85	2017-10-10 01:14:00.62991	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down SnMaintenance
+86	2017-10-10 01:14:00.62991	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down ExchangeSubscriptionService
+87	2017-10-10 01:14:00.62991	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down VoidChannel
+88	2017-10-10 01:14:00.62991	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down IndexingEngine.
+89	2017-10-10 01:14:00.62991	Repository	A:UnitTestAdapter: Running test	T:11				Repository has stopped. Running time: 0.00:00:00
+>90	2017-10-10 01:14:00.63492	Test	A:UnitTestAdapter: Running test	T:11				END test: InMemSearch_Indexing_Rename
+>91	2017-10-10 01:14:00.63793	Test	A:UnitTestAdapter: Running test	T:11				START test: InMemSearch_Indexing_AddTextEctract
+92	2017-10-10 01:14:00.64094	Repository	A:UnitTestAdapter: Running test	T:11				DataProvider configured: SenseNet.ContentRepository.Tests.Implementations.InMemoryDataProvider
+93	2017-10-10 01:14:00.64094	Repository	A:UnitTestAdapter: Running test	T:11				SearchEngine configured: SenseNet.ContentRepository.Tests.Implementations.InMemorySearchEngine
+94	2017-10-10 01:14:00.64094	Repository	A:UnitTestAdapter: Running test	T:11				SecurityDataProvider configured: SenseNet.Security.Data.MemoryDataProvider
+95	2017-10-10 01:14:00.64094	Repository	A:UnitTestAdapter: Running test	T:11				ElevatedModificationVisibilityRuleProvider configured: SenseNet.ContentRepository.Storage.ElevatedModificationVisibilityRule
+96	2017-10-10 01:14:00.64094	Repository	A:UnitTestAdapter: Running test	T:11				CacheProvider configured: SenseNet.ContentRepository.Tests.Implementations.EmptyCache
+97	2017-10-10 01:14:00.64094	System	A:UnitTestAdapter: Running test	T:11				Trace settings were updated. Enabled: Repository, System, Test, Event
+98	2017-10-10 01:14:00.70012	System	A:UnitTestAdapter: Running test	T:11				Trace settings were updated. Enabled: Repository, System, Test, Event
+99	2017-10-10 01:14:01.01015	Repository	A:UnitTestAdapter: Running test	T:11				Sending a goodbye message.
+100	2017-10-10 01:14:01.01015	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down ClusterChannelMonitor
+101	2017-10-10 01:14:01.01015	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down SnMaintenance
+102	2017-10-10 01:14:01.01015	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down ExchangeSubscriptionService
+103	2017-10-10 01:14:01.01015	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down VoidChannel
+104	2017-10-10 01:14:01.01015	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down IndexingEngine.
+105	2017-10-10 01:14:01.01015	Repository	A:UnitTestAdapter: Running test	T:11				Repository has stopped. Running time: 0.00:00:00
+>106	2017-10-10 01:14:01.01416	Test	A:UnitTestAdapter: Running test	T:11				END test: InMemSearch_Indexing_AddTextEctract
+>107	2017-10-10 01:14:01.01717	Test	A:UnitTestAdapter: Running test	T:11				START test: InMemSearch_Indexing_ClearAndPopulateAll
+108	2017-10-10 01:14:01.02218	Repository	A:UnitTestAdapter: Running test	T:11				DataProvider configured: SenseNet.ContentRepository.Tests.Implementations.InMemoryDataProvider
+109	2017-10-10 01:14:01.02218	Repository	A:UnitTestAdapter: Running test	T:11				SearchEngine configured: SenseNet.ContentRepository.Tests.Implementations.InMemorySearchEngine
+110	2017-10-10 01:14:01.02218	Repository	A:UnitTestAdapter: Running test	T:11				SecurityDataProvider configured: SenseNet.Security.Data.MemoryDataProvider
+111	2017-10-10 01:14:01.02218	Repository	A:UnitTestAdapter: Running test	T:11				ElevatedModificationVisibilityRuleProvider configured: SenseNet.ContentRepository.Storage.ElevatedModificationVisibilityRule
+112	2017-10-10 01:14:01.02218	Repository	A:UnitTestAdapter: Running test	T:11				CacheProvider configured: SenseNet.ContentRepository.Tests.Implementations.EmptyCache
+113	2017-10-10 01:14:01.02218	System	A:UnitTestAdapter: Running test	T:11				Trace settings were updated. Enabled: Repository, System, Test, Event
+114	2017-10-10 01:14:01.07635	System	A:UnitTestAdapter: Running test	T:11				Trace settings were updated. Enabled: Repository, System, Test, Event
+>115	2017-10-10 01:14:10.71598	Repository	A:UnitTestAdapter: Running test	T:11				Sending a goodbye message.
+116	2017-10-10 01:14:10.71598	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down ClusterChannelMonitor
+117	2017-10-10 01:14:10.71598	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down SnMaintenance
+118	2017-10-10 01:14:10.71598	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down ExchangeSubscriptionService
+119	2017-10-10 01:14:10.71598	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down VoidChannel
+120	2017-10-10 01:14:10.71598	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down IndexingEngine.
+121	2017-10-10 01:14:10.71598	Repository	A:UnitTestAdapter: Running test	T:11				Repository has stopped. Running time: 0.00:00:09
+>122	2017-10-10 01:14:10.71896	Test	A:UnitTestAdapter: Running test	T:11				END test: InMemSearch_Indexing_ClearAndPopulateAll
+>123	2017-10-10 01:14:10.72500	Test	A:UnitTestAdapter: Running test	T:11				START test: InMemSearch_Query_1Term1Hit
+124	2017-10-10 01:14:10.73406	Repository	A:UnitTestAdapter: Running test	T:11				DataProvider configured: SenseNet.ContentRepository.Tests.Implementations.InMemoryDataProvider
+125	2017-10-10 01:14:10.73406	Repository	A:UnitTestAdapter: Running test	T:11				SearchEngine configured: SenseNet.ContentRepository.Tests.Implementations.InMemorySearchEngine
+126	2017-10-10 01:14:10.73406	Repository	A:UnitTestAdapter: Running test	T:11				SecurityDataProvider configured: SenseNet.Security.Data.MemoryDataProvider
+127	2017-10-10 01:14:10.73406	Repository	A:UnitTestAdapter: Running test	T:11				ElevatedModificationVisibilityRuleProvider configured: SenseNet.ContentRepository.Storage.ElevatedModificationVisibilityRule
+128	2017-10-10 01:14:10.73406	Repository	A:UnitTestAdapter: Running test	T:11				CacheProvider configured: SenseNet.ContentRepository.Tests.Implementations.EmptyCache
+129	2017-10-10 01:14:10.73406	System	A:UnitTestAdapter: Running test	T:11				Trace settings were updated. Enabled: Repository, System, Test, Event
+130	2017-10-10 01:14:10.78917	System	A:UnitTestAdapter: Running test	T:11				Trace settings were updated. Enabled: Repository, System, Test, Event
+131	2017-10-10 01:14:11.12179	Repository	A:UnitTestAdapter: Running test	T:11				Sending a goodbye message.
+132	2017-10-10 01:14:11.12179	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down ClusterChannelMonitor
+133	2017-10-10 01:14:11.12179	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down SnMaintenance
+134	2017-10-10 01:14:11.12179	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down ExchangeSubscriptionService
+135	2017-10-10 01:14:11.12179	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down VoidChannel
+136	2017-10-10 01:14:11.12179	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down IndexingEngine.
+137	2017-10-10 01:14:11.12179	Repository	A:UnitTestAdapter: Running test	T:11				Repository has stopped. Running time: 0.00:00:00
+>138	2017-10-10 01:14:11.12483	Test	A:UnitTestAdapter: Running test	T:11				END test: InMemSearch_Query_1Term1Hit
+>139	2017-10-10 01:14:11.12783	Test	A:UnitTestAdapter: Running test	T:11				START test: InMemSearch_Query_1TermMoreHit1Order
+140	2017-10-10 01:14:11.13385	Repository	A:UnitTestAdapter: Running test	T:11				DataProvider configured: SenseNet.ContentRepository.Tests.Implementations.InMemoryDataProvider
+141	2017-10-10 01:14:11.13385	Repository	A:UnitTestAdapter: Running test	T:11				SearchEngine configured: SenseNet.ContentRepository.Tests.Implementations.InMemorySearchEngine
+142	2017-10-10 01:14:11.13385	Repository	A:UnitTestAdapter: Running test	T:11				SecurityDataProvider configured: SenseNet.Security.Data.MemoryDataProvider
+143	2017-10-10 01:14:11.13385	Repository	A:UnitTestAdapter: Running test	T:11				ElevatedModificationVisibilityRuleProvider configured: SenseNet.ContentRepository.Storage.ElevatedModificationVisibilityRule
+144	2017-10-10 01:14:11.13385	Repository	A:UnitTestAdapter: Running test	T:11				CacheProvider configured: SenseNet.ContentRepository.Tests.Implementations.EmptyCache
+145	2017-10-10 01:14:11.13385	System	A:UnitTestAdapter: Running test	T:11				Trace settings were updated. Enabled: Repository, System, Test, Event
+146	2017-10-10 01:14:11.18496	System	A:UnitTestAdapter: Running test	T:11				Trace settings were updated. Enabled: Repository, System, Test, Event
+147	2017-10-10 01:14:11.50849	Repository	A:UnitTestAdapter: Running test	T:11				Sending a goodbye message.
+148	2017-10-10 01:14:11.50849	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down ClusterChannelMonitor
+149	2017-10-10 01:14:11.50849	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down SnMaintenance
+150	2017-10-10 01:14:11.50849	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down ExchangeSubscriptionService
+151	2017-10-10 01:14:11.50849	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down VoidChannel
+152	2017-10-10 01:14:11.50849	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down IndexingEngine.
+153	2017-10-10 01:14:11.50849	Repository	A:UnitTestAdapter: Running test	T:11				Repository has stopped. Running time: 0.00:00:00
+>154	2017-10-10 01:14:11.51152	Test	A:UnitTestAdapter: Running test	T:11				END test: InMemSearch_Query_1TermMoreHit1Order
+>155	2017-10-10 01:14:11.51450	Test	A:UnitTestAdapter: Running test	T:11				START test: InMemSearch_Query_1TermMoreHit2Order
+156	2017-10-10 01:14:11.51952	Repository	A:UnitTestAdapter: Running test	T:11				DataProvider configured: SenseNet.ContentRepository.Tests.Implementations.InMemoryDataProvider
+157	2017-10-10 01:14:11.51952	Repository	A:UnitTestAdapter: Running test	T:11				SearchEngine configured: SenseNet.ContentRepository.Tests.Implementations.InMemorySearchEngine
+158	2017-10-10 01:14:11.51952	Repository	A:UnitTestAdapter: Running test	T:11				SecurityDataProvider configured: SenseNet.Security.Data.MemoryDataProvider
+159	2017-10-10 01:14:11.51952	Repository	A:UnitTestAdapter: Running test	T:11				ElevatedModificationVisibilityRuleProvider configured: SenseNet.ContentRepository.Storage.ElevatedModificationVisibilityRule
+160	2017-10-10 01:14:11.51952	Repository	A:UnitTestAdapter: Running test	T:11				CacheProvider configured: SenseNet.ContentRepository.Tests.Implementations.EmptyCache
+161	2017-10-10 01:14:11.51952	System	A:UnitTestAdapter: Running test	T:11				Trace settings were updated. Enabled: Repository, System, Test, Event
+162	2017-10-10 01:14:11.57368	System	A:UnitTestAdapter: Running test	T:11				Trace settings were updated. Enabled: Repository, System, Test, Event
+163	2017-10-10 01:14:11.90554	Repository	A:UnitTestAdapter: Running test	T:11				Sending a goodbye message.
+164	2017-10-10 01:14:11.90554	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down ClusterChannelMonitor
+165	2017-10-10 01:14:11.90554	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down SnMaintenance
+166	2017-10-10 01:14:11.90554	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down ExchangeSubscriptionService
+167	2017-10-10 01:14:11.90554	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down VoidChannel
+168	2017-10-10 01:14:11.90554	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down IndexingEngine.
+169	2017-10-10 01:14:11.90554	Repository	A:UnitTestAdapter: Running test	T:11				Repository has stopped. Running time: 0.00:00:00
+>170	2017-10-10 01:14:11.90815	Test	A:UnitTestAdapter: Running test	T:11				END test: InMemSearch_Query_1TermMoreHit2Order
+>171	2017-10-10 01:14:11.91115	Test	A:UnitTestAdapter: Running test	T:11				START test: InMemSearch_Query_PrefixOrSuffix
+172	2017-10-10 01:14:11.91419	Repository	A:UnitTestAdapter: Running test	T:11				DataProvider configured: SenseNet.ContentRepository.Tests.Implementations.InMemoryDataProvider
+173	2017-10-10 01:14:11.91519	Repository	A:UnitTestAdapter: Running test	T:11				SearchEngine configured: SenseNet.ContentRepository.Tests.Implementations.InMemorySearchEngine
+174	2017-10-10 01:14:11.91519	Repository	A:UnitTestAdapter: Running test	T:11				SecurityDataProvider configured: SenseNet.Security.Data.MemoryDataProvider
+175	2017-10-10 01:14:11.91519	Repository	A:UnitTestAdapter: Running test	T:11				ElevatedModificationVisibilityRuleProvider configured: SenseNet.ContentRepository.Storage.ElevatedModificationVisibilityRule
+176	2017-10-10 01:14:11.91519	Repository	A:UnitTestAdapter: Running test	T:11				CacheProvider configured: SenseNet.ContentRepository.Tests.Implementations.EmptyCache
+177	2017-10-10 01:14:11.91519	System	A:UnitTestAdapter: Running test	T:11				Trace settings were updated. Enabled: Repository, System, Test, Event
+178	2017-10-10 01:14:11.97033	System	A:UnitTestAdapter: Running test	T:11				Trace settings were updated. Enabled: Repository, System, Test, Event
+179	2017-10-10 01:14:12.31371	Repository	A:UnitTestAdapter: Running test	T:11				Sending a goodbye message.
+180	2017-10-10 01:14:12.31371	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down ClusterChannelMonitor
+181	2017-10-10 01:14:12.31371	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down SnMaintenance
+182	2017-10-10 01:14:12.31371	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down ExchangeSubscriptionService
+183	2017-10-10 01:14:12.31371	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down VoidChannel
+184	2017-10-10 01:14:12.31371	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down IndexingEngine.
+185	2017-10-10 01:14:12.31371	Repository	A:UnitTestAdapter: Running test	T:11				Repository has stopped. Running time: 0.00:00:00
+>186	2017-10-10 01:14:12.31672	Test	A:UnitTestAdapter: Running test	T:11				END test: InMemSearch_Query_PrefixOrSuffix
+>187	2017-10-10 01:14:12.32073	Test	A:UnitTestAdapter: Running test	T:11				START test: InMemSearch_Query_PrefixAndSuffixOrMiddle
+188	2017-10-10 01:14:12.32675	Repository	A:UnitTestAdapter: Running test	T:11				DataProvider configured: SenseNet.ContentRepository.Tests.Implementations.InMemoryDataProvider
+189	2017-10-10 01:14:12.32675	Repository	A:UnitTestAdapter: Running test	T:11				SearchEngine configured: SenseNet.ContentRepository.Tests.Implementations.InMemorySearchEngine
+190	2017-10-10 01:14:12.32675	Repository	A:UnitTestAdapter: Running test	T:11				SecurityDataProvider configured: SenseNet.Security.Data.MemoryDataProvider
+191	2017-10-10 01:14:12.32675	Repository	A:UnitTestAdapter: Running test	T:11				ElevatedModificationVisibilityRuleProvider configured: SenseNet.ContentRepository.Storage.ElevatedModificationVisibilityRule
+192	2017-10-10 01:14:12.32675	Repository	A:UnitTestAdapter: Running test	T:11				CacheProvider configured: SenseNet.ContentRepository.Tests.Implementations.EmptyCache
+193	2017-10-10 01:14:12.32675	System	A:UnitTestAdapter: Running test	T:11				Trace settings were updated. Enabled: Repository, System, Test, Event
+194	2017-10-10 01:14:12.38390	System	A:UnitTestAdapter: Running test	T:11				Trace settings were updated. Enabled: Repository, System, Test, Event
+195	2017-10-10 01:14:12.71644	Repository	A:UnitTestAdapter: Running test	T:11				Sending a goodbye message.
+196	2017-10-10 01:14:12.71644	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down ClusterChannelMonitor
+197	2017-10-10 01:14:12.71644	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down SnMaintenance
+198	2017-10-10 01:14:12.71644	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down ExchangeSubscriptionService
+199	2017-10-10 01:14:12.71644	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down VoidChannel
+200	2017-10-10 01:14:12.71644	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down IndexingEngine.
+201	2017-10-10 01:14:12.71644	Repository	A:UnitTestAdapter: Running test	T:11				Repository has stopped. Running time: 0.00:00:00
+>202	2017-10-10 01:14:12.71948	Test	A:UnitTestAdapter: Running test	T:11				END test: InMemSearch_Query_PrefixAndSuffixOrMiddle
+>203	2017-10-10 01:14:12.72248	Test	A:UnitTestAdapter: Running test	T:11				START test: InMemSearch_Query_Range
+204	2017-10-10 01:14:12.72647	Repository	A:UnitTestAdapter: Running test	T:11				DataProvider configured: SenseNet.ContentRepository.Tests.Implementations.InMemoryDataProvider
+205	2017-10-10 01:14:12.72647	Repository	A:UnitTestAdapter: Running test	T:11				SearchEngine configured: SenseNet.ContentRepository.Tests.Implementations.InMemorySearchEngine
+206	2017-10-10 01:14:12.72647	Repository	A:UnitTestAdapter: Running test	T:11				SecurityDataProvider configured: SenseNet.Security.Data.MemoryDataProvider
+207	2017-10-10 01:14:12.72647	Repository	A:UnitTestAdapter: Running test	T:11				ElevatedModificationVisibilityRuleProvider configured: SenseNet.ContentRepository.Storage.ElevatedModificationVisibilityRule
+208	2017-10-10 01:14:12.72647	Repository	A:UnitTestAdapter: Running test	T:11				CacheProvider configured: SenseNet.ContentRepository.Tests.Implementations.EmptyCache
+209	2017-10-10 01:14:12.72647	System	A:UnitTestAdapter: Running test	T:11				Trace settings were updated. Enabled: Repository, System, Test, Event
+210	2017-10-10 01:14:12.78161	System	A:UnitTestAdapter: Running test	T:11				Trace settings were updated. Enabled: Repository, System, Test, Event
+211	2017-10-10 01:14:13.11640	Repository	A:UnitTestAdapter: Running test	T:11				Sending a goodbye message.
+212	2017-10-10 01:14:13.11640	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down ClusterChannelMonitor
+213	2017-10-10 01:14:13.11640	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down SnMaintenance
+214	2017-10-10 01:14:13.11640	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down ExchangeSubscriptionService
+215	2017-10-10 01:14:13.11640	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down VoidChannel
+216	2017-10-10 01:14:13.11640	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down IndexingEngine.
+217	2017-10-10 01:14:13.11640	Repository	A:UnitTestAdapter: Running test	T:11				Repository has stopped. Running time: 0.00:00:00
+>218	2017-10-10 01:14:13.11943	Test	A:UnitTestAdapter: Running test	T:11				END test: InMemSearch_Query_Range
+>219	2017-10-10 01:14:13.12144	Test	A:UnitTestAdapter: Running test	T:11				START test: InMemSearch_Query_2TermsBool
+220	2017-10-10 01:14:13.12843	Repository	A:UnitTestAdapter: Running test	T:11				DataProvider configured: SenseNet.ContentRepository.Tests.Implementations.InMemoryDataProvider
+221	2017-10-10 01:14:13.12843	Repository	A:UnitTestAdapter: Running test	T:11				SearchEngine configured: SenseNet.ContentRepository.Tests.Implementations.InMemorySearchEngine
+222	2017-10-10 01:14:13.12843	Repository	A:UnitTestAdapter: Running test	T:11				SecurityDataProvider configured: SenseNet.Security.Data.MemoryDataProvider
+223	2017-10-10 01:14:13.12843	Repository	A:UnitTestAdapter: Running test	T:11				ElevatedModificationVisibilityRuleProvider configured: SenseNet.ContentRepository.Storage.ElevatedModificationVisibilityRule
+224	2017-10-10 01:14:13.12843	Repository	A:UnitTestAdapter: Running test	T:11				CacheProvider configured: SenseNet.ContentRepository.Tests.Implementations.EmptyCache
+225	2017-10-10 01:14:13.12843	System	A:UnitTestAdapter: Running test	T:11				Trace settings were updated. Enabled: Repository, System, Test, Event
+226	2017-10-10 01:14:13.18358	System	A:UnitTestAdapter: Running test	T:11				Trace settings were updated. Enabled: Repository, System, Test, Event
+227	2017-10-10 01:14:13.50922	Repository	A:UnitTestAdapter: Running test	T:11				Sending a goodbye message.
+228	2017-10-10 01:14:13.50922	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down ClusterChannelMonitor
+229	2017-10-10 01:14:13.50922	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down SnMaintenance
+230	2017-10-10 01:14:13.50922	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down ExchangeSubscriptionService
+231	2017-10-10 01:14:13.50922	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down VoidChannel
+232	2017-10-10 01:14:13.50922	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down IndexingEngine.
+233	2017-10-10 01:14:13.50922	Repository	A:UnitTestAdapter: Running test	T:11				Repository has stopped. Running time: 0.00:00:00
+>234	2017-10-10 01:14:13.51226	Test	A:UnitTestAdapter: Running test	T:11				END test: InMemSearch_Query_2TermsBool
+>235	2017-10-10 01:14:13.51524	Test	A:UnitTestAdapter: Running test	T:11				START test: InMemSearch_Query_MultiLevelBool
+236	2017-10-10 01:14:13.51825	Repository	A:UnitTestAdapter: Running test	T:11				DataProvider configured: SenseNet.ContentRepository.Tests.Implementations.InMemoryDataProvider
+237	2017-10-10 01:14:13.51825	Repository	A:UnitTestAdapter: Running test	T:11				SearchEngine configured: SenseNet.ContentRepository.Tests.Implementations.InMemorySearchEngine
+238	2017-10-10 01:14:13.51825	Repository	A:UnitTestAdapter: Running test	T:11				SecurityDataProvider configured: SenseNet.Security.Data.MemoryDataProvider
+239	2017-10-10 01:14:13.51825	Repository	A:UnitTestAdapter: Running test	T:11				ElevatedModificationVisibilityRuleProvider configured: SenseNet.ContentRepository.Storage.ElevatedModificationVisibilityRule
+240	2017-10-10 01:14:13.51825	Repository	A:UnitTestAdapter: Running test	T:11				CacheProvider configured: SenseNet.ContentRepository.Tests.Implementations.EmptyCache
+241	2017-10-10 01:14:13.51825	System	A:UnitTestAdapter: Running test	T:11				Trace settings were updated. Enabled: Repository, System, Test, Event
+242	2017-10-10 01:14:13.57339	System	A:UnitTestAdapter: Running test	T:11				Trace settings were updated. Enabled: Repository, System, Test, Event
+243	2017-10-10 01:14:13.89796	Repository	A:UnitTestAdapter: Running test	T:11				Sending a goodbye message.
+244	2017-10-10 01:14:13.89796	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down ClusterChannelMonitor
+245	2017-10-10 01:14:13.89796	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down SnMaintenance
+246	2017-10-10 01:14:13.89796	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down ExchangeSubscriptionService
+247	2017-10-10 01:14:13.89796	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down VoidChannel
+248	2017-10-10 01:14:13.89796	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down IndexingEngine.
+249	2017-10-10 01:14:13.89796	Repository	A:UnitTestAdapter: Running test	T:11				Repository has stopped. Running time: 0.00:00:00
+>250	2017-10-10 01:14:13.90099	Test	A:UnitTestAdapter: Running test	T:11				END test: InMemSearch_Query_MultiLevelBool
+>251	2017-10-10 01:14:13.90400	Test	A:UnitTestAdapter: Running test	T:11				START test: InMemSearch_Query_Recursive_One
+252	2017-10-10 01:14:13.90801	Repository	A:UnitTestAdapter: Running test	T:11				DataProvider configured: SenseNet.ContentRepository.Tests.Implementations.InMemoryDataProvider
+253	2017-10-10 01:14:13.90801	Repository	A:UnitTestAdapter: Running test	T:11				SearchEngine configured: SenseNet.SearchImpl.Tests.InMemorySearchTests+SearchEngineForNestedQueryTests
+254	2017-10-10 01:14:13.90801	Repository	A:UnitTestAdapter: Running test	T:11				SecurityDataProvider configured: SenseNet.Security.Data.MemoryDataProvider
+255	2017-10-10 01:14:13.90801	Repository	A:UnitTestAdapter: Running test	T:11				ElevatedModificationVisibilityRuleProvider configured: SenseNet.ContentRepository.Storage.ElevatedModificationVisibilityRule
+>256	2017-10-10 01:14:13.93706	Test	A:UnitTestAdapter: Running test	T:11				END test: InMemSearch_Query_Recursive_One
+>257	2017-10-10 01:14:13.94007	Test	A:UnitTestAdapter: Running test	T:11				START test: InMemSearch_Query_Recursive_Three
+>258	2017-10-10 01:14:13.96513	Test	A:UnitTestAdapter: Running test	T:11				END test: InMemSearch_Query_Recursive_Three
+>259	2017-10-10 01:14:13.97216	Test	A:UnitTestAdapter: Running test	T:11				START test: InMemSearch_ActivityStatus_WithoutRepository
+260	2017-10-10 01:14:13.97216	Test	A:UnitTestAdapter: Running test	T:11				END test: InMemSearch_ActivityStatus_WithoutRepository
+>261	2017-10-10 01:14:13.97516	Test	A:UnitTestAdapter: Running test	T:11				START test: InMemSearch_ActivityStatus_WithRepository
+262	2017-10-10 01:14:13.97920	System	A:UnitTestAdapter: Running test	T:11				Trace settings were updated. Enabled: Repository, System, Test, Event
+263	2017-10-10 01:14:14.03332	System	A:UnitTestAdapter: Running test	T:11				Trace settings were updated. Enabled: Repository, System, Test, Event
+264	2017-10-10 01:14:14.03332	Repository	A:UnitTestAdapter: Running test	T:11				Sending a goodbye message.
+265	2017-10-10 01:14:14.03332	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down ClusterChannelMonitor
+266	2017-10-10 01:14:14.03332	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down SnMaintenance
+267	2017-10-10 01:14:14.03332	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down ExchangeSubscriptionService
+268	2017-10-10 01:14:14.03332	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down VoidChannel
+269	2017-10-10 01:14:14.03332	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down IndexingEngine.
+270	2017-10-10 01:14:14.03332	Repository	A:UnitTestAdapter: Running test	T:11				Repository has stopped. Running time: 0.00:00:00
+>271	2017-10-10 01:14:14.03635	Test	A:UnitTestAdapter: Running test	T:11				END test: InMemSearch_ActivityStatus_WithRepository
+>272	2017-10-10 01:14:14.03933	Test	A:UnitTestAdapter: Running test	T:11				START test: L29_BasicConditions
+273	2017-10-10 01:14:14.04635	Repository	A:UnitTestAdapter: Running test	T:11				DataProvider configured: SenseNet.ContentRepository.Tests.Implementations.InMemoryDataProvider
+274	2017-10-10 01:14:14.04735	Repository	A:UnitTestAdapter: Running test	T:11				AccessProvider configured: SenseNet.ContentRepository.Security.DesktopAccessProvider
+275	2017-10-10 01:14:14.04735	Repository	A:UnitTestAdapter: Running test	T:11				PermissionFilterFactory configured: SenseNet.SearchImpl.Tests.Implementations.EverythingAllowedPermissionFilterFactory
+276	2017-10-10 01:14:14.04735	Repository	A:UnitTestAdapter: Running test	T:11				SearchEngine configured: SenseNet.Search.Lucene29.Lucene29SearchEngine
+277	2017-10-10 01:14:14.04735	Repository	A:UnitTestAdapter: Running test	T:11				SecurityDataProvider configured: SenseNet.Security.Data.MemoryDataProvider
+278	2017-10-10 01:14:14.04735	Repository	A:UnitTestAdapter: Running test	T:11				CacheProvider configured: SenseNet.ContentRepository.Tests.Implementations.EmptyCache
+279	2017-10-10 01:14:14.04735	System	A:UnitTestAdapter: Running test	T:11				Trace settings were updated. Enabled: ContentOperation, Index, IndexQueue, Query, Repository, System, Test, Event
+280	2017-10-10 01:14:14.06039	Index	A:UnitTestAdapter: Running test	T:11				New index directory: D:\dev\github\sensenet\src\Tests\SenseNet.SearchImpl.Tests\bin\App_Data\LuceneIndex\Test_L29_BasicConditions
+281	2017-10-10 01:14:14.06039	Repository	A:UnitTestAdapter: Running test	T:11				Waiting for lock file to disappear: D:\dev\github\sensenet\src\Tests\SenseNet.SearchImpl.Tests\bin\App_Data\LuceneIndex\Test_L29_BasicConditions\write.lock
+282	2017-10-10 01:14:14.06039	Repository	A:UnitTestAdapter: Running test	T:11				Lock file has gone: D:\dev\github\sensenet\src\Tests\SenseNet.SearchImpl.Tests\bin\App_Data\LuceneIndex\Test_L29_BasicConditions\write.lock
+283	2017-10-10 01:14:14.11253	Index	A:UnitTestAdapter: Running test	T:11	Op:1	Start		IAQ: InitializeFromIndex. LastIndexedActivityId: 0, LastDatabaseId: 0, TotalUnprocessed: 0
+284	2017-10-10 01:14:14.11353	Index	A:UnitTestAdapter: Running test	T:11	Op:1	End	00:00:00.001003	IAQ: InitializeFromIndex. LastIndexedActivityId: 0, LastDatabaseId: 0, TotalUnprocessed: 0
+285	2017-10-10 01:14:14.11353	Query	A:UnitTestAdapter: Running test	T:11	Op:2	Start		ContentQuery: +Id:1 | Top:0 Skip:0 Sort:[null] Mode:Default AllVersions:False
+286	2017-10-10 01:14:14.11754	Query	A:UnitTestAdapter: Running test	T:11	Op:3	Start		LucQuery: +Id:1 .TOP:2147483647 .AUTOFILTERS:OFF
+287	2017-10-10 01:14:14.12055	Query	A:UnitTestAdapter: Running test	T:11	Op:4	Start		LuceneQueryExecutor. CQL:+Id:1 .TOP:2147483647 .AUTOFILTERS:OFF
+288	2017-10-10 01:14:14.12155	Query	A:UnitTestAdapter: Running test	T:11	Op:4	End	00:00:00.001003	LuceneQueryExecutor. CQL:+Id:1 .TOP:2147483647 .AUTOFILTERS:OFF
+289	2017-10-10 01:14:14.12155	Query	A:UnitTestAdapter: Running test	T:11				LucQuery.Execute total count: 0
+290	2017-10-10 01:14:14.12155	Query	A:UnitTestAdapter: Running test	T:11	Op:3	End	00:00:00.004010	LucQuery: +Id:1 .TOP:2147483647 .AUTOFILTERS:OFF
+291	2017-10-10 01:14:14.12255	Query	A:UnitTestAdapter: Running test	T:11	Op:2	End	00:00:00.009023	ContentQuery: +Id:1 | Top:0 Skip:0 Sort:[null] Mode:Default AllVersions:False
+292	2017-10-10 01:14:14.12355	System	A:UnitTestAdapter: Running test	T:11				Trace settings were updated. Enabled: ContentOperation, Index, IndexQueue, Query, Repository, System, Test, Event
+293	2017-10-10 01:14:14.12355	Repository	A:UnitTestAdapter: Running test	T:11				Sending a goodbye message.
+294	2017-10-10 01:14:14.12355	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down ClusterChannelMonitor
+295	2017-10-10 01:14:14.12355	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down SnMaintenance
+296	2017-10-10 01:14:14.12355	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down ExchangeSubscriptionService
+297	2017-10-10 01:14:14.12355	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down VoidChannel
+298	2017-10-10 01:14:14.12355	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down IndexingEngine.
+299	2017-10-10 01:14:14.12456	Index	A:UnitTestAdapter: Running test	T:11	Op:5	Start		LUCENEMANAGER SHUTDOWN
+300	2017-10-10 01:14:14.12456	Index	A:UnitTestAdapter: Running test	T:11	Op:6	Start		LM: Commit. reopenReader:False
+301	2017-10-10 01:14:14.12456	Index	A:UnitTestAdapter: Running test	T:11				LM: Committing_writer. commitState: 0()
+302	2017-10-10 01:14:14.19875	Index	A:UnitTestAdapter: Running test	T:11	Op:6	End	00:00:00.074196	LM: Commit. reopenReader:False
+303	2017-10-10 01:14:14.19875	Index	A:UnitTestAdapter: Running test	T:11	Op:7	Start		LM.CloseReaders
+304	2017-10-10 01:14:14.20176	Index	A:UnitTestAdapter: Running test	T:11	Op:7	End	00:00:00.003007	LM.CloseReaders
+305	2017-10-10 01:14:14.20176	Index	A:UnitTestAdapter: Running test	T:11	Op:5	End	00:00:00.077204	LUCENEMANAGER SHUTDOWN
+306	2017-10-10 01:14:14.20176	Index	A:UnitTestAdapter: Running test	T:11	Op:8	Start		LM.Waiting for writer lock file is released.
+307	2017-10-10 01:14:14.20176	Repository	A:UnitTestAdapter: Running test	T:11				Waiting for lock file to disappear: D:\dev\github\sensenet\src\Tests\SenseNet.SearchImpl.Tests\bin\App_Data\LuceneIndex\Test_L29_BasicConditions\write.lock
+308	2017-10-10 01:14:14.20176	Repository	A:UnitTestAdapter: Running test	T:11				Lock file has gone: D:\dev\github\sensenet\src\Tests\SenseNet.SearchImpl.Tests\bin\App_Data\LuceneIndex\Test_L29_BasicConditions\write.lock
+309	2017-10-10 01:14:14.20176	Index	A:UnitTestAdapter: Running test	T:11	Op:8	End	00:00:00.000000	LM.Waiting for writer lock file is released.
+310	2017-10-10 01:14:14.20176	Repository	A:UnitTestAdapter: Running test	T:11				Repository has stopped. Running time: 0.00:00:00
+>311	2017-10-10 01:14:14.20480	Test	A:UnitTestAdapter: Running test	T:11				END test: L29_BasicConditions
+>312	2017-10-10 01:14:14.20878	Test	A:UnitTestAdapter: Running test	T:11				START test: L29_ClearAndPopulateAll
+313	2017-10-10 01:14:14.21279	Repository	A:UnitTestAdapter: Running test	T:11				DataProvider configured: SenseNet.ContentRepository.Tests.Implementations.InMemoryDataProvider
+314	2017-10-10 01:14:14.21279	Repository	A:UnitTestAdapter: Running test	T:11				AccessProvider configured: SenseNet.ContentRepository.Security.DesktopAccessProvider
+315	2017-10-10 01:14:14.21279	Repository	A:UnitTestAdapter: Running test	T:11				PermissionFilterFactory configured: SenseNet.SearchImpl.Tests.Implementations.EverythingAllowedPermissionFilterFactory
+316	2017-10-10 01:14:14.21279	Repository	A:UnitTestAdapter: Running test	T:11				SearchEngine configured: SenseNet.Search.Lucene29.Lucene29SearchEngine
+317	2017-10-10 01:14:14.21279	Repository	A:UnitTestAdapter: Running test	T:11				SecurityDataProvider configured: SenseNet.Security.Data.MemoryDataProvider
+318	2017-10-10 01:14:14.21279	Repository	A:UnitTestAdapter: Running test	T:11				CacheProvider configured: SenseNet.ContentRepository.Tests.Implementations.EmptyCache
+319	2017-10-10 01:14:14.21279	System	A:UnitTestAdapter: Running test	T:11				Trace settings were updated. Enabled: ContentOperation, Index, IndexQueue, Query, Repository, System, Test, Event
+320	2017-10-10 01:14:14.22282	Index	A:UnitTestAdapter: Running test	T:11				New index directory: D:\dev\github\sensenet\src\Tests\SenseNet.SearchImpl.Tests\bin\App_Data\LuceneIndex\Test_L29_ClearAndPopulateAll
+321	2017-10-10 01:14:14.22282	Repository	A:UnitTestAdapter: Running test	T:11				Waiting for lock file to disappear: D:\dev\github\sensenet\src\Tests\SenseNet.SearchImpl.Tests\bin\App_Data\LuceneIndex\Test_L29_ClearAndPopulateAll\write.lock
+322	2017-10-10 01:14:14.22282	Repository	A:UnitTestAdapter: Running test	T:11				Lock file has gone: D:\dev\github\sensenet\src\Tests\SenseNet.SearchImpl.Tests\bin\App_Data\LuceneIndex\Test_L29_ClearAndPopulateAll\write.lock
+323	2017-10-10 01:14:14.22776	Index	A:UnitTestAdapter: Running test	T:11	Op:9	Start		IAQ: InitializeFromIndex. LastIndexedActivityId: 0, LastDatabaseId: 0, TotalUnprocessed: 0
+324	2017-10-10 01:14:14.22776	Index	A:UnitTestAdapter: Running test	T:11	Op:9	End	00:00:00.000000	IAQ: InitializeFromIndex. LastIndexedActivityId: 0, LastDatabaseId: 0, TotalUnprocessed: 0
+325	2017-10-10 01:14:14.22776	Query	A:UnitTestAdapter: Running test	T:11	Op:10	Start		ContentQuery: +Id:1 | Top:0 Skip:0 Sort:[null] Mode:Default AllVersions:False
+326	2017-10-10 01:14:14.22776	Query	A:UnitTestAdapter: Running test	T:11	Op:11	Start		LucQuery: +Id:1 .TOP:2147483647 .AUTOFILTERS:OFF
+327	2017-10-10 01:14:14.22776	Query	A:UnitTestAdapter: Running test	T:11	Op:12	Start		LuceneQueryExecutor. CQL:+Id:1 .TOP:2147483647 .AUTOFILTERS:OFF
+328	2017-10-10 01:14:14.22776	Query	A:UnitTestAdapter: Running test	T:11	Op:12	End	00:00:00.000000	LuceneQueryExecutor. CQL:+Id:1 .TOP:2147483647 .AUTOFILTERS:OFF
+329	2017-10-10 01:14:14.22776	Query	A:UnitTestAdapter: Running test	T:11				LucQuery.Execute total count: 0
+330	2017-10-10 01:14:14.22776	Query	A:UnitTestAdapter: Running test	T:11	Op:11	End	00:00:00.000000	LucQuery: +Id:1 .TOP:2147483647 .AUTOFILTERS:OFF
+331	2017-10-10 01:14:14.22776	Query	A:UnitTestAdapter: Running test	T:11	Op:10	End	00:00:00.000000	ContentQuery: +Id:1 | Top:0 Skip:0 Sort:[null] Mode:Default AllVersions:False
+332	2017-10-10 01:14:14.23177	System	A:UnitTestAdapter: Running test	T:11				Trace settings were updated. Enabled: ContentOperation, Index, IndexQueue, Query, Repository, System, Test, Event
+333	2017-10-10 01:14:14.28190	Index	A:UnitTestAdapter: Running test	T:11	Op:13	Start		Getting text extract, VId:1, Path:/Root/IMS/BuiltIn/Portal/Admin
+334	2017-10-10 01:14:14.28190	Index	A:UnitTestAdapter: Running test	T:11	Op:13	End	00:00:00.000000	Getting text extract, VId:1, Path:/Root/IMS/BuiltIn/Portal/Admin
+335	2017-10-10 01:14:14.29293	Index	A:UnitTestAdapter: Running test	T:11	Op:14	Start		Getting text extract, VId:6, Path:/Root/IMS/BuiltIn/Portal/Visitor
+336	2017-10-10 01:14:14.29293	Index	A:UnitTestAdapter: Running test	T:11	Op:14	End	00:00:00.000000	Getting text extract, VId:6, Path:/Root/IMS/BuiltIn/Portal/Visitor
+337	2017-10-10 01:14:14.30095	Index	A:UnitTestAdapter: Running test	T:11	Op:15	Start		Getting text extract, VId:10, Path:/Root/IMS/BuiltIn/Portal/Somebody
+338	2017-10-10 01:14:14.30095	Index	A:UnitTestAdapter: Running test	T:11	Op:15	End	00:00:00.000000	Getting text extract, VId:10, Path:/Root/IMS/BuiltIn/Portal/Somebody
+339	2017-10-10 01:14:14.30897	Index	A:UnitTestAdapter: Running test	T:11	Op:16	Start		Getting text extract, VId:16, Path:/Root/System/Schema/ContentTypes/ContentType
+340	2017-10-10 01:14:14.30997	Index	A:UnitTestAdapter: Running test	T:11				Extracted length length: 2185.
+341	2017-10-10 01:14:14.30997	Index	A:UnitTestAdapter: Running test	T:11	Op:16	End	00:00:00.001002	Getting text extract, VId:16, Path:/Root/System/Schema/ContentTypes/ContentType
+342	2017-10-10 01:14:14.35612	Index	A:UnitTestAdapter: Running test	T:11	Op:17	Start		Getting text extract, VId:17, Path:/Root/System/Schema/ContentTypes/GenericContent
+343	2017-10-10 01:14:14.35812	Index	A:UnitTestAdapter: Running test	T:11				Extracted length length: 6935.
+344	2017-10-10 01:14:14.35812	Index	A:UnitTestAdapter: Running test	T:11	Op:17	End	00:00:00.001995	Getting text extract, VId:17, Path:/Root/System/Schema/ContentTypes/GenericContent
+345	2017-10-10 01:14:14.45436	Index	A:UnitTestAdapter: Running test	T:11	Op:18	Start		Getting text extract, VId:18, Path:/Root/System/Schema/ContentTypes/GenericContent/Application
+346	2017-10-10 01:14:14.45536	Index	A:UnitTestAdapter: Running test	T:11				Extracted length length: 1912.
+347	2017-10-10 01:14:14.45536	Index	A:UnitTestAdapter: Running test	T:11	Op:18	End	00:00:00.001002	Getting text extract, VId:18, Path:/Root/System/Schema/ContentTypes/GenericContent/Application
+348	2017-10-10 01:14:14.58370	Index	A:UnitTestAdapter: Running test	T:11	Op:19	Start		Getting text extract, VId:19, Path:/Root/System/Schema/ContentTypes/GenericContent/Application/ApplicationOverride
+349	2017-10-10 01:14:14.58470	Index	A:UnitTestAdapter: Running test	T:11				Extracted length length: 86.
+350	2017-10-10 01:14:14.58470	Index	A:UnitTestAdapter: Running test	T:11	Op:19	End	00:00:00.001002	Getting text extract, VId:19, Path:/Root/System/Schema/ContentTypes/GenericContent/Application/ApplicationOverride
+351	2017-10-10 01:14:14.71003	Index	A:UnitTestAdapter: Running test	T:11	Op:20	Start		Getting text extract, VId:20, Path:/Root/System/Schema/ContentTypes/GenericContent/Folder
+352	2017-10-10 01:14:14.71104	Index	A:UnitTestAdapter: Running test	T:11				Extracted length length: 157.
+353	2017-10-10 01:14:14.71104	Index	A:UnitTestAdapter: Running test	T:11	Op:20	End	00:00:00.001002	Getting text extract, VId:20, Path:/Root/System/Schema/ContentTypes/GenericContent/Folder
+354	2017-10-10 01:14:14.81230	Index	A:UnitTestAdapter: Running test	T:11	Op:21	Start		Getting text extract, VId:21, Path:/Root/System/Schema/ContentTypes/GenericContent/Folder/ContentList
+355	2017-10-10 01:14:14.81230	Index	A:UnitTestAdapter: Running test	T:11				Extracted length length: 2042.
+356	2017-10-10 01:14:14.81230	Index	A:UnitTestAdapter: Running test	T:11	Op:21	End	00:00:00.000000	Getting text extract, VId:21, Path:/Root/System/Schema/ContentTypes/GenericContent/Folder/ContentList
+357	2017-10-10 01:14:14.93964	Index	A:UnitTestAdapter: Running test	T:11	Op:22	Start		Getting text extract, VId:22, Path:/Root/System/Schema/ContentTypes/GenericContent/Folder/ContentList/Aspect
+358	2017-10-10 01:14:14.94064	Index	A:UnitTestAdapter: Running test	T:11				Extracted length length: 1633.
+359	2017-10-10 01:14:14.94064	Index	A:UnitTestAdapter: Running test	T:11	Op:22	End	00:00:00.001002	Getting text extract, VId:22, Path:/Root/System/Schema/ContentTypes/GenericContent/Folder/ContentList/Aspect
+360	2017-10-10 01:14:15.08302	Index	A:UnitTestAdapter: Running test	T:11	Op:23	Start		Getting text extract, VId:23, Path:/Root/System/Schema/ContentTypes/GenericContent/FieldSettingContent
+361	2017-10-10 01:14:15.08703	Index	A:UnitTestAdapter: Running test	T:11				Extracted length length: 177.
+362	2017-10-10 01:14:15.08703	Index	A:UnitTestAdapter: Running test	T:11	Op:23	End	00:00:00.004010	Getting text extract, VId:23, Path:/Root/System/Schema/ContentTypes/GenericContent/FieldSettingContent
+>363	2017-10-10 01:14:15.22039	Index	A:UnitTestAdapter: Running test	T:11	Op:24	Start		Getting text extract, VId:24, Path:/Root/System/Schema/ContentTypes/GenericContent/FieldSettingContent/BinaryFieldSetting
+364	2017-10-10 01:14:15.22139	Index	A:UnitTestAdapter: Running test	T:11				Extracted length length: 41.
+365	2017-10-10 01:14:15.22139	Index	A:UnitTestAdapter: Running test	T:11	Op:24	End	00:00:00.001001	Getting text extract, VId:24, Path:/Root/System/Schema/ContentTypes/GenericContent/FieldSettingContent/BinaryFieldSetting
+366	2017-10-10 01:14:15.33469	Index	A:UnitTestAdapter: Running test	T:11	Op:25	Start		Getting text extract, VId:25, Path:/Root/System/Schema/ContentTypes/GenericContent/FieldSettingContent/TextFieldSetting
+367	2017-10-10 01:14:15.33569	Index	A:UnitTestAdapter: Running test	T:11				Extracted length length: 52.
+368	2017-10-10 01:14:15.33569	Index	A:UnitTestAdapter: Running test	T:11	Op:25	End	00:00:00.001002	Getting text extract, VId:25, Path:/Root/System/Schema/ContentTypes/GenericContent/FieldSettingContent/TextFieldSetting
+369	2017-10-10 01:14:15.44297	Index	A:UnitTestAdapter: Running test	T:11	Op:26	Start		Getting text extract, VId:26, Path:/Root/System/Schema/ContentTypes/GenericContent/FieldSettingContent/TextFieldSetting/ShortTextFieldSetting
+370	2017-10-10 01:14:15.44398	Index	A:UnitTestAdapter: Running test	T:11				Extracted length length: 57.
+371	2017-10-10 01:14:15.44398	Index	A:UnitTestAdapter: Running test	T:11	Op:26	End	00:00:00.001002	Getting text extract, VId:26, Path:/Root/System/Schema/ContentTypes/GenericContent/FieldSettingContent/TextFieldSetting/ShortTextFieldSetting
+372	2017-10-10 01:14:15.55126	Index	A:UnitTestAdapter: Running test	T:11	Op:27	Start		Getting text extract, VId:27, Path:/Root/System/Schema/ContentTypes/GenericContent/FieldSettingContent/TextFieldSetting/ShortTextFieldSetting/ChoiceFieldSetting
+373	2017-10-10 01:14:15.55226	Index	A:UnitTestAdapter: Running test	T:11				Extracted length length: 51.
+374	2017-10-10 01:14:15.55226	Index	A:UnitTestAdapter: Running test	T:11	Op:27	End	00:00:00.001002	Getting text extract, VId:27, Path:/Root/System/Schema/ContentTypes/GenericContent/FieldSettingContent/TextFieldSetting/ShortTextFieldSetting/ChoiceFieldSetting
+375	2017-10-10 01:14:15.65554	Index	A:UnitTestAdapter: Running test	T:11	Op:28	Start		Getting text extract, VId:28, Path:/Root/System/Schema/ContentTypes/GenericContent/ContentLink
+376	2017-10-10 01:14:15.65654	Index	A:UnitTestAdapter: Running test	T:11				Extracted length length: 154.
+377	2017-10-10 01:14:15.65654	Index	A:UnitTestAdapter: Running test	T:11	Op:28	End	00:00:00.001003	Getting text extract, VId:28, Path:/Root/System/Schema/ContentTypes/GenericContent/ContentLink
+378	2017-10-10 01:14:15.76182	Index	A:UnitTestAdapter: Running test	T:11	Op:29	Start		Getting text extract, VId:29, Path:/Root/System/Schema/ContentTypes/GenericContent/FieldSettingContent/NumberFieldSetting
+379	2017-10-10 01:14:15.76182	Index	A:UnitTestAdapter: Running test	T:11				Extracted length length: 51.
+380	2017-10-10 01:14:15.76182	Index	A:UnitTestAdapter: Running test	T:11	Op:29	End	00:00:00.000000	Getting text extract, VId:29, Path:/Root/System/Schema/ContentTypes/GenericContent/FieldSettingContent/NumberFieldSetting
+381	2017-10-10 01:14:15.86309	Index	A:UnitTestAdapter: Running test	T:11	Op:30	Start		Getting text extract, VId:30, Path:/Root/System/Schema/ContentTypes/GenericContent/FieldSettingContent/NumberFieldSetting/CurrencyFieldSetting
+382	2017-10-10 01:14:15.86409	Index	A:UnitTestAdapter: Running test	T:11				Extracted length length: 55.
+383	2017-10-10 01:14:15.86409	Index	A:UnitTestAdapter: Running test	T:11	Op:30	End	00:00:00.001002	Getting text extract, VId:30, Path:/Root/System/Schema/ContentTypes/GenericContent/FieldSettingContent/NumberFieldSetting/CurrencyFieldSetting
+384	2017-10-10 01:14:15.96837	Index	A:UnitTestAdapter: Running test	T:11	Op:31	Start		Getting text extract, VId:31, Path:/Root/System/Schema/ContentTypes/GenericContent/Folder/ContentList/ItemList
+385	2017-10-10 01:14:15.96837	Index	A:UnitTestAdapter: Running test	T:11				Extracted length length: 499.
+386	2017-10-10 01:14:15.96837	Index	A:UnitTestAdapter: Running test	T:11	Op:31	End	00:00:00.000000	Getting text extract, VId:31, Path:/Root/System/Schema/ContentTypes/GenericContent/Folder/ContentList/ItemList
+387	2017-10-10 01:14:16.09773	Index	A:UnitTestAdapter: Running test	T:11	Op:32	Start		Getting text extract, VId:32, Path:/Root/System/Schema/ContentTypes/GenericContent/Folder/ContentList/ItemList/CustomList
+388	2017-10-10 01:14:16.09874	Index	A:UnitTestAdapter: Running test	T:11				Extracted length length: 87.
+389	2017-10-10 01:14:16.09874	Index	A:UnitTestAdapter: Running test	T:11	Op:32	End	00:00:00.001002	Getting text extract, VId:32, Path:/Root/System/Schema/ContentTypes/GenericContent/Folder/ContentList/ItemList/CustomList
+>390	2017-10-10 01:14:16.23307	Index	A:UnitTestAdapter: Running test	T:11	Op:33	Start		Getting text extract, VId:33, Path:/Root/System/Schema/ContentTypes/GenericContent/ListItem
+391	2017-10-10 01:14:16.23407	Index	A:UnitTestAdapter: Running test	T:11				Extracted length length: 104.
+392	2017-10-10 01:14:16.23407	Index	A:UnitTestAdapter: Running test	T:11	Op:33	End	00:00:00.001002	Getting text extract, VId:33, Path:/Root/System/Schema/ContentTypes/GenericContent/ListItem
+393	2017-10-10 01:14:16.33734	Index	A:UnitTestAdapter: Running test	T:11	Op:34	Start		Getting text extract, VId:34, Path:/Root/System/Schema/ContentTypes/GenericContent/ListItem/CustomListItem
+394	2017-10-10 01:14:16.33834	Index	A:UnitTestAdapter: Running test	T:11				Extracted length length: 198.
+395	2017-10-10 01:14:16.33834	Index	A:UnitTestAdapter: Running test	T:11	Op:34	End	00:00:00.001002	Getting text extract, VId:34, Path:/Root/System/Schema/ContentTypes/GenericContent/ListItem/CustomListItem
+396	2017-10-10 01:14:16.44062	Index	A:UnitTestAdapter: Running test	T:11	Op:35	Start		Getting text extract, VId:35, Path:/Root/System/Schema/ContentTypes/GenericContent/FieldSettingContent/DateTimeFieldSetting
+397	2017-10-10 01:14:16.44162	Index	A:UnitTestAdapter: Running test	T:11				Extracted length length: 55.
+398	2017-10-10 01:14:16.44162	Index	A:UnitTestAdapter: Running test	T:11	Op:35	End	00:00:00.001002	Getting text extract, VId:35, Path:/Root/System/Schema/ContentTypes/GenericContent/FieldSettingContent/DateTimeFieldSetting
+399	2017-10-10 01:14:16.58930	Index	A:UnitTestAdapter: Running test	T:11	Op:36	Start		Getting text extract, VId:36, Path:/Root/System/Schema/ContentTypes/GenericContent/Folder/Device
+400	2017-10-10 01:14:16.59031	Index	A:UnitTestAdapter: Running test	T:11				Extracted length length: 137.
+401	2017-10-10 01:14:16.59031	Index	A:UnitTestAdapter: Running test	T:11	Op:36	End	00:00:00.001002	Getting text extract, VId:36, Path:/Root/System/Schema/ContentTypes/GenericContent/Folder/Device
+402	2017-10-10 01:14:16.69461	Index	A:UnitTestAdapter: Running test	T:11	Op:37	Start		Getting text extract, VId:37, Path:/Root/System/Schema/ContentTypes/GenericContent/Folder/ContentList/Library
+403	2017-10-10 01:14:16.69561	Index	A:UnitTestAdapter: Running test	T:11				Extracted length length: 322.
+404	2017-10-10 01:14:16.69561	Index	A:UnitTestAdapter: Running test	T:11	Op:37	End	00:00:00.001002	Getting text extract, VId:37, Path:/Root/System/Schema/ContentTypes/GenericContent/Folder/ContentList/Library
+405	2017-10-10 01:14:16.82593	Index	A:UnitTestAdapter: Running test	T:11	Op:38	Start		Getting text extract, VId:38, Path:/Root/System/Schema/ContentTypes/GenericContent/Folder/ContentList/Library/DocumentLibrary
+406	2017-10-10 01:14:16.82794	Index	A:UnitTestAdapter: Running test	T:11				Extracted length length: 100.
+407	2017-10-10 01:14:16.82794	Index	A:UnitTestAdapter: Running test	T:11	Op:38	End	00:00:00.002005	Getting text extract, VId:38, Path:/Root/System/Schema/ContentTypes/GenericContent/Folder/ContentList/Library/DocumentLibrary
+408	2017-10-10 01:14:16.96229	Index	A:UnitTestAdapter: Running test	T:11	Op:39	Start		Getting text extract, VId:39, Path:/Root/System/Schema/ContentTypes/GenericContent/Folder/Domain
+409	2017-10-10 01:14:16.96329	Index	A:UnitTestAdapter: Running test	T:11				Extracted length length: 410.
+410	2017-10-10 01:14:16.96329	Index	A:UnitTestAdapter: Running test	T:11	Op:39	End	00:00:00.001002	Getting text extract, VId:39, Path:/Root/System/Schema/ContentTypes/GenericContent/Folder/Domain
+411	2017-10-10 01:14:17.07261	Index	A:UnitTestAdapter: Running test	T:11	Op:40	Start		Getting text extract, VId:40, Path:/Root/System/Schema/ContentTypes/GenericContent/Folder/Domains
+412	2017-10-10 01:14:17.07361	Index	A:UnitTestAdapter: Running test	T:11				Extracted length length: 74.
+413	2017-10-10 01:14:17.07361	Index	A:UnitTestAdapter: Running test	T:11	Op:40	End	00:00:00.001002	Getting text extract, VId:40, Path:/Root/System/Schema/ContentTypes/GenericContent/Folder/Domains
+414	2017-10-10 01:14:17.17889	Index	A:UnitTestAdapter: Running test	T:11	Op:41	Start		Getting text extract, VId:41, Path:/Root/System/Schema/ContentTypes/GenericContent/File
+415	2017-10-10 01:14:17.17990	Index	A:UnitTestAdapter: Running test	T:11				Extracted length length: 835.
+416	2017-10-10 01:14:17.17990	Index	A:UnitTestAdapter: Running test	T:11	Op:41	End	00:00:00.001003	Getting text extract, VId:41, Path:/Root/System/Schema/ContentTypes/GenericContent/File
+>417	2017-10-10 01:14:17.29620	Index	A:UnitTestAdapter: Running test	T:11	Op:42	Start		Getting text extract, VId:42, Path:/Root/System/Schema/ContentTypes/GenericContent/File/DynamicJsonContent
+418	2017-10-10 01:14:17.29718	Index	A:UnitTestAdapter: Running test	T:11				Extracted length length: 30.
+419	2017-10-10 01:14:17.29718	Index	A:UnitTestAdapter: Running test	T:11	Op:42	End	00:00:00.000979	Getting text extract, VId:42, Path:/Root/System/Schema/ContentTypes/GenericContent/File/DynamicJsonContent
+420	2017-10-10 01:14:17.42254	Index	A:UnitTestAdapter: Running test	T:11	Op:43	Start		Getting text extract, VId:43, Path:/Root/System/Schema/ContentTypes/GenericContent/Folder/Email
+421	2017-10-10 01:14:17.42254	Index	A:UnitTestAdapter: Running test	T:11				Extracted length length: 346.
+422	2017-10-10 01:14:17.42254	Index	A:UnitTestAdapter: Running test	T:11	Op:43	End	00:00:00.000000	Getting text extract, VId:43, Path:/Root/System/Schema/ContentTypes/GenericContent/Folder/Email
+423	2017-10-10 01:14:17.53080	Index	A:UnitTestAdapter: Running test	T:11	Op:44	Start		Getting text extract, VId:44, Path:/Root/System/Schema/ContentTypes/GenericContent/File/ExecutableFile
+424	2017-10-10 01:14:17.53183	Index	A:UnitTestAdapter: Running test	T:11				Extracted length length: 82.
+425	2017-10-10 01:14:17.53183	Index	A:UnitTestAdapter: Running test	T:11	Op:44	End	00:00:00.001029	Getting text extract, VId:44, Path:/Root/System/Schema/ContentTypes/GenericContent/File/ExecutableFile
+426	2017-10-10 01:14:17.65312	Index	A:UnitTestAdapter: Running test	T:11	Op:45	Start		Getting text extract, VId:45, Path:/Root/System/Schema/ContentTypes/GenericContent/Application/ExportToCsvApplication
+427	2017-10-10 01:14:17.65412	Index	A:UnitTestAdapter: Running test	T:11				Extracted length length: 92.
+428	2017-10-10 01:14:17.65412	Index	A:UnitTestAdapter: Running test	T:11	Op:45	End	00:00:00.001002	Getting text extract, VId:45, Path:/Root/System/Schema/ContentTypes/GenericContent/Application/ExportToCsvApplication
+429	2017-10-10 01:14:17.78250	Index	A:UnitTestAdapter: Running test	T:11	Op:46	Start		Getting text extract, VId:46, Path:/Root/System/Schema/ContentTypes/GenericContent/Application/GenericODataApplication
+430	2017-10-10 01:14:17.78349	Index	A:UnitTestAdapter: Running test	T:11				Extracted length length: 404.
+431	2017-10-10 01:14:17.78349	Index	A:UnitTestAdapter: Running test	T:11	Op:46	End	00:00:00.000997	Getting text extract, VId:46, Path:/Root/System/Schema/ContentTypes/GenericContent/Application/GenericODataApplication
+432	2017-10-10 01:14:17.91682	Index	A:UnitTestAdapter: Running test	T:11	Op:47	Start		Getting text extract, VId:47, Path:/Root/System/Schema/ContentTypes/GenericContent/Application/HttpHandlerApplication
+433	2017-10-10 01:14:17.91782	Index	A:UnitTestAdapter: Running test	T:11				Extracted length length: 92.
+434	2017-10-10 01:14:17.91782	Index	A:UnitTestAdapter: Running test	T:11	Op:47	End	00:00:00.001002	Getting text extract, VId:47, Path:/Root/System/Schema/ContentTypes/GenericContent/Application/HttpHandlerApplication
+435	2017-10-10 01:14:18.04518	Index	A:UnitTestAdapter: Running test	T:11	Op:48	Start		Getting text extract, VId:48, Path:/Root/System/Schema/ContentTypes/GenericContent/Application/HttpHandlerApplication/GetMetadataApplication
+436	2017-10-10 01:14:18.04518	Index	A:UnitTestAdapter: Running test	T:11				Extracted length length: 23.
+437	2017-10-10 01:14:18.04518	Index	A:UnitTestAdapter: Running test	T:11	Op:48	End	00:00:00.000000	Getting text extract, VId:48, Path:/Root/System/Schema/ContentTypes/GenericContent/Application/HttpHandlerApplication/GetMetadataApplication
+438	2017-10-10 01:14:18.17350	Index	A:UnitTestAdapter: Running test	T:11	Op:49	Start		Getting text extract, VId:49, Path:/Root/System/Schema/ContentTypes/GenericContent/Group
+439	2017-10-10 01:14:18.17450	Index	A:UnitTestAdapter: Running test	T:11				Extracted length length: 359.
+440	2017-10-10 01:14:18.17450	Index	A:UnitTestAdapter: Running test	T:11	Op:49	End	00:00:00.001002	Getting text extract, VId:49, Path:/Root/System/Schema/ContentTypes/GenericContent/Group
+>441	2017-10-10 01:14:18.28181	Index	A:UnitTestAdapter: Running test	T:11	Op:50	Start		Getting text extract, VId:50, Path:/Root/System/Schema/ContentTypes/GenericContent/File/HtmlTemplate
+442	2017-10-10 01:14:18.28582	Index	A:UnitTestAdapter: Running test	T:11				Extracted length length: 183.
+443	2017-10-10 01:14:18.28582	Index	A:UnitTestAdapter: Running test	T:11	Op:50	End	00:00:00.004011	Getting text extract, VId:50, Path:/Root/System/Schema/ContentTypes/GenericContent/File/HtmlTemplate
+444	2017-10-10 01:14:18.40715	Index	A:UnitTestAdapter: Running test	T:11	Op:51	Start		Getting text extract, VId:51, Path:/Root/System/Schema/ContentTypes/GenericContent/Application/HttpStatusApplication
+445	2017-10-10 01:14:18.40715	Index	A:UnitTestAdapter: Running test	T:11				Extracted length length: 555.
+446	2017-10-10 01:14:18.40715	Index	A:UnitTestAdapter: Running test	T:11	Op:51	End	00:00:00.000000	Getting text extract, VId:51, Path:/Root/System/Schema/ContentTypes/GenericContent/Application/HttpStatusApplication
+447	2017-10-10 01:14:18.53847	Index	A:UnitTestAdapter: Running test	T:11	Op:52	Start		Getting text extract, VId:52, Path:/Root/System/Schema/ContentTypes/GenericContent/FieldSettingContent/HyperLinkFieldSetting
+448	2017-10-10 01:14:18.53947	Index	A:UnitTestAdapter: Running test	T:11				Extracted length length: 57.
+449	2017-10-10 01:14:18.53947	Index	A:UnitTestAdapter: Running test	T:11	Op:52	End	00:00:00.001002	Getting text extract, VId:52, Path:/Root/System/Schema/ContentTypes/GenericContent/FieldSettingContent/HyperLinkFieldSetting
+450	2017-10-10 01:14:18.64575	Index	A:UnitTestAdapter: Running test	T:11	Op:53	Start		Getting text extract, VId:53, Path:/Root/System/Schema/ContentTypes/GenericContent/File/Image
+451	2017-10-10 01:14:18.64575	Index	A:UnitTestAdapter: Running test	T:11				Extracted length length: 283.
+452	2017-10-10 01:14:18.64575	Index	A:UnitTestAdapter: Running test	T:11	Op:53	End	00:00:00.000000	Getting text extract, VId:53, Path:/Root/System/Schema/ContentTypes/GenericContent/File/Image
+453	2017-10-10 01:14:18.77311	Index	A:UnitTestAdapter: Running test	T:11	Op:54	Start		Getting text extract, VId:54, Path:/Root/System/Schema/ContentTypes/GenericContent/Folder/ContentList/Library/ImageLibrary
+454	2017-10-10 01:14:18.77411	Index	A:UnitTestAdapter: Running test	T:11				Extracted length length: 172.
+455	2017-10-10 01:14:18.77411	Index	A:UnitTestAdapter: Running test	T:11	Op:54	End	00:00:00.001003	Getting text extract, VId:54, Path:/Root/System/Schema/ContentTypes/GenericContent/Folder/ContentList/Library/ImageLibrary
+456	2017-10-10 01:14:18.90547	Index	A:UnitTestAdapter: Running test	T:11	Op:55	Start		Getting text extract, VId:55, Path:/Root/System/Schema/ContentTypes/GenericContent/Application/ImgResizeApplication
+457	2017-10-10 01:14:18.90647	Index	A:UnitTestAdapter: Running test	T:11				Extracted length length: 3401.
+458	2017-10-10 01:14:18.90647	Index	A:UnitTestAdapter: Running test	T:11	Op:55	End	00:00:00.000999	Getting text extract, VId:55, Path:/Root/System/Schema/ContentTypes/GenericContent/Application/ImgResizeApplication
+459	2017-10-10 01:14:19.05884	Index	A:UnitTestAdapter: Running test	T:11	Op:56	Start		Getting text extract, VId:56, Path:/Root/System/Schema/ContentTypes/GenericContent/File/Settings
+460	2017-10-10 01:14:19.05985	Index	A:UnitTestAdapter: Running test	T:11				Extracted length length: 205.
+461	2017-10-10 01:14:19.05985	Index	A:UnitTestAdapter: Running test	T:11	Op:56	End	00:00:00.001002	Getting text extract, VId:56, Path:/Root/System/Schema/ContentTypes/GenericContent/File/Settings
+462	2017-10-10 01:14:19.18217	Index	A:UnitTestAdapter: Running test	T:11	Op:57	Start		Getting text extract, VId:57, Path:/Root/System/Schema/ContentTypes/GenericContent/File/Settings/IndexingSettings
+463	2017-10-10 01:14:19.18317	Index	A:UnitTestAdapter: Running test	T:11				Extracted length length: 211.
+464	2017-10-10 01:14:19.18317	Index	A:UnitTestAdapter: Running test	T:11	Op:57	End	00:00:00.001003	Getting text extract, VId:57, Path:/Root/System/Schema/ContentTypes/GenericContent/File/Settings/IndexingSettings
+>465	2017-10-10 01:14:19.30653	Index	A:UnitTestAdapter: Running test	T:11	Op:58	Start		Getting text extract, VId:58, Path:/Root/System/Schema/ContentTypes/GenericContent/FieldSettingContent/IntegerFieldSetting
+466	2017-10-10 01:14:19.30753	Index	A:UnitTestAdapter: Running test	T:11				Extracted length length: 52.
+467	2017-10-10 01:14:19.30753	Index	A:UnitTestAdapter: Running test	T:11	Op:58	End	00:00:00.001000	Getting text extract, VId:58, Path:/Root/System/Schema/ContentTypes/GenericContent/FieldSettingContent/IntegerFieldSetting
+468	2017-10-10 01:14:19.41180	Index	A:UnitTestAdapter: Running test	T:11	Op:59	Start		Getting text extract, VId:59, Path:/Root/System/Schema/ContentTypes/GenericContent/File/Settings/LoggingSettings
+469	2017-10-10 01:14:19.41281	Index	A:UnitTestAdapter: Running test	T:11				Extracted length length: 75.
+470	2017-10-10 01:14:19.41281	Index	A:UnitTestAdapter: Running test	T:11	Op:59	End	00:00:00.001005	Getting text extract, VId:59, Path:/Root/System/Schema/ContentTypes/GenericContent/File/Settings/LoggingSettings
+471	2017-10-10 01:14:19.53714	Index	A:UnitTestAdapter: Running test	T:11	Op:60	Start		Getting text extract, VId:60, Path:/Root/System/Schema/ContentTypes/GenericContent/FieldSettingContent/TextFieldSetting/LongTextFieldSetting
+472	2017-10-10 01:14:19.53811	Index	A:UnitTestAdapter: Running test	T:11				Extracted length length: 56.
+473	2017-10-10 01:14:19.53811	Index	A:UnitTestAdapter: Running test	T:11	Op:60	End	00:00:00.000972	Getting text extract, VId:60, Path:/Root/System/Schema/ContentTypes/GenericContent/FieldSettingContent/TextFieldSetting/LongTextFieldSetting
+474	2017-10-10 01:14:19.64241	Index	A:UnitTestAdapter: Running test	T:11	Op:61	Start		Getting text extract, VId:61, Path:/Root/System/Schema/ContentTypes/GenericContent/ListItem/Memo
+475	2017-10-10 01:14:19.64241	Index	A:UnitTestAdapter: Running test	T:11				Extracted length length: 450.
+476	2017-10-10 01:14:19.64241	Index	A:UnitTestAdapter: Running test	T:11	Op:61	End	00:00:00.000000	Getting text extract, VId:61, Path:/Root/System/Schema/ContentTypes/GenericContent/ListItem/Memo
+477	2017-10-10 01:14:19.75271	Index	A:UnitTestAdapter: Running test	T:11	Op:62	Start		Getting text extract, VId:62, Path:/Root/System/Schema/ContentTypes/GenericContent/Folder/ContentList/ItemList/MemoList
+478	2017-10-10 01:14:19.75371	Index	A:UnitTestAdapter: Running test	T:11				Extracted length length: 79.
+479	2017-10-10 01:14:19.75371	Index	A:UnitTestAdapter: Running test	T:11	Op:62	End	00:00:00.001001	Getting text extract, VId:62, Path:/Root/System/Schema/ContentTypes/GenericContent/Folder/ContentList/ItemList/MemoList
+480	2017-10-10 01:14:19.88506	Index	A:UnitTestAdapter: Running test	T:11	Op:63	Start		Getting text extract, VId:63, Path:/Root/System/Schema/ContentTypes/GenericContent/FieldSettingContent/NullFieldSetting
+481	2017-10-10 01:14:19.88606	Index	A:UnitTestAdapter: Running test	T:11				Extracted length length: 39.
+482	2017-10-10 01:14:19.88606	Index	A:UnitTestAdapter: Running test	T:11	Op:63	End	00:00:00.001005	Getting text extract, VId:63, Path:/Root/System/Schema/ContentTypes/GenericContent/FieldSettingContent/NullFieldSetting
+483	2017-10-10 01:14:20.04582	Index	A:UnitTestAdapter: Running test	T:11	Op:64	Start		Getting text extract, VId:64, Path:/Root/System/Schema/ContentTypes/GenericContent/Folder/OrganizationalUnit
+484	2017-10-10 01:14:20.04682	Index	A:UnitTestAdapter: Running test	T:11				Extracted length length: 439.
+485	2017-10-10 01:14:20.04682	Index	A:UnitTestAdapter: Running test	T:11	Op:64	End	00:00:00.001001	Getting text extract, VId:64, Path:/Root/System/Schema/ContentTypes/GenericContent/Folder/OrganizationalUnit
+486	2017-10-10 01:14:20.15310	Index	A:UnitTestAdapter: Running test	T:11	Op:65	Start		Getting text extract, VId:65, Path:/Root/System/Schema/ContentTypes/GenericContent/FieldSettingContent/TextFieldSetting/ShortTextFieldSetting/PasswordFieldSetting
+487	2017-10-10 01:14:20.15411	Index	A:UnitTestAdapter: Running test	T:11				Extracted length length: 56.
+488	2017-10-10 01:14:20.15411	Index	A:UnitTestAdapter: Running test	T:11	Op:65	End	00:00:00.001002	Getting text extract, VId:65, Path:/Root/System/Schema/ContentTypes/GenericContent/FieldSettingContent/TextFieldSetting/ShortTextFieldSetting/PasswordFieldSetting
+489	2017-10-10 01:14:20.26042	Index	A:UnitTestAdapter: Running test	T:11	Op:66	Start		Getting text extract, VId:66, Path:/Root/System/Schema/ContentTypes/GenericContent/FieldSettingContent/TextFieldSetting/ShortTextFieldSetting/ChoiceFieldSetting/PermissionChoiceFieldSetting
+490	2017-10-10 01:14:20.26142	Index	A:UnitTestAdapter: Running test	T:11				Extracted length length: 51.
+491	2017-10-10 01:14:20.26142	Index	A:UnitTestAdapter: Running test	T:11	Op:66	End	00:00:00.001002	Getting text extract, VId:66, Path:/Root/System/Schema/ContentTypes/GenericContent/FieldSettingContent/TextFieldSetting/ShortTextFieldSetting/ChoiceFieldSetting/PermissionChoiceFieldSetting
+>492	2017-10-10 01:14:20.36667	Index	A:UnitTestAdapter: Running test	T:11	Op:67	Start		Getting text extract, VId:67, Path:/Root/System/Schema/ContentTypes/GenericContent/Folder/PortalRoot
+493	2017-10-10 01:14:20.36767	Index	A:UnitTestAdapter: Running test	T:11				Extracted length length: 193.
+494	2017-10-10 01:14:20.36767	Index	A:UnitTestAdapter: Running test	T:11	Op:67	End	00:00:00.001002	Getting text extract, VId:67, Path:/Root/System/Schema/ContentTypes/GenericContent/Folder/PortalRoot
+495	2017-10-10 01:14:20.47297	Index	A:UnitTestAdapter: Running test	T:11	Op:68	Start		Getting text extract, VId:68, Path:/Root/System/Schema/ContentTypes/GenericContent/File/Settings/PortalSettings
+496	2017-10-10 01:14:20.47398	Index	A:UnitTestAdapter: Running test	T:11				Extracted length length: 73.
+497	2017-10-10 01:14:20.47398	Index	A:UnitTestAdapter: Running test	T:11	Op:68	End	00:00:00.001003	Getting text extract, VId:68, Path:/Root/System/Schema/ContentTypes/GenericContent/File/Settings/PortalSettings
+498	2017-10-10 01:14:20.59731	Index	A:UnitTestAdapter: Running test	T:11	Op:69	Start		Getting text extract, VId:69, Path:/Root/System/Schema/ContentTypes/GenericContent/File/Image/PreviewImage
+499	2017-10-10 01:14:20.59831	Index	A:UnitTestAdapter: Running test	T:11				Extracted length length: 78.
+500	2017-10-10 01:14:20.59831	Index	A:UnitTestAdapter: Running test	T:11	Op:69	End	00:00:00.001002	Getting text extract, VId:69, Path:/Root/System/Schema/ContentTypes/GenericContent/File/Image/PreviewImage
+501	2017-10-10 01:14:20.73063	Index	A:UnitTestAdapter: Running test	T:11	Op:70	Start		Getting text extract, VId:70, Path:/Root/System/Schema/ContentTypes/GenericContent/Folder/ProfileDomain
+502	2017-10-10 01:14:20.73164	Index	A:UnitTestAdapter: Running test	T:11				Extracted length length: 191.
+503	2017-10-10 01:14:20.73164	Index	A:UnitTestAdapter: Running test	T:11	Op:70	End	00:00:00.001002	Getting text extract, VId:70, Path:/Root/System/Schema/ContentTypes/GenericContent/Folder/ProfileDomain
+504	2017-10-10 01:14:20.83591	Index	A:UnitTestAdapter: Running test	T:11	Op:71	Start		Getting text extract, VId:71, Path:/Root/System/Schema/ContentTypes/GenericContent/Folder/Profiles
+505	2017-10-10 01:14:20.83692	Index	A:UnitTestAdapter: Running test	T:11				Extracted length length: 83.
+506	2017-10-10 01:14:20.83692	Index	A:UnitTestAdapter: Running test	T:11	Op:71	End	00:00:00.001002	Getting text extract, VId:71, Path:/Root/System/Schema/ContentTypes/GenericContent/Folder/Profiles
+507	2017-10-10 01:14:20.94123	Index	A:UnitTestAdapter: Running test	T:11	Op:72	Start		Getting text extract, VId:72, Path:/Root/System/Schema/ContentTypes/GenericContent/Query
+508	2017-10-10 01:14:20.94223	Index	A:UnitTestAdapter: Running test	T:11				Extracted length length: 272.
+509	2017-10-10 01:14:20.94223	Index	A:UnitTestAdapter: Running test	T:11	Op:72	End	00:00:00.001001	Getting text extract, VId:72, Path:/Root/System/Schema/ContentTypes/GenericContent/Query
+510	2017-10-10 01:14:21.05352	Index	A:UnitTestAdapter: Running test	T:11	Op:73	Start		Getting text extract, VId:73, Path:/Root/System/Schema/ContentTypes/GenericContent/FieldSettingContent/ReferenceFieldSetting
+511	2017-10-10 01:14:21.05452	Index	A:UnitTestAdapter: Running test	T:11				Extracted length length: 57.
+512	2017-10-10 01:14:21.05452	Index	A:UnitTestAdapter: Running test	T:11	Op:73	End	00:00:00.001001	Getting text extract, VId:73, Path:/Root/System/Schema/ContentTypes/GenericContent/FieldSettingContent/ReferenceFieldSetting
+513	2017-10-10 01:14:21.15779	Index	A:UnitTestAdapter: Running test	T:11	Op:74	Start		Getting text extract, VId:74, Path:/Root/System/Schema/ContentTypes/GenericContent/File/SystemFile
+514	2017-10-10 01:14:21.15879	Index	A:UnitTestAdapter: Running test	T:11				Extracted length length: 76.
+515	2017-10-10 01:14:21.15879	Index	A:UnitTestAdapter: Running test	T:11	Op:74	End	00:00:00.001003	Getting text extract, VId:74, Path:/Root/System/Schema/ContentTypes/GenericContent/File/SystemFile
+516	2017-10-10 01:14:21.27909	Index	A:UnitTestAdapter: Running test	T:11	Op:75	Start		Getting text extract, VId:75, Path:/Root/System/Schema/ContentTypes/GenericContent/File/SystemFile/Resource
+517	2017-10-10 01:14:21.28009	Index	A:UnitTestAdapter: Running test	T:11				Extracted length length: 348.
+518	2017-10-10 01:14:21.28009	Index	A:UnitTestAdapter: Running test	T:11	Op:75	End	00:00:00.001002	Getting text extract, VId:75, Path:/Root/System/Schema/ContentTypes/GenericContent/File/SystemFile/Resource
+>519	2017-10-10 01:14:21.40144	Index	A:UnitTestAdapter: Running test	T:11	Op:76	Start		Getting text extract, VId:76, Path:/Root/System/Schema/ContentTypes/GenericContent/Folder/SystemFolder
+520	2017-10-10 01:14:21.40244	Index	A:UnitTestAdapter: Running test	T:11				Extracted length length: 151.
+521	2017-10-10 01:14:21.40244	Index	A:UnitTestAdapter: Running test	T:11	Op:76	End	00:00:00.001000	Getting text extract, VId:76, Path:/Root/System/Schema/ContentTypes/GenericContent/Folder/SystemFolder
+522	2017-10-10 01:14:21.50572	Index	A:UnitTestAdapter: Running test	T:11	Op:77	Start		Getting text extract, VId:77, Path:/Root/System/Schema/ContentTypes/GenericContent/Folder/SystemFolder/Resources
+523	2017-10-10 01:14:21.50572	Index	A:UnitTestAdapter: Running test	T:11				Extracted length length: 80.
+524	2017-10-10 01:14:21.50572	Index	A:UnitTestAdapter: Running test	T:11	Op:77	End	00:00:00.000000	Getting text extract, VId:77, Path:/Root/System/Schema/ContentTypes/GenericContent/Folder/SystemFolder/Resources
+525	2017-10-10 01:14:21.60999	Index	A:UnitTestAdapter: Running test	T:11	Op:78	Start		Getting text extract, VId:78, Path:/Root/System/Schema/ContentTypes/GenericContent/Application/RssApplication
+526	2017-10-10 01:14:21.61099	Index	A:UnitTestAdapter: Running test	T:11				Extracted length length: 76.
+527	2017-10-10 01:14:21.61099	Index	A:UnitTestAdapter: Running test	T:11	Op:78	End	00:00:00.000997	Getting text extract, VId:78, Path:/Root/System/Schema/ContentTypes/GenericContent/Application/RssApplication
+528	2017-10-10 01:14:21.73529	Index	A:UnitTestAdapter: Running test	T:11	Op:79	Start		Getting text extract, VId:79, Path:/Root/System/Schema/ContentTypes/GenericContent/Folder/RuntimeContentContainer
+529	2017-10-10 01:14:21.73630	Index	A:UnitTestAdapter: Running test	T:11				Extracted length length: 89.
+530	2017-10-10 01:14:21.73630	Index	A:UnitTestAdapter: Running test	T:11	Op:79	End	00:00:00.001002	Getting text extract, VId:79, Path:/Root/System/Schema/ContentTypes/GenericContent/Folder/RuntimeContentContainer
+531	2017-10-10 01:14:21.83957	Index	A:UnitTestAdapter: Running test	T:11	Op:80	Start		Getting text extract, VId:80, Path:/Root/System/Schema/ContentTypes/GenericContent/Folder/Workspace
+532	2017-10-10 01:14:21.84057	Index	A:UnitTestAdapter: Running test	T:11				Extracted length length: 891.
+533	2017-10-10 01:14:21.84057	Index	A:UnitTestAdapter: Running test	T:11	Op:80	End	00:00:00.001002	Getting text extract, VId:80, Path:/Root/System/Schema/ContentTypes/GenericContent/Folder/Workspace
+534	2017-10-10 01:14:21.95588	Index	A:UnitTestAdapter: Running test	T:11	Op:81	Start		Getting text extract, VId:81, Path:/Root/System/Schema/ContentTypes/GenericContent/Folder/Workspace/Site
+535	2017-10-10 01:14:21.95691	Index	A:UnitTestAdapter: Running test	T:11				Extracted length length: 1697.
+536	2017-10-10 01:14:21.95691	Index	A:UnitTestAdapter: Running test	T:11	Op:81	End	00:00:00.001031	Getting text extract, VId:81, Path:/Root/System/Schema/ContentTypes/GenericContent/Folder/Workspace/Site
+537	2017-10-10 01:14:22.09327	Index	A:UnitTestAdapter: Running test	T:11	Op:82	Start		Getting text extract, VId:82, Path:/Root/System/Schema/ContentTypes/GenericContent/Folder/Sites
+538	2017-10-10 01:14:22.09427	Index	A:UnitTestAdapter: Running test	T:11				Extracted length length: 66.
+539	2017-10-10 01:14:22.09427	Index	A:UnitTestAdapter: Running test	T:11	Op:82	End	00:00:00.000999	Getting text extract, VId:82, Path:/Root/System/Schema/ContentTypes/GenericContent/Folder/Sites
+540	2017-10-10 01:14:22.20757	Index	A:UnitTestAdapter: Running test	T:11	Op:83	Start		Getting text extract, VId:83, Path:/Root/System/Schema/ContentTypes/GenericContent/Folder/SmartFolder
+541	2017-10-10 01:14:22.20855	Index	A:UnitTestAdapter: Running test	T:11				Extracted length length: 377.
+542	2017-10-10 01:14:22.20855	Index	A:UnitTestAdapter: Running test	T:11	Op:83	End	00:00:00.000976	Getting text extract, VId:83, Path:/Root/System/Schema/ContentTypes/GenericContent/Folder/SmartFolder

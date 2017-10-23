@@ -67,6 +67,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Compile Include="Analysis\Category.cs" />
+    <Compile Include="Analysis\DirectoryReader.cs" />
+    <Compile Include="Analysis\Entry.cs" />
+    <Compile Include="Analysis\EntryEnumerable.cs" />
+    <Compile Include="Analysis\FileReader.cs" />
+    <Compile Include="Analysis\Reader.cs" />
+    <Compile Include="Analysis\SessionReader.cs" />
+    <Compile Include="Analysis\SessionReaderEnumerator.cs" />
+    <Compile Include="Analysis\Status.cs" />
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -106,10 +115,19 @@
     </None>
     <AppDesigner Include="Properties\" />
     <None Include="SampleFiles\detailedlog_20171015-062009Z.log" />
+    <None Include="SampleFiles\session\detailedlog_20171010-011343Z.log" />
+    <None Include="SampleFiles\session\detailedlog_20171015-062009Z.log" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="SampleFiles\session\detailedlog_20171010-011422Z.log" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="SampleFiles\session\detailedlog_20171010-011425Z.log" />
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

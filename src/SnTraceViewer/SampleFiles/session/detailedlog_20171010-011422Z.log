@@ -1,0 +1,569 @@
+﻿----
+>543	2017-10-10 01:14:22.32088	Index	A:UnitTestAdapter: Running test	T:11	Op:84	Start		Getting text extract, VId:84, Path:/Root/System/Schema/ContentTypes/GenericContent/ListItem/Task
+544	2017-10-10 01:14:22.32188	Index	A:UnitTestAdapter: Running test	T:11				Extracted length length: 851.
+545	2017-10-10 01:14:22.32188	Index	A:UnitTestAdapter: Running test	T:11	Op:84	End	00:00:00.000999	Getting text extract, VId:84, Path:/Root/System/Schema/ContentTypes/GenericContent/ListItem/Task
+546	2017-10-10 01:14:22.44918	Index	A:UnitTestAdapter: Running test	T:11	Op:85	Start		Getting text extract, VId:85, Path:/Root/System/Schema/ContentTypes/GenericContent/Folder/ContentList/ItemList/TaskList
+547	2017-10-10 01:14:22.45019	Index	A:UnitTestAdapter: Running test	T:11				Extracted length length: 125.
+548	2017-10-10 01:14:22.45019	Index	A:UnitTestAdapter: Running test	T:11	Op:85	End	00:00:00.001003	Getting text extract, VId:85, Path:/Root/System/Schema/ContentTypes/GenericContent/Folder/ContentList/ItemList/TaskList
+549	2017-10-10 01:14:22.58153	Index	A:UnitTestAdapter: Running test	T:11	Op:86	Start		Getting text extract, VId:86, Path:/Root/System/Schema/ContentTypes/GenericContent/Folder/TrashBag
+550	2017-10-10 01:14:22.58254	Index	A:UnitTestAdapter: Running test	T:11				Extracted length length: 597.
+551	2017-10-10 01:14:22.58254	Index	A:UnitTestAdapter: Running test	T:11	Op:86	End	00:00:00.001003	Getting text extract, VId:86, Path:/Root/System/Schema/ContentTypes/GenericContent/Folder/TrashBag
+552	2017-10-10 01:14:22.69385	Index	A:UnitTestAdapter: Running test	T:11	Op:87	Start		Getting text extract, VId:87, Path:/Root/System/Schema/ContentTypes/GenericContent/Folder/Workspace/TrashBin
+553	2017-10-10 01:14:22.69483	Index	A:UnitTestAdapter: Running test	T:11				Extracted length length: 591.
+554	2017-10-10 01:14:22.69483	Index	A:UnitTestAdapter: Running test	T:11	Op:87	End	00:00:00.000979	Getting text extract, VId:87, Path:/Root/System/Schema/ContentTypes/GenericContent/Folder/Workspace/TrashBin
+555	2017-10-10 01:14:22.81415	Index	A:UnitTestAdapter: Running test	T:11	Op:88	Start		Getting text extract, VId:88, Path:/Root/System/Schema/ContentTypes/GenericContent/User
+556	2017-10-10 01:14:22.81515	Index	A:UnitTestAdapter: Running test	T:11				Extracted length length: 2971.
+557	2017-10-10 01:14:22.81515	Index	A:UnitTestAdapter: Running test	T:11	Op:88	End	00:00:00.001002	Getting text extract, VId:88, Path:/Root/System/Schema/ContentTypes/GenericContent/User
+558	2017-10-10 01:14:22.96257	Index	A:UnitTestAdapter: Running test	T:11	Op:89	Start		Getting text extract, VId:89, Path:/Root/System/Schema/ContentTypes/GenericContent/Folder/Workspace/UserProfile
+559	2017-10-10 01:14:22.96356	Index	A:UnitTestAdapter: Running test	T:11				Extracted length length: 311.
+560	2017-10-10 01:14:22.96356	Index	A:UnitTestAdapter: Running test	T:11	Op:89	End	00:00:00.000994	Getting text extract, VId:89, Path:/Root/System/Schema/ContentTypes/GenericContent/Folder/Workspace/UserProfile
+561	2017-10-10 01:14:23.08186	Index	A:UnitTestAdapter: Running test	T:11	Op:90	Start		Getting text extract, VId:90, Path:/Root/System/Schema/ContentTypes/GenericContent/Application/WebServiceApplication
+562	2017-10-10 01:14:23.08286	Index	A:UnitTestAdapter: Running test	T:11				Extracted length length: 180.
+563	2017-10-10 01:14:23.08286	Index	A:UnitTestAdapter: Running test	T:11	Op:90	End	00:00:00.001003	Getting text extract, VId:90, Path:/Root/System/Schema/ContentTypes/GenericContent/Application/WebServiceApplication
+564	2017-10-10 01:14:23.21722	Index	A:UnitTestAdapter: Running test	T:11	Op:91	Start		Getting text extract, VId:91, Path:/Root/System/Schema/ContentTypes/GenericContent/FieldSettingContent/XmlFieldSetting
+565	2017-10-10 01:14:23.21822	Index	A:UnitTestAdapter: Running test	T:11				Extracted length length: 45.
+566	2017-10-10 01:14:23.21822	Index	A:UnitTestAdapter: Running test	T:11	Op:91	End	00:00:00.001002	Getting text extract, VId:91, Path:/Root/System/Schema/ContentTypes/GenericContent/FieldSettingContent/XmlFieldSetting
+>567	2017-10-10 01:14:23.32751	Index	A:UnitTestAdapter: Running test	T:11	Op:92	Start		Getting text extract, VId:92, Path:/Root/System/Schema/ContentTypes/GenericContent/FieldSettingContent/TextFieldSetting/ShortTextFieldSetting/ChoiceFieldSetting/YesNoFieldSetting
+568	2017-10-10 01:14:23.32851	Index	A:UnitTestAdapter: Running test	T:11				Extracted length length: 49.
+569	2017-10-10 01:14:23.32851	Index	A:UnitTestAdapter: Running test	T:11	Op:92	End	00:00:00.001003	Getting text extract, VId:92, Path:/Root/System/Schema/ContentTypes/GenericContent/FieldSettingContent/TextFieldSetting/ShortTextFieldSetting/ChoiceFieldSetting/YesNoFieldSetting
+570	2017-10-10 01:14:23.44385	Index	A:UnitTestAdapter: Running test	T:11	Op:93	Start		Getting text extract, VId:93, Path:/Root/System/Settings/Indexing.settings
+571	2017-10-10 01:14:23.44486	Index	A:UnitTestAdapter: Running test	T:11	Op:93	End	00:00:00.001003	Getting text extract, VId:93, Path:/Root/System/Settings/Indexing.settings
+572	2017-10-10 01:14:23.44586	Index	A:UnitTestAdapter: Running test	T:11	Op:94	Start		Getting text extract, VId:94, Path:/Root/System/Settings/Logging.settings
+573	2017-10-10 01:14:23.44686	Index	A:UnitTestAdapter: Running test	T:11	Op:94	End	00:00:00.001002	Getting text extract, VId:94, Path:/Root/System/Settings/Logging.settings
+574	2017-10-10 01:14:23.44887	Index	A:UnitTestAdapter: Running test	T:11	Op:95	Start		Getting text extract, VId:95, Path:/Root/System/Settings/MailProcessor.settings
+575	2017-10-10 01:14:23.44987	Index	A:UnitTestAdapter: Running test	T:11	Op:95	End	00:00:00.001002	Getting text extract, VId:95, Path:/Root/System/Settings/MailProcessor.settings
+576	2017-10-10 01:14:23.45086	Index	A:UnitTestAdapter: Running test	T:11	Op:96	Start		Getting text extract, VId:96, Path:/Root/System/Settings/Portal.settings
+577	2017-10-10 01:14:23.45184	Index	A:UnitTestAdapter: Running test	T:11	Op:96	End	00:00:00.000973	Getting text extract, VId:96, Path:/Root/System/Settings/Portal.settings
+578	2017-10-10 01:14:23.45288	Index	A:UnitTestAdapter: Running test	T:11	Op:97	Start		Getting text extract, VId:97, Path:/Root/System/Settings/TaskManagement.settings
+579	2017-10-10 01:14:23.45388	Index	A:UnitTestAdapter: Running test	T:11	Op:97	End	00:00:00.001001	Getting text extract, VId:97, Path:/Root/System/Settings/TaskManagement.settings
+580	2017-10-10 01:14:23.45488	Index	A:UnitTestAdapter: Running test	T:11	Op:98	Start		Getting text extract, VId:98, Path:/Root/System/Settings/UserProfile.settings
+581	2017-10-10 01:14:23.45588	Index	A:UnitTestAdapter: Running test	T:11	Op:98	End	00:00:00.001002	Getting text extract, VId:98, Path:/Root/System/Settings/UserProfile.settings
+582	2017-10-10 01:14:23.46491	Index	A:UnitTestAdapter: Running test	T:11	Op:99	Start		Getting text extract, VId:103, Path:/Root/(apps)/ContentList/ExchangeService.asmx
+583	2017-10-10 01:14:23.46491	Index	A:UnitTestAdapter: Running test	T:11	Op:99	End	00:00:00.000000	Getting text extract, VId:103, Path:/Root/(apps)/ContentList/ExchangeService.asmx
+584	2017-10-10 01:14:23.65438	Index	A:UnitTestAdapter: Running test	T:11	Op:100	Start		Getting text extract, VId:200, Path:/Root/IMS/BuiltIn/Portal/Admin/Admin.png
+585	2017-10-10 01:14:23.65538	Index	A:UnitTestAdapter: Running test	T:11	Op:100	End	00:00:00.001003	Getting text extract, VId:200, Path:/Root/IMS/BuiltIn/Portal/Admin/Admin.png
+586	2017-10-10 01:14:23.67242	Index	A:UnitTestAdapter: Running test	T:11	Op:101	Start		Getting text extract, VId:209, Path:/Root/IMS/BuiltIn/Portal/VirtualADUser
+587	2017-10-10 01:14:23.67242	Index	A:UnitTestAdapter: Running test	T:11	Op:101	End	00:00:00.000000	Getting text extract, VId:209, Path:/Root/IMS/BuiltIn/Portal/VirtualADUser
+588	2017-10-10 01:14:23.67643	Index	A:UnitTestAdapter: Running test	T:11	Op:102	Start		Getting text extract, VId:211, Path:/Root/Localization/Content.xml
+589	2017-10-10 01:14:23.67643	Index	A:UnitTestAdapter: Running test	T:11	Op:102	End	00:00:00.000000	Getting text extract, VId:211, Path:/Root/Localization/Content.xml
+590	2017-10-10 01:14:23.67844	Index	A:UnitTestAdapter: Running test	T:11	Op:103	Start		Getting text extract, VId:212, Path:/Root/Localization/CtdResourcesAB.xml
+591	2017-10-10 01:14:23.67944	Index	A:UnitTestAdapter: Running test	T:11	Op:103	End	00:00:00.001002	Getting text extract, VId:212, Path:/Root/Localization/CtdResourcesAB.xml
+592	2017-10-10 01:14:23.68145	Index	A:UnitTestAdapter: Running test	T:11	Op:104	Start		Getting text extract, VId:213, Path:/Root/Localization/CtdResourcesCD.xml
+593	2017-10-10 01:14:23.68245	Index	A:UnitTestAdapter: Running test	T:11	Op:104	End	00:00:00.001002	Getting text extract, VId:213, Path:/Root/Localization/CtdResourcesCD.xml
+594	2017-10-10 01:14:23.69248	Index	A:UnitTestAdapter: Running test	T:11	Op:105	Start		Getting text extract, VId:214, Path:/Root/Localization/CtdResourcesEF.xml
+595	2017-10-10 01:14:23.69248	Index	A:UnitTestAdapter: Running test	T:11	Op:105	End	00:00:00.000000	Getting text extract, VId:214, Path:/Root/Localization/CtdResourcesEF.xml
+596	2017-10-10 01:14:23.69548	Index	A:UnitTestAdapter: Running test	T:11	Op:106	Start		Getting text extract, VId:215, Path:/Root/Localization/CtdResourcesGH.xml
+597	2017-10-10 01:14:23.69649	Index	A:UnitTestAdapter: Running test	T:11	Op:106	End	00:00:00.001003	Getting text extract, VId:215, Path:/Root/Localization/CtdResourcesGH.xml
+598	2017-10-10 01:14:23.69749	Index	A:UnitTestAdapter: Running test	T:11	Op:107	Start		Getting text extract, VId:216, Path:/Root/Localization/CtdResourcesIJK.xml
+599	2017-10-10 01:14:23.69849	Index	A:UnitTestAdapter: Running test	T:11	Op:107	End	00:00:00.001001	Getting text extract, VId:216, Path:/Root/Localization/CtdResourcesIJK.xml
+600	2017-10-10 01:14:23.69949	Index	A:UnitTestAdapter: Running test	T:11	Op:108	Start		Getting text extract, VId:217, Path:/Root/Localization/CtdResourcesLM.xml
+601	2017-10-10 01:14:23.70050	Index	A:UnitTestAdapter: Running test	T:11	Op:108	End	00:00:00.001002	Getting text extract, VId:217, Path:/Root/Localization/CtdResourcesLM.xml
+602	2017-10-10 01:14:23.70150	Index	A:UnitTestAdapter: Running test	T:11	Op:109	Start		Getting text extract, VId:218, Path:/Root/Localization/CtdResourcesNOP.xml
+603	2017-10-10 01:14:23.70250	Index	A:UnitTestAdapter: Running test	T:11	Op:109	End	00:00:00.001002	Getting text extract, VId:218, Path:/Root/Localization/CtdResourcesNOP.xml
+604	2017-10-10 01:14:23.70451	Index	A:UnitTestAdapter: Running test	T:11	Op:110	Start		Getting text extract, VId:219, Path:/Root/Localization/CtdResourcesQ.xml
+605	2017-10-10 01:14:23.70451	Index	A:UnitTestAdapter: Running test	T:11	Op:110	End	00:00:00.000000	Getting text extract, VId:219, Path:/Root/Localization/CtdResourcesQ.xml
+606	2017-10-10 01:14:23.70651	Index	A:UnitTestAdapter: Running test	T:11	Op:111	Start		Getting text extract, VId:220, Path:/Root/Localization/CtdResourcesRS.xml
+607	2017-10-10 01:14:23.70651	Index	A:UnitTestAdapter: Running test	T:11	Op:111	End	00:00:00.000000	Getting text extract, VId:220, Path:/Root/Localization/CtdResourcesRS.xml
+608	2017-10-10 01:14:23.70852	Index	A:UnitTestAdapter: Running test	T:11	Op:112	Start		Getting text extract, VId:221, Path:/Root/Localization/CtdResourcesTZ.xml
+609	2017-10-10 01:14:23.70852	Index	A:UnitTestAdapter: Running test	T:11	Op:112	End	00:00:00.000000	Getting text extract, VId:221, Path:/Root/Localization/CtdResourcesTZ.xml
+610	2017-10-10 01:14:23.71052	Index	A:UnitTestAdapter: Running test	T:11	Op:113	Start		Getting text extract, VId:222, Path:/Root/Localization/Exceptions.xml
+611	2017-10-10 01:14:23.71153	Index	A:UnitTestAdapter: Running test	T:11	Op:113	End	00:00:00.001002	Getting text extract, VId:222, Path:/Root/Localization/Exceptions.xml
+612	2017-10-10 01:14:23.71353	Index	A:UnitTestAdapter: Running test	T:11	Op:114	Start		Getting text extract, VId:223, Path:/Root/Localization/Trash.xml
+613	2017-10-10 01:14:23.71454	Index	A:UnitTestAdapter: Running test	T:11	Op:114	End	00:00:00.001013	Getting text extract, VId:223, Path:/Root/Localization/Trash.xml
+614	2017-10-10 01:14:23.72055	Index	A:UnitTestAdapter: Running test	T:11	Op:115	Start		Getting text extract, VId:226, Path:/Root/System/ErrorMessages/Default/Global.html
+615	2017-10-10 01:14:23.72055	Index	A:UnitTestAdapter: Running test	T:11	Op:115	End	00:00:00.000000	Getting text extract, VId:226, Path:/Root/System/ErrorMessages/Default/Global.html
+616	2017-10-10 01:14:23.72256	Index	A:UnitTestAdapter: Running test	T:11	Op:116	Start		Getting text extract, VId:227, Path:/Root/System/ErrorMessages/Default/UserGlobal.html
+617	2017-10-10 01:14:23.72356	Index	A:UnitTestAdapter: Running test	T:11	Op:116	End	00:00:00.001001	Getting text extract, VId:227, Path:/Root/System/ErrorMessages/Default/UserGlobal.html
+618	2017-10-10 01:14:23.75263	Index	A:UnitTestAdapter: Running test	T:11	Op:117	Start		Getting text extract, VId:238, Path:/Root/System/WebRoot/binaryhandler.ashx
+619	2017-10-10 01:14:23.75364	Index	A:UnitTestAdapter: Running test	T:11	Op:117	End	00:00:00.001002	Getting text extract, VId:238, Path:/Root/System/WebRoot/binaryhandler.ashx
+620	2017-10-10 01:14:23.75664	Index	A:UnitTestAdapter: Running test	T:11	Op:118	Start		Getting text extract, VId:240, Path:/Root/System/WebRoot/DWS/Dws.asmx
+621	2017-10-10 01:14:23.75664	Index	A:UnitTestAdapter: Running test	T:11	Op:118	End	00:00:00.000000	Getting text extract, VId:240, Path:/Root/System/WebRoot/DWS/Dws.asmx
+622	2017-10-10 01:14:23.75865	Index	A:UnitTestAdapter: Running test	T:11	Op:119	Start		Getting text extract, VId:241, Path:/Root/System/WebRoot/DWS/Fpp.ashx
+623	2017-10-10 01:14:23.75965	Index	A:UnitTestAdapter: Running test	T:11	Op:119	End	00:00:00.001002	Getting text extract, VId:241, Path:/Root/System/WebRoot/DWS/Fpp.ashx
+624	2017-10-10 01:14:23.76166	Index	A:UnitTestAdapter: Running test	T:11	Op:120	Start		Getting text extract, VId:242, Path:/Root/System/WebRoot/DWS/Lists.asmx
+625	2017-10-10 01:14:23.76166	Index	A:UnitTestAdapter: Running test	T:11	Op:120	End	00:00:00.000000	Getting text extract, VId:242, Path:/Root/System/WebRoot/DWS/Lists.asmx
+626	2017-10-10 01:14:23.76366	Index	A:UnitTestAdapter: Running test	T:11	Op:121	Start		Getting text extract, VId:243, Path:/Root/System/WebRoot/DWS/owssvr.aspx
+627	2017-10-10 01:14:23.76767	Index	A:UnitTestAdapter: Running test	T:11	Op:121	End	00:00:00.004010	Getting text extract, VId:243, Path:/Root/System/WebRoot/DWS/owssvr.aspx
+628	2017-10-10 01:14:23.76968	Index	A:UnitTestAdapter: Running test	T:11	Op:122	Start		Getting text extract, VId:244, Path:/Root/System/WebRoot/DWS/Versions.asmx
+629	2017-10-10 01:14:23.76968	Index	A:UnitTestAdapter: Running test	T:11	Op:122	End	00:00:00.000000	Getting text extract, VId:244, Path:/Root/System/WebRoot/DWS/Versions.asmx
+630	2017-10-10 01:14:23.77168	Index	A:UnitTestAdapter: Running test	T:11	Op:123	Start		Getting text extract, VId:245, Path:/Root/System/WebRoot/DWS/Webs.asmx
+631	2017-10-10 01:14:23.77269	Index	A:UnitTestAdapter: Running test	T:11	Op:123	End	00:00:00.001002	Getting text extract, VId:245, Path:/Root/System/WebRoot/DWS/Webs.asmx
+632	2017-10-10 01:14:23.77469	Index	A:UnitTestAdapter: Running test	T:11	Op:124	Start		Getting text extract, VId:246, Path:/Root/System/WebRoot/vsshandler.ashx
+633	2017-10-10 01:14:23.77469	Index	A:UnitTestAdapter: Running test	T:11	Op:124	End	00:00:00.000000	Getting text extract, VId:246, Path:/Root/System/WebRoot/vsshandler.ashx
+634	2017-10-10 01:14:23.78372	Index	A:UnitTestAdapter: Running test	T:11	Op:125	Start		IndexPopulator ClearAndPopulateAll
+635	2017-10-10 01:14:24.22805	System	A:UnitTestAdapter: Running test	T:21				CPU: 15,34173%, RAM: 2,383986E+07 KBytes available (working set: 250818560 bytes)
+636	2017-10-10 01:14:24.24206	Index	A:UnitTestAdapter: Running test	T:11	Op:126	Start		LM: Commit. reopenReader:True
+637	2017-10-10 01:14:24.24206	Index	A:UnitTestAdapter: Running test	T:11				LM: Committing_writer. commitState: 0()
+638	2017-10-10 01:14:24.31929	Index	A:UnitTestAdapter: Running test	T:11	Op:127	Start		LM: ReopenReader
+639	2017-10-10 01:14:24.32226	Index	A:UnitTestAdapter: Running test	T:11				Recently used reader frames from last reopening reader: 2
+640	2017-10-10 01:14:24.32226	Index	A:UnitTestAdapter: Running test	T:11	Op:127	End	00:00:00.002965	LM: ReopenReader
+641	2017-10-10 01:14:24.32226	Index	A:UnitTestAdapter: Running test	T:11	Op:126	End	00:00:00.080198	LM: Commit. reopenReader:True
+642	2017-10-10 01:14:24.32226	Index	A:UnitTestAdapter: Running test	T:11	Op:125	End	00:00:00.538542	IndexPopulator ClearAndPopulateAll
+643	2017-10-10 01:14:24.32527	Repository	A:UnitTestAdapter: Running test	T:11				Sending a goodbye message.
+644	2017-10-10 01:14:24.32527	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down ClusterChannelMonitor
+645	2017-10-10 01:14:24.32527	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down SnMaintenance
+646	2017-10-10 01:14:24.32527	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down ExchangeSubscriptionService
+647	2017-10-10 01:14:24.32527	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down VoidChannel
+648	2017-10-10 01:14:24.32527	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down IndexingEngine.
+649	2017-10-10 01:14:24.32527	Index	A:UnitTestAdapter: Running test	T:11	Op:128	Start		LUCENEMANAGER SHUTDOWN
+650	2017-10-10 01:14:24.32527	Index	A:UnitTestAdapter: Running test	T:11	Op:129	Start		LM: Commit. reopenReader:False
+651	2017-10-10 01:14:24.32527	Index	A:UnitTestAdapter: Running test	T:11				LM: Committing_writer. commitState: 0()
+>652	2017-10-10 01:14:24.34755	Index	A:UnitTestAdapter: Running test	T:11	Op:129	End	00:00:00.022282	LM: Commit. reopenReader:False
+653	2017-10-10 01:14:24.34755	Index	A:UnitTestAdapter: Running test	T:11	Op:130	Start		LM.CloseReaders
+654	2017-10-10 01:14:24.34852	Index	A:UnitTestAdapter: Running test	T:11	Op:130	End	00:00:00.000975	LM.CloseReaders
+655	2017-10-10 01:14:24.34852	Index	A:UnitTestAdapter: Running test	T:11	Op:128	End	00:00:00.023257	LUCENEMANAGER SHUTDOWN
+656	2017-10-10 01:14:24.34852	Index	A:UnitTestAdapter: Running test	T:11	Op:131	Start		LM.Waiting for writer lock file is released.
+657	2017-10-10 01:14:24.34852	Repository	A:UnitTestAdapter: Running test	T:11				Waiting for lock file to disappear: D:\dev\github\sensenet\src\Tests\SenseNet.SearchImpl.Tests\bin\App_Data\LuceneIndex\Test_L29_ClearAndPopulateAll\write.lock
+658	2017-10-10 01:14:24.34852	Repository	A:UnitTestAdapter: Running test	T:11				Lock file has gone: D:\dev\github\sensenet\src\Tests\SenseNet.SearchImpl.Tests\bin\App_Data\LuceneIndex\Test_L29_ClearAndPopulateAll\write.lock
+659	2017-10-10 01:14:24.34852	Index	A:UnitTestAdapter: Running test	T:11	Op:131	End	00:00:00.000000	LM.Waiting for writer lock file is released.
+660	2017-10-10 01:14:24.34852	Repository	A:UnitTestAdapter: Running test	T:11				Repository has stopped. Running time: 0.00:00:10
+>661	2017-10-10 01:14:24.35253	Test	A:UnitTestAdapter: Running test	T:11				END test: L29_ClearAndPopulateAll
+>662	2017-10-10 01:14:24.35810	Test	A:UnitTestAdapter: Running test	T:11				START test: L29_Query
+663	2017-10-10 01:14:24.36409	Repository	A:UnitTestAdapter: Running test	T:11				DataProvider configured: SenseNet.ContentRepository.Tests.Implementations.InMemoryDataProvider
+664	2017-10-10 01:14:24.36409	Repository	A:UnitTestAdapter: Running test	T:11				AccessProvider configured: SenseNet.ContentRepository.Security.DesktopAccessProvider
+665	2017-10-10 01:14:24.36409	Repository	A:UnitTestAdapter: Running test	T:11				PermissionFilterFactory configured: SenseNet.SearchImpl.Tests.Implementations.EverythingAllowedPermissionFilterFactory
+666	2017-10-10 01:14:24.36409	Repository	A:UnitTestAdapter: Running test	T:11				SearchEngine configured: SenseNet.Search.Lucene29.Lucene29SearchEngine
+667	2017-10-10 01:14:24.36409	Repository	A:UnitTestAdapter: Running test	T:11				SecurityDataProvider configured: SenseNet.Security.Data.MemoryDataProvider
+668	2017-10-10 01:14:24.36409	Repository	A:UnitTestAdapter: Running test	T:11				CacheProvider configured: SenseNet.ContentRepository.Tests.Implementations.EmptyCache
+669	2017-10-10 01:14:24.36409	System	A:UnitTestAdapter: Running test	T:11				Trace settings were updated. Enabled: ContentOperation, Index, IndexQueue, Query, Repository, System, Test, Event
+670	2017-10-10 01:14:24.37512	Index	A:UnitTestAdapter: Running test	T:11				New index directory: D:\dev\github\sensenet\src\Tests\SenseNet.SearchImpl.Tests\bin\App_Data\LuceneIndex\Test_L29_Query
+671	2017-10-10 01:14:24.37512	Repository	A:UnitTestAdapter: Running test	T:11				Waiting for lock file to disappear: D:\dev\github\sensenet\src\Tests\SenseNet.SearchImpl.Tests\bin\App_Data\LuceneIndex\Test_L29_Query\write.lock
+672	2017-10-10 01:14:24.37512	Repository	A:UnitTestAdapter: Running test	T:11				Lock file has gone: D:\dev\github\sensenet\src\Tests\SenseNet.SearchImpl.Tests\bin\App_Data\LuceneIndex\Test_L29_Query\write.lock
+673	2017-10-10 01:14:24.38013	Index	A:UnitTestAdapter: Running test	T:11	Op:132	Start		IAQ: InitializeFromIndex. LastIndexedActivityId: 0, LastDatabaseId: 0, TotalUnprocessed: 0
+674	2017-10-10 01:14:24.38013	Index	A:UnitTestAdapter: Running test	T:11	Op:132	End	00:00:00.000000	IAQ: InitializeFromIndex. LastIndexedActivityId: 0, LastDatabaseId: 0, TotalUnprocessed: 0
+675	2017-10-10 01:14:24.38013	Query	A:UnitTestAdapter: Running test	T:11	Op:133	Start		ContentQuery: +Id:1 | Top:0 Skip:0 Sort:[null] Mode:Default AllVersions:False
+676	2017-10-10 01:14:24.38013	Query	A:UnitTestAdapter: Running test	T:11	Op:134	Start		LucQuery: +Id:1 .TOP:2147483647 .AUTOFILTERS:OFF
+677	2017-10-10 01:14:24.38013	Query	A:UnitTestAdapter: Running test	T:11	Op:135	Start		LuceneQueryExecutor. CQL:+Id:1 .TOP:2147483647 .AUTOFILTERS:OFF
+678	2017-10-10 01:14:24.38013	Query	A:UnitTestAdapter: Running test	T:11	Op:135	End	00:00:00.000000	LuceneQueryExecutor. CQL:+Id:1 .TOP:2147483647 .AUTOFILTERS:OFF
+679	2017-10-10 01:14:24.38013	Query	A:UnitTestAdapter: Running test	T:11				LucQuery.Execute total count: 0
+680	2017-10-10 01:14:24.38013	Query	A:UnitTestAdapter: Running test	T:11	Op:134	End	00:00:00.000000	LucQuery: +Id:1 .TOP:2147483647 .AUTOFILTERS:OFF
+681	2017-10-10 01:14:24.38013	Query	A:UnitTestAdapter: Running test	T:11	Op:133	End	00:00:00.000000	ContentQuery: +Id:1 | Top:0 Skip:0 Sort:[null] Mode:Default AllVersions:False
+682	2017-10-10 01:14:24.38113	System	A:UnitTestAdapter: Running test	T:11				Trace settings were updated. Enabled: ContentOperation, Index, IndexQueue, Query, Repository, System, Test, Event
+683	2017-10-10 01:14:24.38113	Index	A:UnitTestAdapter: Running test	T:11	Op:136	Start		DocumentPopulator.RefreshIndex. Version: V1.0.A, VersionId: 2, recursive: False, level: DatabaseAndIndex
+684	2017-10-10 01:14:24.38113	ContentOperation	A:UnitTestAdapter: Running test	T:11				TreeLock: Checking /Root
+685	2017-10-10 01:14:24.38214	IndexQueue	A:UnitTestAdapter: Running test	T:11				IAQ: A1 arrived. RebuildActivity, /root
+686	2017-10-10 01:14:24.38214	IndexQueue	A:UnitTestAdapter: Running test	T:11				IAQ: A1 enqueued.
+687	2017-10-10 01:14:24.38214	IndexQueue	A:UnitTestAdapter: Running test	T:11				IAQ: A1 blocks the T11
+688	2017-10-10 01:14:24.38214	IndexQueue	A:UnitTestAdapter: Running test	T:19				IAQ: A1 dequeued.
+689	2017-10-10 01:14:24.38214	Index	A:UnitTestAdapter: Running test	T:19	Op:137	Start		IAQ: A1 EXECUTION.
+690	2017-10-10 01:14:24.38214	Index	A:UnitTestAdapter: Running test	T:19				LM: SenseNet.Search.Indexing.Activities.RebuildActivity. ActivityId:1, ExecutingUnprocessedActivities:False
+691	2017-10-10 01:14:24.38417	Index	A:UnitTestAdapter: Running test	T:19	Op:138	Start		LM: Commit. reopenReader:True
+692	2017-10-10 01:14:24.38417	Index	A:UnitTestAdapter: Running test	T:19				LM: Committing_writer. commitState: 0()
+693	2017-10-10 01:14:24.40702	Index	A:UnitTestAdapter: Running test	T:19	Op:139	Start		LM: ReopenReader
+694	2017-10-10 01:14:24.40702	Index	A:UnitTestAdapter: Running test	T:19				Recently used reader frames from last reopening reader: 2
+695	2017-10-10 01:14:24.40702	Index	A:UnitTestAdapter: Running test	T:19	Op:139	End	00:00:00.000000	LM: ReopenReader
+696	2017-10-10 01:14:24.40702	Index	A:UnitTestAdapter: Running test	T:19	Op:138	End	00:00:00.022852	LM: Commit. reopenReader:True
+697	2017-10-10 01:14:24.40702	IndexQueue	A:UnitTestAdapter: Running test	T:19				IAQ: waiting resource released T11.
+698	2017-10-10 01:14:24.40702	IndexQueue	A:UnitTestAdapter: Running test	T:19				IAQ: A1 finished.
+699	2017-10-10 01:14:24.40702	IndexQueue	A:UnitTestAdapter: Running test	T:19				IAQ: State after finishing A1: 1()
+700	2017-10-10 01:14:24.40702	Index	A:UnitTestAdapter: Running test	T:19	Op:137	End	00:00:00.024886	IAQ: A1 EXECUTION.
+701	2017-10-10 01:14:24.40702	Index	A:UnitTestAdapter: Running test	T:11	Op:136	End	00:00:00.025888	DocumentPopulator.RefreshIndex. Version: V1.0.A, VersionId: 2, recursive: False, level: DatabaseAndIndex
+702	2017-10-10 01:14:24.40803	Index	A:UnitTestAdapter: Running test	T:11	Op:140	Start		DocumentPopulator.RefreshIndex. Version: V1.0.A, VersionId: 1, recursive: False, level: DatabaseAndIndex
+703	2017-10-10 01:14:24.40803	ContentOperation	A:UnitTestAdapter: Running test	T:11				TreeLock: Checking /Root/IMS/BuiltIn/Portal/Admin
+704	2017-10-10 01:14:24.40803	Index	A:UnitTestAdapter: Running test	T:11	Op:141	Start		Getting text extract, VId:1, Path:/Root/IMS/BuiltIn/Portal/Admin
+705	2017-10-10 01:14:24.40803	Index	A:UnitTestAdapter: Running test	T:11	Op:141	End	00:00:00.000000	Getting text extract, VId:1, Path:/Root/IMS/BuiltIn/Portal/Admin
+706	2017-10-10 01:14:24.41003	IndexQueue	A:UnitTestAdapter: Running test	T:11				IAQ: A2 arrived. RebuildActivity, /root/ims/builtin/portal/admin
+707	2017-10-10 01:14:24.41003	IndexQueue	A:UnitTestAdapter: Running test	T:11				IAQ: A2 enqueued.
+708	2017-10-10 01:14:24.41003	IndexQueue	A:UnitTestAdapter: Running test	T:11				IAQ: A2 blocks the T11
+709	2017-10-10 01:14:24.41103	IndexQueue	A:UnitTestAdapter: Running test	T:7				IAQ: A2 dequeued.
+710	2017-10-10 01:14:24.41103	Index	A:UnitTestAdapter: Running test	T:7	Op:142	Start		IAQ: A2 EXECUTION.
+711	2017-10-10 01:14:24.41103	Index	A:UnitTestAdapter: Running test	T:7				LM: SenseNet.Search.Indexing.Activities.RebuildActivity. ActivityId:2, ExecutingUnprocessedActivities:False
+712	2017-10-10 01:14:24.41504	Index	A:UnitTestAdapter: Running test	T:7	Op:143	Start		LM: Commit. reopenReader:True
+713	2017-10-10 01:14:24.41504	Index	A:UnitTestAdapter: Running test	T:7				LM: Committing_writer. commitState: 1()
+714	2017-10-10 01:14:24.43800	Index	A:UnitTestAdapter: Running test	T:7	Op:144	Start		LM: ReopenReader
+715	2017-10-10 01:14:24.43800	Index	A:UnitTestAdapter: Running test	T:7				Recently used reader frames from last reopening reader: 0
+716	2017-10-10 01:14:24.43800	Index	A:UnitTestAdapter: Running test	T:7	Op:144	End	00:00:00.000000	LM: ReopenReader
+717	2017-10-10 01:14:24.43800	Index	A:UnitTestAdapter: Running test	T:7	Op:143	End	00:00:00.022958	LM: Commit. reopenReader:True
+718	2017-10-10 01:14:24.43800	IndexQueue	A:UnitTestAdapter: Running test	T:7				IAQ: waiting resource released T11.
+719	2017-10-10 01:14:24.43800	IndexQueue	A:UnitTestAdapter: Running test	T:7				IAQ: A2 finished.
+720	2017-10-10 01:14:24.43800	IndexQueue	A:UnitTestAdapter: Running test	T:7				IAQ: State after finishing A2: 2()
+721	2017-10-10 01:14:24.43800	Index	A:UnitTestAdapter: Running test	T:7	Op:142	End	00:00:00.026969	IAQ: A2 EXECUTION.
+722	2017-10-10 01:14:24.43800	Index	A:UnitTestAdapter: Running test	T:11	Op:140	End	00:00:00.029977	DocumentPopulator.RefreshIndex. Version: V1.0.A, VersionId: 1, recursive: False, level: DatabaseAndIndex
+723	2017-10-10 01:14:24.43903	Query	A:UnitTestAdapter: Running test	T:11	Op:145	Start		ContentQuery: Id:1 | Top:0 Skip:0 Sort:[null] Mode:Default AllVersions:False
+724	2017-10-10 01:14:24.43903	Query	A:UnitTestAdapter: Running test	T:11	Op:146	Start		LucQuery: Id:1 .TOP:2147483647 .AUTOFILTERS:OFF
+725	2017-10-10 01:14:24.43903	Query	A:UnitTestAdapter: Running test	T:11	Op:147	Start		LuceneQueryExecutor. CQL:Id:1 .TOP:2147483647 .AUTOFILTERS:OFF
+726	2017-10-10 01:14:24.44506	Query	A:UnitTestAdapter: Running test	T:11	Op:147	End	00:00:00.006023	LuceneQueryExecutor. CQL:Id:1 .TOP:2147483647 .AUTOFILTERS:OFF
+727	2017-10-10 01:14:24.44506	Query	A:UnitTestAdapter: Running test	T:11				LucQuery.Execute total count: 1
+728	2017-10-10 01:14:24.44506	Query	A:UnitTestAdapter: Running test	T:11	Op:146	End	00:00:00.006023	LucQuery: Id:1 .TOP:2147483647 .AUTOFILTERS:OFF
+729	2017-10-10 01:14:24.44506	Query	A:UnitTestAdapter: Running test	T:11	Op:145	End	00:00:00.006023	ContentQuery: Id:1 | Top:0 Skip:0 Sort:[null] Mode:Default AllVersions:False
+730	2017-10-10 01:14:24.44506	Query	A:UnitTestAdapter: Running test	T:11	Op:148	Start		ContentQuery: Id:2 .COUNTONLY | Top:0 Skip:0 Sort:[null] Mode:Default AllVersions:False
+731	2017-10-10 01:14:24.44506	Query	A:UnitTestAdapter: Running test	T:11	Op:149	Start		LucQuery: Id:2 .COUNTONLY .TOP:2147483647 .AUTOFILTERS:OFF
+732	2017-10-10 01:14:24.44506	Query	A:UnitTestAdapter: Running test	T:11	Op:150	Start		LuceneQueryExecutor. CQL:Id:2 .COUNTONLY .TOP:2147483647 .AUTOFILTERS:OFF
+733	2017-10-10 01:14:24.44606	Query	A:UnitTestAdapter: Running test	T:11	Op:150	End	00:00:00.001003	LuceneQueryExecutor. CQL:Id:2 .COUNTONLY .TOP:2147483647 .AUTOFILTERS:OFF
+734	2017-10-10 01:14:24.44606	Query	A:UnitTestAdapter: Running test	T:11				LucQuery.Execute total count: 1
+735	2017-10-10 01:14:24.44606	Query	A:UnitTestAdapter: Running test	T:11	Op:149	End	00:00:00.001003	LucQuery: Id:2 .COUNTONLY .TOP:2147483647 .AUTOFILTERS:OFF
+736	2017-10-10 01:14:24.44606	Query	A:UnitTestAdapter: Running test	T:11	Op:148	End	00:00:00.001003	ContentQuery: Id:2 .COUNTONLY | Top:0 Skip:0 Sort:[null] Mode:Default AllVersions:False
+737	2017-10-10 01:14:24.44606	Repository	A:UnitTestAdapter: Running test	T:11				Sending a goodbye message.
+738	2017-10-10 01:14:24.44606	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down ClusterChannelMonitor
+739	2017-10-10 01:14:24.44606	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down SnMaintenance
+740	2017-10-10 01:14:24.44606	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down ExchangeSubscriptionService
+741	2017-10-10 01:14:24.44606	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down VoidChannel
+742	2017-10-10 01:14:24.44606	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down IndexingEngine.
+743	2017-10-10 01:14:24.44606	Index	A:UnitTestAdapter: Running test	T:11	Op:151	Start		LUCENEMANAGER SHUTDOWN
+744	2017-10-10 01:14:24.44606	Index	A:UnitTestAdapter: Running test	T:11	Op:152	Start		LM: Commit. reopenReader:False
+745	2017-10-10 01:14:24.44606	Index	A:UnitTestAdapter: Running test	T:11				LM: Committing_writer. commitState: 2()
+746	2017-10-10 01:14:24.46150	Index	A:UnitTestAdapter: Running test	T:11	Op:152	End	00:00:00.015437	LM: Commit. reopenReader:False
+747	2017-10-10 01:14:24.46150	Index	A:UnitTestAdapter: Running test	T:11	Op:153	Start		LM.CloseReaders
+748	2017-10-10 01:14:24.46150	Index	A:UnitTestAdapter: Running test	T:11	Op:153	End	00:00:00.000000	LM.CloseReaders
+749	2017-10-10 01:14:24.46150	Index	A:UnitTestAdapter: Running test	T:11	Op:151	End	00:00:00.015437	LUCENEMANAGER SHUTDOWN
+750	2017-10-10 01:14:24.46150	Index	A:UnitTestAdapter: Running test	T:11	Op:154	Start		LM.Waiting for writer lock file is released.
+751	2017-10-10 01:14:24.46150	Repository	A:UnitTestAdapter: Running test	T:11				Waiting for lock file to disappear: D:\dev\github\sensenet\src\Tests\SenseNet.SearchImpl.Tests\bin\App_Data\LuceneIndex\Test_L29_Query\write.lock
+752	2017-10-10 01:14:24.46150	Repository	A:UnitTestAdapter: Running test	T:11				Lock file has gone: D:\dev\github\sensenet\src\Tests\SenseNet.SearchImpl.Tests\bin\App_Data\LuceneIndex\Test_L29_Query\write.lock
+753	2017-10-10 01:14:24.46150	Index	A:UnitTestAdapter: Running test	T:11	Op:154	End	00:00:00.000000	LM.Waiting for writer lock file is released.
+754	2017-10-10 01:14:24.46150	Repository	A:UnitTestAdapter: Running test	T:11				Repository has stopped. Running time: 0.00:00:00
+>755	2017-10-10 01:14:24.46554	Test	A:UnitTestAdapter: Running test	T:11				END test: L29_Query
+>756	2017-10-10 01:14:24.47052	Test	A:UnitTestAdapter: Running test	T:11				START test: L29_SaveAndQuery
+757	2017-10-10 01:14:24.47456	Repository	A:UnitTestAdapter: Running test	T:11				DataProvider configured: SenseNet.ContentRepository.Tests.Implementations.InMemoryDataProvider
+758	2017-10-10 01:14:24.47456	Repository	A:UnitTestAdapter: Running test	T:11				AccessProvider configured: SenseNet.ContentRepository.Security.DesktopAccessProvider
+759	2017-10-10 01:14:24.47456	Repository	A:UnitTestAdapter: Running test	T:11				PermissionFilterFactory configured: SenseNet.SearchImpl.Tests.Implementations.EverythingAllowedPermissionFilterFactory
+760	2017-10-10 01:14:24.47456	Repository	A:UnitTestAdapter: Running test	T:11				SearchEngine configured: SenseNet.Search.Lucene29.Lucene29SearchEngine
+761	2017-10-10 01:14:24.47456	Repository	A:UnitTestAdapter: Running test	T:11				SecurityDataProvider configured: SenseNet.Security.Data.MemoryDataProvider
+762	2017-10-10 01:14:24.47456	Repository	A:UnitTestAdapter: Running test	T:11				CacheProvider configured: SenseNet.ContentRepository.Tests.Implementations.EmptyCache
+763	2017-10-10 01:14:24.47456	System	A:UnitTestAdapter: Running test	T:11				Trace settings were updated. Enabled: ContentOperation, Index, IndexQueue, Query, Repository, System, Test, Event
+764	2017-10-10 01:14:24.48757	Index	A:UnitTestAdapter: Running test	T:11				New index directory: D:\dev\github\sensenet\src\Tests\SenseNet.SearchImpl.Tests\bin\App_Data\LuceneIndex\Test_L29_SaveAndQuery
+765	2017-10-10 01:14:24.48757	Repository	A:UnitTestAdapter: Running test	T:11				Waiting for lock file to disappear: D:\dev\github\sensenet\src\Tests\SenseNet.SearchImpl.Tests\bin\App_Data\LuceneIndex\Test_L29_SaveAndQuery\write.lock
+766	2017-10-10 01:14:24.48757	Repository	A:UnitTestAdapter: Running test	T:11				Lock file has gone: D:\dev\github\sensenet\src\Tests\SenseNet.SearchImpl.Tests\bin\App_Data\LuceneIndex\Test_L29_SaveAndQuery\write.lock
+767	2017-10-10 01:14:24.49158	Index	A:UnitTestAdapter: Running test	T:11	Op:155	Start		IAQ: InitializeFromIndex. LastIndexedActivityId: 0, LastDatabaseId: 0, TotalUnprocessed: 0
+768	2017-10-10 01:14:24.49158	Index	A:UnitTestAdapter: Running test	T:11	Op:155	End	00:00:00.000000	IAQ: InitializeFromIndex. LastIndexedActivityId: 0, LastDatabaseId: 0, TotalUnprocessed: 0
+769	2017-10-10 01:14:24.49158	Query	A:UnitTestAdapter: Running test	T:11	Op:156	Start		ContentQuery: +Id:1 | Top:0 Skip:0 Sort:[null] Mode:Default AllVersions:False
+770	2017-10-10 01:14:24.49158	Query	A:UnitTestAdapter: Running test	T:11	Op:157	Start		LucQuery: +Id:1 .TOP:2147483647 .AUTOFILTERS:OFF
+771	2017-10-10 01:14:24.49158	Query	A:UnitTestAdapter: Running test	T:11	Op:158	Start		LuceneQueryExecutor. CQL:+Id:1 .TOP:2147483647 .AUTOFILTERS:OFF
+772	2017-10-10 01:14:24.49258	Query	A:UnitTestAdapter: Running test	T:11	Op:158	End	00:00:00.001002	LuceneQueryExecutor. CQL:+Id:1 .TOP:2147483647 .AUTOFILTERS:OFF
+773	2017-10-10 01:14:24.49258	Query	A:UnitTestAdapter: Running test	T:11				LucQuery.Execute total count: 0
+774	2017-10-10 01:14:24.49258	Query	A:UnitTestAdapter: Running test	T:11	Op:157	End	00:00:00.001002	LucQuery: +Id:1 .TOP:2147483647 .AUTOFILTERS:OFF
+775	2017-10-10 01:14:24.49258	Query	A:UnitTestAdapter: Running test	T:11	Op:156	End	00:00:00.001002	ContentQuery: +Id:1 | Top:0 Skip:0 Sort:[null] Mode:Default AllVersions:False
+776	2017-10-10 01:14:24.49258	System	A:UnitTestAdapter: Running test	T:11				Trace settings were updated. Enabled: ContentOperation, Index, IndexQueue, Query, Repository, System, Test, Event
+777	2017-10-10 01:14:24.49358	Index	A:UnitTestAdapter: Running test	T:11	Op:159	Start		DocumentPopulator.RefreshIndex. Version: V1.0.A, VersionId: 2, recursive: False, level: DatabaseAndIndex
+778	2017-10-10 01:14:24.49358	ContentOperation	A:UnitTestAdapter: Running test	T:11				TreeLock: Checking /Root
+779	2017-10-10 01:14:24.49459	IndexQueue	A:UnitTestAdapter: Running test	T:11				IAQ: A1 arrived. RebuildActivity, /root
+780	2017-10-10 01:14:24.49459	IndexQueue	A:UnitTestAdapter: Running test	T:11				IAQ: A1 enqueued.
+781	2017-10-10 01:14:24.49459	IndexQueue	A:UnitTestAdapter: Running test	T:11				IAQ: A1 blocks the T11
+782	2017-10-10 01:14:24.49459	IndexQueue	A:UnitTestAdapter: Running test	T:18				IAQ: A1 dequeued.
+783	2017-10-10 01:14:24.49459	Index	A:UnitTestAdapter: Running test	T:18	Op:160	Start		IAQ: A1 EXECUTION.
+784	2017-10-10 01:14:24.49459	Index	A:UnitTestAdapter: Running test	T:18				LM: SenseNet.Search.Indexing.Activities.RebuildActivity. ActivityId:1, ExecutingUnprocessedActivities:False
+785	2017-10-10 01:14:24.49561	Index	A:UnitTestAdapter: Running test	T:18	Op:161	Start		LM: Commit. reopenReader:True
+786	2017-10-10 01:14:24.49561	Index	A:UnitTestAdapter: Running test	T:18				LM: Committing_writer. commitState: 0()
+787	2017-10-10 01:14:24.51163	Index	A:UnitTestAdapter: Running test	T:18	Op:162	Start		LM: ReopenReader
+788	2017-10-10 01:14:24.51163	Index	A:UnitTestAdapter: Running test	T:18				Recently used reader frames from last reopening reader: 2
+789	2017-10-10 01:14:24.51163	Index	A:UnitTestAdapter: Running test	T:18	Op:162	End	00:00:00.001002	LM: ReopenReader
+790	2017-10-10 01:14:24.51263	Index	A:UnitTestAdapter: Running test	T:18	Op:161	End	00:00:00.017018	LM: Commit. reopenReader:True
+791	2017-10-10 01:14:24.51263	IndexQueue	A:UnitTestAdapter: Running test	T:18				IAQ: waiting resource released T11.
+792	2017-10-10 01:14:24.51263	IndexQueue	A:UnitTestAdapter: Running test	T:18				IAQ: A1 finished.
+793	2017-10-10 01:14:24.51263	IndexQueue	A:UnitTestAdapter: Running test	T:18				IAQ: State after finishing A1: 1()
+794	2017-10-10 01:14:24.51263	Index	A:UnitTestAdapter: Running test	T:18	Op:160	End	00:00:00.018048	IAQ: A1 EXECUTION.
+795	2017-10-10 01:14:24.51263	Index	A:UnitTestAdapter: Running test	T:11	Op:159	End	00:00:00.019051	DocumentPopulator.RefreshIndex. Version: V1.0.A, VersionId: 2, recursive: False, level: DatabaseAndIndex
+796	2017-10-10 01:14:24.51263	Index	A:UnitTestAdapter: Running test	T:11	Op:163	Start		DocumentPopulator.RefreshIndex. Version: V1.0.A, VersionId: 1, recursive: False, level: DatabaseAndIndex
+797	2017-10-10 01:14:24.51263	ContentOperation	A:UnitTestAdapter: Running test	T:11				TreeLock: Checking /Root/IMS/BuiltIn/Portal/Admin
+798	2017-10-10 01:14:24.51263	Index	A:UnitTestAdapter: Running test	T:11	Op:164	Start		Getting text extract, VId:1, Path:/Root/IMS/BuiltIn/Portal/Admin
+799	2017-10-10 01:14:24.51263	Index	A:UnitTestAdapter: Running test	T:11	Op:164	End	00:00:00.000000	Getting text extract, VId:1, Path:/Root/IMS/BuiltIn/Portal/Admin
+800	2017-10-10 01:14:24.51467	IndexQueue	A:UnitTestAdapter: Running test	T:11				IAQ: A2 arrived. RebuildActivity, /root/ims/builtin/portal/admin
+801	2017-10-10 01:14:24.51467	IndexQueue	A:UnitTestAdapter: Running test	T:11				IAQ: A2 enqueued.
+802	2017-10-10 01:14:24.51467	IndexQueue	A:UnitTestAdapter: Running test	T:11				IAQ: A2 blocks the T11
+803	2017-10-10 01:14:24.51467	IndexQueue	A:UnitTestAdapter: Running test	T:20				IAQ: A2 dequeued.
+804	2017-10-10 01:14:24.51467	Index	A:UnitTestAdapter: Running test	T:20	Op:165	Start		IAQ: A2 EXECUTION.
+805	2017-10-10 01:14:24.51467	Index	A:UnitTestAdapter: Running test	T:20				LM: SenseNet.Search.Indexing.Activities.RebuildActivity. ActivityId:2, ExecutingUnprocessedActivities:False
+806	2017-10-10 01:14:24.51664	Index	A:UnitTestAdapter: Running test	T:20	Op:166	Start		LM: Commit. reopenReader:True
+807	2017-10-10 01:14:24.51664	Index	A:UnitTestAdapter: Running test	T:20				LM: Committing_writer. commitState: 1()
+808	2017-10-10 01:14:24.53469	Index	A:UnitTestAdapter: Running test	T:20	Op:167	Start		LM: ReopenReader
+809	2017-10-10 01:14:24.53569	Index	A:UnitTestAdapter: Running test	T:20				Recently used reader frames from last reopening reader: 0
+810	2017-10-10 01:14:24.53569	Index	A:UnitTestAdapter: Running test	T:20	Op:167	End	00:00:00.001002	LM: ReopenReader
+811	2017-10-10 01:14:24.53569	Index	A:UnitTestAdapter: Running test	T:20	Op:166	End	00:00:00.019051	LM: Commit. reopenReader:True
+812	2017-10-10 01:14:24.53569	IndexQueue	A:UnitTestAdapter: Running test	T:20				IAQ: waiting resource released T11.
+813	2017-10-10 01:14:24.53569	IndexQueue	A:UnitTestAdapter: Running test	T:20				IAQ: A2 finished.
+814	2017-10-10 01:14:24.53569	IndexQueue	A:UnitTestAdapter: Running test	T:20				IAQ: State after finishing A2: 2()
+815	2017-10-10 01:14:24.53569	Index	A:UnitTestAdapter: Running test	T:20	Op:165	End	00:00:00.021026	IAQ: A2 EXECUTION.
+816	2017-10-10 01:14:24.53569	Index	A:UnitTestAdapter: Running test	T:11	Op:163	End	00:00:00.023061	DocumentPopulator.RefreshIndex. Version: V1.0.A, VersionId: 1, recursive: False, level: DatabaseAndIndex
+817	2017-10-10 01:14:24.53569	Query	A:UnitTestAdapter: Running test	T:11	Op:168	Start		ContentQuery: Name:NodeForL29_SaveAndQuery | Top:0 Skip:0 Sort:[null] Mode:Default AllVersions:False
+818	2017-10-10 01:14:24.53569	Query	A:UnitTestAdapter: Running test	T:11	Op:169	Start		LucQuery: Name:nodeforl29_saveandquery .TOP:2147483647 .AUTOFILTERS:OFF
+819	2017-10-10 01:14:24.53569	Query	A:UnitTestAdapter: Running test	T:11	Op:170	Start		LuceneQueryExecutor. CQL:Name:nodeforl29_saveandquery .TOP:2147483647 .AUTOFILTERS:OFF
+820	2017-10-10 01:14:24.53672	Query	A:UnitTestAdapter: Running test	T:11	Op:170	End	00:00:00.001029	LuceneQueryExecutor. CQL:Name:nodeforl29_saveandquery .TOP:2147483647 .AUTOFILTERS:OFF
+821	2017-10-10 01:14:24.53672	Query	A:UnitTestAdapter: Running test	T:11				LucQuery.Execute total count: 0
+822	2017-10-10 01:14:24.53672	Query	A:UnitTestAdapter: Running test	T:11	Op:169	End	00:00:00.001029	LucQuery: Name:nodeforl29_saveandquery .TOP:2147483647 .AUTOFILTERS:OFF
+823	2017-10-10 01:14:24.53672	Query	A:UnitTestAdapter: Running test	T:11	Op:168	End	00:00:00.001029	ContentQuery: Name:NodeForL29_SaveAndQuery | Top:0 Skip:0 Sort:[null] Mode:Default AllVersions:False
+824	2017-10-10 01:14:24.53672	ContentOperation	A:UnitTestAdapter: Running test	T:11	Op:171	Start		GC.Save: Mode:RaiseVersion, VId:0, Path:/Root/SystemFolder-20171010011424
+825	2017-10-10 01:14:24.53672	ContentOperation	A:UnitTestAdapter: Running test	T:11	Op:172	Start		NODE.SAVE Id: 0, VersionId: 0, Version: V1.0.A, Name: NodeForL29_SaveAndQuery, ParentPath: /Root
+826	2017-10-10 01:14:24.53672	ContentOperation	A:UnitTestAdapter: Running test	T:11				TreeLock: Checking /Root/NodeForL29_SaveAndQuery
+827	2017-10-10 01:14:24.53873	Index	A:UnitTestAdapter: Running test	T:11	Op:173	Start		Indexing node
+828	2017-10-10 01:14:24.53873	Index	A:UnitTestAdapter: Running test	T:11	Op:174	Start		DocumentPopulator.CommitPopulateNode. Version: V1.0.A, VersionId: 1239, Path: /Root/NodeForL29_SaveAndQuery
+829	2017-10-10 01:14:24.53873	IndexQueue	A:UnitTestAdapter: Running test	T:11				IAQ: A3 arrived. AddDocumentActivity, /root/nodeforl29_saveandquery
+830	2017-10-10 01:14:24.53873	IndexQueue	A:UnitTestAdapter: Running test	T:11				IAQ: A3 enqueued.
+831	2017-10-10 01:14:24.53873	IndexQueue	A:UnitTestAdapter: Running test	T:11				IAQ: A3 blocks the T11
+832	2017-10-10 01:14:24.53873	IndexQueue	A:UnitTestAdapter: Running test	T:17				IAQ: A3 dequeued.
+833	2017-10-10 01:14:24.53873	Index	A:UnitTestAdapter: Running test	T:17	Op:175	Start		IAQ: A3 EXECUTION.
+834	2017-10-10 01:14:24.53873	Index	A:UnitTestAdapter: Running test	T:17				LM: AddDocumentActivity: [1239/1239], /root/nodeforl29_saveandquery. ActivityId:3, ExecutingUnprocessedActivities:False
+835	2017-10-10 01:14:24.53873	Index	A:UnitTestAdapter: Running test	T:17	Op:176	Start		LM: LuceneDocumentActivity.CreateDocument (VersionId:1239)
+836	2017-10-10 01:14:24.53873	Index	A:UnitTestAdapter: Running test	T:17	Op:176	End	00:00:00.000000	LM: LuceneDocumentActivity.CreateDocument (VersionId:1239)
+837	2017-10-10 01:14:24.54271	Index	A:UnitTestAdapter: Running test	T:17	Op:177	Start		LM: Commit. reopenReader:True
+838	2017-10-10 01:14:24.54271	Index	A:UnitTestAdapter: Running test	T:17				LM: Committing_writer. commitState: 2()
+839	2017-10-10 01:14:24.56477	Index	A:UnitTestAdapter: Running test	T:17	Op:178	Start		LM: ReopenReader
+840	2017-10-10 01:14:24.56477	Index	A:UnitTestAdapter: Running test	T:17				Recently used reader frames from last reopening reader: 1
+841	2017-10-10 01:14:24.56477	Index	A:UnitTestAdapter: Running test	T:17	Op:178	End	00:00:00.000000	LM: ReopenReader
+842	2017-10-10 01:14:24.56477	Index	A:UnitTestAdapter: Running test	T:17	Op:177	End	00:00:00.022058	LM: Commit. reopenReader:True
+843	2017-10-10 01:14:24.56477	IndexQueue	A:UnitTestAdapter: Running test	T:17				IAQ: waiting resource released T11.
+844	2017-10-10 01:14:24.56477	IndexQueue	A:UnitTestAdapter: Running test	T:17				IAQ: A3 finished.
+845	2017-10-10 01:14:24.56477	IndexQueue	A:UnitTestAdapter: Running test	T:17				IAQ: State after finishing A3: 3()
+846	2017-10-10 01:14:24.56477	Index	A:UnitTestAdapter: Running test	T:17	Op:175	End	00:00:00.026042	IAQ: A3 EXECUTION.
+847	2017-10-10 01:14:24.56477	Index	A:UnitTestAdapter: Running test	T:11	Op:174	End	00:00:00.026042	DocumentPopulator.CommitPopulateNode. Version: V1.0.A, VersionId: 1239, Path: /Root/NodeForL29_SaveAndQuery
+848	2017-10-10 01:14:24.56477	Index	A:UnitTestAdapter: Running test	T:11	Op:173	End	00:00:00.026042	Indexing node
+849	2017-10-10 01:14:24.86708	ContentOperation	A:UnitTestAdapter: Running test	T:11				Node created. Id:1239, Path:/Root/NodeForL29_SaveAndQuery
+850	2017-10-10 01:14:24.86708	ContentOperation	A:UnitTestAdapter: Running test	T:11	Op:172	End	00:00:00.330358	NODE.SAVE Id: 0, VersionId: 0, Version: V1.0.A, Name: NodeForL29_SaveAndQuery, ParentPath: /Root
+851	2017-10-10 01:14:24.86708	ContentOperation	A:UnitTestAdapter: Running test	T:11	Op:171	End	00:00:00.330358	GC.Save: Mode:RaiseVersion, VId:0, Path:/Root/SystemFolder-20171010011424
+852	2017-10-10 01:14:24.86708	Query	A:UnitTestAdapter: Running test	T:11	Op:179	Start		ContentQuery: Name:NodeForL29_SaveAndQuery | Top:0 Skip:0 Sort:[null] Mode:Default AllVersions:False
+853	2017-10-10 01:14:24.86708	Query	A:UnitTestAdapter: Running test	T:11	Op:180	Start		LucQuery: Name:nodeforl29_saveandquery .TOP:2147483647 .AUTOFILTERS:OFF
+854	2017-10-10 01:14:24.86708	Query	A:UnitTestAdapter: Running test	T:11	Op:181	Start		LuceneQueryExecutor. CQL:Name:nodeforl29_saveandquery .TOP:2147483647 .AUTOFILTERS:OFF
+855	2017-10-10 01:14:24.86708	Query	A:UnitTestAdapter: Running test	T:11	Op:181	End	00:00:00.000000	LuceneQueryExecutor. CQL:Name:nodeforl29_saveandquery .TOP:2147483647 .AUTOFILTERS:OFF
+856	2017-10-10 01:14:24.86708	Query	A:UnitTestAdapter: Running test	T:11				LucQuery.Execute total count: 1
+857	2017-10-10 01:14:24.86708	Query	A:UnitTestAdapter: Running test	T:11	Op:180	End	00:00:00.000000	LucQuery: Name:nodeforl29_saveandquery .TOP:2147483647 .AUTOFILTERS:OFF
+858	2017-10-10 01:14:24.86708	Query	A:UnitTestAdapter: Running test	T:11	Op:179	End	00:00:00.000000	ContentQuery: Name:NodeForL29_SaveAndQuery | Top:0 Skip:0 Sort:[null] Mode:Default AllVersions:False
+859	2017-10-10 01:14:24.86708	Repository	A:UnitTestAdapter: Running test	T:11				Sending a goodbye message.
+860	2017-10-10 01:14:24.86804	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down ClusterChannelMonitor
+861	2017-10-10 01:14:24.86804	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down SnMaintenance
+862	2017-10-10 01:14:24.86804	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down ExchangeSubscriptionService
+863	2017-10-10 01:14:24.86804	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down VoidChannel
+864	2017-10-10 01:14:24.86804	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down IndexingEngine.
+865	2017-10-10 01:14:24.86804	Index	A:UnitTestAdapter: Running test	T:11	Op:182	Start		LUCENEMANAGER SHUTDOWN
+866	2017-10-10 01:14:24.86804	Index	A:UnitTestAdapter: Running test	T:11	Op:183	Start		LM: Commit. reopenReader:False
+867	2017-10-10 01:14:24.86804	Index	A:UnitTestAdapter: Running test	T:11				LM: Committing_writer. commitState: 3()
+868	2017-10-10 01:14:24.89311	Index	A:UnitTestAdapter: Running test	T:11	Op:183	End	00:00:00.025066	LM: Commit. reopenReader:False
+869	2017-10-10 01:14:24.89311	Index	A:UnitTestAdapter: Running test	T:11	Op:184	Start		LM.CloseReaders
+870	2017-10-10 01:14:24.89311	Index	A:UnitTestAdapter: Running test	T:11	Op:184	End	00:00:00.000000	LM.CloseReaders
+871	2017-10-10 01:14:24.89311	Index	A:UnitTestAdapter: Running test	T:11	Op:182	End	00:00:00.025066	LUCENEMANAGER SHUTDOWN
+872	2017-10-10 01:14:24.89311	Index	A:UnitTestAdapter: Running test	T:11	Op:185	Start		LM.Waiting for writer lock file is released.
+873	2017-10-10 01:14:24.89311	Repository	A:UnitTestAdapter: Running test	T:11				Waiting for lock file to disappear: D:\dev\github\sensenet\src\Tests\SenseNet.SearchImpl.Tests\bin\App_Data\LuceneIndex\Test_L29_SaveAndQuery\write.lock
+874	2017-10-10 01:14:24.89311	Repository	A:UnitTestAdapter: Running test	T:11				Lock file has gone: D:\dev\github\sensenet\src\Tests\SenseNet.SearchImpl.Tests\bin\App_Data\LuceneIndex\Test_L29_SaveAndQuery\write.lock
+875	2017-10-10 01:14:24.89311	Index	A:UnitTestAdapter: Running test	T:11	Op:185	End	00:00:00.000000	LM.Waiting for writer lock file is released.
+876	2017-10-10 01:14:24.89311	Repository	A:UnitTestAdapter: Running test	T:11				Repository has stopped. Running time: 0.00:00:00
+>877	2017-10-10 01:14:24.89715	Test	A:UnitTestAdapter: Running test	T:11				END test: L29_SaveAndQuery
+>878	2017-10-10 01:14:24.90213	Test	A:UnitTestAdapter: Running test	T:11				START test: L29_SwitchOffRunningState
+879	2017-10-10 01:14:24.90514	Repository	A:UnitTestAdapter: Running test	T:11				DataProvider configured: SenseNet.ContentRepository.Tests.Implementations.InMemoryDataProvider
+880	2017-10-10 01:14:24.90514	Repository	A:UnitTestAdapter: Running test	T:11				AccessProvider configured: SenseNet.ContentRepository.Security.DesktopAccessProvider
+881	2017-10-10 01:14:24.90514	Repository	A:UnitTestAdapter: Running test	T:11				PermissionFilterFactory configured: SenseNet.SearchImpl.Tests.Implementations.EverythingAllowedPermissionFilterFactory
+882	2017-10-10 01:14:24.90514	Repository	A:UnitTestAdapter: Running test	T:11				SearchEngine configured: SenseNet.Search.Lucene29.Lucene29SearchEngine
+883	2017-10-10 01:14:24.90514	Repository	A:UnitTestAdapter: Running test	T:11				SecurityDataProvider configured: SenseNet.Security.Data.MemoryDataProvider
+884	2017-10-10 01:14:24.90514	Repository	A:UnitTestAdapter: Running test	T:11				CacheProvider configured: SenseNet.ContentRepository.Tests.Implementations.EmptyCache
+885	2017-10-10 01:14:24.90514	System	A:UnitTestAdapter: Running test	T:11				Trace settings were updated. Enabled: ContentOperation, Index, IndexQueue, Query, Repository, System, Test, Event
+886	2017-10-10 01:14:24.91617	Index	A:UnitTestAdapter: Running test	T:11				New index directory: D:\dev\github\sensenet\src\Tests\SenseNet.SearchImpl.Tests\bin\App_Data\LuceneIndex\20171010011424
+887	2017-10-10 01:14:24.91617	Repository	A:UnitTestAdapter: Running test	T:11				Waiting for lock file to disappear: D:\dev\github\sensenet\src\Tests\SenseNet.SearchImpl.Tests\bin\App_Data\LuceneIndex\20171010011424\write.lock
+888	2017-10-10 01:14:24.91617	Repository	A:UnitTestAdapter: Running test	T:11				Lock file has gone: D:\dev\github\sensenet\src\Tests\SenseNet.SearchImpl.Tests\bin\App_Data\LuceneIndex\20171010011424\write.lock
+889	2017-10-10 01:14:24.92018	Index	A:UnitTestAdapter: Running test	T:11	Op:186	Start		IAQ: InitializeFromIndex. LastIndexedActivityId: 0, LastDatabaseId: 0, TotalUnprocessed: 0
+890	2017-10-10 01:14:24.92018	Index	A:UnitTestAdapter: Running test	T:11	Op:186	End	00:00:00.000000	IAQ: InitializeFromIndex. LastIndexedActivityId: 0, LastDatabaseId: 0, TotalUnprocessed: 0
+891	2017-10-10 01:14:24.92018	Query	A:UnitTestAdapter: Running test	T:11	Op:187	Start		ContentQuery: +Id:1 | Top:0 Skip:0 Sort:[null] Mode:Default AllVersions:False
+892	2017-10-10 01:14:24.92018	Query	A:UnitTestAdapter: Running test	T:11	Op:188	Start		LucQuery: +Id:1 .TOP:2147483647 .AUTOFILTERS:OFF
+893	2017-10-10 01:14:24.92018	Query	A:UnitTestAdapter: Running test	T:11	Op:189	Start		LuceneQueryExecutor. CQL:+Id:1 .TOP:2147483647 .AUTOFILTERS:OFF
+894	2017-10-10 01:14:24.92018	Query	A:UnitTestAdapter: Running test	T:11	Op:189	End	00:00:00.000000	LuceneQueryExecutor. CQL:+Id:1 .TOP:2147483647 .AUTOFILTERS:OFF
+895	2017-10-10 01:14:24.92018	Query	A:UnitTestAdapter: Running test	T:11				LucQuery.Execute total count: 0
+896	2017-10-10 01:14:24.92018	Query	A:UnitTestAdapter: Running test	T:11	Op:188	End	00:00:00.000000	LucQuery: +Id:1 .TOP:2147483647 .AUTOFILTERS:OFF
+897	2017-10-10 01:14:24.92018	Query	A:UnitTestAdapter: Running test	T:11	Op:187	End	00:00:00.000000	ContentQuery: +Id:1 | Top:0 Skip:0 Sort:[null] Mode:Default AllVersions:False
+898	2017-10-10 01:14:24.92121	System	A:UnitTestAdapter: Running test	T:11				Trace settings were updated. Enabled: ContentOperation, Index, IndexQueue, Query, Repository, System, Test, Event
+899	2017-10-10 01:14:24.92121	Repository	A:UnitTestAdapter: Running test	T:11				Sending a goodbye message.
+900	2017-10-10 01:14:24.92121	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down ClusterChannelMonitor
+901	2017-10-10 01:14:24.92121	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down SnMaintenance
+902	2017-10-10 01:14:24.92121	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down ExchangeSubscriptionService
+903	2017-10-10 01:14:24.92121	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down VoidChannel
+904	2017-10-10 01:14:24.92121	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down IndexingEngine.
+905	2017-10-10 01:14:24.92121	Index	A:UnitTestAdapter: Running test	T:11	Op:190	Start		LUCENEMANAGER SHUTDOWN
+906	2017-10-10 01:14:24.92121	Index	A:UnitTestAdapter: Running test	T:11	Op:191	Start		LM: Commit. reopenReader:False
+907	2017-10-10 01:14:24.92121	Index	A:UnitTestAdapter: Running test	T:11				LM: Committing_writer. commitState: 0()
+908	2017-10-10 01:14:24.94024	Index	A:UnitTestAdapter: Running test	T:11	Op:191	End	00:00:00.019022	LM: Commit. reopenReader:False
+909	2017-10-10 01:14:24.94024	Index	A:UnitTestAdapter: Running test	T:11	Op:192	Start		LM.CloseReaders
+910	2017-10-10 01:14:24.94124	Index	A:UnitTestAdapter: Running test	T:11	Op:192	End	00:00:00.001004	LM.CloseReaders
+911	2017-10-10 01:14:24.94124	Index	A:UnitTestAdapter: Running test	T:11	Op:190	End	00:00:00.020026	LUCENEMANAGER SHUTDOWN
+912	2017-10-10 01:14:24.94124	Index	A:UnitTestAdapter: Running test	T:11	Op:193	Start		LM.Waiting for writer lock file is released.
+913	2017-10-10 01:14:24.94124	Repository	A:UnitTestAdapter: Running test	T:11				Waiting for lock file to disappear: D:\dev\github\sensenet\src\Tests\SenseNet.SearchImpl.Tests\bin\App_Data\LuceneIndex\20171010011424\write.lock
+914	2017-10-10 01:14:24.94124	Repository	A:UnitTestAdapter: Running test	T:11				Lock file has gone: D:\dev\github\sensenet\src\Tests\SenseNet.SearchImpl.Tests\bin\App_Data\LuceneIndex\20171010011424\write.lock
+915	2017-10-10 01:14:24.94124	Index	A:UnitTestAdapter: Running test	T:11	Op:193	End	00:00:00.000000	LM.Waiting for writer lock file is released.
+916	2017-10-10 01:14:24.94124	Repository	A:UnitTestAdapter: Running test	T:11				Repository has stopped. Running time: 0.00:00:00
+>917	2017-10-10 01:14:24.94528	System	A:UnitTestAdapter: Running test	T:11				Trace settings were updated. Enabled: ContentOperation, Index, IndexQueue, Query, Repository, System, Test, Event
+918	2017-10-10 01:14:24.95828	Repository	A:UnitTestAdapter: Running test	T:11				Waiting for lock file to disappear: D:\dev\github\sensenet\src\Tests\SenseNet.SearchImpl.Tests\bin\App_Data\LuceneIndex\20171010011424\write.lock
+919	2017-10-10 01:14:24.95828	Repository	A:UnitTestAdapter: Running test	T:11				Lock file has gone: D:\dev\github\sensenet\src\Tests\SenseNet.SearchImpl.Tests\bin\App_Data\LuceneIndex\20171010011424\write.lock
+920	2017-10-10 01:14:24.95929	Index	A:UnitTestAdapter: Running test	T:11	Op:194	Start		IAQ: InitializeFromIndex. LastIndexedActivityId: 0, LastDatabaseId: 0, TotalUnprocessed: 0
+921	2017-10-10 01:14:24.95929	Index	A:UnitTestAdapter: Running test	T:11	Op:194	End	00:00:00.000000	IAQ: InitializeFromIndex. LastIndexedActivityId: 0, LastDatabaseId: 0, TotalUnprocessed: 0
+922	2017-10-10 01:14:24.95929	Query	A:UnitTestAdapter: Running test	T:11	Op:195	Start		ContentQuery: +Id:1 | Top:0 Skip:0 Sort:[null] Mode:Default AllVersions:False
+923	2017-10-10 01:14:24.95929	Query	A:UnitTestAdapter: Running test	T:11	Op:196	Start		LucQuery: +Id:1 .TOP:2147483647 .AUTOFILTERS:OFF
+924	2017-10-10 01:14:24.95929	Query	A:UnitTestAdapter: Running test	T:11	Op:197	Start		LuceneQueryExecutor. CQL:+Id:1 .TOP:2147483647 .AUTOFILTERS:OFF
+925	2017-10-10 01:14:24.96029	Query	A:UnitTestAdapter: Running test	T:11	Op:197	End	00:00:00.001002	LuceneQueryExecutor. CQL:+Id:1 .TOP:2147483647 .AUTOFILTERS:OFF
+926	2017-10-10 01:14:24.96029	Query	A:UnitTestAdapter: Running test	T:11				LucQuery.Execute total count: 0
+927	2017-10-10 01:14:24.96029	Query	A:UnitTestAdapter: Running test	T:11	Op:196	End	00:00:00.001002	LucQuery: +Id:1 .TOP:2147483647 .AUTOFILTERS:OFF
+928	2017-10-10 01:14:24.96029	Query	A:UnitTestAdapter: Running test	T:11	Op:195	End	00:00:00.001002	ContentQuery: +Id:1 | Top:0 Skip:0 Sort:[null] Mode:Default AllVersions:False
+929	2017-10-10 01:14:24.96129	System	A:UnitTestAdapter: Running test	T:11				Trace settings were updated. Enabled: ContentOperation, Index, IndexQueue, Query, Repository, System, Test, Event
+930	2017-10-10 01:14:24.96129	Repository	A:UnitTestAdapter: Running test	T:11				Sending a goodbye message.
+931	2017-10-10 01:14:24.96129	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down ClusterChannelMonitor
+932	2017-10-10 01:14:24.96129	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down SnMaintenance
+933	2017-10-10 01:14:24.96129	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down ExchangeSubscriptionService
+934	2017-10-10 01:14:24.96129	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down VoidChannel
+935	2017-10-10 01:14:24.96129	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down IndexingEngine.
+936	2017-10-10 01:14:24.96129	Index	A:UnitTestAdapter: Running test	T:11	Op:198	Start		LUCENEMANAGER SHUTDOWN
+937	2017-10-10 01:14:24.96129	Index	A:UnitTestAdapter: Running test	T:11	Op:199	Start		LM: Commit. reopenReader:False
+938	2017-10-10 01:14:24.96129	Index	A:UnitTestAdapter: Running test	T:11				LM: Committing_writer. commitState: 0()
+939	2017-10-10 01:14:24.97649	Index	A:UnitTestAdapter: Running test	T:11	Op:199	End	00:00:00.015198	LM: Commit. reopenReader:False
+940	2017-10-10 01:14:24.97649	Index	A:UnitTestAdapter: Running test	T:11	Op:200	Start		LM.CloseReaders
+941	2017-10-10 01:14:24.97649	Index	A:UnitTestAdapter: Running test	T:11	Op:200	End	00:00:00.000000	LM.CloseReaders
+942	2017-10-10 01:14:24.97649	Index	A:UnitTestAdapter: Running test	T:11	Op:198	End	00:00:00.015198	LUCENEMANAGER SHUTDOWN
+943	2017-10-10 01:14:24.97649	Index	A:UnitTestAdapter: Running test	T:11	Op:201	Start		LM.Waiting for writer lock file is released.
+944	2017-10-10 01:14:24.97649	Repository	A:UnitTestAdapter: Running test	T:11				Waiting for lock file to disappear: D:\dev\github\sensenet\src\Tests\SenseNet.SearchImpl.Tests\bin\App_Data\LuceneIndex\20171010011424\write.lock
+945	2017-10-10 01:14:24.97649	Repository	A:UnitTestAdapter: Running test	T:11				Lock file has gone: D:\dev\github\sensenet\src\Tests\SenseNet.SearchImpl.Tests\bin\App_Data\LuceneIndex\20171010011424\write.lock
+946	2017-10-10 01:14:24.97649	Index	A:UnitTestAdapter: Running test	T:11	Op:201	End	00:00:00.000000	LM.Waiting for writer lock file is released.
+947	2017-10-10 01:14:24.97649	Repository	A:UnitTestAdapter: Running test	T:11				Repository has stopped. Running time: 0.00:00:00
+>948	2017-10-10 01:14:24.98050	Test	A:UnitTestAdapter: Running test	T:11				END test: L29_SwitchOffRunningState
+>949	2017-10-10 01:14:24.98555	Test	A:UnitTestAdapter: Running test	T:11				START test: L29_NamedIndexDirectory
+950	2017-10-10 01:14:24.98956	Repository	A:UnitTestAdapter: Running test	T:11				DataProvider configured: SenseNet.ContentRepository.Tests.Implementations.InMemoryDataProvider
+951	2017-10-10 01:14:24.98956	Repository	A:UnitTestAdapter: Running test	T:11				AccessProvider configured: SenseNet.ContentRepository.Security.DesktopAccessProvider
+952	2017-10-10 01:14:24.98956	Repository	A:UnitTestAdapter: Running test	T:11				PermissionFilterFactory configured: SenseNet.SearchImpl.Tests.Implementations.EverythingAllowedPermissionFilterFactory
+953	2017-10-10 01:14:24.98956	Repository	A:UnitTestAdapter: Running test	T:11				SearchEngine configured: SenseNet.Search.Lucene29.Lucene29SearchEngine
+954	2017-10-10 01:14:24.98956	Repository	A:UnitTestAdapter: Running test	T:11				SecurityDataProvider configured: SenseNet.Security.Data.MemoryDataProvider
+955	2017-10-10 01:14:24.98956	Repository	A:UnitTestAdapter: Running test	T:11				CacheProvider configured: SenseNet.ContentRepository.Tests.Implementations.EmptyCache
+956	2017-10-10 01:14:24.98956	System	A:UnitTestAdapter: Running test	T:11				Trace settings were updated. Enabled: ContentOperation, Index, IndexQueue, Query, Repository, System, Test, Event
+957	2017-10-10 01:14:25.00055	Index	A:UnitTestAdapter: Running test	T:11				New index directory: D:\dev\github\sensenet\src\Tests\SenseNet.SearchImpl.Tests\bin\App_Data\LuceneIndex\Test_L29_NamedIndexDirectory
+958	2017-10-10 01:14:25.00055	Repository	A:UnitTestAdapter: Running test	T:11				Waiting for lock file to disappear: D:\dev\github\sensenet\src\Tests\SenseNet.SearchImpl.Tests\bin\App_Data\LuceneIndex\Test_L29_NamedIndexDirectory\write.lock
+959	2017-10-10 01:14:25.00055	Repository	A:UnitTestAdapter: Running test	T:11				Lock file has gone: D:\dev\github\sensenet\src\Tests\SenseNet.SearchImpl.Tests\bin\App_Data\LuceneIndex\Test_L29_NamedIndexDirectory\write.lock
+960	2017-10-10 01:14:25.00456	Index	A:UnitTestAdapter: Running test	T:11	Op:202	Start		IAQ: InitializeFromIndex. LastIndexedActivityId: 0, LastDatabaseId: 0, TotalUnprocessed: 0
+961	2017-10-10 01:14:25.00456	Index	A:UnitTestAdapter: Running test	T:11	Op:202	End	00:00:00.000000	IAQ: InitializeFromIndex. LastIndexedActivityId: 0, LastDatabaseId: 0, TotalUnprocessed: 0
+962	2017-10-10 01:14:25.00456	Query	A:UnitTestAdapter: Running test	T:11	Op:203	Start		ContentQuery: +Id:1 | Top:0 Skip:0 Sort:[null] Mode:Default AllVersions:False
+963	2017-10-10 01:14:25.00456	Query	A:UnitTestAdapter: Running test	T:11	Op:204	Start		LucQuery: +Id:1 .TOP:2147483647 .AUTOFILTERS:OFF
+964	2017-10-10 01:14:25.00456	Query	A:UnitTestAdapter: Running test	T:11	Op:205	Start		LuceneQueryExecutor. CQL:+Id:1 .TOP:2147483647 .AUTOFILTERS:OFF
+965	2017-10-10 01:14:25.00456	Query	A:UnitTestAdapter: Running test	T:11	Op:205	End	00:00:00.000000	LuceneQueryExecutor. CQL:+Id:1 .TOP:2147483647 .AUTOFILTERS:OFF
+966	2017-10-10 01:14:25.00456	Query	A:UnitTestAdapter: Running test	T:11				LucQuery.Execute total count: 0
+967	2017-10-10 01:14:25.00456	Query	A:UnitTestAdapter: Running test	T:11	Op:204	End	00:00:00.000000	LucQuery: +Id:1 .TOP:2147483647 .AUTOFILTERS:OFF
+968	2017-10-10 01:14:25.00456	Query	A:UnitTestAdapter: Running test	T:11	Op:203	End	00:00:00.000000	ContentQuery: +Id:1 | Top:0 Skip:0 Sort:[null] Mode:Default AllVersions:False
+969	2017-10-10 01:14:25.00557	System	A:UnitTestAdapter: Running test	T:11				Trace settings were updated. Enabled: ContentOperation, Index, IndexQueue, Query, Repository, System, Test, Event
+970	2017-10-10 01:14:25.00557	Repository	A:UnitTestAdapter: Running test	T:11				Sending a goodbye message.
+971	2017-10-10 01:14:25.00557	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down ClusterChannelMonitor
+972	2017-10-10 01:14:25.00557	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down SnMaintenance
+973	2017-10-10 01:14:25.00557	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down ExchangeSubscriptionService
+974	2017-10-10 01:14:25.00557	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down VoidChannel
+975	2017-10-10 01:14:25.00557	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down IndexingEngine.
+976	2017-10-10 01:14:25.00557	Index	A:UnitTestAdapter: Running test	T:11	Op:206	Start		LUCENEMANAGER SHUTDOWN
+977	2017-10-10 01:14:25.00557	Index	A:UnitTestAdapter: Running test	T:11	Op:207	Start		LM: Commit. reopenReader:False
+978	2017-10-10 01:14:25.00557	Index	A:UnitTestAdapter: Running test	T:11				LM: Committing_writer. commitState: 0()
+979	2017-10-10 01:14:25.02498	Index	A:UnitTestAdapter: Running test	T:11	Op:207	End	00:00:00.019412	LM: Commit. reopenReader:False
+980	2017-10-10 01:14:25.02498	Index	A:UnitTestAdapter: Running test	T:11	Op:208	Start		LM.CloseReaders
+981	2017-10-10 01:14:25.02498	Index	A:UnitTestAdapter: Running test	T:11	Op:208	End	00:00:00.000000	LM.CloseReaders
+982	2017-10-10 01:14:25.02498	Index	A:UnitTestAdapter: Running test	T:11	Op:206	End	00:00:00.019412	LUCENEMANAGER SHUTDOWN
+983	2017-10-10 01:14:25.02498	Index	A:UnitTestAdapter: Running test	T:11	Op:209	Start		LM.Waiting for writer lock file is released.
+984	2017-10-10 01:14:25.02498	Repository	A:UnitTestAdapter: Running test	T:11				Waiting for lock file to disappear: D:\dev\github\sensenet\src\Tests\SenseNet.SearchImpl.Tests\bin\App_Data\LuceneIndex\Test_L29_NamedIndexDirectory\write.lock
+985	2017-10-10 01:14:25.02498	Repository	A:UnitTestAdapter: Running test	T:11				Lock file has gone: D:\dev\github\sensenet\src\Tests\SenseNet.SearchImpl.Tests\bin\App_Data\LuceneIndex\Test_L29_NamedIndexDirectory\write.lock
+986	2017-10-10 01:14:25.02498	Index	A:UnitTestAdapter: Running test	T:11	Op:209	End	00:00:00.000000	LM.Waiting for writer lock file is released.
+987	2017-10-10 01:14:25.02498	Repository	A:UnitTestAdapter: Running test	T:11				Repository has stopped. Running time: 0.00:00:00
+>988	2017-10-10 01:14:25.02902	Test	A:UnitTestAdapter: Running test	T:11				END test: L29_NamedIndexDirectory
+>989	2017-10-10 01:14:25.03303	Test	A:UnitTestAdapter: Running test	T:11				START test: L29_ActivityStatus_WithoutSave
+990	2017-10-10 01:14:25.03704	Repository	A:UnitTestAdapter: Running test	T:11				DataProvider configured: SenseNet.ContentRepository.Tests.Implementations.InMemoryDataProvider
+991	2017-10-10 01:14:25.03704	Repository	A:UnitTestAdapter: Running test	T:11				AccessProvider configured: SenseNet.ContentRepository.Security.DesktopAccessProvider
+992	2017-10-10 01:14:25.03704	Repository	A:UnitTestAdapter: Running test	T:11				PermissionFilterFactory configured: SenseNet.SearchImpl.Tests.Implementations.EverythingAllowedPermissionFilterFactory
+993	2017-10-10 01:14:25.03704	Repository	A:UnitTestAdapter: Running test	T:11				SearchEngine configured: SenseNet.Search.Lucene29.Lucene29SearchEngine
+994	2017-10-10 01:14:25.03704	Repository	A:UnitTestAdapter: Running test	T:11				SecurityDataProvider configured: SenseNet.Security.Data.MemoryDataProvider
+995	2017-10-10 01:14:25.03704	Repository	A:UnitTestAdapter: Running test	T:11				CacheProvider configured: SenseNet.ContentRepository.Tests.Implementations.EmptyCache
+996	2017-10-10 01:14:25.03704	System	A:UnitTestAdapter: Running test	T:11				Trace settings were updated. Enabled: ContentOperation, Index, IndexQueue, Query, Repository, System, Test, Event
+997	2017-10-10 01:14:25.04704	Index	A:UnitTestAdapter: Running test	T:11				New index directory: D:\dev\github\sensenet\src\Tests\SenseNet.SearchImpl.Tests\bin\App_Data\LuceneIndex\Test_L29_ActivityStatus_WithoutSave
+998	2017-10-10 01:14:25.04704	Repository	A:UnitTestAdapter: Running test	T:11				Waiting for lock file to disappear: D:\dev\github\sensenet\src\Tests\SenseNet.SearchImpl.Tests\bin\App_Data\LuceneIndex\Test_L29_ActivityStatus_WithoutSave\write.lock
+999	2017-10-10 01:14:25.04704	Repository	A:UnitTestAdapter: Running test	T:11				Lock file has gone: D:\dev\github\sensenet\src\Tests\SenseNet.SearchImpl.Tests\bin\App_Data\LuceneIndex\Test_L29_ActivityStatus_WithoutSave\write.lock
+1000	2017-10-10 01:14:25.05205	Index	A:UnitTestAdapter: Running test	T:11	Op:210	Start		IAQ: InitializeFromIndex. LastIndexedActivityId: 0, LastDatabaseId: 0, TotalUnprocessed: 0
+1001	2017-10-10 01:14:25.05205	Index	A:UnitTestAdapter: Running test	T:11	Op:210	End	00:00:00.000000	IAQ: InitializeFromIndex. LastIndexedActivityId: 0, LastDatabaseId: 0, TotalUnprocessed: 0
+1002	2017-10-10 01:14:25.05205	Query	A:UnitTestAdapter: Running test	T:11	Op:211	Start		ContentQuery: +Id:1 | Top:0 Skip:0 Sort:[null] Mode:Default AllVersions:False
+1003	2017-10-10 01:14:25.05205	Query	A:UnitTestAdapter: Running test	T:11	Op:212	Start		LucQuery: +Id:1 .TOP:2147483647 .AUTOFILTERS:OFF
+1004	2017-10-10 01:14:25.05205	Query	A:UnitTestAdapter: Running test	T:11	Op:213	Start		LuceneQueryExecutor. CQL:+Id:1 .TOP:2147483647 .AUTOFILTERS:OFF
+1005	2017-10-10 01:14:25.05205	Query	A:UnitTestAdapter: Running test	T:11	Op:213	End	00:00:00.000000	LuceneQueryExecutor. CQL:+Id:1 .TOP:2147483647 .AUTOFILTERS:OFF
+1006	2017-10-10 01:14:25.05205	Query	A:UnitTestAdapter: Running test	T:11				LucQuery.Execute total count: 0
+1007	2017-10-10 01:14:25.05205	Query	A:UnitTestAdapter: Running test	T:11	Op:212	End	00:00:00.000000	LucQuery: +Id:1 .TOP:2147483647 .AUTOFILTERS:OFF
+1008	2017-10-10 01:14:25.05205	Query	A:UnitTestAdapter: Running test	T:11	Op:211	End	00:00:00.000000	ContentQuery: +Id:1 | Top:0 Skip:0 Sort:[null] Mode:Default AllVersions:False
+1009	2017-10-10 01:14:25.05305	System	A:UnitTestAdapter: Running test	T:11				Trace settings were updated. Enabled: ContentOperation, Index, IndexQueue, Query, Repository, System, Test, Event
+1010	2017-10-10 01:14:25.05305	Index	A:UnitTestAdapter: Running test	T:11	Op:214	Start		LM: Commit. reopenReader:True
+1011	2017-10-10 01:14:25.05305	Index	A:UnitTestAdapter: Running test	T:11				LM: Committing_writer. commitState: 33(5,6,7)
+1012	2017-10-10 01:14:25.07761	Index	A:UnitTestAdapter: Running test	T:11	Op:215	Start		LM: ReopenReader
+1013	2017-10-10 01:14:25.07761	Index	A:UnitTestAdapter: Running test	T:11				Recently used reader frames from last reopening reader: 3
+1014	2017-10-10 01:14:25.07761	Index	A:UnitTestAdapter: Running test	T:11	Op:215	End	00:00:00.000000	LM: ReopenReader
+1015	2017-10-10 01:14:25.07761	Index	A:UnitTestAdapter: Running test	T:11	Op:214	End	00:00:00.024558	LM: Commit. reopenReader:True
+1016	2017-10-10 01:14:25.07761	Repository	A:UnitTestAdapter: Running test	T:11				Sending a goodbye message.
+1017	2017-10-10 01:14:25.07761	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down ClusterChannelMonitor
+1018	2017-10-10 01:14:25.07761	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down SnMaintenance
+1019	2017-10-10 01:14:25.07761	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down ExchangeSubscriptionService
+1020	2017-10-10 01:14:25.07761	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down VoidChannel
+1021	2017-10-10 01:14:25.07761	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down IndexingEngine.
+1022	2017-10-10 01:14:25.07761	Index	A:UnitTestAdapter: Running test	T:11	Op:216	Start		LUCENEMANAGER SHUTDOWN
+1023	2017-10-10 01:14:25.07761	Index	A:UnitTestAdapter: Running test	T:11	Op:217	Start		LM: Commit. reopenReader:False
+1024	2017-10-10 01:14:25.07761	Index	A:UnitTestAdapter: Running test	T:11				LM: Committing_writer. commitState: 0()
+1025	2017-10-10 01:14:25.09363	Index	A:UnitTestAdapter: Running test	T:11	Op:217	End	00:00:00.016016	LM: Commit. reopenReader:False
+1026	2017-10-10 01:14:25.09363	Index	A:UnitTestAdapter: Running test	T:11	Op:218	Start		LM.CloseReaders
+1027	2017-10-10 01:14:25.09363	Index	A:UnitTestAdapter: Running test	T:11	Op:218	End	00:00:00.000000	LM.CloseReaders
+1028	2017-10-10 01:14:25.09363	Index	A:UnitTestAdapter: Running test	T:11	Op:216	End	00:00:00.016016	LUCENEMANAGER SHUTDOWN
+1029	2017-10-10 01:14:25.09363	Index	A:UnitTestAdapter: Running test	T:11	Op:219	Start		LM.Waiting for writer lock file is released.
+1030	2017-10-10 01:14:25.09363	Repository	A:UnitTestAdapter: Running test	T:11				Waiting for lock file to disappear: D:\dev\github\sensenet\src\Tests\SenseNet.SearchImpl.Tests\bin\App_Data\LuceneIndex\Test_L29_ActivityStatus_WithoutSave\write.lock
+1031	2017-10-10 01:14:25.09363	Repository	A:UnitTestAdapter: Running test	T:11				Lock file has gone: D:\dev\github\sensenet\src\Tests\SenseNet.SearchImpl.Tests\bin\App_Data\LuceneIndex\Test_L29_ActivityStatus_WithoutSave\write.lock
+1032	2017-10-10 01:14:25.09363	Index	A:UnitTestAdapter: Running test	T:11	Op:219	End	00:00:00.000000	LM.Waiting for writer lock file is released.
+1033	2017-10-10 01:14:25.09363	Repository	A:UnitTestAdapter: Running test	T:11				Repository has stopped. Running time: 0.00:00:00
+MaxPdiff: 121
+>1034	2017-10-10 01:14:25.09764	Test	A:UnitTestAdapter: Running test	T:11				END test: L29_ActivityStatus_WithoutSave
+>1035	2017-10-10 01:14:25.10165	Test	A:UnitTestAdapter: Running test	T:11				START test: L29_ActivityStatus_WithSave
+1036	2017-10-10 01:14:25.10466	Test	A:UnitTestAdapter: Running test	T:11				END test: L29_ActivityStatus_WithSave
+>1037	2017-10-10 01:14:25.10897	Test	A:UnitTestAdapter: Running test	T:11				START test: L29_Analyzers
+1038	2017-10-10 01:14:25.11502	Repository	A:UnitTestAdapter: Running test	T:11				DataProvider configured: SenseNet.ContentRepository.Tests.Implementations.InMemoryDataProvider
+1039	2017-10-10 01:14:25.11502	Repository	A:UnitTestAdapter: Running test	T:11				AccessProvider configured: SenseNet.ContentRepository.Security.DesktopAccessProvider
+1040	2017-10-10 01:14:25.11502	Repository	A:UnitTestAdapter: Running test	T:11				PermissionFilterFactory configured: SenseNet.SearchImpl.Tests.Implementations.EverythingAllowedPermissionFilterFactory
+1041	2017-10-10 01:14:25.11502	Repository	A:UnitTestAdapter: Running test	T:11				SearchEngine configured: SenseNet.Search.Lucene29.Lucene29SearchEngine
+1042	2017-10-10 01:14:25.11502	Repository	A:UnitTestAdapter: Running test	T:11				SecurityDataProvider configured: SenseNet.Security.Data.MemoryDataProvider
+1043	2017-10-10 01:14:25.11502	Repository	A:UnitTestAdapter: Running test	T:11				CacheProvider configured: SenseNet.ContentRepository.Tests.Implementations.EmptyCache
+1044	2017-10-10 01:14:25.11502	System	A:UnitTestAdapter: Running test	T:11				Trace settings were updated. Enabled: ContentOperation, Index, IndexQueue, Query, Repository, System, Test, Event
+1045	2017-10-10 01:14:25.12601	Index	A:UnitTestAdapter: Running test	T:11				New index directory: D:\dev\github\sensenet\src\Tests\SenseNet.SearchImpl.Tests\bin\App_Data\LuceneIndex\Test_L29_Analyzers
+1046	2017-10-10 01:14:25.12601	Repository	A:UnitTestAdapter: Running test	T:11				Waiting for lock file to disappear: D:\dev\github\sensenet\src\Tests\SenseNet.SearchImpl.Tests\bin\App_Data\LuceneIndex\Test_L29_Analyzers\write.lock
+1047	2017-10-10 01:14:25.12601	Repository	A:UnitTestAdapter: Running test	T:11				Lock file has gone: D:\dev\github\sensenet\src\Tests\SenseNet.SearchImpl.Tests\bin\App_Data\LuceneIndex\Test_L29_Analyzers\write.lock
+1048	2017-10-10 01:14:25.13002	Index	A:UnitTestAdapter: Running test	T:11	Op:220	Start		IAQ: InitializeFromIndex. LastIndexedActivityId: 0, LastDatabaseId: 0, TotalUnprocessed: 0
+1049	2017-10-10 01:14:25.13002	Index	A:UnitTestAdapter: Running test	T:11	Op:220	End	00:00:00.000000	IAQ: InitializeFromIndex. LastIndexedActivityId: 0, LastDatabaseId: 0, TotalUnprocessed: 0
+1050	2017-10-10 01:14:25.13002	Query	A:UnitTestAdapter: Running test	T:11	Op:221	Start		ContentQuery: +Id:1 | Top:0 Skip:0 Sort:[null] Mode:Default AllVersions:False
+1051	2017-10-10 01:14:25.13002	Query	A:UnitTestAdapter: Running test	T:11	Op:222	Start		LucQuery: +Id:1 .TOP:2147483647 .AUTOFILTERS:OFF
+1052	2017-10-10 01:14:25.13002	Query	A:UnitTestAdapter: Running test	T:11	Op:223	Start		LuceneQueryExecutor. CQL:+Id:1 .TOP:2147483647 .AUTOFILTERS:OFF
+1053	2017-10-10 01:14:25.13002	Query	A:UnitTestAdapter: Running test	T:11	Op:223	End	00:00:00.000000	LuceneQueryExecutor. CQL:+Id:1 .TOP:2147483647 .AUTOFILTERS:OFF
+1054	2017-10-10 01:14:25.13002	Query	A:UnitTestAdapter: Running test	T:11				LucQuery.Execute total count: 0
+1055	2017-10-10 01:14:25.13002	Query	A:UnitTestAdapter: Running test	T:11	Op:222	End	00:00:00.000000	LucQuery: +Id:1 .TOP:2147483647 .AUTOFILTERS:OFF
+1056	2017-10-10 01:14:25.13002	Query	A:UnitTestAdapter: Running test	T:11	Op:221	End	00:00:00.000000	ContentQuery: +Id:1 | Top:0 Skip:0 Sort:[null] Mode:Default AllVersions:False
+1057	2017-10-10 01:14:25.13103	System	A:UnitTestAdapter: Running test	T:11				Trace settings were updated. Enabled: ContentOperation, Index, IndexQueue, Query, Repository, System, Test, Event
+1058	2017-10-10 01:14:25.13203	Repository	A:UnitTestAdapter: Running test	T:11				Sending a goodbye message.
+1059	2017-10-10 01:14:25.13203	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down ClusterChannelMonitor
+1060	2017-10-10 01:14:25.13203	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down SnMaintenance
+1061	2017-10-10 01:14:25.13203	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down ExchangeSubscriptionService
+1062	2017-10-10 01:14:25.13203	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down VoidChannel
+1063	2017-10-10 01:14:25.13203	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down IndexingEngine.
+1064	2017-10-10 01:14:25.13203	Index	A:UnitTestAdapter: Running test	T:11	Op:224	Start		LUCENEMANAGER SHUTDOWN
+1065	2017-10-10 01:14:25.13203	Index	A:UnitTestAdapter: Running test	T:11	Op:225	Start		LM: Commit. reopenReader:False
+1066	2017-10-10 01:14:25.13203	Index	A:UnitTestAdapter: Running test	T:11				LM: Committing_writer. commitState: 0()
+1067	2017-10-10 01:14:25.14609	Index	A:UnitTestAdapter: Running test	T:11	Op:225	End	00:00:00.014064	LM: Commit. reopenReader:False
+1068	2017-10-10 01:14:25.14609	Index	A:UnitTestAdapter: Running test	T:11	Op:226	Start		LM.CloseReaders
+1069	2017-10-10 01:14:25.14609	Index	A:UnitTestAdapter: Running test	T:11	Op:226	End	00:00:00.000000	LM.CloseReaders
+1070	2017-10-10 01:14:25.14609	Index	A:UnitTestAdapter: Running test	T:11	Op:224	End	00:00:00.014064	LUCENEMANAGER SHUTDOWN
+1071	2017-10-10 01:14:25.14609	Index	A:UnitTestAdapter: Running test	T:11	Op:227	Start		LM.Waiting for writer lock file is released.
+1072	2017-10-10 01:14:25.14609	Repository	A:UnitTestAdapter: Running test	T:11				Waiting for lock file to disappear: D:\dev\github\sensenet\src\Tests\SenseNet.SearchImpl.Tests\bin\App_Data\LuceneIndex\Test_L29_Analyzers\write.lock
+1073	2017-10-10 01:14:25.14609	Repository	A:UnitTestAdapter: Running test	T:11				Lock file has gone: D:\dev\github\sensenet\src\Tests\SenseNet.SearchImpl.Tests\bin\App_Data\LuceneIndex\Test_L29_Analyzers\write.lock
+1074	2017-10-10 01:14:25.14609	Index	A:UnitTestAdapter: Running test	T:11	Op:227	End	00:00:00.000000	LM.Waiting for writer lock file is released.
+1075	2017-10-10 01:14:25.14707	Repository	A:UnitTestAdapter: Running test	T:11				Repository has stopped. Running time: 0.00:00:00
+>1076	2017-10-10 01:14:25.15008	Test	A:UnitTestAdapter: Running test	T:11				END test: L29_Analyzers
+>1077	2017-10-10 01:14:25.16660	Test	A:UnitTestAdapter: Running test	T:11				START test: TreeLock_AcquieAndScope
+1078	2017-10-10 01:14:25.16961	Repository	A:UnitTestAdapter: Running test	T:11				DataProvider configured: SenseNet.ContentRepository.Tests.Implementations.InMemoryDataProvider
+1079	2017-10-10 01:14:25.16961	Repository	A:UnitTestAdapter: Running test	T:11				SearchEngine configured: SenseNet.ContentRepository.Tests.Implementations.InMemorySearchEngine
+1080	2017-10-10 01:14:25.16961	Repository	A:UnitTestAdapter: Running test	T:11				SecurityDataProvider configured: SenseNet.Security.Data.MemoryDataProvider
+1081	2017-10-10 01:14:25.16961	Repository	A:UnitTestAdapter: Running test	T:11				ElevatedModificationVisibilityRuleProvider configured: SenseNet.ContentRepository.Storage.ElevatedModificationVisibilityRule
+1082	2017-10-10 01:14:25.16961	Repository	A:UnitTestAdapter: Running test	T:11				CacheProvider configured: SenseNet.ContentRepository.Tests.Implementations.EmptyCache
+1083	2017-10-10 01:14:25.16961	System	A:UnitTestAdapter: Running test	T:11				Trace settings were updated. Enabled: ContentOperation, Index, IndexQueue, Query, Repository, System, Test, Event
+1084	2017-10-10 01:14:25.22476	Index	A:UnitTestAdapter: Running test	T:11	Op:228	Start		IAQ: InitializeFromIndex. LastIndexedActivityId: 0, LastDatabaseId: 0, TotalUnprocessed: 0
+1085	2017-10-10 01:14:25.22476	Index	A:UnitTestAdapter: Running test	T:11	Op:228	End	00:00:00.000000	IAQ: InitializeFromIndex. LastIndexedActivityId: 0, LastDatabaseId: 0, TotalUnprocessed: 0
+1086	2017-10-10 01:14:25.22573	System	A:UnitTestAdapter: Running test	T:11				Trace settings were updated. Enabled: ContentOperation, Index, IndexQueue, Query, Repository, System, Test, Event
+1087	2017-10-10 01:14:25.22573	ContentOperation	A:UnitTestAdapter: Running test	T:11				TreeLock: Acquiring lock for /Root/A/B/C
+1088	2017-10-10 01:14:25.22573	ContentOperation	A:UnitTestAdapter: Running test	T:11	Op:229	Start		TreeLock: [1] for [/Root/A/B/C]
+1089	2017-10-10 01:14:25.22676	ContentOperation	A:UnitTestAdapter: Running test	T:11				TreeLock: Checking /Root/A/B/C/D
+1090	2017-10-10 01:14:25.22676	ContentOperation	A:UnitTestAdapter: Running test	T:11				TreeLock: Checking /Root/A/B/C/D
+1091	2017-10-10 01:14:25.22676	ContentOperation	A:UnitTestAdapter: Running test	T:11				TreeLock: Checking /Root/A/B/C
+1092	2017-10-10 01:14:25.22676	ContentOperation	A:UnitTestAdapter: Running test	T:11				TreeLock: Checking /Root/A/B/C
+1093	2017-10-10 01:14:25.22676	ContentOperation	A:UnitTestAdapter: Running test	T:11				TreeLock: Checking /Root/A/B
+1094	2017-10-10 01:14:25.22676	ContentOperation	A:UnitTestAdapter: Running test	T:11				TreeLock: Checking /Root/A/B
+1095	2017-10-10 01:14:25.22676	ContentOperation	A:UnitTestAdapter: Running test	T:11				TreeLock: Checking /Root/A
+1096	2017-10-10 01:14:25.22676	ContentOperation	A:UnitTestAdapter: Running test	T:11				TreeLock: Checking /Root/A
+1097	2017-10-10 01:14:25.22676	ContentOperation	A:UnitTestAdapter: Running test	T:11				TreeLock: Checking /Root
+1098	2017-10-10 01:14:25.22676	ContentOperation	A:UnitTestAdapter: Running test	T:11				TreeLock: Checking /Root
+1099	2017-10-10 01:14:25.22676	ContentOperation	A:UnitTestAdapter: Running test	T:11				TreeLock: Checking /Root/A/B/X
+1100	2017-10-10 01:14:25.22676	ContentOperation	A:UnitTestAdapter: Running test	T:11				TreeLock: Checking /Root/A/X
+1101	2017-10-10 01:14:25.22676	ContentOperation	A:UnitTestAdapter: Running test	T:11				TreeLock: Checking /Root/X
+1102	2017-10-10 01:14:25.22676	ContentOperation	A:UnitTestAdapter: Running test	T:11	Op:229	End	00:00:00.001031	TreeLock: [1] for [/Root/A/B/C]
+1103	2017-10-10 01:14:25.22676	Repository	A:UnitTestAdapter: Running test	T:11				Sending a goodbye message.
+1104	2017-10-10 01:14:25.22676	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down ClusterChannelMonitor
+1105	2017-10-10 01:14:25.22676	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down SnMaintenance
+1106	2017-10-10 01:14:25.22676	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down ExchangeSubscriptionService
+1107	2017-10-10 01:14:25.22676	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down VoidChannel
+1108	2017-10-10 01:14:25.22676	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down IndexingEngine.
+1109	2017-10-10 01:14:25.22676	Repository	A:UnitTestAdapter: Running test	T:11				Repository has stopped. Running time: 0.00:00:00

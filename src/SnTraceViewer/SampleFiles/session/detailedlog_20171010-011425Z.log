@@ -1,0 +1,487 @@
+﻿----
+>1110	2017-10-10 01:14:25.23077	Test	A:UnitTestAdapter: Running test	T:11				END test: TreeLock_AcquieAndScope
+>1111	2017-10-10 01:14:25.23476	Test	A:UnitTestAdapter: Running test	T:11				START test: TreeLock_Release
+1112	2017-10-10 01:14:25.23979	Repository	A:UnitTestAdapter: Running test	T:11				DataProvider configured: SenseNet.ContentRepository.Tests.Implementations.InMemoryDataProvider
+1113	2017-10-10 01:14:25.23979	Repository	A:UnitTestAdapter: Running test	T:11				SearchEngine configured: SenseNet.ContentRepository.Tests.Implementations.InMemorySearchEngine
+1114	2017-10-10 01:14:25.23979	Repository	A:UnitTestAdapter: Running test	T:11				SecurityDataProvider configured: SenseNet.Security.Data.MemoryDataProvider
+1115	2017-10-10 01:14:25.23979	Repository	A:UnitTestAdapter: Running test	T:11				ElevatedModificationVisibilityRuleProvider configured: SenseNet.ContentRepository.Storage.ElevatedModificationVisibilityRule
+1116	2017-10-10 01:14:25.23979	Repository	A:UnitTestAdapter: Running test	T:11				CacheProvider configured: SenseNet.ContentRepository.Tests.Implementations.EmptyCache
+1117	2017-10-10 01:14:25.23979	System	A:UnitTestAdapter: Running test	T:11				Trace settings were updated. Enabled: ContentOperation, Index, IndexQueue, Query, Repository, System, Test, Event
+1118	2017-10-10 01:14:25.28892	Index	A:UnitTestAdapter: Running test	T:11	Op:230	Start		IAQ: InitializeFromIndex. LastIndexedActivityId: 0, LastDatabaseId: 0, TotalUnprocessed: 0
+1119	2017-10-10 01:14:25.28892	Index	A:UnitTestAdapter: Running test	T:11	Op:230	End	00:00:00.000000	IAQ: InitializeFromIndex. LastIndexedActivityId: 0, LastDatabaseId: 0, TotalUnprocessed: 0
+1120	2017-10-10 01:14:25.28993	System	A:UnitTestAdapter: Running test	T:11				Trace settings were updated. Enabled: ContentOperation, Index, IndexQueue, Query, Repository, System, Test, Event
+1121	2017-10-10 01:14:25.29092	ContentOperation	A:UnitTestAdapter: Running test	T:11				TreeLock: Acquiring lock for /Root/A/B/C1
+1122	2017-10-10 01:14:25.29092	ContentOperation	A:UnitTestAdapter: Running test	T:11	Op:231	Start		TreeLock: [1] for [/Root/A/B/C1]
+1123	2017-10-10 01:14:25.29092	ContentOperation	A:UnitTestAdapter: Running test	T:11				TreeLock: Acquiring lock for /Root/A/B/C2
+1124	2017-10-10 01:14:25.29092	ContentOperation	A:UnitTestAdapter: Running test	T:11	Op:232	Start		TreeLock: [2] for [/Root/A/B/C2]
+1125	2017-10-10 01:14:25.29092	ContentOperation	A:UnitTestAdapter: Running test	T:11				TreeLock: Checking /Root/A/B/C1/D
+1126	2017-10-10 01:14:25.29092	ContentOperation	A:UnitTestAdapter: Running test	T:11				TreeLock: Checking /Root/A/B/C1/D
+1127	2017-10-10 01:14:25.29092	ContentOperation	A:UnitTestAdapter: Running test	T:11				TreeLock: Checking /Root/A/B/C2/D
+1128	2017-10-10 01:14:25.29092	ContentOperation	A:UnitTestAdapter: Running test	T:11				TreeLock: Checking /Root/A/B/C2/D
+1129	2017-10-10 01:14:25.29092	ContentOperation	A:UnitTestAdapter: Running test	T:11				TreeLock: Checking /Root/A/B/C1
+1130	2017-10-10 01:14:25.29092	ContentOperation	A:UnitTestAdapter: Running test	T:11				TreeLock: Checking /Root/A/B/C1
+1131	2017-10-10 01:14:25.29092	ContentOperation	A:UnitTestAdapter: Running test	T:11				TreeLock: Checking /Root/A/B/C2
+1132	2017-10-10 01:14:25.29092	ContentOperation	A:UnitTestAdapter: Running test	T:11				TreeLock: Checking /Root/A/B/C2
+1133	2017-10-10 01:14:25.29092	ContentOperation	A:UnitTestAdapter: Running test	T:11				TreeLock: Checking /Root/A/B
+1134	2017-10-10 01:14:25.29092	ContentOperation	A:UnitTestAdapter: Running test	T:11				TreeLock: Checking /Root/A/B
+1135	2017-10-10 01:14:25.29092	ContentOperation	A:UnitTestAdapter: Running test	T:11				TreeLock: Checking /Root/A
+1136	2017-10-10 01:14:25.29092	ContentOperation	A:UnitTestAdapter: Running test	T:11				TreeLock: Checking /Root/A
+1137	2017-10-10 01:14:25.29092	ContentOperation	A:UnitTestAdapter: Running test	T:11				TreeLock: Checking /Root
+1138	2017-10-10 01:14:25.29092	ContentOperation	A:UnitTestAdapter: Running test	T:11				TreeLock: Checking /Root
+1139	2017-10-10 01:14:25.29092	ContentOperation	A:UnitTestAdapter: Running test	T:11	Op:232	End	00:00:00.000000	TreeLock: [2] for [/Root/A/B/C2]
+1140	2017-10-10 01:14:25.29092	ContentOperation	A:UnitTestAdapter: Running test	T:11				TreeLock: Checking /Root/A/B/C1/D
+1141	2017-10-10 01:14:25.29092	ContentOperation	A:UnitTestAdapter: Running test	T:11				TreeLock: Checking /Root/A/B/C1/D
+1142	2017-10-10 01:14:25.29092	ContentOperation	A:UnitTestAdapter: Running test	T:11				TreeLock: Checking /Root/A/B/C1
+1143	2017-10-10 01:14:25.29092	ContentOperation	A:UnitTestAdapter: Running test	T:11				TreeLock: Checking /Root/A/B/C1
+1144	2017-10-10 01:14:25.29092	ContentOperation	A:UnitTestAdapter: Running test	T:11				TreeLock: Checking /Root/A/B
+1145	2017-10-10 01:14:25.29092	ContentOperation	A:UnitTestAdapter: Running test	T:11				TreeLock: Checking /Root/A/B
+1146	2017-10-10 01:14:25.29092	ContentOperation	A:UnitTestAdapter: Running test	T:11				TreeLock: Checking /Root/A
+1147	2017-10-10 01:14:25.29092	ContentOperation	A:UnitTestAdapter: Running test	T:11				TreeLock: Checking /Root/A
+1148	2017-10-10 01:14:25.29092	ContentOperation	A:UnitTestAdapter: Running test	T:11				TreeLock: Checking /Root
+1149	2017-10-10 01:14:25.29092	ContentOperation	A:UnitTestAdapter: Running test	T:11				TreeLock: Checking /Root
+1150	2017-10-10 01:14:25.29092	ContentOperation	A:UnitTestAdapter: Running test	T:11				TreeLock: Checking /Root/A/B/C2/D
+1151	2017-10-10 01:14:25.29092	ContentOperation	A:UnitTestAdapter: Running test	T:11				TreeLock: Checking /Root/A/B/C2
+1152	2017-10-10 01:14:25.29092	ContentOperation	A:UnitTestAdapter: Running test	T:11	Op:231	End	00:00:00.000000	TreeLock: [1] for [/Root/A/B/C1]
+1153	2017-10-10 01:14:25.29092	ContentOperation	A:UnitTestAdapter: Running test	T:11				TreeLock: Checking /Root/A/B/C1/D
+1154	2017-10-10 01:14:25.29092	ContentOperation	A:UnitTestAdapter: Running test	T:11				TreeLock: Checking /Root/A/B/C2/D
+1155	2017-10-10 01:14:25.29092	ContentOperation	A:UnitTestAdapter: Running test	T:11				TreeLock: Checking /Root/A/B/C1
+1156	2017-10-10 01:14:25.29092	ContentOperation	A:UnitTestAdapter: Running test	T:11				TreeLock: Checking /Root/A/B/C2
+1157	2017-10-10 01:14:25.29092	ContentOperation	A:UnitTestAdapter: Running test	T:11				TreeLock: Checking /Root/A/B
+1158	2017-10-10 01:14:25.29092	ContentOperation	A:UnitTestAdapter: Running test	T:11				TreeLock: Checking /Root/A
+1159	2017-10-10 01:14:25.29092	ContentOperation	A:UnitTestAdapter: Running test	T:11				TreeLock: Checking /Root
+1160	2017-10-10 01:14:25.29092	Repository	A:UnitTestAdapter: Running test	T:11				Sending a goodbye message.
+1161	2017-10-10 01:14:25.29092	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down ClusterChannelMonitor
+1162	2017-10-10 01:14:25.29092	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down SnMaintenance
+1163	2017-10-10 01:14:25.29092	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down ExchangeSubscriptionService
+1164	2017-10-10 01:14:25.29092	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down VoidChannel
+1165	2017-10-10 01:14:25.29092	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down IndexingEngine.
+1166	2017-10-10 01:14:25.29092	Repository	A:UnitTestAdapter: Running test	T:11				Repository has stopped. Running time: 0.00:00:00
+>1167	2017-10-10 01:14:25.29491	Test	A:UnitTestAdapter: Running test	T:11				END test: TreeLock_Release
+>1168	2017-10-10 01:14:25.29792	Test	A:UnitTestAdapter: Running test	T:11				START test: TreeLock_CannotAcquire
+1169	2017-10-10 01:14:25.30497	Repository	A:UnitTestAdapter: Running test	T:11				DataProvider configured: SenseNet.ContentRepository.Tests.Implementations.InMemoryDataProvider
+1170	2017-10-10 01:14:25.30497	Repository	A:UnitTestAdapter: Running test	T:11				SearchEngine configured: SenseNet.ContentRepository.Tests.Implementations.InMemorySearchEngine
+1171	2017-10-10 01:14:25.30497	Repository	A:UnitTestAdapter: Running test	T:11				SecurityDataProvider configured: SenseNet.Security.Data.MemoryDataProvider
+1172	2017-10-10 01:14:25.30497	Repository	A:UnitTestAdapter: Running test	T:11				ElevatedModificationVisibilityRuleProvider configured: SenseNet.ContentRepository.Storage.ElevatedModificationVisibilityRule
+1173	2017-10-10 01:14:25.30497	Repository	A:UnitTestAdapter: Running test	T:11				CacheProvider configured: SenseNet.ContentRepository.Tests.Implementations.EmptyCache
+1174	2017-10-10 01:14:25.30497	System	A:UnitTestAdapter: Running test	T:11				Trace settings were updated. Enabled: ContentOperation, Index, IndexQueue, Query, Repository, System, Test, Event
+1175	2017-10-10 01:14:25.35507	Index	A:UnitTestAdapter: Running test	T:11	Op:233	Start		IAQ: InitializeFromIndex. LastIndexedActivityId: 0, LastDatabaseId: 0, TotalUnprocessed: 0
+1176	2017-10-10 01:14:25.35507	Index	A:UnitTestAdapter: Running test	T:11	Op:233	End	00:00:00.000000	IAQ: InitializeFromIndex. LastIndexedActivityId: 0, LastDatabaseId: 0, TotalUnprocessed: 0
+1177	2017-10-10 01:14:25.35507	System	A:UnitTestAdapter: Running test	T:11				Trace settings were updated. Enabled: ContentOperation, Index, IndexQueue, Query, Repository, System, Test, Event
+1178	2017-10-10 01:14:25.35608	ContentOperation	A:UnitTestAdapter: Running test	T:11				TreeLock: Acquiring lock for /Root/A/B/C
+1179	2017-10-10 01:14:25.35608	ContentOperation	A:UnitTestAdapter: Running test	T:11	Op:234	Start		TreeLock: [1] for [/Root/A/B/C]
+1180	2017-10-10 01:14:25.35608	ContentOperation	A:UnitTestAdapter: Running test	T:11				TreeLock: Acquiring lock for /Root/A/B/C/D
+1181	2017-10-10 01:14:25.35608	ContentOperation	A:UnitTestAdapter: Running test	T:11				TreeLock: Cannot acquire a tree lock for /Root/A/B/C/D
+1182	2017-10-10 01:14:25.35608	ContentOperation	A:UnitTestAdapter: Running test	T:11				TreeLock: Acquiring lock for /Root/A/B/C/D
+1183	2017-10-10 01:14:25.35808	ContentOperation	A:UnitTestAdapter: Running test	T:11				TreeLock: Cannot acquire a tree lock for /Root/A/B/C/D
+1184	2017-10-10 01:14:25.35808	ContentOperation	A:UnitTestAdapter: Running test	T:11				TreeLock: Acquiring lock for /Root/A/B/C/D
+1185	2017-10-10 01:14:25.35808	ContentOperation	A:UnitTestAdapter: Running test	T:11				TreeLock: Cannot acquire a tree lock for /Root/A/B/C/D
+1186	2017-10-10 01:14:25.35808	ContentOperation	A:UnitTestAdapter: Running test	T:11				TreeLock: Acquiring lock for /Root/A/B/C/D
+1187	2017-10-10 01:14:25.35808	ContentOperation	A:UnitTestAdapter: Running test	T:11				TreeLock: Cannot acquire a tree lock for /Root/A/B/C/D
+1188	2017-10-10 01:14:25.35808	ContentOperation	A:UnitTestAdapter: Running test	T:11				TreeLock: Acquiring lock for /Root/A/B/C/D
+1189	2017-10-10 01:14:25.35808	ContentOperation	A:UnitTestAdapter: Running test	T:11				TreeLock: Cannot acquire a tree lock for /Root/A/B/C/D
+1190	2017-10-10 01:14:25.35808	ContentOperation	A:UnitTestAdapter: Running test	T:11	Op:234	End	00:00:00.002005	TreeLock: [1] for [/Root/A/B/C]
+1191	2017-10-10 01:14:25.35808	Repository	A:UnitTestAdapter: Running test	T:11				Sending a goodbye message.
+1192	2017-10-10 01:14:25.35808	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down ClusterChannelMonitor
+1193	2017-10-10 01:14:25.35808	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down SnMaintenance
+1194	2017-10-10 01:14:25.35808	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down ExchangeSubscriptionService
+1195	2017-10-10 01:14:25.35808	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down VoidChannel
+1196	2017-10-10 01:14:25.35808	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down IndexingEngine.
+1197	2017-10-10 01:14:25.35908	Repository	A:UnitTestAdapter: Running test	T:11				Repository has stopped. Running time: 0.00:00:00
+>1198	2017-10-10 01:14:25.36212	Test	A:UnitTestAdapter: Running test	T:11				END test: TreeLock_CannotAcquire
+>1199	2017-10-10 01:14:25.36513	Test	A:UnitTestAdapter: Running test	T:11				START test: TreeLock_TSQL_Underscore
+1200	2017-10-10 01:14:25.36911	Repository	A:UnitTestAdapter: Running test	T:11				DataProvider configured: SenseNet.ContentRepository.Tests.Implementations.InMemoryDataProvider
+1201	2017-10-10 01:14:25.36911	Repository	A:UnitTestAdapter: Running test	T:11				SearchEngine configured: SenseNet.ContentRepository.Tests.Implementations.InMemorySearchEngine
+1202	2017-10-10 01:14:25.36911	Repository	A:UnitTestAdapter: Running test	T:11				SecurityDataProvider configured: SenseNet.Security.Data.MemoryDataProvider
+1203	2017-10-10 01:14:25.36911	Repository	A:UnitTestAdapter: Running test	T:11				ElevatedModificationVisibilityRuleProvider configured: SenseNet.ContentRepository.Storage.ElevatedModificationVisibilityRule
+1204	2017-10-10 01:14:25.36911	Repository	A:UnitTestAdapter: Running test	T:11				CacheProvider configured: SenseNet.ContentRepository.Tests.Implementations.EmptyCache
+1205	2017-10-10 01:14:25.36911	System	A:UnitTestAdapter: Running test	T:11				Trace settings were updated. Enabled: ContentOperation, Index, IndexQueue, Query, Repository, System, Test, Event
+1206	2017-10-10 01:14:25.42125	Index	A:UnitTestAdapter: Running test	T:11	Op:235	Start		IAQ: InitializeFromIndex. LastIndexedActivityId: 0, LastDatabaseId: 0, TotalUnprocessed: 0
+1207	2017-10-10 01:14:25.42125	Index	A:UnitTestAdapter: Running test	T:11	Op:235	End	00:00:00.000000	IAQ: InitializeFromIndex. LastIndexedActivityId: 0, LastDatabaseId: 0, TotalUnprocessed: 0
+1208	2017-10-10 01:14:25.42225	System	A:UnitTestAdapter: Running test	T:11				Trace settings were updated. Enabled: ContentOperation, Index, IndexQueue, Query, Repository, System, Test, Event
+1209	2017-10-10 01:14:25.42225	ContentOperation	A:UnitTestAdapter: Running test	T:11				TreeLock: Acquiring lock for /Root/A/BxB/C
+1210	2017-10-10 01:14:25.42225	ContentOperation	A:UnitTestAdapter: Running test	T:11	Op:236	Start		TreeLock: [1] for [/Root/A/BxB/C]
+1211	2017-10-10 01:14:25.42225	ContentOperation	A:UnitTestAdapter: Running test	T:11				TreeLock: Checking /Root/A/B_B
+1212	2017-10-10 01:14:25.42225	ContentOperation	A:UnitTestAdapter: Running test	T:11				TreeLock: Acquiring lock for /Root/A/B_B
+1213	2017-10-10 01:14:25.42225	ContentOperation	A:UnitTestAdapter: Running test	T:11	Op:237	Start		TreeLock: [2] for [/Root/A/B_B]
+1214	2017-10-10 01:14:25.42225	ContentOperation	A:UnitTestAdapter: Running test	T:11				TreeLock: Checking /Root/A/B_
+1215	2017-10-10 01:14:25.42225	ContentOperation	A:UnitTestAdapter: Running test	T:11				TreeLock: Checking /Root/A/ByB
+1216	2017-10-10 01:14:25.42225	ContentOperation	A:UnitTestAdapter: Running test	T:11	Op:237	End	00:00:00.000000	TreeLock: [2] for [/Root/A/B_B]
+1217	2017-10-10 01:14:25.42225	ContentOperation	A:UnitTestAdapter: Running test	T:11				TreeLock: Checking /Root/A/BxB
+1218	2017-10-10 01:14:25.42225	ContentOperation	A:UnitTestAdapter: Running test	T:11				TreeLock: Checking /Root/A/BxB
+1219	2017-10-10 01:14:25.42225	ContentOperation	A:UnitTestAdapter: Running test	T:11	Op:236	End	00:00:00.000000	TreeLock: [1] for [/Root/A/BxB/C]
+1220	2017-10-10 01:14:25.42225	Repository	A:UnitTestAdapter: Running test	T:11				Sending a goodbye message.
+1221	2017-10-10 01:14:25.42225	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down ClusterChannelMonitor
+1222	2017-10-10 01:14:25.42325	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down SnMaintenance
+1223	2017-10-10 01:14:25.42325	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down ExchangeSubscriptionService
+1224	2017-10-10 01:14:25.42325	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down VoidChannel
+1225	2017-10-10 01:14:25.42325	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down IndexingEngine.
+1226	2017-10-10 01:14:25.42325	Repository	A:UnitTestAdapter: Running test	T:11				Repository has stopped. Running time: 0.00:00:00
+>1227	2017-10-10 01:14:25.42626	Test	A:UnitTestAdapter: Running test	T:11				END test: TreeLock_TSQL_Underscore
+>1228	2017-10-10 01:14:25.43030	Test	A:UnitTestAdapter: Running test	T:11				START test: InMemDb_LoadRootById
+1229	2017-10-10 01:14:25.43428	Repository	A:UnitTestAdapter: Running test	T:11				DataProvider configured: SenseNet.ContentRepository.Tests.Implementations.InMemoryDataProvider
+1230	2017-10-10 01:14:25.43428	Repository	A:UnitTestAdapter: Running test	T:11				SearchEngine configured: SenseNet.ContentRepository.Tests.Implementations.InMemorySearchEngine
+1231	2017-10-10 01:14:25.43428	Repository	A:UnitTestAdapter: Running test	T:11				SecurityDataProvider configured: SenseNet.Security.Data.MemoryDataProvider
+1232	2017-10-10 01:14:25.43428	Repository	A:UnitTestAdapter: Running test	T:11				ElevatedModificationVisibilityRuleProvider configured: SenseNet.ContentRepository.Storage.ElevatedModificationVisibilityRule
+1233	2017-10-10 01:14:25.43428	Repository	A:UnitTestAdapter: Running test	T:11				CacheProvider configured: SenseNet.ContentRepository.Tests.Implementations.EmptyCache
+1234	2017-10-10 01:14:25.43428	System	A:UnitTestAdapter: Running test	T:11				Trace settings were updated. Enabled: ContentOperation, Index, IndexQueue, Query, Repository, System, Test, Event
+1235	2017-10-10 01:14:25.48645	Index	A:UnitTestAdapter: Running test	T:11	Op:238	Start		IAQ: InitializeFromIndex. LastIndexedActivityId: 0, LastDatabaseId: 0, TotalUnprocessed: 0
+1236	2017-10-10 01:14:25.48745	Index	A:UnitTestAdapter: Running test	T:11	Op:238	End	00:00:00.001002	IAQ: InitializeFromIndex. LastIndexedActivityId: 0, LastDatabaseId: 0, TotalUnprocessed: 0
+1237	2017-10-10 01:14:25.48745	System	A:UnitTestAdapter: Running test	T:11				Trace settings were updated. Enabled: ContentOperation, Index, IndexQueue, Query, Repository, System, Test, Event
+1238	2017-10-10 01:14:25.48745	Repository	A:UnitTestAdapter: Running test	T:11				Sending a goodbye message.
+1239	2017-10-10 01:14:25.48745	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down ClusterChannelMonitor
+1240	2017-10-10 01:14:25.48745	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down SnMaintenance
+1241	2017-10-10 01:14:25.48745	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down ExchangeSubscriptionService
+1242	2017-10-10 01:14:25.48745	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down VoidChannel
+1243	2017-10-10 01:14:25.48745	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down IndexingEngine.
+1244	2017-10-10 01:14:25.48745	Repository	A:UnitTestAdapter: Running test	T:11				Repository has stopped. Running time: 0.00:00:00
+>1245	2017-10-10 01:14:25.49143	Test	A:UnitTestAdapter: Running test	T:11				END test: InMemDb_LoadRootById
+>1246	2017-10-10 01:14:25.49444	Test	A:UnitTestAdapter: Running test	T:11				START test: InMemDb_LoadRootByPath
+1247	2017-10-10 01:14:25.49948	Repository	A:UnitTestAdapter: Running test	T:11				DataProvider configured: SenseNet.ContentRepository.Tests.Implementations.InMemoryDataProvider
+1248	2017-10-10 01:14:25.49948	Repository	A:UnitTestAdapter: Running test	T:11				SearchEngine configured: SenseNet.ContentRepository.Tests.Implementations.InMemorySearchEngine
+1249	2017-10-10 01:14:25.49948	Repository	A:UnitTestAdapter: Running test	T:11				SecurityDataProvider configured: SenseNet.Security.Data.MemoryDataProvider
+1250	2017-10-10 01:14:25.50049	Repository	A:UnitTestAdapter: Running test	T:11				ElevatedModificationVisibilityRuleProvider configured: SenseNet.ContentRepository.Storage.ElevatedModificationVisibilityRule
+1251	2017-10-10 01:14:25.50049	Repository	A:UnitTestAdapter: Running test	T:11				CacheProvider configured: SenseNet.ContentRepository.Tests.Implementations.EmptyCache
+1252	2017-10-10 01:14:25.50049	System	A:UnitTestAdapter: Running test	T:11				Trace settings were updated. Enabled: ContentOperation, Index, IndexQueue, Query, Repository, System, Test, Event
+1253	2017-10-10 01:14:25.54959	Index	A:UnitTestAdapter: Running test	T:11	Op:239	Start		IAQ: InitializeFromIndex. LastIndexedActivityId: 0, LastDatabaseId: 0, TotalUnprocessed: 0
+1254	2017-10-10 01:14:25.54959	Index	A:UnitTestAdapter: Running test	T:11	Op:239	End	00:00:00.000000	IAQ: InitializeFromIndex. LastIndexedActivityId: 0, LastDatabaseId: 0, TotalUnprocessed: 0
+1255	2017-10-10 01:14:25.55062	System	A:UnitTestAdapter: Running test	T:11				Trace settings were updated. Enabled: ContentOperation, Index, IndexQueue, Query, Repository, System, Test, Event
+1256	2017-10-10 01:14:25.55062	Repository	A:UnitTestAdapter: Running test	T:11				Sending a goodbye message.
+1257	2017-10-10 01:14:25.55062	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down ClusterChannelMonitor
+1258	2017-10-10 01:14:25.55062	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down SnMaintenance
+1259	2017-10-10 01:14:25.55062	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down ExchangeSubscriptionService
+1260	2017-10-10 01:14:25.55062	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down VoidChannel
+1261	2017-10-10 01:14:25.55062	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down IndexingEngine.
+1262	2017-10-10 01:14:25.55062	Repository	A:UnitTestAdapter: Running test	T:11				Repository has stopped. Running time: 0.00:00:00
+>1263	2017-10-10 01:14:25.55460	Test	A:UnitTestAdapter: Running test	T:11				END test: InMemDb_LoadRootByPath
+>1264	2017-10-10 01:14:25.55763	Test	A:UnitTestAdapter: Running test	T:11				START test: InMemDb_Create
+1265	2017-10-10 01:14:25.56366	Repository	A:UnitTestAdapter: Running test	T:11				DataProvider configured: SenseNet.ContentRepository.Tests.Implementations.InMemoryDataProvider
+1266	2017-10-10 01:14:25.56366	Repository	A:UnitTestAdapter: Running test	T:11				SearchEngine configured: SenseNet.ContentRepository.Tests.Implementations.InMemorySearchEngine
+1267	2017-10-10 01:14:25.56366	Repository	A:UnitTestAdapter: Running test	T:11				SecurityDataProvider configured: SenseNet.Security.Data.MemoryDataProvider
+1268	2017-10-10 01:14:25.56366	Repository	A:UnitTestAdapter: Running test	T:11				ElevatedModificationVisibilityRuleProvider configured: SenseNet.ContentRepository.Storage.ElevatedModificationVisibilityRule
+1269	2017-10-10 01:14:25.56366	Repository	A:UnitTestAdapter: Running test	T:11				CacheProvider configured: SenseNet.ContentRepository.Tests.Implementations.EmptyCache
+1270	2017-10-10 01:14:25.56366	System	A:UnitTestAdapter: Running test	T:11				Trace settings were updated. Enabled: ContentOperation, Index, IndexQueue, Query, Repository, System, Test, Event
+1271	2017-10-10 01:14:25.61379	Index	A:UnitTestAdapter: Running test	T:11	Op:240	Start		IAQ: InitializeFromIndex. LastIndexedActivityId: 0, LastDatabaseId: 0, TotalUnprocessed: 0
+1272	2017-10-10 01:14:25.61379	Index	A:UnitTestAdapter: Running test	T:11	Op:240	End	00:00:00.000000	IAQ: InitializeFromIndex. LastIndexedActivityId: 0, LastDatabaseId: 0, TotalUnprocessed: 0
+1273	2017-10-10 01:14:25.61780	System	A:UnitTestAdapter: Running test	T:11				Trace settings were updated. Enabled: ContentOperation, Index, IndexQueue, Query, Repository, System, Test, Event
+1274	2017-10-10 01:14:25.61780	ContentOperation	A:UnitTestAdapter: Running test	T:11	Op:241	Start		GC.Save: Mode:RaiseVersion, VId:0, Path:/Root/SystemFolder-20171010011425
+1275	2017-10-10 01:14:25.61780	ContentOperation	A:UnitTestAdapter: Running test	T:11	Op:242	Start		NODE.SAVE Id: 0, VersionId: 0, Version: V1.0.A, Name: Node1, ParentPath: /Root
+1276	2017-10-10 01:14:25.61780	ContentOperation	A:UnitTestAdapter: Running test	T:11				TreeLock: Checking /Root/Node1
+1277	2017-10-10 01:14:25.61980	Index	A:UnitTestAdapter: Running test	T:11	Op:243	Start		Indexing node
+1278	2017-10-10 01:14:25.61980	Index	A:UnitTestAdapter: Running test	T:11	Op:244	Start		DocumentPopulator.CommitPopulateNode. Version: V1.0.A, VersionId: 1239, Path: /Root/Node1
+1279	2017-10-10 01:14:25.61980	IndexQueue	A:UnitTestAdapter: Running test	T:11				IAQ: A1 arrived. AddDocumentActivity, /root/node1
+1280	2017-10-10 01:14:25.61980	IndexQueue	A:UnitTestAdapter: Running test	T:11				IAQ: A1 enqueued.
+1281	2017-10-10 01:14:25.61980	IndexQueue	A:UnitTestAdapter: Running test	T:11				IAQ: A1 blocks the T11
+1282	2017-10-10 01:14:25.61980	IndexQueue	A:UnitTestAdapter: Running test	T:7				IAQ: A1 dequeued.
+1283	2017-10-10 01:14:25.61980	Index	A:UnitTestAdapter: Running test	T:7	Op:245	Start		IAQ: A1 EXECUTION.
+1284	2017-10-10 01:14:25.61980	Index	A:UnitTestAdapter: Running test	T:7				LM: AddDocumentActivity: [1239/1239], /root/node1. ActivityId:1, ExecutingUnprocessedActivities:False
+1285	2017-10-10 01:14:25.61980	Index	A:UnitTestAdapter: Running test	T:7	Op:246	Start		LM: LuceneDocumentActivity.CreateDocument (VersionId:1239)
+1286	2017-10-10 01:14:25.61980	Index	A:UnitTestAdapter: Running test	T:7	Op:246	End	00:00:00.000000	LM: LuceneDocumentActivity.CreateDocument (VersionId:1239)
+1287	2017-10-10 01:14:25.61980	IndexQueue	A:UnitTestAdapter: Running test	T:7				IAQ: waiting resource released T11.
+1288	2017-10-10 01:14:25.61980	IndexQueue	A:UnitTestAdapter: Running test	T:7				IAQ: A1 finished.
+1289	2017-10-10 01:14:25.61980	Index	A:UnitTestAdapter: Running test	T:11	Op:244	End	00:00:00.000000	DocumentPopulator.CommitPopulateNode. Version: V1.0.A, VersionId: 1239, Path: /Root/Node1
+1290	2017-10-10 01:14:25.61980	IndexQueue	A:UnitTestAdapter: Running test	T:7				IAQ: State after finishing A1: 1()
+1292	2017-10-10 01:14:25.61980	Index	A:UnitTestAdapter: Running test	T:11	Op:243	End	00:00:00.000000	Indexing node
+1291	2017-10-10 01:14:25.61980	Index	A:UnitTestAdapter: Running test	T:7	Op:245	End	00:00:00.000000	IAQ: A1 EXECUTION.
+1293	2017-10-10 01:14:25.92104	ContentOperation	A:UnitTestAdapter: Running test	T:11				Node created. Id:1239, Path:/Root/Node1
+1294	2017-10-10 01:14:25.92104	ContentOperation	A:UnitTestAdapter: Running test	T:11	Op:242	End	00:00:00.303245	NODE.SAVE Id: 0, VersionId: 0, Version: V1.0.A, Name: Node1, ParentPath: /Root
+1295	2017-10-10 01:14:25.92104	ContentOperation	A:UnitTestAdapter: Running test	T:11	Op:241	End	00:00:00.303245	GC.Save: Mode:RaiseVersion, VId:0, Path:/Root/SystemFolder-20171010011425
+1296	2017-10-10 01:14:25.92204	Repository	A:UnitTestAdapter: Running test	T:11				Sending a goodbye message.
+1297	2017-10-10 01:14:25.92204	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down ClusterChannelMonitor
+1298	2017-10-10 01:14:25.92204	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down SnMaintenance
+1299	2017-10-10 01:14:25.92204	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down ExchangeSubscriptionService
+1300	2017-10-10 01:14:25.92204	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down VoidChannel
+1301	2017-10-10 01:14:25.92204	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down IndexingEngine.
+1302	2017-10-10 01:14:25.92204	Repository	A:UnitTestAdapter: Running test	T:11				Repository has stopped. Running time: 0.00:00:00
+>1303	2017-10-10 01:14:25.92605	Test	A:UnitTestAdapter: Running test	T:11				END test: InMemDb_Create
+>1304	2017-10-10 01:14:25.93006	Test	A:UnitTestAdapter: Running test	T:11				START test: InMemDb_FlatPropertyLoaded
+1305	2017-10-10 01:14:25.93407	Repository	A:UnitTestAdapter: Running test	T:11				DataProvider configured: SenseNet.ContentRepository.Tests.Implementations.InMemoryDataProvider
+1306	2017-10-10 01:14:25.93407	Repository	A:UnitTestAdapter: Running test	T:11				SearchEngine configured: SenseNet.ContentRepository.Tests.Implementations.InMemorySearchEngine
+1307	2017-10-10 01:14:25.93407	Repository	A:UnitTestAdapter: Running test	T:11				SecurityDataProvider configured: SenseNet.Security.Data.MemoryDataProvider
+1308	2017-10-10 01:14:25.93407	Repository	A:UnitTestAdapter: Running test	T:11				ElevatedModificationVisibilityRuleProvider configured: SenseNet.ContentRepository.Storage.ElevatedModificationVisibilityRule
+1309	2017-10-10 01:14:25.93407	Repository	A:UnitTestAdapter: Running test	T:11				CacheProvider configured: SenseNet.ContentRepository.Tests.Implementations.EmptyCache
+1310	2017-10-10 01:14:25.93407	System	A:UnitTestAdapter: Running test	T:11				Trace settings were updated. Enabled: ContentOperation, Index, IndexQueue, Query, Repository, System, Test, Event
+1311	2017-10-10 01:14:25.99022	Index	A:UnitTestAdapter: Running test	T:11	Op:247	Start		IAQ: InitializeFromIndex. LastIndexedActivityId: 0, LastDatabaseId: 0, TotalUnprocessed: 0
+1312	2017-10-10 01:14:25.99022	Index	A:UnitTestAdapter: Running test	T:11	Op:247	End	00:00:00.000000	IAQ: InitializeFromIndex. LastIndexedActivityId: 0, LastDatabaseId: 0, TotalUnprocessed: 0
+1313	2017-10-10 01:14:25.99123	System	A:UnitTestAdapter: Running test	T:11				Trace settings were updated. Enabled: ContentOperation, Index, IndexQueue, Query, Repository, System, Test, Event
+1314	2017-10-10 01:14:25.99123	Repository	A:UnitTestAdapter: Running test	T:11				Sending a goodbye message.
+1315	2017-10-10 01:14:25.99123	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down ClusterChannelMonitor
+1316	2017-10-10 01:14:25.99123	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down SnMaintenance
+1317	2017-10-10 01:14:25.99123	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down ExchangeSubscriptionService
+1318	2017-10-10 01:14:25.99123	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down VoidChannel
+1319	2017-10-10 01:14:25.99123	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down IndexingEngine.
+1320	2017-10-10 01:14:25.99123	Repository	A:UnitTestAdapter: Running test	T:11				Repository has stopped. Running time: 0.00:00:00
+>1321	2017-10-10 01:14:25.99526	Test	A:UnitTestAdapter: Running test	T:11				END test: InMemDb_FlatPropertyLoaded
+>1322	2017-10-10 01:14:25.99927	Test	A:UnitTestAdapter: Running test	T:11				START test: InMemDb_FlatPropertyWrite
+1323	2017-10-10 01:14:26.00426	Repository	A:UnitTestAdapter: Running test	T:11				DataProvider configured: SenseNet.ContentRepository.Tests.Implementations.InMemoryDataProvider
+1324	2017-10-10 01:14:26.00426	Repository	A:UnitTestAdapter: Running test	T:11				SearchEngine configured: SenseNet.ContentRepository.Tests.Implementations.InMemorySearchEngine
+1325	2017-10-10 01:14:26.00426	Repository	A:UnitTestAdapter: Running test	T:11				SecurityDataProvider configured: SenseNet.Security.Data.MemoryDataProvider
+1326	2017-10-10 01:14:26.00426	Repository	A:UnitTestAdapter: Running test	T:11				ElevatedModificationVisibilityRuleProvider configured: SenseNet.ContentRepository.Storage.ElevatedModificationVisibilityRule
+1327	2017-10-10 01:14:26.00426	Repository	A:UnitTestAdapter: Running test	T:11				CacheProvider configured: SenseNet.ContentRepository.Tests.Implementations.EmptyCache
+1328	2017-10-10 01:14:26.00426	System	A:UnitTestAdapter: Running test	T:11				Trace settings were updated. Enabled: ContentOperation, Index, IndexQueue, Query, Repository, System, Test, Event
+1329	2017-10-10 01:14:26.05640	Index	A:UnitTestAdapter: Running test	T:11	Op:248	Start		IAQ: InitializeFromIndex. LastIndexedActivityId: 0, LastDatabaseId: 0, TotalUnprocessed: 0
+1330	2017-10-10 01:14:26.05740	Index	A:UnitTestAdapter: Running test	T:11	Op:248	End	00:00:00.001002	IAQ: InitializeFromIndex. LastIndexedActivityId: 0, LastDatabaseId: 0, TotalUnprocessed: 0
+1331	2017-10-10 01:14:26.05740	System	A:UnitTestAdapter: Running test	T:11				Trace settings were updated. Enabled: ContentOperation, Index, IndexQueue, Query, Repository, System, Test, Event
+1332	2017-10-10 01:14:26.05840	ContentOperation	A:UnitTestAdapter: Running test	T:11	Op:249	Start		GC.Save: Mode:RaiseVersion, VId:1, Path:/Root/IMS/BuiltIn/Portal/Admin
+1333	2017-10-10 01:14:26.06843	ContentOperation	A:UnitTestAdapter: Running test	T:11	Op:250	Start		NODE.SAVE Id: 1, VersionId: 1, Version: V1.0.A, Name: Admin, ParentPath: /Root/IMS/BuiltIn/Portal
+1334	2017-10-10 01:14:26.06843	ContentOperation	A:UnitTestAdapter: Running test	T:11				TreeLock: Checking /Root/IMS/BuiltIn/Portal/Admin
+1335	2017-10-10 01:14:26.07545	Index	A:UnitTestAdapter: Running test	T:11	Op:251	Start		Indexing node
+1336	2017-10-10 01:14:26.07545	Index	A:UnitTestAdapter: Running test	T:11	Op:252	Start		DocumentPopulator.CommitPopulateNode. Version: V1.0.A, VersionId: 1, Path: /Root/IMS/BuiltIn/Portal/Admin
+1337	2017-10-10 01:14:26.07545	IndexQueue	A:UnitTestAdapter: Running test	T:11				IAQ: A1 arrived. UpdateDocumentActivity, /root/ims/builtin/portal/admin
+1338	2017-10-10 01:14:26.07545	IndexQueue	A:UnitTestAdapter: Running test	T:11				IAQ: A1 enqueued.
+1339	2017-10-10 01:14:26.07545	IndexQueue	A:UnitTestAdapter: Running test	T:11				IAQ: A1 blocks the T11
+1340	2017-10-10 01:14:26.07545	IndexQueue	A:UnitTestAdapter: Running test	T:17				IAQ: A1 dequeued.
+1341	2017-10-10 01:14:26.07545	Index	A:UnitTestAdapter: Running test	T:17	Op:253	Start		IAQ: A1 EXECUTION.
+1342	2017-10-10 01:14:26.07545	Index	A:UnitTestAdapter: Running test	T:17				LM: UpdateDocumentActivity: [1/1], /root/ims/builtin/portal/admin. ActivityId:1, ExecutingUnprocessedActivities:False
+1343	2017-10-10 01:14:26.07545	Index	A:UnitTestAdapter: Running test	T:17	Op:254	Start		LM: LuceneDocumentActivity.CreateDocument (VersionId:1)
+1344	2017-10-10 01:14:26.07545	Index	A:UnitTestAdapter: Running test	T:17	Op:254	End	00:00:00.000000	LM: LuceneDocumentActivity.CreateDocument (VersionId:1)
+1345	2017-10-10 01:14:26.07545	IndexQueue	A:UnitTestAdapter: Running test	T:17				IAQ: waiting resource released T11.
+1346	2017-10-10 01:14:26.07545	IndexQueue	A:UnitTestAdapter: Running test	T:17				IAQ: A1 finished.
+1347	2017-10-10 01:14:26.07545	IndexQueue	A:UnitTestAdapter: Running test	T:17				IAQ: State after finishing A1: 1()
+1348	2017-10-10 01:14:26.07545	Index	A:UnitTestAdapter: Running test	T:17	Op:253	End	00:00:00.000000	IAQ: A1 EXECUTION.
+1349	2017-10-10 01:14:26.07545	Index	A:UnitTestAdapter: Running test	T:11	Op:252	End	00:00:00.000000	DocumentPopulator.CommitPopulateNode. Version: V1.0.A, VersionId: 1, Path: /Root/IMS/BuiltIn/Portal/Admin
+1350	2017-10-10 01:14:26.07846	IndexQueue	A:UnitTestAdapter: Running test	T:11				IAQ: A2 arrived. UpdateDocumentActivity, /root/ims/builtin/portal/admin
+1351	2017-10-10 01:14:26.07846	IndexQueue	A:UnitTestAdapter: Running test	T:11				IAQ: A2 enqueued.
+1352	2017-10-10 01:14:26.07846	IndexQueue	A:UnitTestAdapter: Running test	T:11				IAQ: A2 blocks the T11
+1353	2017-10-10 01:14:26.07846	IndexQueue	A:UnitTestAdapter: Running test	T:20				IAQ: A2 dequeued.
+1354	2017-10-10 01:14:26.07846	Index	A:UnitTestAdapter: Running test	T:20	Op:255	Start		IAQ: A2 EXECUTION.
+1355	2017-10-10 01:14:26.07846	Index	A:UnitTestAdapter: Running test	T:20				LM: UpdateDocumentActivity: [1/1], /root/ims/builtin/portal/admin. ActivityId:2, ExecutingUnprocessedActivities:False
+1356	2017-10-10 01:14:26.07846	Index	A:UnitTestAdapter: Running test	T:20	Op:256	Start		LM: LuceneDocumentActivity.CreateDocument (VersionId:1)
+1357	2017-10-10 01:14:26.07846	Index	A:UnitTestAdapter: Running test	T:20	Op:256	End	00:00:00.000000	LM: LuceneDocumentActivity.CreateDocument (VersionId:1)
+1358	2017-10-10 01:14:26.07846	IndexQueue	A:UnitTestAdapter: Running test	T:20				IAQ: waiting resource released T11.
+1359	2017-10-10 01:14:26.07846	IndexQueue	A:UnitTestAdapter: Running test	T:20				IAQ: A2 finished.
+1360	2017-10-10 01:14:26.07846	IndexQueue	A:UnitTestAdapter: Running test	T:20				IAQ: State after finishing A2: 2()
+1361	2017-10-10 01:14:26.07846	Index	A:UnitTestAdapter: Running test	T:20	Op:255	End	00:00:00.000000	IAQ: A2 EXECUTION.
+1362	2017-10-10 01:14:26.07846	Index	A:UnitTestAdapter: Running test	T:11	Op:251	End	00:00:00.003008	Indexing node
+1363	2017-10-10 01:14:26.07846	ContentOperation	A:UnitTestAdapter: Running test	T:11				Node updated. Id:1, Path:/Root/IMS/BuiltIn/Portal/Admin
+1364	2017-10-10 01:14:26.07846	ContentOperation	A:UnitTestAdapter: Running test	T:11	Op:250	End	00:00:00.010026	NODE.SAVE Id: 1, VersionId: 1, Version: V1.0.A, Name: Admin, ParentPath: /Root/IMS/BuiltIn/Portal
+1365	2017-10-10 01:14:26.07949	ContentOperation	A:UnitTestAdapter: Running test	T:11	Op:249	End	00:00:00.021084	GC.Save: Mode:RaiseVersion, VId:1, Path:/Root/IMS/BuiltIn/Portal/Admin
+1366	2017-10-10 01:14:26.07949	Repository	A:UnitTestAdapter: Running test	T:11				Sending a goodbye message.
+1367	2017-10-10 01:14:26.07949	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down ClusterChannelMonitor
+1368	2017-10-10 01:14:26.07949	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down SnMaintenance
+1369	2017-10-10 01:14:26.07949	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down ExchangeSubscriptionService
+1370	2017-10-10 01:14:26.07949	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down VoidChannel
+1371	2017-10-10 01:14:26.07949	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down IndexingEngine.
+1372	2017-10-10 01:14:26.07949	Repository	A:UnitTestAdapter: Running test	T:11				Repository has stopped. Running time: 0.00:00:00
+>1373	2017-10-10 01:14:26.08347	Test	A:UnitTestAdapter: Running test	T:11				END test: InMemDb_FlatPropertyWrite
+>1374	2017-10-10 01:14:26.08650	Test	A:UnitTestAdapter: Running test	T:11				START test: InMemDb_TextPropertyWrite
+1375	2017-10-10 01:14:26.09049	Repository	A:UnitTestAdapter: Running test	T:11				DataProvider configured: SenseNet.ContentRepository.Tests.Implementations.InMemoryDataProvider
+1376	2017-10-10 01:14:26.09049	Repository	A:UnitTestAdapter: Running test	T:11				SearchEngine configured: SenseNet.ContentRepository.Tests.Implementations.InMemorySearchEngine
+1377	2017-10-10 01:14:26.09049	Repository	A:UnitTestAdapter: Running test	T:11				SecurityDataProvider configured: SenseNet.Security.Data.MemoryDataProvider
+1378	2017-10-10 01:14:26.09049	Repository	A:UnitTestAdapter: Running test	T:11				ElevatedModificationVisibilityRuleProvider configured: SenseNet.ContentRepository.Storage.ElevatedModificationVisibilityRule
+1379	2017-10-10 01:14:26.09049	Repository	A:UnitTestAdapter: Running test	T:11				CacheProvider configured: SenseNet.ContentRepository.Tests.Implementations.EmptyCache
+1380	2017-10-10 01:14:26.09049	System	A:UnitTestAdapter: Running test	T:11				Trace settings were updated. Enabled: ContentOperation, Index, IndexQueue, Query, Repository, System, Test, Event
+1381	2017-10-10 01:14:26.14664	Index	A:UnitTestAdapter: Running test	T:11	Op:257	Start		IAQ: InitializeFromIndex. LastIndexedActivityId: 0, LastDatabaseId: 0, TotalUnprocessed: 0
+1382	2017-10-10 01:14:26.14664	Index	A:UnitTestAdapter: Running test	T:11	Op:257	End	00:00:00.000000	IAQ: InitializeFromIndex. LastIndexedActivityId: 0, LastDatabaseId: 0, TotalUnprocessed: 0
+1383	2017-10-10 01:14:26.14764	System	A:UnitTestAdapter: Running test	T:11				Trace settings were updated. Enabled: ContentOperation, Index, IndexQueue, Query, Repository, System, Test, Event
+1384	2017-10-10 01:14:26.14864	ContentOperation	A:UnitTestAdapter: Running test	T:11	Op:258	Start		GC.Save: Mode:RaiseVersion, VId:1, Path:/Root/IMS/BuiltIn/Portal/Admin
+1385	2017-10-10 01:14:26.14964	ContentOperation	A:UnitTestAdapter: Running test	T:11	Op:259	Start		NODE.SAVE Id: 1, VersionId: 1, Version: V1.0.A, Name: Admin, ParentPath: /Root/IMS/BuiltIn/Portal
+1386	2017-10-10 01:14:26.14964	ContentOperation	A:UnitTestAdapter: Running test	T:11				TreeLock: Checking /Root/IMS/BuiltIn/Portal/Admin
+1387	2017-10-10 01:14:26.15265	Index	A:UnitTestAdapter: Running test	T:11	Op:260	Start		Indexing node
+1388	2017-10-10 01:14:26.15265	Index	A:UnitTestAdapter: Running test	T:11	Op:261	Start		DocumentPopulator.CommitPopulateNode. Version: V1.0.A, VersionId: 1, Path: /Root/IMS/BuiltIn/Portal/Admin
+1389	2017-10-10 01:14:26.15265	IndexQueue	A:UnitTestAdapter: Running test	T:11				IAQ: A1 arrived. UpdateDocumentActivity, /root/ims/builtin/portal/admin
+1390	2017-10-10 01:14:26.15265	IndexQueue	A:UnitTestAdapter: Running test	T:11				IAQ: A1 enqueued.
+1391	2017-10-10 01:14:26.15265	IndexQueue	A:UnitTestAdapter: Running test	T:11				IAQ: A1 blocks the T11
+1392	2017-10-10 01:14:26.15265	IndexQueue	A:UnitTestAdapter: Running test	T:19				IAQ: A1 dequeued.
+1393	2017-10-10 01:14:26.15265	Index	A:UnitTestAdapter: Running test	T:19	Op:262	Start		IAQ: A1 EXECUTION.
+1394	2017-10-10 01:14:26.15265	Index	A:UnitTestAdapter: Running test	T:19				LM: UpdateDocumentActivity: [1/1], /root/ims/builtin/portal/admin. ActivityId:1, ExecutingUnprocessedActivities:False
+1395	2017-10-10 01:14:26.15265	Index	A:UnitTestAdapter: Running test	T:19	Op:263	Start		LM: LuceneDocumentActivity.CreateDocument (VersionId:1)
+1396	2017-10-10 01:14:26.15265	Index	A:UnitTestAdapter: Running test	T:19	Op:263	End	00:00:00.000000	LM: LuceneDocumentActivity.CreateDocument (VersionId:1)
+1397	2017-10-10 01:14:26.15265	IndexQueue	A:UnitTestAdapter: Running test	T:19				IAQ: waiting resource released T11.
+1398	2017-10-10 01:14:26.15265	IndexQueue	A:UnitTestAdapter: Running test	T:19				IAQ: A1 finished.
+1399	2017-10-10 01:14:26.15265	IndexQueue	A:UnitTestAdapter: Running test	T:19				IAQ: State after finishing A1: 1()
+1400	2017-10-10 01:14:26.15265	Index	A:UnitTestAdapter: Running test	T:19	Op:262	End	00:00:00.000000	IAQ: A1 EXECUTION.
+1401	2017-10-10 01:14:26.15265	Index	A:UnitTestAdapter: Running test	T:11	Op:261	End	00:00:00.000000	DocumentPopulator.CommitPopulateNode. Version: V1.0.A, VersionId: 1, Path: /Root/IMS/BuiltIn/Portal/Admin
+1402	2017-10-10 01:14:26.15365	IndexQueue	A:UnitTestAdapter: Running test	T:11				IAQ: A2 arrived. UpdateDocumentActivity, /root/ims/builtin/portal/admin
+1403	2017-10-10 01:14:26.15365	IndexQueue	A:UnitTestAdapter: Running test	T:11				IAQ: A2 enqueued.
+1404	2017-10-10 01:14:26.15365	IndexQueue	A:UnitTestAdapter: Running test	T:11				IAQ: A2 blocks the T11
+1405	2017-10-10 01:14:26.15365	IndexQueue	A:UnitTestAdapter: Running test	T:16				IAQ: A2 dequeued.
+1406	2017-10-10 01:14:26.15365	Index	A:UnitTestAdapter: Running test	T:16	Op:264	Start		IAQ: A2 EXECUTION.
+1407	2017-10-10 01:14:26.15365	Index	A:UnitTestAdapter: Running test	T:16				LM: UpdateDocumentActivity: [1/1], /root/ims/builtin/portal/admin. ActivityId:2, ExecutingUnprocessedActivities:False
+1408	2017-10-10 01:14:26.15365	Index	A:UnitTestAdapter: Running test	T:16	Op:265	Start		LM: LuceneDocumentActivity.CreateDocument (VersionId:1)
+1409	2017-10-10 01:14:26.15365	Index	A:UnitTestAdapter: Running test	T:16	Op:265	End	00:00:00.000000	LM: LuceneDocumentActivity.CreateDocument (VersionId:1)
+1410	2017-10-10 01:14:26.15365	IndexQueue	A:UnitTestAdapter: Running test	T:16				IAQ: waiting resource released T11.
+1411	2017-10-10 01:14:26.15365	IndexQueue	A:UnitTestAdapter: Running test	T:16				IAQ: A2 finished.
+1412	2017-10-10 01:14:26.15365	IndexQueue	A:UnitTestAdapter: Running test	T:16				IAQ: State after finishing A2: 2()
+1413	2017-10-10 01:14:26.15365	Index	A:UnitTestAdapter: Running test	T:16	Op:264	End	00:00:00.000000	IAQ: A2 EXECUTION.
+1414	2017-10-10 01:14:26.15365	Index	A:UnitTestAdapter: Running test	T:11	Op:260	End	00:00:00.001002	Indexing node
+1415	2017-10-10 01:14:26.15365	ContentOperation	A:UnitTestAdapter: Running test	T:11				Node updated. Id:1, Path:/Root/IMS/BuiltIn/Portal/Admin
+1416	2017-10-10 01:14:26.15365	ContentOperation	A:UnitTestAdapter: Running test	T:11	Op:259	End	00:00:00.004010	NODE.SAVE Id: 1, VersionId: 1, Version: V1.0.A, Name: Admin, ParentPath: /Root/IMS/BuiltIn/Portal
+1417	2017-10-10 01:14:26.15365	ContentOperation	A:UnitTestAdapter: Running test	T:11	Op:258	End	00:00:00.005013	GC.Save: Mode:RaiseVersion, VId:1, Path:/Root/IMS/BuiltIn/Portal/Admin
+1418	2017-10-10 01:14:26.15365	Repository	A:UnitTestAdapter: Running test	T:11				Sending a goodbye message.
+1419	2017-10-10 01:14:26.15365	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down ClusterChannelMonitor
+1420	2017-10-10 01:14:26.15365	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down SnMaintenance
+1421	2017-10-10 01:14:26.15365	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down ExchangeSubscriptionService
+1422	2017-10-10 01:14:26.15365	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down VoidChannel
+1423	2017-10-10 01:14:26.15365	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down IndexingEngine.
+1424	2017-10-10 01:14:26.15466	Repository	A:UnitTestAdapter: Running test	T:11				Repository has stopped. Running time: 0.00:00:00
+>1425	2017-10-10 01:14:26.15766	Test	A:UnitTestAdapter: Running test	T:11				END test: InMemDb_TextPropertyWrite
+>1426	2017-10-10 01:14:26.16168	Test	A:UnitTestAdapter: Running test	T:11				START test: InMemDb_ReferencePropertyLoaded
+1427	2017-10-10 01:14:26.16769	Repository	A:UnitTestAdapter: Running test	T:11				DataProvider configured: SenseNet.ContentRepository.Tests.Implementations.InMemoryDataProvider
+1428	2017-10-10 01:14:26.16769	Repository	A:UnitTestAdapter: Running test	T:11				SearchEngine configured: SenseNet.ContentRepository.Tests.Implementations.InMemorySearchEngine
+1429	2017-10-10 01:14:26.16769	Repository	A:UnitTestAdapter: Running test	T:11				SecurityDataProvider configured: SenseNet.Security.Data.MemoryDataProvider
+1430	2017-10-10 01:14:26.16769	Repository	A:UnitTestAdapter: Running test	T:11				ElevatedModificationVisibilityRuleProvider configured: SenseNet.ContentRepository.Storage.ElevatedModificationVisibilityRule
+1431	2017-10-10 01:14:26.16769	Repository	A:UnitTestAdapter: Running test	T:11				CacheProvider configured: SenseNet.ContentRepository.Tests.Implementations.EmptyCache
+1432	2017-10-10 01:14:26.16769	System	A:UnitTestAdapter: Running test	T:11				Trace settings were updated. Enabled: ContentOperation, Index, IndexQueue, Query, Repository, System, Test, Event
+1433	2017-10-10 01:14:26.22186	Index	A:UnitTestAdapter: Running test	T:11	Op:266	Start		IAQ: InitializeFromIndex. LastIndexedActivityId: 0, LastDatabaseId: 0, TotalUnprocessed: 0
+1434	2017-10-10 01:14:26.22186	Index	A:UnitTestAdapter: Running test	T:11	Op:266	End	00:00:00.000000	IAQ: InitializeFromIndex. LastIndexedActivityId: 0, LastDatabaseId: 0, TotalUnprocessed: 0
+1435	2017-10-10 01:14:26.22286	System	A:UnitTestAdapter: Running test	T:11				Trace settings were updated. Enabled: ContentOperation, Index, IndexQueue, Query, Repository, System, Test, Event
+1436	2017-10-10 01:14:26.22286	Repository	A:UnitTestAdapter: Running test	T:11				Sending a goodbye message.
+1437	2017-10-10 01:14:26.22286	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down ClusterChannelMonitor
+1438	2017-10-10 01:14:26.22286	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down SnMaintenance
+1439	2017-10-10 01:14:26.22286	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down ExchangeSubscriptionService
+1440	2017-10-10 01:14:26.22286	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down VoidChannel
+1441	2017-10-10 01:14:26.22286	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down IndexingEngine.
+1442	2017-10-10 01:14:26.22286	Repository	A:UnitTestAdapter: Running test	T:11				Repository has stopped. Running time: 0.00:00:00
+>1443	2017-10-10 01:14:26.22687	Test	A:UnitTestAdapter: Running test	T:11				END test: InMemDb_ReferencePropertyLoaded
+>1444	2017-10-10 01:14:26.22989	Test	A:UnitTestAdapter: Running test	T:11				START test: InMemDb_ReferencePropertyWrite
+1445	2017-10-10 01:14:26.23691	Repository	A:UnitTestAdapter: Running test	T:11				DataProvider configured: SenseNet.ContentRepository.Tests.Implementations.InMemoryDataProvider
+1446	2017-10-10 01:14:26.23691	Repository	A:UnitTestAdapter: Running test	T:11				SearchEngine configured: SenseNet.ContentRepository.Tests.Implementations.InMemorySearchEngine
+1447	2017-10-10 01:14:26.23691	Repository	A:UnitTestAdapter: Running test	T:11				SecurityDataProvider configured: SenseNet.Security.Data.MemoryDataProvider
+1448	2017-10-10 01:14:26.23691	Repository	A:UnitTestAdapter: Running test	T:11				ElevatedModificationVisibilityRuleProvider configured: SenseNet.ContentRepository.Storage.ElevatedModificationVisibilityRule
+1449	2017-10-10 01:14:26.23691	Repository	A:UnitTestAdapter: Running test	T:11				CacheProvider configured: SenseNet.ContentRepository.Tests.Implementations.EmptyCache
+1450	2017-10-10 01:14:26.23691	System	A:UnitTestAdapter: Running test	T:11				Trace settings were updated. Enabled: ContentOperation, Index, IndexQueue, Query, Repository, System, Test, Event
+1451	2017-10-10 01:14:26.29004	Index	A:UnitTestAdapter: Running test	T:11	Op:267	Start		IAQ: InitializeFromIndex. LastIndexedActivityId: 0, LastDatabaseId: 0, TotalUnprocessed: 0
+1452	2017-10-10 01:14:26.29004	Index	A:UnitTestAdapter: Running test	T:11	Op:267	End	00:00:00.000000	IAQ: InitializeFromIndex. LastIndexedActivityId: 0, LastDatabaseId: 0, TotalUnprocessed: 0
+1453	2017-10-10 01:14:26.29102	System	A:UnitTestAdapter: Running test	T:11				Trace settings were updated. Enabled: ContentOperation, Index, IndexQueue, Query, Repository, System, Test, Event
+1454	2017-10-10 01:14:26.29205	ContentOperation	A:UnitTestAdapter: Running test	T:11	Op:268	Start		GC.Save: Mode:RaiseVersion, VId:203, Path:/Root/IMS/BuiltIn/Portal/Editors
+1455	2017-10-10 01:14:26.29305	ContentOperation	A:UnitTestAdapter: Running test	T:11	Op:269	Start		NODE.SAVE Id: 1191, VersionId: 203, Version: V1.0.A, Name: Editors, ParentPath: /Root/IMS/BuiltIn/Portal
+1456	2017-10-10 01:14:26.29305	ContentOperation	A:UnitTestAdapter: Running test	T:11				TreeLock: Checking /Root/IMS/BuiltIn/Portal/Editors
+1457	2017-10-10 01:14:26.29603	Index	A:UnitTestAdapter: Running test	T:11	Op:270	Start		Indexing node
+1458	2017-10-10 01:14:26.29603	Index	A:UnitTestAdapter: Running test	T:11	Op:271	Start		DocumentPopulator.CommitPopulateNode. Version: V1.0.A, VersionId: 203, Path: /Root/IMS/BuiltIn/Portal/Editors
+1459	2017-10-10 01:14:26.29603	IndexQueue	A:UnitTestAdapter: Running test	T:11				IAQ: A1 arrived. UpdateDocumentActivity, /root/ims/builtin/portal/editors
+1460	2017-10-10 01:14:26.29603	IndexQueue	A:UnitTestAdapter: Running test	T:11				IAQ: A1 enqueued.
+1461	2017-10-10 01:14:26.29603	IndexQueue	A:UnitTestAdapter: Running test	T:11				IAQ: A1 blocks the T11
+1462	2017-10-10 01:14:26.29603	IndexQueue	A:UnitTestAdapter: Running test	T:17				IAQ: A1 dequeued.
+1463	2017-10-10 01:14:26.29603	Index	A:UnitTestAdapter: Running test	T:17	Op:272	Start		IAQ: A1 EXECUTION.
+1464	2017-10-10 01:14:26.29603	Index	A:UnitTestAdapter: Running test	T:17				LM: UpdateDocumentActivity: [1191/203], /root/ims/builtin/portal/editors. ActivityId:1, ExecutingUnprocessedActivities:False
+1465	2017-10-10 01:14:26.29603	Index	A:UnitTestAdapter: Running test	T:17	Op:273	Start		LM: LuceneDocumentActivity.CreateDocument (VersionId:203)
+1466	2017-10-10 01:14:26.29603	Index	A:UnitTestAdapter: Running test	T:17	Op:273	End	00:00:00.000000	LM: LuceneDocumentActivity.CreateDocument (VersionId:203)
+1467	2017-10-10 01:14:26.29603	IndexQueue	A:UnitTestAdapter: Running test	T:17				IAQ: waiting resource released T11.
+1468	2017-10-10 01:14:26.29603	IndexQueue	A:UnitTestAdapter: Running test	T:17				IAQ: A1 finished.
+1470	2017-10-10 01:14:26.29603	IndexQueue	A:UnitTestAdapter: Running test	T:17				IAQ: State after finishing A1: 1()
+1469	2017-10-10 01:14:26.29603	Index	A:UnitTestAdapter: Running test	T:11	Op:271	End	00:00:00.000000	DocumentPopulator.CommitPopulateNode. Version: V1.0.A, VersionId: 203, Path: /Root/IMS/BuiltIn/Portal/Editors
+1471	2017-10-10 01:14:26.29603	Index	A:UnitTestAdapter: Running test	T:17	Op:272	End	00:00:00.000000	IAQ: A1 EXECUTION.
+1472	2017-10-10 01:14:26.29603	Index	A:UnitTestAdapter: Running test	T:11	Op:270	End	00:00:00.000000	Indexing node
+1473	2017-10-10 01:14:26.29603	ContentOperation	A:UnitTestAdapter: Running test	T:11				Node updated. Id:1191, Path:/Root/IMS/BuiltIn/Portal/Editors
+1474	2017-10-10 01:14:26.60339	ContentOperation	A:UnitTestAdapter: Running test	T:11	Op:269	End	00:00:00.310344	NODE.SAVE Id: 1191, VersionId: 203, Version: V1.0.A, Name: Editors, ParentPath: /Root/IMS/BuiltIn/Portal
+1475	2017-10-10 01:14:26.60339	ContentOperation	A:UnitTestAdapter: Running test	T:11	Op:268	End	00:00:00.311346	GC.Save: Mode:RaiseVersion, VId:203, Path:/Root/IMS/BuiltIn/Portal/Editors
+1476	2017-10-10 01:14:26.60339	Repository	A:UnitTestAdapter: Running test	T:11				Sending a goodbye message.
+1477	2017-10-10 01:14:26.60339	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down ClusterChannelMonitor
+1478	2017-10-10 01:14:26.60339	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down SnMaintenance
+1479	2017-10-10 01:14:26.60339	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down ExchangeSubscriptionService
+1480	2017-10-10 01:14:26.60339	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down VoidChannel
+1481	2017-10-10 01:14:26.60339	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down IndexingEngine.
+1482	2017-10-10 01:14:26.60339	Repository	A:UnitTestAdapter: Running test	T:11				Repository has stopped. Running time: 0.00:00:00
+>1483	2017-10-10 01:14:26.60740	Test	A:UnitTestAdapter: Running test	T:11				END test: InMemDb_ReferencePropertyWrite
+>1484	2017-10-10 01:14:26.61239	Test	A:UnitTestAdapter: Running test	T:11				START test: InMemDb_SaveAndLoadNewNodeWithAllDynamicDataTypes
+1485	2017-10-10 01:14:26.61543	Repository	A:UnitTestAdapter: Running test	T:11				DataProvider configured: SenseNet.ContentRepository.Tests.Implementations.InMemoryDataProvider
+1486	2017-10-10 01:14:26.61543	Repository	A:UnitTestAdapter: Running test	T:11				SearchEngine configured: SenseNet.ContentRepository.Tests.Implementations.InMemorySearchEngine
+1487	2017-10-10 01:14:26.61543	Repository	A:UnitTestAdapter: Running test	T:11				SecurityDataProvider configured: SenseNet.Security.Data.MemoryDataProvider
+1488	2017-10-10 01:14:26.61543	Repository	A:UnitTestAdapter: Running test	T:11				ElevatedModificationVisibilityRuleProvider configured: SenseNet.ContentRepository.Storage.ElevatedModificationVisibilityRule
+1489	2017-10-10 01:14:26.61543	Repository	A:UnitTestAdapter: Running test	T:11				CacheProvider configured: SenseNet.ContentRepository.Tests.Implementations.EmptyCache
+1490	2017-10-10 01:14:26.61543	System	A:UnitTestAdapter: Running test	T:11				Trace settings were updated. Enabled: ContentOperation, Index, IndexQueue, Query, Repository, System, Test, Event
+1491	2017-10-10 01:14:26.66954	Index	A:UnitTestAdapter: Running test	T:11	Op:274	Start		IAQ: InitializeFromIndex. LastIndexedActivityId: 0, LastDatabaseId: 0, TotalUnprocessed: 0
+1492	2017-10-10 01:14:26.66954	Index	A:UnitTestAdapter: Running test	T:11	Op:274	End	00:00:00.000000	IAQ: InitializeFromIndex. LastIndexedActivityId: 0, LastDatabaseId: 0, TotalUnprocessed: 0
+1493	2017-10-10 01:14:26.67054	System	A:UnitTestAdapter: Running test	T:11				Trace settings were updated. Enabled: ContentOperation, Index, IndexQueue, Query, Repository, System, Test, Event
+1494	2017-10-10 01:14:26.69862	ContentOperation	A:UnitTestAdapter: Running test	T:11	Op:275	Start		NODE.SAVE Id: 0, VersionId: 0, Version: V1.0.A, Name: DataTestNode, ParentPath: /Root/System/Schema/ContentTypes/GenericContent
+1495	2017-10-10 01:14:26.69862	ContentOperation	A:UnitTestAdapter: Running test	T:11				TreeLock: Checking /Root/System/Schema/ContentTypes/GenericContent/DataTestNode
+1496	2017-10-10 01:14:26.88311	Repository	A:UnitTestAdapter: Running test	T:11	Op:276	Start		CreateJsEvaluatorAndType
+1497	2017-10-10 01:14:26.93175	Repository	A:UnitTestAdapter: Running test	T:11				JsEvaluator assembly compiled: FullName:vof4dpzt, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null, CodeBase:file:///C:/WINDOWS/Microsoft.Net/assembly/GAC_MSIL/Microsoft.JScript/v4.0_10.0.0.0__b03f5f7f11d50a3a/Microsoft.JScript.dll, Location:
+1498	2017-10-10 01:14:26.93175	Repository	A:UnitTestAdapter: Running test	T:11	Op:276	End	00:00:00.048639	CreateJsEvaluatorAndType
+1499	2017-10-10 01:14:26.93378	Repository	A:UnitTestAdapter: Running test	T:11				Script evaluated. Evaluator:SenseNet.ContentRepository.JscriptEvaluator, source: System.Globalization.CultureInfo.CurrentUICulture.IsNeutralCulture ? System.Globalization.CultureInfo.CreateSpecificCulture(System.Globalization.CultureInfo.CurrentUICulture.Name).Name : System.Globalization.CultureInfo.CurrentUICulture.Name; 
+1500	2017-10-10 01:14:26.94180	Index	A:UnitTestAdapter: Running test	T:11	Op:277	Start		Indexing node
+1501	2017-10-10 01:14:26.94180	Index	A:UnitTestAdapter: Running test	T:11	Op:278	Start		DocumentPopulator.CommitPopulateNode. Version: V1.0.A, VersionId: 1239, Path: /Root/System/Schema/ContentTypes/GenericContent/DataTestNode
+1502	2017-10-10 01:14:26.94280	IndexQueue	A:UnitTestAdapter: Running test	T:11				IAQ: A1 arrived. AddDocumentActivity, /root/system/schema/contenttypes/genericcontent/datatestnode
+1503	2017-10-10 01:14:26.94280	IndexQueue	A:UnitTestAdapter: Running test	T:11				IAQ: A1 enqueued.
+1504	2017-10-10 01:14:26.94280	IndexQueue	A:UnitTestAdapter: Running test	T:11				IAQ: A1 blocks the T11
+1505	2017-10-10 01:14:26.94280	IndexQueue	A:UnitTestAdapter: Running test	T:18				IAQ: A1 dequeued.
+1506	2017-10-10 01:14:26.94280	Index	A:UnitTestAdapter: Running test	T:18	Op:279	Start		IAQ: A1 EXECUTION.
+1507	2017-10-10 01:14:26.94280	Index	A:UnitTestAdapter: Running test	T:18				LM: AddDocumentActivity: [1239/1239], /root/system/schema/contenttypes/genericcontent/datatestnode. ActivityId:1, ExecutingUnprocessedActivities:False
+1508	2017-10-10 01:14:26.94280	Index	A:UnitTestAdapter: Running test	T:18	Op:280	Start		LM: LuceneDocumentActivity.CreateDocument (VersionId:1239)
+1509	2017-10-10 01:14:26.94280	Index	A:UnitTestAdapter: Running test	T:18	Op:280	End	00:00:00.000000	LM: LuceneDocumentActivity.CreateDocument (VersionId:1239)
+1510	2017-10-10 01:14:26.94280	IndexQueue	A:UnitTestAdapter: Running test	T:18				IAQ: waiting resource released T11.
+1511	2017-10-10 01:14:26.94280	IndexQueue	A:UnitTestAdapter: Running test	T:18				IAQ: A1 finished.
+1512	2017-10-10 01:14:26.94280	IndexQueue	A:UnitTestAdapter: Running test	T:18				IAQ: State after finishing A1: 1()
+1513	2017-10-10 01:14:26.94280	Index	A:UnitTestAdapter: Running test	T:18	Op:279	End	00:00:00.000000	IAQ: A1 EXECUTION.
+1514	2017-10-10 01:14:26.94280	Index	A:UnitTestAdapter: Running test	T:11	Op:278	End	00:00:00.001002	DocumentPopulator.CommitPopulateNode. Version: V1.0.A, VersionId: 1239, Path: /Root/System/Schema/ContentTypes/GenericContent/DataTestNode
+1515	2017-10-10 01:14:26.94380	IndexQueue	A:UnitTestAdapter: Running test	T:11				IAQ: A2 arrived. UpdateDocumentActivity, /root/system/schema/contenttypes/genericcontent/datatestnode
+1516	2017-10-10 01:14:26.94380	IndexQueue	A:UnitTestAdapter: Running test	T:11				IAQ: A2 enqueued.
+1517	2017-10-10 01:14:26.94380	IndexQueue	A:UnitTestAdapter: Running test	T:11				IAQ: A2 blocks the T11
+1518	2017-10-10 01:14:26.94380	IndexQueue	A:UnitTestAdapter: Running test	T:7				IAQ: A2 dequeued.
+1519	2017-10-10 01:14:26.94380	Index	A:UnitTestAdapter: Running test	T:7	Op:281	Start		IAQ: A2 EXECUTION.
+1520	2017-10-10 01:14:26.94380	Index	A:UnitTestAdapter: Running test	T:7				LM: UpdateDocumentActivity: [1239/1239], /root/system/schema/contenttypes/genericcontent/datatestnode. ActivityId:2, ExecutingUnprocessedActivities:False
+1521	2017-10-10 01:14:26.94380	Index	A:UnitTestAdapter: Running test	T:7	Op:282	Start		LM: LuceneDocumentActivity.CreateDocument (VersionId:1239)
+1522	2017-10-10 01:14:26.94380	Index	A:UnitTestAdapter: Running test	T:7	Op:282	End	00:00:00.000000	LM: LuceneDocumentActivity.CreateDocument (VersionId:1239)
+1523	2017-10-10 01:14:26.94380	IndexQueue	A:UnitTestAdapter: Running test	T:7				IAQ: waiting resource released T11.
+1524	2017-10-10 01:14:26.94380	IndexQueue	A:UnitTestAdapter: Running test	T:7				IAQ: A2 finished.
+1525	2017-10-10 01:14:26.94380	IndexQueue	A:UnitTestAdapter: Running test	T:7				IAQ: State after finishing A2: 2()
+1526	2017-10-10 01:14:26.94380	Index	A:UnitTestAdapter: Running test	T:7	Op:281	End	00:00:00.000000	IAQ: A2 EXECUTION.
+1527	2017-10-10 01:14:26.94380	Index	A:UnitTestAdapter: Running test	T:11	Op:277	End	00:00:00.002005	Indexing node
+1528	2017-10-10 01:14:27.24552	ContentOperation	A:UnitTestAdapter: Running test	T:11				Node created. Id:1239, Path:/Root/System/Schema/ContentTypes/GenericContent/DataTestNode
+1529	2017-10-10 01:14:27.24552	ContentOperation	A:UnitTestAdapter: Running test	T:11	Op:275	End	00:00:00.546898	NODE.SAVE Id: 0, VersionId: 0, Version: V1.0.A, Name: DataTestNode, ParentPath: /Root/System/Schema/ContentTypes/GenericContent
+1530	2017-10-10 01:14:27.30568	ContentOperation	A:UnitTestAdapter: Running test	T:11	Op:283	Start		GC.Save: Mode:RaiseVersion, VId:0, Path:/Root/SystemFolder-20171010011427
+1531	2017-10-10 01:14:27.30668	ContentOperation	A:UnitTestAdapter: Running test	T:11	Op:284	Start		NODE.SAVE Id: 0, VersionId: 0, Version: V1.0.A, Name: b67b3aae-5618-422f-be12-f21bbff2d18a, ParentPath: /Root
+1532	2017-10-10 01:14:27.30668	ContentOperation	A:UnitTestAdapter: Running test	T:11				TreeLock: Checking /Root/b67b3aae-5618-422f-be12-f21bbff2d18a
+1533	2017-10-10 01:14:27.30768	Index	A:UnitTestAdapter: Running test	T:11	Op:285	Start		Indexing node
+1534	2017-10-10 01:14:27.30768	Index	A:UnitTestAdapter: Running test	T:11	Op:286	Start		DocumentPopulator.CommitPopulateNode. Version: V1.0.A, VersionId: 1240, Path: /Root/b67b3aae-5618-422f-be12-f21bbff2d18a
+1535	2017-10-10 01:14:27.30768	IndexQueue	A:UnitTestAdapter: Running test	T:11				IAQ: A3 arrived. AddDocumentActivity, /root/b67b3aae-5618-422f-be12-f21bbff2d18a
+1536	2017-10-10 01:14:27.30768	IndexQueue	A:UnitTestAdapter: Running test	T:11				IAQ: A3 enqueued.
+1537	2017-10-10 01:14:27.30768	IndexQueue	A:UnitTestAdapter: Running test	T:11				IAQ: A3 blocks the T11
+1538	2017-10-10 01:14:27.30768	IndexQueue	A:UnitTestAdapter: Running test	T:18				IAQ: A3 dequeued.
+1539	2017-10-10 01:14:27.30768	Index	A:UnitTestAdapter: Running test	T:18	Op:287	Start		IAQ: A3 EXECUTION.
+1540	2017-10-10 01:14:27.30768	Index	A:UnitTestAdapter: Running test	T:18				LM: AddDocumentActivity: [1240/1240], /root/b67b3aae-5618-422f-be12-f21bbff2d18a. ActivityId:3, ExecutingUnprocessedActivities:False
+1541	2017-10-10 01:14:27.30768	Index	A:UnitTestAdapter: Running test	T:18	Op:288	Start		LM: LuceneDocumentActivity.CreateDocument (VersionId:1240)
+1542	2017-10-10 01:14:27.30768	Index	A:UnitTestAdapter: Running test	T:18	Op:288	End	00:00:00.000000	LM: LuceneDocumentActivity.CreateDocument (VersionId:1240)
+1543	2017-10-10 01:14:27.30768	IndexQueue	A:UnitTestAdapter: Running test	T:18				IAQ: waiting resource released T11.
+1544	2017-10-10 01:14:27.30768	IndexQueue	A:UnitTestAdapter: Running test	T:18				IAQ: A3 finished.
+1545	2017-10-10 01:14:27.30768	IndexQueue	A:UnitTestAdapter: Running test	T:18				IAQ: State after finishing A3: 3()
+1546	2017-10-10 01:14:27.30768	Index	A:UnitTestAdapter: Running test	T:18	Op:287	End	00:00:00.000000	IAQ: A3 EXECUTION.
+1547	2017-10-10 01:14:27.30768	Index	A:UnitTestAdapter: Running test	T:11	Op:286	End	00:00:00.000000	DocumentPopulator.CommitPopulateNode. Version: V1.0.A, VersionId: 1240, Path: /Root/b67b3aae-5618-422f-be12-f21bbff2d18a
+1548	2017-10-10 01:14:27.30768	Index	A:UnitTestAdapter: Running test	T:11	Op:285	End	00:00:00.000000	Indexing node
+1549	2017-10-10 01:14:27.30768	ContentOperation	A:UnitTestAdapter: Running test	T:11				Node created. Id:1240, Path:/Root/b67b3aae-5618-422f-be12-f21bbff2d18a
+1550	2017-10-10 01:14:27.30869	ContentOperation	A:UnitTestAdapter: Running test	T:11	Op:284	End	00:00:00.002006	NODE.SAVE Id: 0, VersionId: 0, Version: V1.0.A, Name: b67b3aae-5618-422f-be12-f21bbff2d18a, ParentPath: /Root
+1551	2017-10-10 01:14:27.30869	ContentOperation	A:UnitTestAdapter: Running test	T:11	Op:283	End	00:00:00.003009	GC.Save: Mode:RaiseVersion, VId:0, Path:/Root/SystemFolder-20171010011427
+1552	2017-10-10 01:14:27.30869	ContentOperation	A:UnitTestAdapter: Running test	T:11	Op:289	Start		Content.CreateNew
+1553	2017-10-10 01:14:27.30969	ContentOperation	A:UnitTestAdapter: Running test	T:11	Op:289	End	00:00:00.001002	Content.CreateNew
+1554	2017-10-10 01:14:27.31170	ContentOperation	A:UnitTestAdapter: Running test	T:11	Op:290	Start		GC.Save: Mode:RaiseVersion, VId:0, Path:/Root/b67b3aae-5618-422f-be12-f21bbff2d18a/DataTestNode-20171010011427
+1555	2017-10-10 01:14:27.31170	ContentOperation	A:UnitTestAdapter: Running test	T:11	Op:291	Start		NODE.SAVE Id: 0, VersionId: 0, Version: V1.0.A, Name: 4edc87e7-30ff-4b26-86ae-f74272f0d2b1, ParentPath: /Root/b67b3aae-5618-422f-be12-f21bbff2d18a
+1556	2017-10-10 01:14:27.31170	ContentOperation	A:UnitTestAdapter: Running test	T:11				TreeLock: Checking /Root/b67b3aae-5618-422f-be12-f21bbff2d18a/4edc87e7-30ff-4b26-86ae-f74272f0d2b1
+1557	2017-10-10 01:14:27.31370	Index	A:UnitTestAdapter: Running test	T:11	Op:292	Start		Indexing node
+1558	2017-10-10 01:14:27.31370	Index	A:UnitTestAdapter: Running test	T:11	Op:293	Start		DocumentPopulator.CommitPopulateNode. Version: V1.0.A, VersionId: 1241, Path: /Root/b67b3aae-5618-422f-be12-f21bbff2d18a/4edc87e7-30ff-4b26-86ae-f74272f0d2b1
+1559	2017-10-10 01:14:27.31370	IndexQueue	A:UnitTestAdapter: Running test	T:11				IAQ: A4 arrived. AddDocumentActivity, /root/b67b3aae-5618-422f-be12-f21bbff2d18a/4edc87e7-30ff-4b26-86ae-f74272f0d2b1
+1560	2017-10-10 01:14:27.31370	IndexQueue	A:UnitTestAdapter: Running test	T:11				IAQ: A4 enqueued.
+1561	2017-10-10 01:14:27.31370	IndexQueue	A:UnitTestAdapter: Running test	T:11				IAQ: A4 blocks the T11
+1562	2017-10-10 01:14:27.31370	IndexQueue	A:UnitTestAdapter: Running test	T:17				IAQ: A4 dequeued.
+1563	2017-10-10 01:14:27.31370	Index	A:UnitTestAdapter: Running test	T:17	Op:294	Start		IAQ: A4 EXECUTION.
+1564	2017-10-10 01:14:27.31370	Index	A:UnitTestAdapter: Running test	T:17				LM: AddDocumentActivity: [1241/1241], /root/b67b3aae-5618-422f-be12-f21bbff2d18a/4edc87e7-30ff-4b26-86ae-f74272f0d2b1. ActivityId:4, ExecutingUnprocessedActivities:False
+1565	2017-10-10 01:14:27.31370	Index	A:UnitTestAdapter: Running test	T:17	Op:295	Start		LM: LuceneDocumentActivity.CreateDocument (VersionId:1241)
+1566	2017-10-10 01:14:27.31370	Index	A:UnitTestAdapter: Running test	T:17	Op:295	End	00:00:00.000000	LM: LuceneDocumentActivity.CreateDocument (VersionId:1241)
+1567	2017-10-10 01:14:27.31370	IndexQueue	A:UnitTestAdapter: Running test	T:17				IAQ: waiting resource released T11.
+1568	2017-10-10 01:14:27.31370	IndexQueue	A:UnitTestAdapter: Running test	T:17				IAQ: A4 finished.
+1570	2017-10-10 01:14:27.31370	IndexQueue	A:UnitTestAdapter: Running test	T:17				IAQ: State after finishing A4: 4()
+1571	2017-10-10 01:14:27.31370	Index	A:UnitTestAdapter: Running test	T:17	Op:294	End	00:00:00.000000	IAQ: A4 EXECUTION.
+1569	2017-10-10 01:14:27.31370	Index	A:UnitTestAdapter: Running test	T:11	Op:293	End	00:00:00.000000	DocumentPopulator.CommitPopulateNode. Version: V1.0.A, VersionId: 1241, Path: /Root/b67b3aae-5618-422f-be12-f21bbff2d18a/4edc87e7-30ff-4b26-86ae-f74272f0d2b1
+1572	2017-10-10 01:14:27.31473	IndexQueue	A:UnitTestAdapter: Running test	T:11				IAQ: A5 arrived. UpdateDocumentActivity, /root/b67b3aae-5618-422f-be12-f21bbff2d18a/4edc87e7-30ff-4b26-86ae-f74272f0d2b1
+1573	2017-10-10 01:14:27.31473	IndexQueue	A:UnitTestAdapter: Running test	T:11				IAQ: A5 enqueued.
+1574	2017-10-10 01:14:27.31473	IndexQueue	A:UnitTestAdapter: Running test	T:11				IAQ: A5 blocks the T11
+1575	2017-10-10 01:14:27.31473	IndexQueue	A:UnitTestAdapter: Running test	T:18				IAQ: A5 dequeued.
+1576	2017-10-10 01:14:27.31473	Index	A:UnitTestAdapter: Running test	T:18	Op:296	Start		IAQ: A5 EXECUTION.
+1577	2017-10-10 01:14:27.31473	Index	A:UnitTestAdapter: Running test	T:18				LM: UpdateDocumentActivity: [1241/1241], /root/b67b3aae-5618-422f-be12-f21bbff2d18a/4edc87e7-30ff-4b26-86ae-f74272f0d2b1. ActivityId:5, ExecutingUnprocessedActivities:False
+1578	2017-10-10 01:14:27.31473	Index	A:UnitTestAdapter: Running test	T:18	Op:297	Start		LM: LuceneDocumentActivity.CreateDocument (VersionId:1241)
+1579	2017-10-10 01:14:27.31473	Index	A:UnitTestAdapter: Running test	T:18	Op:297	End	00:00:00.000000	LM: LuceneDocumentActivity.CreateDocument (VersionId:1241)
+1580	2017-10-10 01:14:27.31473	IndexQueue	A:UnitTestAdapter: Running test	T:18				IAQ: waiting resource released T11.
+1581	2017-10-10 01:14:27.31473	IndexQueue	A:UnitTestAdapter: Running test	T:18				IAQ: A5 finished.
+1583	2017-10-10 01:14:27.31473	IndexQueue	A:UnitTestAdapter: Running test	T:18				IAQ: State after finishing A5: 5()
+1582	2017-10-10 01:14:27.31473	Index	A:UnitTestAdapter: Running test	T:11	Op:292	End	00:00:00.001028	Indexing node
+1584	2017-10-10 01:14:27.31473	Index	A:UnitTestAdapter: Running test	T:18	Op:296	End	00:00:00.000000	IAQ: A5 EXECUTION.
+1585	2017-10-10 01:14:27.31473	ContentOperation	A:UnitTestAdapter: Running test	T:11				Node created. Id:1241, Path:/Root/b67b3aae-5618-422f-be12-f21bbff2d18a/4edc87e7-30ff-4b26-86ae-f74272f0d2b1
+1586	2017-10-10 01:14:27.31473	ContentOperation	A:UnitTestAdapter: Running test	T:11	Op:291	End	00:00:00.003033	NODE.SAVE Id: 0, VersionId: 0, Version: V1.0.A, Name: 4edc87e7-30ff-4b26-86ae-f74272f0d2b1, ParentPath: /Root/b67b3aae-5618-422f-be12-f21bbff2d18a
+1587	2017-10-10 01:14:27.31473	ContentOperation	A:UnitTestAdapter: Running test	T:11	Op:290	End	00:00:00.003033	GC.Save: Mode:RaiseVersion, VId:0, Path:/Root/b67b3aae-5618-422f-be12-f21bbff2d18a/DataTestNode-20171010011427
+1588	2017-10-10 01:14:27.31571	Repository	A:UnitTestAdapter: Running test	T:11				Sending a goodbye message.
+1589	2017-10-10 01:14:27.31671	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down ClusterChannelMonitor
+1590	2017-10-10 01:14:27.31671	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down SnMaintenance
+1591	2017-10-10 01:14:27.31671	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down ExchangeSubscriptionService
+1592	2017-10-10 01:14:27.31671	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down VoidChannel
+1593	2017-10-10 01:14:27.31671	Repository	A:UnitTestAdapter: Running test	T:11				Shutting down IndexingEngine.
+1594	2017-10-10 01:14:27.31671	Repository	A:UnitTestAdapter: Running test	T:11				Repository has stopped. Running time: 0.00:00:00
+>1595	2017-10-10 01:14:27.32000	Test	A:UnitTestAdapter: Running test	T:11				END test: InMemDb_SaveAndLoadNewNodeWithAllDynamicDataTypes
