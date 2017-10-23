@@ -6,10 +6,10 @@ using SnTraceViewer.Analysis;
 namespace SnTraceViewerTests
 {
     [TestClass]
-    public class ReaderTests
+    public class DirectoryTests : TestBase
     {
         [TestMethod]
-        public void Reader_SearchTraceDirectories()
+        public void Directory_Search()
         {
             var expectedPaths = new[]
             {
@@ -18,20 +18,11 @@ namespace SnTraceViewerTests
                  GetFullPath(@"..\..\SampleFilesForSnTraceView\SenseNet.SearchImpl.Tests\bin\Debug\App_Data\DetailedLog"),
             };
 
-            var actualPaths = Reader.SearchTraceDirectories(GetFullPath(@"..\..\SampleFilesForSnTraceView"));
+            var actualPaths = TraceDirectory.SearchTraceDirectories(GetFullPath(@"..\..\SampleFilesForSnTraceView"));
 
             Assert.AreEqual(3, actualPaths.Length);
             for (var i = 0; i < 3; i++)
-                Assert.AreEqual(expectedPaths[i], actualPaths[i]);
+                Assert.AreEqual(expectedPaths[i], actualPaths[i].Path);
         }
-
-        /* ============================================================================ */
-
-        private string GetFullPath(string relativePath)
-        {
-            var x = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, relativePath));
-            return x;
-        }
-
     }
 }
