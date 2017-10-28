@@ -137,7 +137,8 @@ namespace SnTraceViewer
 
             listView.SelectedItems.Clear();
             for (int i = bottom; i <= top; i++)
-                listView.SelectedItems.Add(_currentlyVisible[i]);
+                if (_currentlyVisible[i] != selectedItem.Content)
+                    listView.SelectedItems.Add(_currentlyVisible[i]);
         }
 
         private void ListViewItem_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
