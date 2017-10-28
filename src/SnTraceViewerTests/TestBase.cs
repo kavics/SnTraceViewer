@@ -9,10 +9,5 @@ namespace SnTraceViewerTests
 {
     public abstract class TestBase
     {
-        protected string GetFullPath(string relativePath)
-        {
-            var x = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, relativePath));
-            return x;
-        }
     }
 }

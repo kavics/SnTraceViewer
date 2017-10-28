@@ -44,10 +44,15 @@ namespace SnTraceViewer
             fileNamesComboBox.SelectedIndex = 0;
             var selectedFile = fileNamesComboBox.SelectedItem;
 
-            var file = System.IO.Path.Combine(directory, selectedFile.ToString());
-            //using (var reader = Reader.Create(file))
-            using (var reader = Reader.Create(@"D:\Projects\github\space-bender\SnTraceViewer\src\SnTraceViewer\SampleFiles\session"))
-                entries = reader.Select(x => new DisplayEntry(x)).ToList();
+            ////var file = System.IO.Path.Combine(directory, selectedFile.ToString());
+            ////using (var reader = Reader.Create(file))
+            //using (var reader = Reader.Create(@"D:\Projects\github\space-bender\SnTraceViewer\src\SnTraceViewer\SampleFiles\session"))
+            //    entries = reader.Select(x => new DisplayEntry(x)).ToList();
+
+            var rootPath = TraceDirectory.GetFullPath(@"..\..\..\SnTraceViewer\SampleFiles\session");
+            var traceDirs = TraceDirectory.SearchTraceDirectories(rootPath);
+            var sessions = TraceSession.Create(traceDirs);
+            entries = sessions.First().Select(x => new DisplayEntry(x)).ToList();
 
             _allEntries = entries;
             _currentlyVisible = entries;

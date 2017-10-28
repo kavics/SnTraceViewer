@@ -9,7 +9,7 @@ namespace SnTraceViewer.Analysis
     /// <summary>
     /// Represents a file section that created by one AppDomain in a row.
     /// </summary>
-    public class TraceSession
+    public class TraceSession : EntryEnumerable<Entry>
     {
         private List<TraceFile> _files = new List<TraceFile>();
         public TraceFile[] Files => _files.ToArray();
@@ -48,7 +48,6 @@ namespace SnTraceViewer.Analysis
 
             return sessions.ToArray();
         }
-
         private void AddFile(TraceFile file)
         {
             if (_files.Count == 0)
@@ -62,6 +61,25 @@ namespace SnTraceViewer.Analysis
 
             LastLineId = file.LastEntry.LineId;
             LastTime = file.LastEntry.Time;
+        }
+
+        public override void Dispose()
+        {
+            foreach(var file in _files)
+                file.Dispose();
+            _files.Clear();
+
+            FirstLineId = 0;
+            LastLineId = 0;
+            FirstTime = DateTime.MinValue;
+            LastTime = DateTime.MinValue;
+        }
+
+        public override IEnumerator<Entry> GetEnumerator()
+        {
+            foreach (var file in _files)
+                foreach (var entry in file)
+                    yield return entry;
         }
     }
 }

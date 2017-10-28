@@ -39,6 +39,11 @@ namespace SnTraceViewer.Analysis
             foreach (var subPath in Directory.GetDirectories(rootPath))
                 CollectPaths(subPath, pattern, paths);
         }
+        public static string GetFullPath(string relativePath)
+        {
+            var x = System.IO.Path.GetFullPath(System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, relativePath));
+            return x;
+        }
 
     }
 }
