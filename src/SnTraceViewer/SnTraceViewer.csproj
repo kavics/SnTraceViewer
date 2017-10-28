@@ -78,6 +78,7 @@
     <Compile Include="Analysis\Status.cs" />
     <Compile Include="Analysis\TraceDirectory.cs" />
     <Compile Include="Analysis\TraceFile.cs" />
+    <Compile Include="Analysis\TraceSession.cs" />
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>

@@ -1,0 +1,67 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace SnTraceViewer.Analysis
+{
+    /// <summary>
+    /// Represents a file section that created by one AppDomain in a row.
+    /// </summary>
+    public class TraceSession
+    {
+        private List<TraceFile> _files = new List<TraceFile>();
+        public TraceFile[] Files => _files.ToArray();
+
+        public string AppDomain { get; private set; }
+        public int FirstLineId { get; private set; }
+        public int LastLineId { get; private set; }
+        public DateTime FirstTime { get; private set; }
+        public DateTime LastTime { get; private set; }
+
+        public static TraceSession[] Create(TraceDirectory[] traceDirs)
+        {
+            var allFiles = traceDirs
+                .SelectMany(d => d.TraceFiles, (d, f) => f)
+                .OrderBy(f => f.FirstEntry.AppDomain)
+                .ThenBy(f => f.FirstEntry.Time)
+                .ToArray();
+
+            //  1-542     | "01:13:42.2279700"-"01:14:22.2085500": "UnitTestAdapter: Running test"	SnTraceViewer.Analysis.TraceFile
+            //  543-1109  | "01:14:22.3208800"-"01:14:25.2267600": "UnitTestAdapter: Running test"	SnTraceViewer.Analysis.TraceFile
+            //  1110-1595 | "01:14:25.2307700"-"01:14:27.3200000": "UnitTestAdapter: Running test"	SnTraceViewer.Analysis.TraceFile
+            //  1-21      | "06:20:08.7282800"-"06:20:25.6107500": "UnitTestAdapter: Running test"	SnTraceViewer.Analysis.TraceFile
+
+            var sessions = new List<TraceSession>();
+            foreach(var file in allFiles)
+            {
+                var session = sessions.Where(s =>
+                        s.LastLineId == file.FirstEntry.LineId - 1 && 
+                        s.AppDomain == file.FirstEntry.AppDomain &&
+                        (file.FirstEntry.Time - s.LastTime) < TimeSpan.FromMinutes(1))
+                    .FirstOrDefault();
+                if (session == null)
+                    sessions.Add(session = new TraceSession());
+                session.AddFile(file);
+            }
+
+            return sessions.ToArray();
+        }
+
+        private void AddFile(TraceFile file)
+        {
+            if (_files.Count == 0)
+            {
+                AppDomain = file.FirstEntry.AppDomain;
+                FirstLineId = file.FirstEntry.LineId;
+                FirstTime = file.FirstEntry.Time;
+            }
+
+            _files.Add(file);
+
+            LastLineId = file.LastEntry.LineId;
+            LastTime = file.LastEntry.Time;
+        }
+    }
+}

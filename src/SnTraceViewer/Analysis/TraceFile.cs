@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -7,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace SnTraceViewer.Analysis
 {
+    [DebuggerDisplay("{FirstEntry.LineId}-{LastEntry.LineId} | {FirstEntry.Time.TimeOfDay.ToString()}-{LastEntry.Time.TimeOfDay.ToString()}: {FirstEntry.AppDomain}")]
     public class TraceFile : EntryEnumerable<Entry>
     {
         public static readonly string DefaultSearchPattern = "detailedlog_*.log";
@@ -104,6 +106,7 @@ namespace SnTraceViewer.Analysis
                         _errors = entries.Count(e => e.Status == "ERROR");
                         _unterminatedLines = entries.Count(e => e.Status == "UNTERMINATED");
                     }
+                    _scanned = true;
                 }
             }
         }
