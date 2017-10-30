@@ -14,12 +14,12 @@ namespace SnTraceViewerTests
         {
             var expectedPaths = new[]
             {
-                 GetFullPath(@"..\..\SampleFilesForSnTraceView\SenseNet.ContentRepository.Tests\bin\Debug\App_Data\DetailedLog"),
-                 GetFullPath(@"..\..\SampleFilesForSnTraceView\SenseNet.Search.IntegrationTests\bin\Debug\App_Data\DetailedLog"),
-                 GetFullPath(@"..\..\SampleFilesForSnTraceView\SenseNet.SearchImpl.Tests\bin\Debug\App_Data\DetailedLog"),
+                 TraceDirectory.GetFullPath(@"..\..\SampleFilesForSnTraceView\SenseNet.ContentRepository.Tests\bin\Debug\App_Data\DetailedLog"),
+                 TraceDirectory.GetFullPath(@"..\..\SampleFilesForSnTraceView\SenseNet.Search.IntegrationTests\bin\Debug\App_Data\DetailedLog"),
+                 TraceDirectory.GetFullPath(@"..\..\SampleFilesForSnTraceView\SenseNet.SearchImpl.Tests\bin\Debug\App_Data\DetailedLog"),
             };
 
-            var actualDirs = TraceDirectory.SearchTraceDirectories(GetFullPath(@"..\..\SampleFilesForSnTraceView"));
+            var actualDirs = TraceDirectory.SearchTraceDirectories(TraceDirectory.GetFullPath(@"..\..\SampleFilesForSnTraceView"));
 
             Assert.AreEqual(3, actualDirs.Length);
             for (var i = 0; i < 3; i++)
@@ -28,7 +28,7 @@ namespace SnTraceViewerTests
         [TestMethod]
         public void Directory_GetFiles()
         {
-            var rootPath = GetFullPath(@"..\..\SampleFilesForSnTraceView\SenseNet.ContentRepository.Tests");
+            var rootPath = TraceDirectory.GetFullPath(@"..\..\SampleFilesForSnTraceView\SenseNet.ContentRepository.Tests");
             var traceDir = TraceDirectory.SearchTraceDirectories(rootPath).First();
             var expectedCount = Directory.GetFiles(traceDir.Path).Length;
             if (expectedCount == 0)
@@ -39,7 +39,7 @@ namespace SnTraceViewerTests
         [TestMethod]
         public void Session_GetSessionsFromOneDirectory()
         {
-            var rootPath = GetFullPath(@"..\..\..\SnTraceViewer\SampleFiles\session");
+            var rootPath = TraceDirectory.GetFullPath(@"..\..\..\SnTraceViewer\SampleFiles\session");
             var traceDirs = TraceDirectory.SearchTraceDirectories(rootPath);
             var sessions = TraceSession.Create(traceDirs);
 
