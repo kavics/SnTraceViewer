@@ -33,10 +33,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="SenseNet.Tools, Version=2.1.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\SenseNet.Tools.2.1.1\lib\net451\SenseNet.Tools.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -47,16 +43,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GenericSequenceParser.cs" />
-    <Compile Include="SequenceParser.cs" />
+    <Compile Include="Analysis\DirectoryReader.cs" />
+    <Compile Include="Analysis\Entry.cs" />
+    <Compile Include="Analysis\EntryParser.cs" />
+    <Compile Include="Analysis\FileReader.cs" />
+    <Compile Include="Analysis\GenericCollector.cs" />
+    <Compile Include="Analysis\Reader.cs" />
+    <Compile Include="Analysis\SessionReader.cs" />
+    <Compile Include="Analysis\SessionReaderEnumerator.cs" />
     <Compile Include="Extensions.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
