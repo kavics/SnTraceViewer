@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace SenseNet.Diagnostics.Analysis
 {
-    public abstract class EntryCollection
+    public abstract class EntryCollection<T>
     {
-        public abstract void Add(Entry entry, string qualification);
+        public abstract void Add(T entry, string qualification);
 
         public virtual bool Finished()
         {
@@ -17,9 +17,9 @@ namespace SenseNet.Diagnostics.Analysis
         }
     }
 
-    public class GenericCollector<TSource, TResult> : IEnumerable<TResult> where TSource : Entry where TResult : EntryCollection, new()
+    public class GenericCollector<TSource, TResult> : IEnumerable<TResult> where TResult : EntryCollection<TSource>, new()
     {
-        private IEnumerable<Entry> _input;
+        private IEnumerable<TSource> _input;
         private readonly Func<TSource, Tuple<string, string>> _keySelector;
         private readonly Func<TResult, TResult> _finalizer;
         private static readonly Func<TResult, TResult> DefaultFinalizer = (c) => { return c.Finished() ? c : null; };
@@ -29,7 +29,7 @@ namespace SenseNet.Diagnostics.Analysis
             _keySelector = keySelector;
             _finalizer = finalizer ?? DefaultFinalizer;
         }
-        public void Initialize(IEnumerable<Entry> input)
+        public void Initialize(IEnumerable<TSource> input)
         {
             _input = input;
         }
@@ -63,17 +63,17 @@ namespace SenseNet.Diagnostics.Analysis
             }
         }
 
-        private T Collect<T>(string key, string qualification, Entry entry) where T : EntryCollection, new()
+        private T Collect<T>(string key, string qualification, TSource entry) where T : EntryCollection<TSource>, new()
         {
             var collection = GetCollection<T>(key);
             collection.Add(entry, qualification);
             return collection;
         }
 
-        private Dictionary<string, EntryCollection> Collections { get; } = new Dictionary<string, EntryCollection>();
-        internal T GetCollection<T>(string key) where T : EntryCollection, new()
+        private Dictionary<string, EntryCollection<TSource>> Collections { get; } = new Dictionary<string, EntryCollection<TSource>>();
+        internal T GetCollection<T>(string key) where T : EntryCollection<TSource>, new()
         {
-            EntryCollection collection;
+            EntryCollection<TSource> collection;
             if (!Collections.TryGetValue(key, out collection))
             {
                 collection = new T();

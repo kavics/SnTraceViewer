@@ -33,7 +33,7 @@ namespace Transformer
                 return string.Format(_format, (i + 1));
             }
         }
-        private class WebRequestEntryCollection : EntryCollection
+        private class WebRequestEntryCollection : EntryCollection<Entry>
         {
             public static class Q
             {
