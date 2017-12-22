@@ -7,14 +7,9 @@ using System.Threading.Tasks;
 
 namespace SenseNet.Diagnostics.Analysis
 {
-    public class EntryCollection : Entry
+    public abstract class EntryCollection
     {
-        public EntryCollection() : base() { }
-        public EntryCollection(Entry sourceEntry) : base(sourceEntry) { }
-
-        public virtual void Add(Entry entry, string qualification)
-        {
-        }
+        public abstract void Add(Entry entry, string qualification);
 
         public virtual bool Finished()
         {

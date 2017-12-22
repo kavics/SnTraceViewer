@@ -89,7 +89,7 @@ namespace Transformer
             using (var logFlow = Reader.Create(logDirectories, "detailedlog_*.log"))
             {
                 var transformedLogFlow = logFlow
-                    .Take(10);
+                    .Take(3);
                 foreach (var item in transformedLogFlow)
                     writer.WriteLine(item);
             }
@@ -101,7 +101,7 @@ namespace Transformer
             {
                 var transformedLogFlow = logFlow
                     .Where(e => e.Category == "Web")
-                    .Take(50);
+                    .Take(3);
                 foreach (var item in transformedLogFlow)
                     writer.WriteLine(item);
             }
@@ -116,7 +116,7 @@ namespace Transformer
                 var transformedLogFlow = logFlow
                     .Where(e => e.Category == "Web")
                     .Select(e => { e.AppDomain = aps.Simplify(e.AppDomain); return e; })
-                    .Take(50);
+                    .Take(3);
                 foreach (var item in transformedLogFlow)
                 {
                     writer.WriteLine(item);
@@ -141,7 +141,7 @@ namespace Transformer
                             return new Tuple<string, string>($"{e.AppDomain}|{e.ThreadId}|{e.Message.Substring("PCM.OnEndRequest ".Length)}", WebRequestEntryCollection.Q.End);
                         return null;
                     })
-                    .Take(50);
+                    .Take(3);
                 foreach (var item in transformedLogFlow)
                 {
                     var app = item.StartEntry.AppDomain;
@@ -150,7 +150,6 @@ namespace Transformer
                     var dt = item.EndEntry.Time - item.StartEntry.Time;
                     writer.WriteLine($"{app}\t{time}\t{dt}\t{req}");
                 }
-                //var collections = analyzator.Context.Collections;
             }
         }
     }
