@@ -61,6 +61,66 @@ namespace TransformerTests
                 return StartEntry != null && EndEntry != null;
             }
         }
+        private class DistributedIndexingActivityCollection : EntryCollection<Entry>
+        {
+            public static class Q
+            {
+                public const string Start1 = "Start1";
+                public const string Start2 = "Start2";
+                public const string Dequeue = "Dequeue";
+                public const string ExecStart = "ExecStart";
+                public const string End = "End";
+            }
+
+            public Entry Start1;
+            public Entry Start2;
+            public Entry Dequeue1;
+            public Entry Dequeue2;
+            public Entry ExecStart1;
+            public Entry ExecStart2;
+            public Entry End1;
+            public Entry End2;
+            private bool _sorted;
+
+            public override void Add(Entry entry, string qualification)
+            {
+                switch (qualification)
+                {
+                    case Q.Start1: Start1 = entry; break;
+                    case Q.Start2: Start2 = entry; break;
+                    case Q.Dequeue: if (Dequeue1 == null) Dequeue1 = entry; else Dequeue2 = entry; break;
+                    case Q.ExecStart: if (ExecStart1 == null) ExecStart1 = entry; else ExecStart2 = entry; break;
+                    case Q.End: if (End1 == null) End1 = entry; else End2 = entry; break;
+                }
+            }
+            public override bool Finished()
+            {
+                if( End1 != null && End2 != null)
+                {
+                    if (!_sorted)
+                        TidyUp();
+                    return true;
+                }
+                return false;
+            }
+            private void TidyUp()
+            {
+                Entry e;
+                if (Dequeue1.AppDomain != Start1.AppDomain)
+                {
+                    e = Start1; Start1 = Start2; Start2 = e;
+                }
+                if (ExecStart1.AppDomain != Start1.AppDomain)
+                {
+                    e = ExecStart1; ExecStart1 = ExecStart2; ExecStart2 = e;
+                }
+                if (End1.AppDomain != Start1.AppDomain)
+                {
+                    e = End1; End1 = End2; End2 = e;
+                }
+                _sorted = true;
+            }
+        }
 
         [TestMethod]
         public void Analysis_SimpleRead()
@@ -100,7 +160,7 @@ namespace TransformerTests
             using (var logFlow = new InMemoryEntryReader(_logForFiltering))
             {
                 entries = logFlow
-                    .Where(e => e.Category == "Web")
+                    .Where(e => e.Category == "Web") //UNDONE: use constants
                     .ToArray();
             }
 
@@ -216,7 +276,7 @@ namespace TransformerTests
                 var aps = new AppDomainSimplifier("App-{0}");
 
                 var transformedLogFlow = logFlow
-                    .Where(e => e.Category == "Web")
+                    .Where(e => e.Category == "Web") //UNDONE: use constants
                     .Select(e => { e.AppDomain = aps.Simplify(e.AppDomain); return e; })
                     .Collect<Entry, WebRequestEntryCollection>((e) =>
                     {
@@ -281,6 +341,147 @@ namespace TransformerTests
             "2672\t2017-11-14 02:25:39.42533\tWeb\tA:/LM/W3SVC/9/ROOT-1-131550997594246478\tT:33\t\t\t\tHTTP Action.ActionType: RemapHttpAction, TargetNode: [null], AppNode: [null], HttpHandlerType:ODataHandler",
             ">2673\t2017-11-14 02:25:40.19095\tDatabase\tA:/LM/W3SVC/9/ROOT-1-131550997594246478\tT:33\tOp:1256\tStart\t\tSqlProcedure.ExecuteReader (tran:0): Command: SELECT...",
             "2674\t2017-11-14 02:25:40.19095\tDatabase\tA:/LM/W3SVC/9/ROOT-1-131550997594246478\tT:33\tOp:1256\tEnd\t00:00:00.000000\tSqlProcedure.ExecuteReader (tran:0): Command: SELECT...",
+        };
+        #endregion
+
+        [TestMethod]
+        public void Analysis_ComplexCollect()
+        {
+            var logs = new[] { _log1ForComplexCollectTest, _log2ForComplexCollectTest };
+
+            var sb = new StringBuilder();
+            using (var writer = new StringWriter(sb))
+            using (var logFlow = Reader.Create(logs))
+            {
+                var aps = new AppDomainSimplifier("App-{0}");
+
+                var transformedLogFlow = logFlow
+                    .Where(e => e.Category == "Index" || e.Category == "IndexQueue") //UNDONE: use constants
+                    .Select(e => { e.AppDomain = aps.Simplify(e.AppDomain); return e; })
+                    .Collect<Entry, DistributedIndexingActivityCollection>((e) =>
+                    {
+                        //       ExecuteDistributedActivity: #6607
+                        //       IAQ: A6607 dequeued.
+                        // Start IAQ: A6607 EXECUTION.
+                        // End   IAQ: A6607 EXECUTION.
+                        // -----------------------------
+                        //       IAQ: A6607 arrived from another computer.
+                        //       IAQ: A6607 dequeued.
+                        // Start IAQ: A6607 EXECUTION.
+                        // End   IAQ: A6607 EXECUTION.
+
+                        if (e.Message.StartsWith("ExecuteDistributedActivity: #"))
+                        {
+                            var key = e.Message.Replace("ExecuteDistributedActivity: #", "A");
+                            return new Tuple<string, string>(key, DistributedIndexingActivityCollection.Q.Start1);
+                        }
+                        if (e.Message.StartsWith("IAQ: A"))
+                        {
+                            if (e.Message.Contains(" arrived from another computer."))
+                            {
+                                var p = e.Message.IndexOf(" arrived from another computer.");
+                                var key = e.Message.Substring(5, p - 5);
+                                return new Tuple<string, string>(key, DistributedIndexingActivityCollection.Q.Start2);
+                            }
+                            if (e.Message.EndsWith(" dequeued."))
+                            {
+                                var key = e.Message.Substring(5).Replace(" dequeued.", "");
+                                return new Tuple<string, string>(key, DistributedIndexingActivityCollection.Q.Dequeue);
+                            }
+                            if (e.Message.EndsWith(" EXECUTION."))
+                            {
+                                var key = e.Message.Substring(5).Replace(" EXECUTION.", "");
+                                return new Tuple<string, string>(key, e.Status == "Start"
+                                    ? DistributedIndexingActivityCollection.Q.ExecStart
+                                    : DistributedIndexingActivityCollection.Q.End);
+                            }
+                        }
+                        return null;
+                    }
+                );
+
+                foreach (var item in transformedLogFlow)
+                {
+                    int q = 1;
+                }
+            }
+            Assert.Inconclusive();
+        }
+        #region Data for Analysis_ComplexCollect
+        private string[] _log1ForComplexCollectTest = new[]
+        {
+            "2708\t2017-11-14 02:25:40.30033\tDatabase\tA:/LM/W3SVC/9/ROOT-1-131550997594246478\tT:33\tOp:1274\tStart\t\tSqlProcedure.ExecuteScalar (tran:0): Command: INSERT INTO [IndexingActivities]...",
+            "2709\t2017-11-14 02:25:40.30033\tDatabase\tA:/LM/W3SVC/9/ROOT-1-131550997594246478\tT:33\tOp:1274\tEnd\t00:00:00.000000\tSqlProcedure.ExecuteScalar (tran:0): Command: INSERT INTO [IndexingActivities]...",
+            "2710\t2017-11-14 02:25:40.30033\tIndex\tA:/LM/W3SVC/9/ROOT-1-131550997594246478\tT:33\t\t\t\tExecuteDistributedActivity: #5127",
+            "2711\t2017-11-14 02:25:40.30033\tMessaging\tA:/LM/W3SVC/9/ROOT-1-131550997594246478\tT:33\t\t\t\tSending a 'SenseNet.ContentRepository.Search.Indexing.Activities.AddDocumentActivity' message",
+            "2712\t2017-11-14 02:25:40.30033\tIndexQueue\tA:/LM/W3SVC/9/ROOT-1-131550997594246478\tT:33\t\t\t\tIAQ: A5127 arrived. AddDocumentActivity, /root/benchmark/systemfolder-20171114022535/test500b.txt",
+            "2713\t2017-11-14 02:25:40.30033\tIndexQueue\tA:/LM/W3SVC/9/ROOT-1-131550997594246478\tT:33\t\t\t\tIAQ: A5127 enqueued.",
+            "2714\t2017-11-14 02:25:40.30033\tIndexQueue\tA:/LM/W3SVC/9/ROOT-1-131550997594246478\tT:33\t\t\t\tIAQ: A5127 blocks the T33",
+            "2715\t2017-11-14 02:25:40.30033\tIndexQueue\tA:/LM/W3SVC/9/ROOT-1-131550997594246478\tT:35\t\t\t\tIAQ: A5127 dequeued.",
+            "2716\t2017-11-14 02:25:40.30033\tIndex\tA:/LM/W3SVC/9/ROOT-1-131550997594246478\tT:35\tOp:1275\tStart\t\tIAQ: A5127 EXECUTION.",
+            "2717\t2017-11-14 02:25:40.30033\tIndex\tA:/LM/W3SVC/9/ROOT-1-131550997594246478\tT:35\t\t\t\tLM: AddDocumentActivity: [5254/3473], /root/benchmark/systemfolder-20171114022535/test500b.txt. ActivityId:5127, ExecutingUnprocessedActivities:False",
+            "2718\t2017-11-14 02:25:40.30033\tIndex\tA:/LM/W3SVC/9/ROOT-1-131550997594246478\tT:35\tOp:1276\tStart\t\tLM: DocumentIndexingActivity.CreateDocument (VersionId:3473)",
+            "2719\t2017-11-14 02:25:40.30033\tIndex\tA:/LM/W3SVC/9/ROOT-1-131550997594246478\tT:35\tOp:1276\tEnd\t00:00:00.000000\tLM: DocumentIndexingActivity.CreateDocument (VersionId:3473)",
+            "2720\t2017-11-14 02:25:40.31596\tIndexQueue\tA:/LM/W3SVC/9/ROOT-1-131550997594246478\tT:35\t\t\t\tIAQ: waiting resource released T33.",
+            "2722\t2017-11-14 02:25:40.31596\tIndexQueue\tA:/LM/W3SVC/9/ROOT-1-131550997594246478\tT:35\t\t\t\tIndexingActivity A5127 finished.",
+            "2721\t2017-11-14 02:25:40.31596\tIndex\tA:/LM/W3SVC/9/ROOT-1-131550997594246478\tT:33\tOp:1273\tEnd\t00:00:00.015625\tDocumentPopulator.CommitPopulateNode. Version: V1.0.A, VersionId: 3473, Path: /Root/Benchmark/SystemFolder-20171114022535/Test500B.txt",
+            "2723\t2017-11-14 02:25:40.31596\tIndexQueue\tA:/LM/W3SVC/9/ROOT-1-131550997594246478\tT:35\t\t\t\tIAQ: State after finishing A5127: 5127()",
+            "2724\t2017-11-14 02:25:40.31596\tIndex\tA:/LM/W3SVC/9/ROOT-1-131550997594246478\tT:35\t\t\t\tLM: ActivityFinished: 5127",
+            "2725\t2017-11-14 02:25:40.31596\tIndex\tA:/LM/W3SVC/9/ROOT-1-131550997594246478\tT:33\tOp:1272\tEnd\t00:00:00.015625\tIndexing node",
+            "2726\t2017-11-14 02:25:40.31596\tDatabase\tA:/LM/W3SVC/9/ROOT-1-131550997594246478\tT:33\tOp:1262\tEnd\t00:00:00.093748\tSaving Node#0, /Root/Benchmark/SystemFolder-20171114022535/Test500B.txt",
+            "2727\t2017-11-14 02:25:40.31596\tDatabase\tA:/LM/W3SVC/9/ROOT-1-131550997594246478\tT:33\tOp:1261\tEnd\t00:00:00.093748\tSaveNodeData",
+            "2728\t2017-11-14 02:25:40.31596\tIndex\tA:/LM/W3SVC/9/ROOT-1-131550997594246478\tT:35\t\t\t\tLM: WriteActivityStatusToIndex: 5127()",
+            "2729\t2017-11-14 02:25:40.31596\tSecurity\tA:/LM/W3SVC/9/ROOT-1-131550997594246478\tT:33\tOp:1277\tStart\t\tCreateSecurityEntity id:5254, parent:5253, owner:1",
+            "2730\t2017-11-14 02:25:40.31596\tIndex\tA:/LM/W3SVC/9/ROOT-1-131550997594246478\tT:35\tOp:1278\tStart\t\tLM: Commit. reopenReader:True",
+            "2731\t2017-11-14 02:25:40.31596\tIndex\tA:/LM/W3SVC/9/ROOT-1-131550997594246478\tT:35\t\t\t\tLM: Committing_writer. commitState: 5127()",
+            "2732\t2017-11-14 02:25:40.31596\tSecurityQueue\tA:/LM/W3SVC/9/ROOT-1-131550997594246478\tT:33\t\t\t\tSAQ: SA6974 arrived. CreateSecurityEntityActivity",
+            "2733\t2017-11-14 02:25:40.31596\tSecurityQueue\tA:/LM/W3SVC/9/ROOT-1-131550997594246478\tT:33\t\t\t\tSAQ: SA6974 enqueued.",
+            "2734\t2017-11-14 02:25:40.31596\tSecurityQueue\tA:/LM/W3SVC/9/ROOT-1-131550997594246478\tT:32\t\t\t\tSAQ: SA6974 dequeued.",
+            "2735\t2017-11-14 02:25:40.31596\tSecurityQueue\tA:/LM/W3SVC/9/ROOT-1-131550997594246478\tT:32\tOp:1279\tStart\t\tSAQ: EXECUTION START SA6974 .",
+            "2736\t2017-11-14 02:25:40.33158\tSecurityQueue\tA:/LM/W3SVC/9/ROOT-1-131550997594246478\tT:32\tOp:1279\tEnd\t00:00:00.015626\tSAQ: EXECUTION START SA6974 .",
+            "2737\t2017-11-14 02:25:40.33158\tSecurity\tA:/LM/W3SVC/9/ROOT-1-131550997594246478\tT:33\tOp:1277\tEnd\t00:00:00.015626\tCreateSecurityEntity id:5254, parent:5253, owner:1",
+            "2738\t2017-11-14 02:25:40.33158\tSecurityQueue\tA:/LM/W3SVC/9/ROOT-1-131550997594246478\tT:32\t\t\t\tSAQ: State after finishing SA6974: 6974()",
+            "2739\t2017-11-14 02:25:40.33158\tContentOperation\tA:/LM/W3SVC/9/ROOT-1-131550997594246478\tT:33\t\t\t\tNode created. Id:5254, Path:/Root/Benchmark/SystemFolder-20171114022535/Test500B.txt",
+            "2740\t2017-11-14 02:25:40.33158\tEvent\tA:/LM/W3SVC/9/ROOT-1-131550997594246478\tT:33\t\t\t\tAudit: ContentCreated, Id:5254, Path:/Root/Benchmark/SystemFolder-20171114022535/Test500B.txt",
+            "2741\t2017-11-14 02:25:40.34721\tIndex\tA:/LM/W3SVC/9/ROOT-1-131550997594246478\tT:35\tOp:1280\tStart\t\tLM: ReopenReader",
+            "2742\t2017-11-14 02:25:40.34721\tContentOperation\tA:/LM/W3SVC/9/ROOT-1-131550997594246478\tT:33\tOp:1259\tEnd\t00:00:00.140626\tNODE.SAVE Id: 0, VersionId: 0, Version: V1.0.A, Name: Test500B.txt, ParentPath: /Root/Benchmark/SystemFolder-20171114022535",
+            "2743\t2017-11-14 02:25:40.34721\tContentOperation\tA:/LM/W3SVC/9/ROOT-1-131550997594246478\tT:33\tOp:1258\tEnd\t00:00:00.140626\tGC.Save: Mode:RaiseVersion, VId:0, Path:/Root/Benchmark/SystemFolder-20171114022535/File-20171114022540",
+            "2744\t2017-11-14 02:25:40.34721\tIndex\tA:/LM/W3SVC/9/ROOT-1-131550997594246478\tT:35\t\t\t\tRecently used reader frames from last reopening reader: 1",
+            "2745\t2017-11-14 02:25:40.34721\tIndex\tA:/LM/W3SVC/9/ROOT-1-131550997594246478\tT:35\tOp:1280\tEnd\t00:00:00.000000\tLM: ReopenReader",
+            "2746\t2017-11-14 02:25:40.34721\tIndex\tA:/LM/W3SVC/9/ROOT-1-131550997594246478\tT:35\tOp:1278\tEnd\t00:00:00.031252\tLM: Commit. reopenReader:True",
+            "2747\t2017-11-14 02:25:40.34721\tIndex\tA:/LM/W3SVC/9/ROOT-1-131550997594246478\tT:35\tOp:1275\tEnd\t00:00:00.046877\tIAQ: A5127 EXECUTION.",
+            "2748\t2017-11-14 02:25:40.36283\tWeb\tA:/LM/W3SVC/9/ROOT-1-131550997594246478\tT:33\t\t\t\tPortalAuthenticationModule.OnEndRequest. Url:http://snbweb01.sn.hu/OData.svc/Root/Benchmark/('SystemFolder-20171114022535')/Upload?metadata=no, StatusCode:200",
+            "2749\t2017-11-14 02:25:40.36283\tWeb\tA:/LM/W3SVC/9/ROOT-1-131550997594246478\tT:33\t\t\t\tPCM.OnEndRequest POST http://snbweb01.sn.hu/OData.svc/Root/Benchmark/('SystemFolder-20171114022535')/Upload?metadata=no",
+        };
+        private string[] _log2ForComplexCollectTest = new[]
+        {
+            ">776\t2017-11-14 02:25:40.31170\tMessaging\tA:/LM/W3SVC/9/ROOT-1-131550997621776476\tT:23\t\t\t\tReceived a 'SenseNet.ContentRepository.Search.Indexing.Activities.AddDocumentActivity' message.",
+            "777\t2017-11-14 02:25:40.38982\tMessaging\tA:/LM/W3SVC/9/ROOT-1-131550997621776476\tT:21\t\t\t\tProcessing a 'SenseNet.ContentRepository.Search.Indexing.Activities.AddDocumentActivity' message. IsMe: False",
+            "778\t2017-11-14 02:25:40.38982\tIndexQueue\tA:/LM/W3SVC/9/ROOT-1-131550997621776476\tT:21\t\t\t\tIAQ: A5127 arrived from another computer. AddDocumentActivity, /root/benchmark/systemfolder-20171114022535/test500b.txt",
+            "779\t2017-11-14 02:25:40.38982\tIndexQueue\tA:/LM/W3SVC/9/ROOT-1-131550997621776476\tT:21\t\t\t\tIAQ: A5127 enqueued.",
+            "780\t2017-11-14 02:25:40.38982\tIndexQueue\tA:/LM/W3SVC/9/ROOT-1-131550997621776476\tT:31\t\t\t\tIAQ: A5127 dequeued.",
+            "781\t2017-11-14 02:25:40.38982\tIndex\tA:/LM/W3SVC/9/ROOT-1-131550997621776476\tT:25\tOp:339\tStart\t\tIAQ: A5127 EXECUTION.",
+            "782\t2017-11-14 02:25:40.38982\tIndex\tA:/LM/W3SVC/9/ROOT-1-131550997621776476\tT:25\t\t\t\tLM: AddDocumentActivity: [5254/3473], /root/benchmark/systemfolder-20171114022535/test500b.txt. ActivityId:5127, ExecutingUnprocessedActivities:False",
+            "783\t2017-11-14 02:25:40.38982\tIndex\tA:/LM/W3SVC/9/ROOT-1-131550997621776476\tT:25\tOp:340\tStart\t\tLM: DocumentIndexingActivity.CreateDocument (VersionId:3473)",
+            "784\t2017-11-14 02:25:40.38982\tIndex\tA:/LM/W3SVC/9/ROOT-1-131550997621776476\tT:25\tOp:340\tEnd\t00:00:00.000000\tLM: DocumentIndexingActivity.CreateDocument (VersionId:3473)",
+            "785\t2017-11-14 02:25:40.38982\tIndexQueue\tA:/LM/W3SVC/9/ROOT-1-131550997621776476\tT:25\t\t\t\tIndexingActivity A5127 finished.",
+            "786\t2017-11-14 02:25:40.38982\tIndexQueue\tA:/LM/W3SVC/9/ROOT-1-131550997621776476\tT:25\t\t\t\tIAQ: State after finishing A5127: 5127()",
+            "787\t2017-11-14 02:25:40.38982\tIndex\tA:/LM/W3SVC/9/ROOT-1-131550997621776476\tT:25\t\t\t\tLM: ActivityFinished: 5127",
+            "788\t2017-11-14 02:25:40.38982\tIndex\tA:/LM/W3SVC/9/ROOT-1-131550997621776476\tT:25\t\t\t\tLM: WriteActivityStatusToIndex: 5127()",
+            "789\t2017-11-14 02:25:40.38982\tIndex\tA:/LM/W3SVC/9/ROOT-1-131550997621776476\tT:25\tOp:341\tStart\t\tLM: Commit. reopenReader:True",
+            "790\t2017-11-14 02:25:40.38982\tIndex\tA:/LM/W3SVC/9/ROOT-1-131550997621776476\tT:25\t\t\t\tLM: Committing_writer. commitState: 5127()",
+            "791\t2017-11-14 02:25:40.43669\tSecurityQueue\tA:/LM/W3SVC/9/ROOT-1-131550997621776476\tT:14\t\t\t\tSAQ: SA6974 arrived from another computer. CreateSecurityEntityActivity",
+            "792\t2017-11-14 02:25:40.43669\tSecurityQueue\tA:/LM/W3SVC/9/ROOT-1-131550997621776476\tT:14\t\t\t\tSAQ: SA6974 enqueued.",
+            "793\t2017-11-14 02:25:40.43669\tSecurityQueue\tA:/LM/W3SVC/9/ROOT-1-131550997621776476\tT:6\t\t\t\tSAQ: SA6974 dequeued.",
+            "794\t2017-11-14 02:25:40.43669\tSecurityQueue\tA:/LM/W3SVC/9/ROOT-1-131550997621776476\tT:12\tOp:342\tStart\t\tSAQ: EXECUTION START SA6974 .",
+            "795\t2017-11-14 02:25:40.43669\tSecurityQueue\tA:/LM/W3SVC/9/ROOT-1-131550997621776476\tT:12\tOp:342\tEnd\t00:00:00.000000\tSAQ: EXECUTION START SA6974 .",
+            "796\t2017-11-14 02:25:40.43669\tSecurityQueue\tA:/LM/W3SVC/9/ROOT-1-131550997621776476\tT:12\t\t\t\tSAQ: State after finishing SA6974: 6974()",
+            "797\t2017-11-14 02:25:40.43669\tIndex\tA:/LM/W3SVC/9/ROOT-1-131550997621776476\tT:25\tOp:343\tStart\t\tLM: ReopenReader",
+            "798\t2017-11-14 02:25:40.43669\tIndex\tA:/LM/W3SVC/9/ROOT-1-131550997621776476\tT:25\t\t\t\tRecently used reader frames from last reopening reader: 0",
+            "799\t2017-11-14 02:25:40.43669\tIndex\tA:/LM/W3SVC/9/ROOT-1-131550997621776476\tT:25\tOp:343\tEnd\t00:00:00.000000\tLM: ReopenReader",
+            "800\t2017-11-14 02:25:40.43669\tIndex\tA:/LM/W3SVC/9/ROOT-1-131550997621776476\tT:25\tOp:341\tEnd\t00:00:00.046868\tLM: Commit. reopenReader:True",
+            "801\t2017-11-14 02:25:40.43669\tIndex\tA:/LM/W3SVC/9/ROOT-1-131550997621776476\tT:25\tOp:339\tEnd\t00:00:00.046868\tIAQ: A5127 EXECUTION.",
+            "802\t2017-11-14 02:25:40.56170\tWeb\tA:/LM/W3SVC/9/ROOT-1-131550997621776476\tT:31\t\t\t\tPCM.OnEnter POST http://snbweb02.sn.hu/OData.svc/Root/Benchmark/SystemFolder-20171114022535?benchamrkId=P5A5x",
         };
         #endregion
     }
