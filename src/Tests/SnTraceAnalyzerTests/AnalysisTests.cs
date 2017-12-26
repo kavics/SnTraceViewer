@@ -400,12 +400,18 @@ namespace TransformerTests
                     }
                 );
 
-                foreach (var item in transformedLogFlow)
-                {
-                    int q = 1;
-                }
+                var items = transformedLogFlow.ToArray();
+                Assert.AreEqual(1, items.Length);
+                var item = items.First();
+                Assert.IsNotNull(item.Start1);
+                Assert.IsNotNull(item.Start2);
+                Assert.IsNotNull(item.Dequeue1);
+                Assert.IsNotNull(item.Dequeue2);
+                Assert.IsNotNull(item.ExecStart1);
+                Assert.IsNotNull(item.ExecStart2);
+                Assert.IsNotNull(item.End1);
+                Assert.IsNotNull(item.End2);
             }
-            Assert.Inconclusive();
         }
         #region Data for Analysis_ComplexCollect
         private string[] _log1ForComplexCollectTest = new[]

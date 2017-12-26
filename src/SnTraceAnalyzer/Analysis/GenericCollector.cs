@@ -10,11 +10,7 @@ namespace SenseNet.Diagnostics.Analysis
     public abstract class EntryCollection<T>
     {
         public abstract void Add(T entry, string qualification);
-
-        public virtual bool Finished()
-        {
-            return true;
-        }
+        public abstract bool Finished();
     }
 
     public class GenericCollector<TSource, TResult> : IEnumerable<TResult> where TResult : EntryCollection<TSource>, new()
