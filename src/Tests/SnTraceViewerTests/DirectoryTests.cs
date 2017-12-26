@@ -39,7 +39,7 @@ namespace SnTraceViewerTests
         [TestMethod]
         public void Session_GetSessionsFromOneDirectory()
         {
-            var rootPath = TraceDirectory.GetFullPath(@"..\..\..\SnTraceViewer\SampleFiles\session");
+            var rootPath = TraceDirectory.GetFullPath(@"..\..\..\..\SnTraceViewer\SampleFiles\session");
             var traceDirs = TraceDirectory.SearchTraceDirectories(rootPath);
             var sessions = TraceSession.Create(traceDirs);
 
