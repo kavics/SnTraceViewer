@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("SnTraceViewerTests")]
+[assembly: AssemblyTitle("SnTraceAnalyzer")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("SnTraceViewerTests")]
+[assembly: AssemblyProduct("SnTraceAnalyzer")]
 [assembly: AssemblyCopyright("Copyright ©  2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("b1976821-a920-441e-8008-7173527d7df9")]
+[assembly: Guid("425c4b59-9811-4a3e-9789-c1d576b4d8dd")]
 
 // Version information for an assembly consists of the following four values:
 //

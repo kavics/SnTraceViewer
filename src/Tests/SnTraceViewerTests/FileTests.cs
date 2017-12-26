@@ -14,7 +14,7 @@ namespace SnTraceViewerTests
         [TestMethod]
         public void File_Scanning()
         {
-            var file = new TraceFile(TraceDirectory.GetFullPath(@"..\..\..\SnTraceViewer\SampleFiles\detailedlog_20171015-062009Z.log"));
+            var file = new TraceFile(TraceDirectory.GetFullPath(@"..\..\..\..\SnTraceViewer\SampleFiles\detailedlog_20171015-062009Z.log"));
 
             Assert.AreEqual(22, file.EntryCount);
             Assert.AreEqual(1, file.Errors);

@@ -5,9 +5,15 @@ VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SnTraceViewer", "SnTraceViewer\SnTraceViewer.csproj", "{8CF4E472-6110-43B2-8C19-68DF38268472}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SnTraceViewerTests", "SnTraceViewerTests\SnTraceViewerTests.csproj", "{B1976821-A920-441E-8008-7173527D7DF9}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Transformer", "Transformer\Transformer.csproj", "{A98DB305-D0AF-426C-8D02-AF6078A48F9F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{F0F70820-5BE4-43D7-948E-D081CEDA1C3E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SnTraceAnalyzer", "SnTraceAnalyzer\SnTraceAnalyzer.csproj", "{425C4B59-9811-4A3E-9789-C1D576B4D8DD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SnTraceAnalyzerTests", "Tests\SnTraceAnalyzerTests\SnTraceAnalyzerTests.csproj", "{40B1E774-6B84-43FD-B9FF-CBDF6550FDC5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SnTraceViewerTests", "Tests\SnTraceViewerTests\SnTraceViewerTests.csproj", "{79C475E1-9F48-4CDB-999A-17617CDFEDD3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,16 +25,28 @@ Global
 		{8CF4E472-6110-43B2-8C19-68DF38268472}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8CF4E472-6110-43B2-8C19-68DF38268472}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8CF4E472-6110-43B2-8C19-68DF38268472}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B1976821-A920-441E-8008-7173527D7DF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B1976821-A920-441E-8008-7173527D7DF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B1976821-A920-441E-8008-7173527D7DF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B1976821-A920-441E-8008-7173527D7DF9}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A98DB305-D0AF-426C-8D02-AF6078A48F9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A98DB305-D0AF-426C-8D02-AF6078A48F9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A98DB305-D0AF-426C-8D02-AF6078A48F9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A98DB305-D0AF-426C-8D02-AF6078A48F9F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{425C4B59-9811-4A3E-9789-C1D576B4D8DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{425C4B59-9811-4A3E-9789-C1D576B4D8DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{425C4B59-9811-4A3E-9789-C1D576B4D8DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{425C4B59-9811-4A3E-9789-C1D576B4D8DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40B1E774-6B84-43FD-B9FF-CBDF6550FDC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40B1E774-6B84-43FD-B9FF-CBDF6550FDC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40B1E774-6B84-43FD-B9FF-CBDF6550FDC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40B1E774-6B84-43FD-B9FF-CBDF6550FDC5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{79C475E1-9F48-4CDB-999A-17617CDFEDD3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79C475E1-9F48-4CDB-999A-17617CDFEDD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79C475E1-9F48-4CDB-999A-17617CDFEDD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79C475E1-9F48-4CDB-999A-17617CDFEDD3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{40B1E774-6B84-43FD-B9FF-CBDF6550FDC5} = {F0F70820-5BE4-43D7-948E-D081CEDA1C3E}
+		{79C475E1-9F48-4CDB-999A-17617CDFEDD3} = {F0F70820-5BE4-43D7-948E-D081CEDA1C3E}
 	EndGlobalSection
 EndGlobal

@@ -4,17 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A98DB305-D0AF-426C-8D02-AF6078A48F9F}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{425C4B59-9811-4A3E-9789-C1D576B4D8DD}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Transformer</RootNamespace>
-    <AssemblyName>Transformer</AssemblyName>
+    <RootNamespace>SnTraceAnalyzer</RootNamespace>
+    <AssemblyName>SnTraceAnalyzer</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -43,17 +40,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="Analysis\DirectoryReader.cs" />
+    <Compile Include="Analysis\Entry.cs" />
+    <Compile Include="Analysis\EntryParser.cs" />
+    <Compile Include="Analysis\Extensions.cs" />
+    <Compile Include="Analysis\FileReader.cs" />
+    <Compile Include="Analysis\GenericCollector.cs" />
+    <Compile Include="Analysis\InMemoryEntryReader.cs" />
+    <Compile Include="Analysis\Reader.cs" />
+    <Compile Include="Analysis\SessionReader.cs" />
+    <Compile Include="Analysis\SessionReaderEnumerator.cs" />
+    <Compile Include="TraceAnalyzer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\SnTraceAnalyzer\SnTraceAnalyzer.csproj">
-      <Project>{425c4b59-9811-4a3e-9789-c1d576b4d8dd}</Project>
-      <Name>SnTraceAnalyzer</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
