@@ -45,7 +45,9 @@
     <Compile Include="Analysis\EntryParser.cs" />
     <Compile Include="Analysis\Extensions.cs" />
     <Compile Include="Analysis\FileReader.cs" />
+    <Compile Include="Analysis\GenericAggregator.cs" />
     <Compile Include="Analysis\GenericCollector.cs" />
+    <Compile Include="Analysis\GenericCollector2.cs" />
     <Compile Include="Analysis\InMemoryEntryReader.cs" />
     <Compile Include="Analysis\Reader.cs" />
     <Compile Include="Analysis\SessionReader.cs" />
