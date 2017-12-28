@@ -16,14 +16,14 @@ namespace SenseNet.Diagnostics.Analysis
             return collector;
         }
 
-        public static IEnumerable<object> Collect2<TSource>(this IEnumerable<TSource> input, Func<TSource, Tuple<string, string>> keySelector, Func<dynamic, dynamic> finalizer) //where TSource : Entry
+        public static IEnumerable<object> Collect2<TSource>(this IEnumerable<TSource> input, Func<TSource, Tuple<string, string>> keySelector, Func<dynamic, dynamic> finalizer)
         {
             var collector = new GenericCollector2<TSource>(keySelector, finalizer);
             collector.Initialize(input);
             return collector;
         }
 
-        public static IEnumerable<Statistics<long>> Statisctics<TSource>(this IEnumerable<TSource> input, Func<TSource, string> keySelector, Func<TSource, long> valueSelector)
+        public static IEnumerable<Statistics<long>> Statistics<TSource>(this IEnumerable<TSource> input, Func<TSource, string> keySelector, Func<TSource, long> valueSelector)
         {
             var aggregator = new GenericAggregator<TSource, long>(keySelector, valueSelector);
             aggregator.Initialize(input);

@@ -448,7 +448,7 @@ namespace TransformerTests
             Assert.AreEqual(expected, actual);
         }
         [TestMethod]
-        public void Analysis2_SimpleMapReduce_GroupBy()
+        public void Analysis2_SimpleMapReduce_Statistics()
         {
             var sb = new StringBuilder();
             using (var writer = new StringWriter(sb))
@@ -478,7 +478,7 @@ namespace TransformerTests
                             Duration = c.EndEntry.Time - c.StartEntry.Time,
                         };
                     })
-                    .Statisctics<dynamic>(o => o.Request, o => o.Duration.Ticks);
+                    .Statistics<dynamic>(o => o.Request, o => o.Duration.Ticks);
 
                 foreach (dynamic item in transformedLogFlow)
                 {

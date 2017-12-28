@@ -51,63 +51,24 @@ namespace SenseNet.Diagnostics.Analysis
         }
         public IEnumerator<Statistics<TResult>> GetEnumerator()
         {
-            return new GenericAggregatorEnumerator(_input, _keySelector, _valueSelector);
-        }
+            var aggregations = new Dictionary<string, Statistics<TResult>>();
 
-        private class GenericAggregatorEnumerator : IEnumerator<Statistics<TResult>>
-        {
-            private IEnumerable<TSource> _input;
-            private Func<TSource, string> _keySelector;
-            private Func<TSource, TResult> _valueSelector;
-            private int _currentIndex;
-            private Statistics<TResult>[] _aggregations;
+            foreach (var item in _input)
+            {
+                var key = _keySelector(item);
+                var value = _valueSelector(item);
 
-            public GenericAggregatorEnumerator(IEnumerable<TSource> _input, Func<TSource, string> _keySelector, Func<TSource, TResult> _valueSelector)
-            {
-                this._input = _input;
-                this._keySelector = _keySelector;
-                this._valueSelector = _valueSelector;
-            }
-
-            object IEnumerator.Current { get { return Current; } }
-            public Statistics<TResult> Current
-            {
-                get { return _aggregations[_currentIndex]; }
-            }
-
-            public void Dispose()
-            {
-                // do nothing
-            }
-            public void Reset()
-            {
-                throw new NotImplementedException();
-            }
-
-            public bool MoveNext()
-            {
-                if(_aggregations == null)
+                Statistics<TResult> stat;
+                if (!aggregations.TryGetValue(key, out stat))
                 {
-                    var aggregations  = new Dictionary<string, Statistics<TResult>>();
-                    foreach (var item in _input)
-                    {
-                        var key = _keySelector(item);
-                        var value = _valueSelector(item);
-
-                        Statistics<TResult> stat;
-                        if(!aggregations.TryGetValue(key, out stat))
-                        {
-                            stat = new Statistics<TResult> { Key = key };
-                            aggregations.Add(key, stat);
-                        }
-                        stat.Aggregate(value);
-                    }
-                    _aggregations = aggregations.Values.ToArray();
-                    _currentIndex = -1;
+                    stat = new Statistics<TResult> { Key = key };
+                    aggregations.Add(key, stat);
                 }
-                _currentIndex++;
-                return _currentIndex < _aggregations.Length;
+                stat.Aggregate(value);
             }
+
+            foreach (var item in aggregations)
+                yield return item.Value;
         }
     }
 }
