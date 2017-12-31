@@ -5,8 +5,9 @@ using System.Text;
 using SenseNet.Diagnostics.Analysis;
 using System.Linq;
 using System.Collections.Generic;
+using System.Linq.Expressions;
 
-namespace TransformerTests
+namespace SnTraceAnalyzerTests
 {
     [TestClass]
     public class AnalysisTests
@@ -662,5 +663,69 @@ namespace TransformerTests
             "802\t2017-11-14 02:25:40.56170\tWeb\tA:/LM/W3SVC/9/ROOT-1-131550997621776476\tT:31\t\t\t\tPCM.OnEnter POST http://snbweb02.sn.hu/OData.svc/Root/Benchmark/SystemFolder-20171114022535?benchamrkId=P5A5x",
         };
         #endregion
+
+        /* ============================================================================== Remote */
+
+        [TestMethod]
+        public void Analysis_Remote_SimpleRead()
+        {
+            var server = new AnalyzatorServer("uri?", new InMemoryEntryReader(_logForSimpleRead));
+            var entries = server.Entries.Skip(4).Take(3).ToArray();
+
+            Assert.AreEqual(3, entries.Length);
+            Assert.AreEqual(5, entries[0].LineId);
+            Assert.AreEqual(6, entries[1].LineId);
+            Assert.AreEqual(7, entries[2].LineId);
+        }
+
+        [TestMethod]
+        public void Analysis_Remote_SimpleCollect()
+        {
+            var server = new AnalyzatorServer("uri?", new InMemoryEntryReader(_logForSimpleCollectTest));
+            var logFlow = server.Entries
+                .Where(e => e.Category == "Web") //UNDONE: use constants
+                .Collect2((e) =>
+                {
+                    if (e.Message.StartsWith("PCM.OnEnter "))
+                        return new Tuple<string, string>($"{e.AppDomain}|{e.ThreadId}|{e.Message.Substring("PCM.OnEnter ".Length)}", "StartEntry");
+                    else if (e.Message.StartsWith("PCM.OnEndRequest "))
+                        return new Tuple<string, string>($"{e.AppDomain}|{e.ThreadId}|{e.Message.Substring("PCM.OnEndRequest ".Length)}", "EndEntry");
+                    return null;
+                }, (c) =>
+                {
+                    var d = (IDictionary<string, object>)c;
+                    if (c.StartEntry == null || !d.ContainsKey("EndEntry"))
+                        return null;
+                    return new
+                    {
+                        Time = c.StartEntry.Time,
+                        Request = c.StartEntry.Message.Substring("PCM.OnEnter ".Length),
+                        Duration = c.EndEntry.Time - c.StartEntry.Time,
+                    };
+                })
+                .ToArray();
+
+            string actual;
+            using (var writer = new StringWriter())
+            {
+                foreach (dynamic item in logFlow)
+                {
+                    var time = item.Time.ToString("HH:mm:ss.fffff");
+                    var req = item.Request;
+                    var dt = item.Duration;
+                    writer.WriteLine($"{time}\t{dt}\t{req}");
+                }
+                actual = writer.GetStringBuilder().ToString().Trim();
+            }
+
+            var expected = string.Join(Environment.NewLine, new[] {
+                    "02:25:28.25307	00:00:00.0156500	GET http://snbweb01.sn.hu/",
+                    "02:25:28.47362	00:00:00	GET http://snbweb01.sn.hu/favicon.ico",
+                    "02:25:34.95093	00:00:02.9687600	POST http://snbweb01.sn.hu/OData.svc/Root/Benchmark?benchamrkId=P5A0x",
+                    "02:25:38.55033	00:00:00.8593700	POST http://snbweb01.sn.hu/OData.svc/Root/Benchmark/('SystemFolder-20171114022535')/Upload?create=1&metadata=no",
+                });
+            Assert.AreEqual(expected, actual);
+        }
+
     }
 }
