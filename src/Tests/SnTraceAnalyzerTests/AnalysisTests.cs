@@ -161,7 +161,7 @@ namespace SnTraceAnalyzerTests
             using (var logFlow = new InMemoryEntryReader(_logForFiltering))
             {
                 entries = logFlow
-                    .Where(e => e.Category == "Web") //UNDONE: use constants
+                    .Where(e => e.Category == Category.Web)
                     .ToArray();
             }
 
@@ -277,7 +277,7 @@ namespace SnTraceAnalyzerTests
                 var aps = new AppDomainSimplifier("App-{0}");
 
                 var transformedLogFlow = logFlow
-                    .Where(e => e.Category == "Web") //UNDONE: use constants
+                    .Where(e => e.Category == Category.Web)
                     .Select(e => { e.AppDomain = aps.Simplify(e.AppDomain); return e; })
                     .Collect<Entry, WebRequestEntryCollection>((e) =>
                     {
@@ -317,7 +317,7 @@ namespace SnTraceAnalyzerTests
                 var aps = new AppDomainSimplifier("App-{0}");
 
                 var transformedLogFlow = logFlow
-                    .Where(e => e.Category == "Web") //UNDONE: use constants
+                    .Where(e => e.Category == Category.Web)
                     .Select(e => { e.AppDomain = aps.Simplify(e.AppDomain); return e; })
                     .Collect2((e) =>
                     {
@@ -407,7 +407,7 @@ namespace SnTraceAnalyzerTests
                 var aps = new AppDomainSimplifier("App-{0}");
 
                 var transformedLogFlow = logFlow
-                    .Where(e => e.Category == "Web") //UNDONE: use constants
+                    .Where(e => e.Category == Category.Web)
                     .Select(e => { e.AppDomain = aps.Simplify(e.AppDomain); return e; })
                     .Collect2((e) =>
                     {
@@ -458,7 +458,7 @@ namespace SnTraceAnalyzerTests
                 var aps = new AppDomainSimplifier("App-{0}");
 
                 var transformedLogFlow = logFlow
-                    .Where(e => e.Category == "Web") //UNDONE: use constants
+                    .Where(e => e.Category == Category.Web)
                     .Select(e => { e.AppDomain = aps.Simplify(e.AppDomain); return e; })
                     .Collect2((e) =>
                     {
@@ -529,7 +529,7 @@ namespace SnTraceAnalyzerTests
                 var aps = new AppDomainSimplifier("App-{0}");
 
                 var transformedLogFlow = logFlow
-                    .Where(e => e.Category == "Index" || e.Category == "IndexQueue") //UNDONE: use constants
+                    .Where(e => e.Category == Category.Index || e.Category == Category.IndexQueue)
                     .Select(e => { e.AppDomain = aps.Simplify(e.AppDomain); return e; })
                     .Collect<Entry, DistributedIndexingActivityCollection>((e) =>
                     {
@@ -683,7 +683,7 @@ namespace SnTraceAnalyzerTests
         {
             var server = new AnalyzatorServer("uri?", new InMemoryEntryReader(_logForSimpleCollectTest));
             var logFlow = server.Entries
-                .Where(e => e.Category == "Web") //UNDONE: use constants
+                .Where(e => e.Category == Category.Web)
                 .Collect2((e) =>
                 {
                     if (e.Message.StartsWith("PCM.OnEnter "))
