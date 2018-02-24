@@ -66,14 +66,18 @@ namespace Transformer
         static void Main(string[] args)
         {
             var logDirectories = new[] {
-                @"C:\Users\Gyebi\Desktop\benchmark\02\web1",
-                @"C:\Users\Gyebi\Desktop\benchmark\02\web2",
+                @"D:\Desktop\benchmark\02\web1",
+                @"D:\Desktop\benchmark\02\web2",
             };
-            var outputDir = @"C:\Users\Gyebi\Desktop\benchmark\02\";
+            var outputDir = @"D:\Desktop\benchmark\02\";
 
+            Console.WriteLine("Running Test1_SimpleRead");
             Test1_SimpleRead(logDirectories, outputDir);
+            Console.WriteLine("Running Test2_Filtering");
             Test2_Filtering(logDirectories, outputDir);
+            Console.WriteLine("Running Test3_Modifying");
             Test3_Modifying(logDirectories, outputDir);
+            Console.WriteLine("Running Test4_Collecting");
             Test4_Collecting(logDirectories, outputDir);
 
             if (Debugger.IsAttached)
