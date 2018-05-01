@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace SnTraceViewer.Analysis
 {
-    [DebuggerDisplay("{FirstEntry.LineId}-{LastEntry.LineId} | {FirstEntry.Time.TimeOfDay.ToString()}-{LastEntry.Time.TimeOfDay.ToString()}: {FirstEntry.AppDomain}")]
+    [DebuggerDisplay("{FirstEntry.LineId}-{LastEntry.LineId} | {FirstEntry.Time.TimeOfDay.ToString()}-{LastEntry.Time.TimeOfDay.ToString()}: {FirstEntry.AppDomain} {Path}")]
     public class TraceFile : EntryEnumerable<Entry>
     {
         public static readonly string DefaultSearchPattern = "detailedlog_*.log";
