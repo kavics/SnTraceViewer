@@ -1,5 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SnTraceViewer.Analysis;
+using SenseNet.Diagnostics.Analysis2;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;

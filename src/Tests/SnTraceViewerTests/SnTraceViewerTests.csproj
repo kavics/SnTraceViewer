@@ -57,6 +57,10 @@
     <Compile Include="SensenetTestSessionsTests.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\SnTraceAnalyzer\SnTraceAnalyzer.csproj">
+      <Project>{425c4b59-9811-4a3e-9789-c1d576b4d8dd}</Project>
+      <Name>SnTraceAnalyzer</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\SnTraceViewer\SnTraceViewer.csproj">
       <Project>{8cf4e472-6110-43b2-8c19-68df38268472}</Project>
       <Name>SnTraceViewer</Name>

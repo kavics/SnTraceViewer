@@ -1,4 +1,6 @@
-﻿namespace SenseNet.Diagnostics.Analysis
+﻿#pragma warning disable 1591
+
+namespace SenseNet.Diagnostics.Analysis2
 {
     /// <summary>
     /// Contains available values of the Status column.

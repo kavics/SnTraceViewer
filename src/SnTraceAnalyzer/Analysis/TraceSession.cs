@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SnTraceViewer.Analysis
+namespace SenseNet.Diagnostics.Analysis2
 {
     /// <summary>
     /// Represents a file section that created by one AppDomain in a row.

@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SnTraceViewer.Analysis
+namespace SenseNet.Diagnostics.Analysis2
 {
     [DebuggerDisplay("{TraceFiles.Count} files: {Path}")]
     public class TraceDirectory

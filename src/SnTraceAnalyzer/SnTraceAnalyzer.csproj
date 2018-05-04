@@ -51,7 +51,7 @@
     <Compile Include="Analysis\Category.cs" />
     <Compile Include="Analysis\DirectoryReader.cs" />
     <Compile Include="Analysis\Entry.cs" />
-    <Compile Include="Analysis\EntryParser.cs" />
+    <Compile Include="Analysis\EntryEnumerable.cs" />
     <Compile Include="Analysis\Extensions.cs" />
     <Compile Include="Analysis\FileReader.cs" />
     <Compile Include="Analysis\GenericAggregator.cs" />
@@ -62,6 +62,9 @@
     <Compile Include="Analysis\SessionReader.cs" />
     <Compile Include="Analysis\SessionReaderEnumerator.cs" />
     <Compile Include="Analysis\Status.cs" />
+    <Compile Include="Analysis\TraceDirectory.cs" />
+    <Compile Include="Analysis\TraceFile.cs" />
+    <Compile Include="Analysis\TraceSession.cs" />
     <Compile Include="TraceAnalyzer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

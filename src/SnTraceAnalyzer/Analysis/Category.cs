@@ -1,4 +1,4 @@
-﻿namespace SenseNet.Diagnostics.Analysis
+﻿namespace SenseNet.Diagnostics.Analysis2
 {
     /// <summary>
     /// Contains available values of the Category column.

@@ -4,9 +4,9 @@ using System.Collections.Generic;
 
 #pragma warning disable 1591
 
-namespace SnTraceViewer.Analysis
+namespace SenseNet.Diagnostics.Analysis2
 {
-    public abstract class EntryEnumerable<T> : IDisposable, IEnumerable<T> where T : Entry
+    public abstract class EntryEnumerable<T> : IDisposable, IEnumerable, IEnumerable<T> where T : Entry
     {
         public abstract void Dispose();
 

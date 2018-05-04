@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SenseNet.Diagnostics.Analysis
+namespace SenseNet.Diagnostics.Analysis2
 {
     public class InMemoryEntryReader : Reader
     {
@@ -17,10 +17,9 @@ namespace SenseNet.Diagnostics.Analysis
 
         public override IEnumerator<Entry> GetEnumerator()
         {
-            var parser = new EntryParser();
             foreach (var item in _entrySource)
             {
-                var entry = parser.Parse(item);
+                var entry = Entry.Parse(item);
                 if (entry != null)
                     yield return entry;
             }
