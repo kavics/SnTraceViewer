@@ -76,6 +76,7 @@
     <Compile Include="Analysis\SessionReader.cs" />
     <Compile Include="Analysis\SessionReaderEnumerator.cs" />
     <Compile Include="Analysis\Status.cs" />
+    <Compile Include="OldTransformationTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RemoteLinqImpl.cs" />
   </ItemGroup>
