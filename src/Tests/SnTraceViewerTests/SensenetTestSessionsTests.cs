@@ -13,6 +13,37 @@ namespace SnTraceViewerTests
     [DebuggerDisplay("#{Index}: {FileNames.Count} files. {FirstTime} - {LastTime}.")]
     public class SessionInfo
     {
+        /*
+        DIRECTORIES
+
+        D1
+            F1	 0,  1
+            F2	10, 12
+            F3	14, 16
+        D2
+            F1	11, 13
+            F2	15, 17
+            F3	20, 21
+
+        FILES
+
+                0,  1,  ...    10, 11, 12, 13, 14, 15, 16, 17,   ...    20, 21
+        D1/F1   |====|
+        D1/F2                  |=========|
+        D1/F3                                  |========|
+        D2/F1                      |=========|
+        D2/F2                                      |=========|
+        D2/F3                                                           |====|
+
+        SESSIONS
+
+        S1      |====|
+        S2                     |=============================|
+        S3                                                              |====|
+        */
+
+
+
         public int Index { get; set; }
         public DateTime FirstTime => FirstEntry.Time;
         public DateTime LastTime => LastEntry.Time;
