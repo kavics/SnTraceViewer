@@ -2,7 +2,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.IO;
 using System.Text;
-using SenseNet.Diagnostics.Analysis;
+using SnTraceAnalyzerTests.Analysis;
 using System.Linq;
 using System.Collections.Generic;
 using System.Linq.Expressions;

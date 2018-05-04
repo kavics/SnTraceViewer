@@ -1,7 +1,7 @@
 ﻿using Aqua.Dynamic;
 using Remote.Linq;
 using Remote.Linq.Expressions;
-using SenseNet.Diagnostics.Analysis;
+using SnTraceAnalyzerTests.Analysis;
 using System;
 using System.Collections.Generic;
 using System.IO;
