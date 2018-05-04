@@ -35,7 +35,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Aqua, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\aqua-core.4.2.0\lib\net451\Aqua.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Remote.Linq, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Remote.Linq.5.6.0\lib\net451\Remote.Linq.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.XML" />
   </ItemGroup>
   <Choose>
     <When Condition="('$(VisualStudioVersion)' == '10.0' or '$(VisualStudioVersion)' == '') and '$(TargetFrameworkVersion)' == 'v3.5'">
@@ -51,13 +62,26 @@
   </Choose>
   <ItemGroup>
     <Compile Include="AnalysisTests.cs" />
+    <Compile Include="Analysis\Category.cs" />
+    <Compile Include="Analysis\DirectoryReader.cs" />
+    <Compile Include="Analysis\Entry.cs" />
+    <Compile Include="Analysis\EntryParser.cs" />
+    <Compile Include="Analysis\Extensions.cs" />
+    <Compile Include="Analysis\FileReader.cs" />
+    <Compile Include="Analysis\GenericAggregator.cs" />
+    <Compile Include="Analysis\GenericCollector.cs" />
+    <Compile Include="Analysis\GenericCollector2.cs" />
+    <Compile Include="Analysis\InMemoryEntryReader.cs" />
+    <Compile Include="Analysis\Reader.cs" />
+    <Compile Include="Analysis\SessionReader.cs" />
+    <Compile Include="Analysis\SessionReaderEnumerator.cs" />
+    <Compile Include="Analysis\Status.cs" />
+    <Compile Include="OldTransformationTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RemoteLinqImpl.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\SnTraceAnalyzer\SnTraceAnalyzer.csproj">
-      <Project>{425c4b59-9811-4a3e-9789-c1d576b4d8dd}</Project>
-      <Name>SnTraceAnalyzer</Name>
-    </ProjectReference>
+    <None Include="packages.config" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

@@ -2,11 +2,12 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.IO;
 using System.Text;
-using SenseNet.Diagnostics.Analysis;
+using SnTraceAnalyzerTests.Analysis;
 using System.Linq;
 using System.Collections.Generic;
+using System.Linq.Expressions;
 
-namespace TransformerTests
+namespace SnTraceAnalyzerTests
 {
     [TestClass]
     public class AnalysisTests
@@ -160,7 +161,7 @@ namespace TransformerTests
             using (var logFlow = new InMemoryEntryReader(_logForFiltering))
             {
                 entries = logFlow
-                    .Where(e => e.Category == "Web") //UNDONE: use constants
+                    .Where(e => e.Category == Category.Web)
                     .ToArray();
             }
 
@@ -276,7 +277,7 @@ namespace TransformerTests
                 var aps = new AppDomainSimplifier("App-{0}");
 
                 var transformedLogFlow = logFlow
-                    .Where(e => e.Category == "Web") //UNDONE: use constants
+                    .Where(e => e.Category == Category.Web)
                     .Select(e => { e.AppDomain = aps.Simplify(e.AppDomain); return e; })
                     .Collect<Entry, WebRequestEntryCollection>((e) =>
                     {
@@ -293,6 +294,58 @@ namespace TransformerTests
                     var time = item.StartEntry.Time.ToString("HH:mm:ss.fffff");
                     var req = item.StartEntry.Message.Substring("PCM.OnEnter ".Length);
                     var dt = item.EndEntry.Time - item.StartEntry.Time;
+                    writer.WriteLine($"{app}\t{time}\t{dt}\t{req}");
+                }
+            }
+
+            var expected = string.Join(Environment.NewLine, new[] {
+                    "App-1	02:25:28.25307	00:00:00.0156500	GET http://snbweb01.sn.hu/",
+                    "App-1	02:25:28.47362	00:00:00	GET http://snbweb01.sn.hu/favicon.ico",
+                    "App-1	02:25:34.95093	00:00:02.9687600	POST http://snbweb01.sn.hu/OData.svc/Root/Benchmark?benchamrkId=P5A0x",
+                    "App-1	02:25:38.55033	00:00:00.8593700	POST http://snbweb01.sn.hu/OData.svc/Root/Benchmark/('SystemFolder-20171114022535')/Upload?create=1&metadata=no",
+                });
+            var actual = sb.ToString().Trim();
+            Assert.AreEqual(expected, actual);
+        }
+        [TestMethod]
+        public void Analysis2_SimpleCollect()
+        {
+            var sb = new StringBuilder();
+            using (var writer = new StringWriter(sb))
+            using (var logFlow = Reader.Create(_logForSimpleCollectTest))
+            {
+                var aps = new AppDomainSimplifier("App-{0}");
+
+                var transformedLogFlow = logFlow
+                    .Where(e => e.Category == Category.Web)
+                    .Select(e => { e.AppDomain = aps.Simplify(e.AppDomain); return e; })
+                    .Collect2((e) =>
+                    {
+                        if (e.Message.StartsWith("PCM.OnEnter "))
+                            return new Tuple<string, string>($"{e.AppDomain}|{e.ThreadId}|{e.Message.Substring("PCM.OnEnter ".Length)}", "StartEntry");
+                        else if (e.Message.StartsWith("PCM.OnEndRequest "))
+                            return new Tuple<string, string>($"{e.AppDomain}|{e.ThreadId}|{e.Message.Substring("PCM.OnEndRequest ".Length)}", "EndEntry");
+                        return null;
+                    }, (c) =>
+                    {
+                        var d = (IDictionary<string, object>)c;
+                        if (c.StartEntry == null || !d.ContainsKey("EndEntry"))
+                            return null;
+                        return new
+                        {
+                            App = c.StartEntry.AppDomain,
+                            Time = c.StartEntry.Time,
+                            Request = c.StartEntry.Message.Substring("PCM.OnEnter ".Length),
+                            Duration = c.EndEntry.Time - c.StartEntry.Time,
+                        };
+                    });
+
+                foreach (dynamic item in transformedLogFlow)
+                {
+                    var app = item.App;
+                    var time = item.Time.ToString("HH:mm:ss.fffff");
+                    var req = item.Request;
+                    var dt = item.Duration;
                     writer.WriteLine($"{app}\t{time}\t{dt}\t{req}");
                 }
             }
@@ -345,6 +398,126 @@ namespace TransformerTests
         #endregion
 
         [TestMethod]
+        public void Analysis2_SimpleMapReduce()
+        {
+            var sb = new StringBuilder();
+            using (var writer = new StringWriter(sb))
+            using (var logFlow = Reader.Create(_logForSimpleMapReduce))
+            {
+                var aps = new AppDomainSimplifier("App-{0}");
+
+                var transformedLogFlow = logFlow
+                    .Where(e => e.Category == Category.Web)
+                    .Select(e => { e.AppDomain = aps.Simplify(e.AppDomain); return e; })
+                    .Collect2((e) =>
+                    {
+                        if (e.Message.StartsWith("PCM.OnEnter "))
+                            return new Tuple<string, string>($"{e.AppDomain}|{e.ThreadId}|{e.Message.Substring("PCM.OnEnter ".Length)}", "StartEntry");
+                        else if (e.Message.StartsWith("PCM.OnEndRequest "))
+                            return new Tuple<string, string>($"{e.AppDomain}|{e.ThreadId}|{e.Message.Substring("PCM.OnEndRequest ".Length)}", "EndEntry");
+                        return null;
+                    }, (c) =>
+                    {
+                        var d = (IDictionary<string, object>)c;
+                        if (c.StartEntry == null || !d.ContainsKey("EndEntry"))
+                            return null;
+                        return new
+                        {
+                            Request = c.StartEntry.Message.Substring("PCM.OnEnter ".Length),
+                            Time = c.StartEntry.Time,
+                            Duration = c.EndEntry.Time - c.StartEntry.Time,
+                        };
+                    });
+
+                foreach (dynamic item in transformedLogFlow)
+                {
+                    var time = item.Time.ToString("HH:mm:ss.fffff");
+                    var req = item.Request;
+                    var dt = item.Duration;
+                    writer.WriteLine($"{time}\t{dt}\t{req}");
+                }
+            }
+
+            var expected = string.Join(Environment.NewLine, new[] {
+                "02:22:49.34658	00:00:01.7031400	GET http://snbweb01.sn.hu/",
+                "02:22:51.29972	00:00:00.0000100	GET http://snbweb01.sn.hu/favicon.ico",
+                "02:25:28.25307	00:00:00.0156500	GET http://snbweb01.sn.hu/",
+                "02:25:28.47362	00:00:00.0000300	GET http://snbweb01.sn.hu/favicon.ico",
+            });
+
+            var actual = sb.ToString().Trim();
+            Assert.AreEqual(expected, actual);
+        }
+        [TestMethod]
+        public void Analysis2_SimpleMapReduce_Statistics()
+        {
+            var sb = new StringBuilder();
+            using (var writer = new StringWriter(sb))
+            using (var logFlow = Reader.Create(_logForSimpleMapReduce))
+            {
+                var aps = new AppDomainSimplifier("App-{0}");
+
+                var transformedLogFlow = logFlow
+                    .Where(e => e.Category == Category.Web)
+                    .Select(e => { e.AppDomain = aps.Simplify(e.AppDomain); return e; })
+                    .Collect2((e) =>
+                    {
+                        if (e.Message.StartsWith("PCM.OnEnter "))
+                            return new Tuple<string, string>($"{e.AppDomain}|{e.ThreadId}|{e.Message.Substring("PCM.OnEnter ".Length)}", "StartEntry");
+                        else if (e.Message.StartsWith("PCM.OnEndRequest "))
+                            return new Tuple<string, string>($"{e.AppDomain}|{e.ThreadId}|{e.Message.Substring("PCM.OnEndRequest ".Length)}", "EndEntry");
+                        return null;
+                    }, (c) =>
+                    {
+                        var d = (IDictionary<string, object>)c;
+                        if (c.StartEntry == null || !d.ContainsKey("EndEntry"))
+                            return null;
+                        return new
+                        {
+                            Request = c.StartEntry.Message.Substring("PCM.OnEnter ".Length),
+                            Time = c.StartEntry.Time,
+                            Duration = c.EndEntry.Time - c.StartEntry.Time,
+                        };
+                    })
+                    .Statistics<dynamic>(o => o.Request, o => o.Duration.Ticks);
+
+                foreach (dynamic item in transformedLogFlow)
+                {
+                    var req = item.Key;
+                    var count = item.Count;
+                    var min = TimeSpan.FromTicks(item.Min);
+                    var max = TimeSpan.FromTicks(item.Max);
+                    var avg = TimeSpan.FromTicks(Convert.ToInt64(item.Average));
+                    writer.WriteLine($"{req}\t{count}\t{min}\t{max}\t{avg}");
+                }
+            }
+
+            var expected = string.Join(Environment.NewLine, new[] {
+                "GET http://snbweb01.sn.hu/	2	00:00:00.0156500	00:00:01.7031400	00:00:00.8593950",
+                "GET http://snbweb01.sn.hu/favicon.ico	2	00:00:00.0000100	00:00:00.0000300	00:00:00.0000200",
+            });
+
+            var actual = sb.ToString().Trim();
+            Assert.AreEqual(expected, actual);
+        }
+        #region Data for Analysis_SimpleCollect
+        private string[] _logForSimpleMapReduce = new[]
+        {
+            ">1\t2017-11-14 02:22:49.34658\tWeb\tA:/LM/W3SVC/9/ROOT-1-131550997594246478\tT:8\t\t\t\tPCM.OnEnter GET http://snbweb01.sn.hu/",
+            ">12\t2017-11-14 02:22:49.50283\tEvent\tA:/LM/W3SVC/9/ROOT-1-131550997594246478\tT:8\t\t\t\tINFORMATION #57d3ae04-0b56-4fd1-9984-498092df19bd: TemplateReplacers created, see supported templates below.",
+            "32\t2017-11-14 02:22:51.04972\tWeb\tA:/LM/W3SVC/9/ROOT-1-131550997594246478\tT:8\t\t\t\tPCM.OnEndRequest GET http://snbweb01.sn.hu/",
+            "57\t2017-11-14 02:22:51.29972\tWeb\tA:/LM/W3SVC/9/ROOT-1-131550997594246478\tT:8\t\t\t\tPCM.OnEnter GET http://snbweb01.sn.hu/favicon.ico",
+            "60\t2017-11-14 02:22:51.29973\tWeb\tA:/LM/W3SVC/9/ROOT-1-131550997594246478\tT:8\t\t\t\tPCM.OnEndRequest GET http://snbweb01.sn.hu/favicon.ico",
+            ">2533\t2017-11-14 02:25:19.14251\tSystem\tA:/LM/W3SVC/9/ROOT-1-131550997594246478\tT:9\t\t\t\tCPU: 0,1836666%, RAM: 607016 KBytes available (working set: 299585536 bytes)",
+            ">2534\t2017-11-14 02:25:28.25307\tWeb\tA:/LM/W3SVC/9/ROOT-1-131550997594246478\tT:10\t\t\t\tPCM.OnEnter GET http://snbweb01.sn.hu/",
+            "2537\t2017-11-14 02:25:28.26872\tWeb\tA:/LM/W3SVC/9/ROOT-1-131550997594246478\tT:10\t\t\t\tPCM.OnEndRequest GET http://snbweb01.sn.hu/",
+            "2538\t2017-11-14 02:25:28.47362\tWeb\tA:/LM/W3SVC/9/ROOT-1-131550997594246478\tT:6\t\t\t\tPCM.OnEnter GET http://snbweb01.sn.hu/favicon.ico",
+            "2541\t2017-11-14 02:25:28.47365\tWeb\tA:/LM/W3SVC/9/ROOT-1-131550997594246478\tT:6\t\t\t\tPCM.OnEndRequest GET http://snbweb01.sn.hu/favicon.ico",
+            ">2542\t2017-11-14 02:25:29.14242\tSystem\tA:/LM/W3SVC/9/ROOT-1-131550997594246478\tT:33\t\t\t\tCPU: 0,1337686%, RAM: 607004 KBytes available (working set: 299618304 bytes)",
+        };
+        #endregion
+
+        [TestMethod]
         public void Analysis_ComplexCollect()
         {
             var logs = new[] { _log1ForComplexCollectTest, _log2ForComplexCollectTest };
@@ -356,7 +529,7 @@ namespace TransformerTests
                 var aps = new AppDomainSimplifier("App-{0}");
 
                 var transformedLogFlow = logFlow
-                    .Where(e => e.Category == "Index" || e.Category == "IndexQueue") //UNDONE: use constants
+                    .Where(e => e.Category == Category.Index || e.Category == Category.IndexQueue)
                     .Select(e => { e.AppDomain = aps.Simplify(e.AppDomain); return e; })
                     .Collect<Entry, DistributedIndexingActivityCollection>((e) =>
                     {
@@ -490,5 +663,69 @@ namespace TransformerTests
             "802\t2017-11-14 02:25:40.56170\tWeb\tA:/LM/W3SVC/9/ROOT-1-131550997621776476\tT:31\t\t\t\tPCM.OnEnter POST http://snbweb02.sn.hu/OData.svc/Root/Benchmark/SystemFolder-20171114022535?benchamrkId=P5A5x",
         };
         #endregion
+
+        /* ============================================================================== Remote */
+
+        [TestMethod]
+        public void Analysis_Remote_SimpleRead()
+        {
+            var server = new AnalyzatorServer("uri?", new InMemoryEntryReader(_logForSimpleRead));
+            var entries = server.Entries.Skip(4).Take(3).ToArray();
+
+            Assert.AreEqual(3, entries.Length);
+            Assert.AreEqual(5, entries[0].LineId);
+            Assert.AreEqual(6, entries[1].LineId);
+            Assert.AreEqual(7, entries[2].LineId);
+        }
+
+        [TestMethod]
+        public void Analysis_Remote_SimpleCollect()
+        {
+            var server = new AnalyzatorServer("uri?", new InMemoryEntryReader(_logForSimpleCollectTest));
+            var logFlow = server.Entries
+                .Where(e => e.Category == Category.Web)
+                .Collect2((e) =>
+                {
+                    if (e.Message.StartsWith("PCM.OnEnter "))
+                        return new Tuple<string, string>($"{e.AppDomain}|{e.ThreadId}|{e.Message.Substring("PCM.OnEnter ".Length)}", "StartEntry");
+                    else if (e.Message.StartsWith("PCM.OnEndRequest "))
+                        return new Tuple<string, string>($"{e.AppDomain}|{e.ThreadId}|{e.Message.Substring("PCM.OnEndRequest ".Length)}", "EndEntry");
+                    return null;
+                }, (c) =>
+                {
+                    var d = (IDictionary<string, object>)c;
+                    if (c.StartEntry == null || !d.ContainsKey("EndEntry"))
+                        return null;
+                    return new
+                    {
+                        Time = c.StartEntry.Time,
+                        Request = c.StartEntry.Message.Substring("PCM.OnEnter ".Length),
+                        Duration = c.EndEntry.Time - c.StartEntry.Time,
+                    };
+                })
+                .ToArray();
+
+            string actual;
+            using (var writer = new StringWriter())
+            {
+                foreach (dynamic item in logFlow)
+                {
+                    var time = item.Time.ToString("HH:mm:ss.fffff");
+                    var req = item.Request;
+                    var dt = item.Duration;
+                    writer.WriteLine($"{time}\t{dt}\t{req}");
+                }
+                actual = writer.GetStringBuilder().ToString().Trim();
+            }
+
+            var expected = string.Join(Environment.NewLine, new[] {
+                    "02:25:28.25307	00:00:00.0156500	GET http://snbweb01.sn.hu/",
+                    "02:25:28.47362	00:00:00	GET http://snbweb01.sn.hu/favicon.ico",
+                    "02:25:34.95093	00:00:02.9687600	POST http://snbweb01.sn.hu/OData.svc/Root/Benchmark?benchamrkId=P5A0x",
+                    "02:25:38.55033	00:00:00.8593700	POST http://snbweb01.sn.hu/OData.svc/Root/Benchmark/('SystemFolder-20171114022535')/Upload?create=1&metadata=no",
+                });
+            Assert.AreEqual(expected, actual);
+        }
+
     }
 }

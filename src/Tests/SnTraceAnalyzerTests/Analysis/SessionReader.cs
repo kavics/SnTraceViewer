@@ -3,7 +3,7 @@ using System.Linq;
 
 #pragma warning disable 1591
 
-namespace SnTraceViewer.Analysis
+namespace SnTraceAnalyzerTests.Analysis
 {
     /// <summary>
     /// EXPERIMENTAL FEATURE

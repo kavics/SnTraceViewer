@@ -1,8 +1,8 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.IO;
-using SnTraceViewer.Analysis;
 using System.Linq;
+using SenseNet.Diagnostics.Analysis2;
 
 namespace SnTraceViewerTests
 {

@@ -1,8 +1,7 @@
-﻿namespace SnTraceViewer.Analysis
+﻿namespace SenseNet.Diagnostics.Analysis2
 {
     /// <summary>
     /// Contains available values of the Category column.
-    /// EXPERIMENTAL FEATURE
     /// </summary>
     public static class Category
     {

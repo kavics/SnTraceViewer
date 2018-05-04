@@ -7,23 +7,16 @@
 
 //namespace SenseNet.Diagnostics.Analysis2
 //{
-//    public abstract class EntryCollection<T>
-//    {
-//        public abstract void Add(T entry, string qualification);
-//        public abstract bool Finished();
-//    }
-
-//    public class GenericCollector<TSource, TResult> : IEnumerable<TResult> where TResult : EntryCollection<TSource>, new()
+//    public class GenericCollector2<TSource> : IEnumerable<object>
 //    {
 //        private IEnumerable<TSource> _input;
 //        private readonly Func<TSource, Tuple<string, string>> _keySelector;
-//        private readonly Func<TResult, TResult> _finalizer;
-//        private static readonly Func<TResult, TResult> DefaultFinalizer = (c) => { return c.Finished() ? c : null; };
+//        private readonly Func<dynamic, dynamic> _finalizer;
 
-//        public GenericCollector(Func<TSource, Tuple<string, string>> keySelector, Func<TResult, TResult> finalizer = null)
+//        public GenericCollector2(Func<TSource, Tuple<string, string>> keySelector, Func<dynamic, dynamic> finalizer = null)
 //        {
 //            _keySelector = keySelector;
-//            _finalizer = finalizer ?? DefaultFinalizer;
+//            _finalizer = finalizer;
 //        }
 //        public void Initialize(IEnumerable<TSource> input)
 //        {
@@ -33,22 +26,21 @@
 //        {
 //            return GetEnumerator();
 //        }
-//        public IEnumerator<TResult> GetEnumerator()
+//        public IEnumerator<dynamic> GetEnumerator()
 //        {
 //            foreach (TSource entry in _input)
 //            {
 //                var keySelectorResult = _keySelector(entry);
-//                TResult collection;
-//                TResult outputEntry;
+//                dynamic collection;
+//                dynamic outputEntry;
 //                if (keySelectorResult != null)
 //                {
 //                    var key = keySelectorResult.Item1;
 //                    var qualification = keySelectorResult.Item2;
-//                    collection = Collect<TResult>(key, qualification, entry);
+//                    collection = Collect(key, qualification, entry);
 //                    if (collection != null)
 //                    {
 //                        outputEntry = _finalizer(collection);
-//                        //outputEntry = Build<TResult>(collection);
 //                        if (outputEntry != null)
 //                        {
 //                            RemoveCollection(key);
@@ -59,23 +51,24 @@
 //            }
 //        }
 
-//        private T Collect<T>(string key, string qualification, TSource entry) where T : EntryCollection<TSource>, new()
+//        private dynamic Collect(string key, string qualification, TSource entry)
 //        {
-//            var collection = GetCollection<T>(key);
-//            collection.Add(entry, qualification);
+//            var collection = GetCollection(key);
+//            var d = collection as IDictionary<string, object>;
+//            d[qualification] = entry;
 //            return collection;
 //        }
 
-//        private Dictionary<string, EntryCollection<TSource>> Collections { get; } = new Dictionary<string, EntryCollection<TSource>>();
-//        internal T GetCollection<T>(string key) where T : EntryCollection<TSource>, new()
+//        private Dictionary<string, dynamic> Collections { get; } = new Dictionary<string, dynamic>();
+//        internal dynamic GetCollection(string key)
 //        {
-//            EntryCollection<TSource> collection;
+//            dynamic collection;
 //            if (!Collections.TryGetValue(key, out collection))
 //            {
-//                collection = new T();
+//                collection = new System.Dynamic.ExpandoObject();
 //                Collections[key] = collection;
 //            }
-//            return (T)collection;
+//            return collection;
 //        }
 //        internal void RemoveCollection(string key)
 //        {

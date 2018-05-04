@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 #pragma warning disable 1591
 
-namespace SenseNet.Diagnostics.Analysis
+namespace SenseNet.Diagnostics.Analysis2
 {
     /// <summary>
     /// EXPERIMENTAL FEATURE

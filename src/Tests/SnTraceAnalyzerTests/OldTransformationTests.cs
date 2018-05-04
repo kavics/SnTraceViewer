@@ -1,16 +1,16 @@
-﻿using SenseNet.Diagnostics.Analysis;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using SnTraceAnalyzerTests.Analysis;
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
-using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
-namespace Transformer
+namespace SnTraceAnalyzerTests
 {
-    class Program
+    [TestClass]
+    public class OldTransformationTests
     {
         private class AppDomainSimplifier
         {
@@ -63,28 +63,15 @@ namespace Transformer
             }
         }
 
-        static void Main(string[] args)
+        [TestMethod]
+        public void OldTransform_SimpleRead()
         {
             var logDirectories = new[] {
-                @"C:\Users\Gyebi\Desktop\benchmark\02\web1",
-                @"C:\Users\Gyebi\Desktop\benchmark\02\web2",
+                @"D:\Desktop\benchmark\02\web1",
+                @"D:\Desktop\benchmark\02\web2",
             };
-            var outputDir = @"C:\Users\Gyebi\Desktop\benchmark\02\";
+            var outputDir = @"D:\Desktop\benchmark\02\";
 
-            Test1_SimpleRead(logDirectories, outputDir);
-            Test2_Filtering(logDirectories, outputDir);
-            Test3_Modifying(logDirectories, outputDir);
-            Test4_Collecting(logDirectories, outputDir);
-
-            if (Debugger.IsAttached)
-            {
-                Console.Write("press <enter> to exit...");
-                Console.ReadLine();
-            }
-        }
-
-        private static void Test1_SimpleRead(string[] logDirectories, string outputDir)
-        {
             using (var writer = new StreamWriter(Path.Combine(outputDir, "webrequests1.log")))
             using (var logFlow = Reader.Create(logDirectories, "detailedlog_*.log"))
             {
@@ -94,10 +81,17 @@ namespace Transformer
                     writer.WriteLine(item);
             }
         }
-        private static void Test2_Filtering(string[] logDirectories, string outputDir)
+        [TestMethod]
+        public void OldTransform_Filtering()
         {
+            var logDirectories = new[] {
+                @"D:\Desktop\benchmark\02\web1",
+                @"D:\Desktop\benchmark\02\web2",
+            };
+            var outputDir = @"D:\Desktop\benchmark\02\";
+
             using (var writer = new StreamWriter(Path.Combine(outputDir, "webrequests2.log")))
-            using (var logFlow = Reader.Create(logDirectories, "detailedlog_*.log")            )
+            using (var logFlow = Reader.Create(logDirectories, "detailedlog_*.log"))
             {
                 var transformedLogFlow = logFlow
                     .Where(e => e.Category == "Web")
@@ -106,8 +100,15 @@ namespace Transformer
                     writer.WriteLine(item);
             }
         }
-        private static void Test3_Modifying(string[] logDirectories, string outputDir)
+        [TestMethod]
+        public void OldTransform_Modifying()
         {
+            var logDirectories = new[] {
+                @"D:\Desktop\benchmark\02\web1",
+                @"D:\Desktop\benchmark\02\web2",
+            };
+            var outputDir = @"D:\Desktop\benchmark\02\";
+
             using (var writer = new StreamWriter(Path.Combine(outputDir, "webrequests3.log")))
             using (var logFlow = Reader.Create(logDirectories, "detailedlog_*.log"))
             {
@@ -123,8 +124,15 @@ namespace Transformer
                 }
             }
         }
-        private static void Test4_Collecting(string[] logDirectories, string outputDir)
+        [TestMethod]
+        public void OldTransform_Collecting()
         {
+            var logDirectories = new[] {
+                @"D:\Desktop\benchmark\02\web1",
+                @"D:\Desktop\benchmark\02\web2",
+            };
+            var outputDir = @"D:\Desktop\benchmark\02\";
+
             using (var writer = new StreamWriter(Path.Combine(outputDir, "webrequests4.log")))
             using (var logFlow = Reader.Create(logDirectories, "detailedlog_*.log"))
             {
@@ -152,5 +160,6 @@ namespace Transformer
                 }
             }
         }
+
     }
 }
