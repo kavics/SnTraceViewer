@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,6 +10,7 @@ namespace SenseNet.Diagnostics.Analysis2
     /// <summary>
     /// Represents a file section that created by one AppDomain in a row.
     /// </summary>
+    [DebuggerDisplay("{ToString()}")]
     public class TraceSession : EntryEnumerable<Entry>
     {
         private List<TraceFile> _files = new List<TraceFile>();
@@ -24,6 +26,7 @@ namespace SenseNet.Diagnostics.Analysis2
         {
             var allFiles = traceDirs
                 .SelectMany(d => d.TraceFiles, (d, f) => f)
+                .Where(f => f.FirstEntry != null)
                 .OrderBy(f => f.FirstEntry.AppDomain)
                 .ThenBy(f => f.FirstEntry.Time)
                 .ToArray();
@@ -80,6 +83,11 @@ namespace SenseNet.Diagnostics.Analysis2
             foreach (var file in _files)
                 foreach (var entry in file)
                     yield return entry;
+        }
+
+        public override string ToString()
+        {
+            return $"{_files.Count} files | {FirstTime.ToDisplayString()} - {LastTime.ToDisplayString()}";
         }
     }
 }
