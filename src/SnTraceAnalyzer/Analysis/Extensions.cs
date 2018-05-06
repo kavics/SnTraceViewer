@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,8 +11,28 @@ namespace SenseNet.Diagnostics.Analysis2
     {
         public static string ToDisplayString(this DateTime dateTime)
         {
-            //var dt = (dateTime.Kind == DateTimeKind.Utc ? DateTime.UtcNow : DateTime.Now) - dateTime;
-            return dateTime.ToString("yyyy-MM-dd HH:mm:ss.ffff");
+            return dateTime.ToString("yyyy-MM-dd HH:mm:ss.fffff") + (dateTime.Kind == DateTimeKind.Utc ? "Z" : "");
+        }
+        public static string ToDisplayString(this DateTime dateTime, DateTime now)
+        {
+            var ci = new CultureInfo("en-US");
+
+            if (now.Year != dateTime.Year)
+                return dateTime.ToDisplayString();
+
+            if (now.Month - dateTime.Month > 1)
+                return dateTime.ToString("MM-dd HH:mm:ss.fffff", ci);
+            if (now.Month - dateTime.Month == 1)
+                return "Last month " + dateTime.ToString("dd HH:mm:ss.fffff", ci);
+
+            if (now.Day - dateTime.Day > 6)
+                return dateTime.ToString("dd HH:mm:ss.fffff", ci);
+            if (now.Day - dateTime.Day > 1)
+                return dateTime.ToString("dddd HH:mm:ss.fffff", ci);
+            if (now.Day - dateTime.Day == 1)
+                return "Yesterday " + dateTime.ToString("HH:mm:ss.fffff", ci);
+
+            return "Today " + dateTime.ToString("HH:mm:ss.fffff", ci);
         }
 
         ////UNDONE: not serialized.

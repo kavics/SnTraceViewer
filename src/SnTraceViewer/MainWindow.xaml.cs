@@ -229,7 +229,8 @@ namespace SnTraceViewer
             var entries = session.Select(x => new DisplayEntry(x)).ToList();
             _allEntries = entries;
             _currentlyVisible = entries;
-            listView.ItemsSource = entries;
+            ApplyCategoryFilters();
+            //listView.ItemsSource = entries;
         }
     }
 }
