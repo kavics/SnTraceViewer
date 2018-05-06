@@ -727,5 +727,138 @@ namespace SnTraceAnalyzerTests
             Assert.AreEqual(expected, actual);
         }
 
+        /* ============================================================================== */
+
+        [TestMethod]
+        public void Analysis3_TestMethodTimes()
+        {
+            var oldResult = Analysis3_TestMethodTimes_OLD();
+            var newResult = Analysis3_TestMethodTimes_NEW();
+            var expected = string.Join(Environment.NewLine, new[] {
+                "1	00:00:46.1279200	Aspect_HasFieldIfHasAspect",
+                "2	00:00:01.6750500	Aspect_Searchable",
+                "3	00:00:01.1980000	Aspect_Sortable",
+                "4	00:00:00.0070100	ContentNaming_FromDisplayName",
+                "5	00:00:01.6859900	ContentNaming_AllowIncrementalNaming_Allowed",
+                "6	00:00:01.6750900	ContentNaming_AllowIncrementalNaming_Disallowed"
+            });
+            Assert.AreEqual(expected, oldResult);
+            Assert.AreEqual(expected, newResult);
+        }
+        private string Analysis3_TestMethodTimes_OLD()
+        {
+            var sb = new StringBuilder();
+            using (var writer = new StringWriter(sb))
+            using (var logFlow = Reader.Create(_logForAnalysis3_TestMethodTimes))
+            {
+                var aps = new AppDomainSimplifier("App-{0}");
+
+                var transformedLogFlow = logFlow
+                    .Where(e => e.Category == Category.Test)
+                    .Select(e => { e.AppDomain = aps.Simplify(e.AppDomain); return e; })
+                    .Collect2((e) =>
+                    {
+                        if (e.Message.StartsWith("START test: "))
+                            return new Tuple<string, string>($"{e.AppDomain}|{e.ThreadId}|{e.Message.Substring("START test: ".Length)}", "StartEntry");
+                        else if (e.Message.StartsWith("END test: "))
+                            return new Tuple<string, string>($"{e.AppDomain}|{e.ThreadId}|{e.Message.Substring("END test: ".Length)}", "EndEntry");
+                        return null;
+                    }, (c) =>
+                    {
+                        var d = (IDictionary<string, object>)c;
+                        if (c.StartEntry == null || !d.ContainsKey("EndEntry"))
+                            return null;
+                        return new
+                        {
+                            Name = c.StartEntry.Message.Substring("START test: ".Length),
+                            Duration = c.EndEntry.Time - c.StartEntry.Time,
+                        };
+                    });
+
+                var id = 0;
+                foreach (dynamic item in transformedLogFlow)
+                {
+                    var name = item.Name;
+                    var dt = item.Duration;
+                    writer.WriteLine($"{++id}\t{dt}\t{name}");
+                }
+            }
+
+            var result = sb.ToString().Trim();
+            return result;
+        }
+        private string Analysis3_TestMethodTimes_NEW()
+        {
+            var sb = new StringBuilder();
+            var collector = new Collector();
+
+            using (var writer = new StringWriter(sb))
+            using (var logFlow = Reader.Create(_logForAnalysis3_TestMethodTimes))
+            {
+                var aps = new AppDomainSimplifier("App-{0}");
+
+                var transformedLogFlow = logFlow
+                    .Where(e => e.Category == Category.Test)
+                    .Select(e => { e.AppDomain = aps.Simplify(e.AppDomain); return e; })
+                    .Where((e) =>
+                    {
+                        if (e.Message.StartsWith("START test: "))
+                        {
+                            var key = $"{e.AppDomain}|{e.ThreadId}|{e.Message.Substring("START test: ".Length)}";
+                            collector.Set(key, "start", e);
+                            return false;
+                        }
+                        if (e.Message.StartsWith("END test: "))
+                        {
+                            var key = $"{e.AppDomain}|{e.ThreadId}|{e.Message.Substring("END test: ".Length)}";
+                            // false if the [key] does not exist.
+                            return collector.Finish(key, e);
+                        }
+                        return false;
+                    })
+                    .Select(e => new
+                    {
+                        Name = e.Message.Substring("END test: ".Length),
+                        Duration = e.Time - e.Associations["start"].Time,
+                    });
+
+                var id = 0;
+                foreach (dynamic item in transformedLogFlow)
+                {
+                    var name = item.Name;
+                    var dt = item.Duration;
+                    writer.WriteLine($"{++id}\t{dt}\t{name}");
+                }
+            }
+
+
+            var result = sb.ToString().Trim();
+            return result;
+        }
+        #region Data for Analysis3_TestMethodTimes
+        private string[] _logForAnalysis3_TestMethodTimes = new[]
+        {
+            "----",
+            ">1\t2018-04-27 14:38:04.64910\tTest\tA:TestSourceHost: Enumering assembly\tT:11\t\t\t\tSTART test: Aspect_HasFieldIfHasAspect",
+            "2\t2018-04-27 14:38:04.65210\tTest\tA:TestSourceHost: Enumering assembly\tT:11\t\t\t\tWait for creating prototypes.",
+            "3\t2018-04-27 14:38:04.65310\tTest\tA:TestSourceHost: Enumering assembly\tT:11\tOp:1\tStart\t\tCreate prototypes.",
+            "4\t2018-04-27 14:38:05.12416\tTest\tA:TestSourceHost: Enumering assembly\tT:11\t\t\t\tStart repository.",
+            ">5\t2018-04-27 14:38:23.50371\tTest\tA:TestSourceHost: Enumering assembly\tT:11\t\t\t\tCreate initial index.",
+            ">6\t2018-04-27 14:38:48.60204\tTest\tA:TestSourceHost: Enumering assembly\tT:11\t\t\t\tCreate snapshots.",
+            ">7\t2018-04-27 14:38:48.60905\tTest\tA:TestSourceHost: Enumering assembly\tT:11\tOp:1\tEnd\t00:00:43.956943\tCreate prototypes.",
+            ">8\t2018-04-27 14:38:50.77702\tTest\tA:TestSourceHost: Enumering assembly\tT:11\t\t\t\tEND test: Aspect_HasFieldIfHasAspect",
+            ">11\t2018-04-27 14:38:51.40401\tTest\tA:TestSourceHost: Enumering assembly\tT:11\t\t\t\tSTART test: Aspect_Searchable",
+            ">12\t2018-04-27 14:38:53.07906\tTest\tA:TestSourceHost: Enumering assembly\tT:11\t\t\t\tEND test: Aspect_Searchable",
+            ">13\t2018-04-27 14:38:53.08006\tTest\tA:TestSourceHost: Enumering assembly\tT:11\t\t\t\tSTART test: Aspect_Sortable",
+            ">14\t2018-04-27 14:38:54.27806\tTest\tA:TestSourceHost: Enumering assembly\tT:11\t\t\t\tEND test: Aspect_Sortable",
+            ">35\t2018-04-27 14:39:05.37339\tTest\tA:TestSourceHost: Enumering assembly\tT:11\t\t\t\tSTART test: ContentNaming_FromDisplayName",
+            "36\t2018-04-27 14:39:05.38040\tTest\tA:TestSourceHost: Enumering assembly\tT:11\t\t\t\tEND test: ContentNaming_FromDisplayName",
+            ">37\t2018-04-27 14:39:05.38140\tTest\tA:TestSourceHost: Enumering assembly\tT:11\t\t\t\tSTART test: ContentNaming_AllowIncrementalNaming_Allowed",
+            ">38\t2018-04-27 14:39:07.06739\tTest\tA:TestSourceHost: Enumering assembly\tT:11\t\t\t\tEND test: ContentNaming_AllowIncrementalNaming_Allowed",
+            ">39\t2018-04-27 14:39:07.07039\tTest\tA:TestSourceHost: Enumering assembly\tT:11\t\t\t\tSTART test: ContentNaming_AllowIncrementalNaming_Disallowed",
+            ">40\t2018-04-27 14:39:08.74548\tTest\tA:TestSourceHost: Enumering assembly\tT:11\t\t\t\tEND test: ContentNaming_AllowIncrementalNaming_Disallowed",
+        };
+        #endregion
+
     }
 }

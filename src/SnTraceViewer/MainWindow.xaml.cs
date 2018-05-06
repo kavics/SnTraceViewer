@@ -12,6 +12,7 @@ using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
+using System.Windows.Interop;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
@@ -26,42 +27,66 @@ namespace SnTraceViewer
     {
         private FiltersWindow _filtersWindow;
 
+        public string LastDirectory
+        {
+            get
+            {
+                var lastDirectory = Properties.Settings.Default.LastDirectory;
+                if (string.IsNullOrEmpty(lastDirectory) || !System.IO.Directory.Exists(lastDirectory))
+                {
+                    lastDirectory = Environment.GetEnvironmentVariable("USERPROFILE");
+                    LastDirectory = lastDirectory;
+                }
+                return lastDirectory;
+            }
+            set
+            {
+                Properties.Settings.Default.LastDirectory = value;
+            }
+        }
+
         public MainWindow()
         {
             InitializeComponent();
 
-            List<DisplayEntry> entries;
-            var directory = directoryTextBox.Text;
-            if (!System.IO.Path.IsPathRooted(directory))
-                directory = System.IO.Path.GetFullPath(System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, directory));
-            var files = System.IO.Directory.GetFiles(directory);
-            var fileNames = files
-                //.OrderByDescending(x => x)
-                .Select(x => System.IO.Path.GetFileName(x))
-                .ToArray();
+            _isSessionChangeEnabled = false;
 
-            fileNamesComboBox.ItemsSource = fileNames;
-            fileNamesComboBox.SelectedIndex = 0;
-            var selectedFile = fileNamesComboBox.SelectedItem;
+            //List<DisplayEntry> entries;
+            //var directory = directoryTextBox.Text;
+            //if (!System.IO.Path.IsPathRooted(directory))
+            //    directory = System.IO.Path.GetFullPath(System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, directory));
+            //var files = System.IO.Directory.GetFiles(directory);
+            //var fileNames = files
+            //    //.OrderByDescending(x => x)
+            //    .Select(x => System.IO.Path.GetFileName(x))
+            //    .ToArray();
 
-            ////var file = System.IO.Path.Combine(directory, selectedFile.ToString());
-            ////using (var reader = Reader.Create(file))
-            //using (var reader = Reader.Create(@"D:\Projects\github\space-bender\SnTraceViewer\src\SnTraceViewer\SampleFiles\session"))
-            //    entries = reader.Select(x => new DisplayEntry(x)).ToList();
+            //fileNamesComboBox.ItemsSource = fileNames;
+            //fileNamesComboBox.SelectedIndex = 0;
+            //var selectedFile = fileNamesComboBox.SelectedItem;
 
-            var rootPath = TraceDirectory.GetFullPath(@"..\..\..\SnTraceViewer\SampleFiles\session");
-            var traceDirs = TraceDirectory.SearchTraceDirectories(rootPath);
-            var sessions = TraceSession.Create(traceDirs);
-            entries = sessions.First().Select(x => new DisplayEntry(x)).ToList();
+            directoryTextBox.Text = "";
 
-            _allEntries = entries;
-            _currentlyVisible = entries;
-            listView.ItemsSource = entries;
+            //////var file = System.IO.Path.Combine(directory, selectedFile.ToString());
+            //////using (var reader = Reader.Create(file))
+            ////using (var reader = Reader.Create(@"D:\Projects\github\space-bender\SnTraceViewer\src\SnTraceViewer\SampleFiles\session"))
+            ////    entries = reader.Select(x => new DisplayEntry(x)).ToList();
+
+            //var rootPath = TraceDirectory.GetFullPath(@"..\..\..\SnTraceViewer\SampleFiles\session");
+            //var traceDirs = TraceDirectory.SearchTraceDirectories(rootPath);
+            //var sessions = TraceSession.Create(traceDirs);
+            //entries = sessions.First().Select(x => new DisplayEntry(x)).ToList();
+
+            //_allEntries = entries;
+            //_currentlyVisible = entries;
+            //listView.ItemsSource = entries;
 
             this.CategoryVisibility = new CategoryVisibility(this);
             _filtersWindow = new FiltersWindow(this.CategoryVisibility);
 
             this.DataContext = this;
+
+            _isSessionChangeEnabled = true;
         }
 
         public CategoryVisibility CategoryVisibility { get; }
@@ -153,75 +178,59 @@ namespace SnTraceViewer
         {
             _filtersWindow.Show();
         }
-
-        private class DisplayEntry
+        private void directoryButton_Click(object sender, RoutedEventArgs e)
         {
-            public string BlockStart { get; set; }
-            public int LineId { get; set; }
-            public string Time { get; set; }
-            public string Category { get; set; }
-            public string AppDomain { get; set; }
-            public int ThreadId { get; set; }
-            public int OpId { get; set; }
-            public string Status { get; set; }
-            public string StatusColor { get; set; }
-            public string StatusWeight { get; set; }
-            public string Duration { get; set; }
-            public string Message { get; set; }
-
-            public DisplayEntry(Entry x)
+            var dialog = new Microsoft.Win32.SaveFileDialog // new Microsoft.Win32.OpenFileDialog();
             {
-                string status;
-                string statusColor;
-                string statusWeight;
-                switch (x.Status)
-                {
-                    default:
-                        status = string.Empty;
-                        statusColor = "#FFFFFF";
-                        statusWeight = "Normal";
-                        break;
-                    case "Start":
-                        status = "Start";
-                        statusColor = "#FFFFFF";
-                        statusWeight = "Bold";
-                        break;
-                    case "End":
-                        status = "End";
-                        statusColor = "#FFFFFF";
-                        statusWeight = "Bold";
-                        break;
-                    case "ERROR":
-                        status = "ERROR";
-                        statusColor = "#FFBB99";
-                        statusWeight = "Bold";
-                        break;
-                    case "UNTERMINATED":
-                        status = "unterminated";
-                        statusColor = "#FFFFBB";
-                        statusWeight = "Bold";
-                        break;
-                }
+                FileName = "---",
+                InitialDirectory = this.LastDirectory,
+                Title = "Open directory",
+                ValidateNames = false
+            };
+            var result = dialog.ShowDialog();
 
-                BlockStart = x.BlockStart ? ">" : "";
-                LineId = x.LineId;
-                Time = x.Time.ToString("HH:mm:ss.ffff");
-                Category = x.Category;
-                AppDomain = x.AppDomain;
-                ThreadId = x.ThreadId;
-                OpId = x.OpId;
-                Status = status;
-                StatusColor = statusColor;
-                StatusWeight = statusWeight;
-                Duration = x.Status != "UNTERMINATED" && x.Status != "End" ? "" : x.Duration.ToString(@"hh\:mm\:ss\.ffffff");
-                Message = x.Message;
-            }
+            if (!result.HasValue || !result.Value)
+                return;
+
+            var fileName = dialog.FileName;
+            var selectedDirectory = System.IO.Path.GetDirectoryName(dialog.FileName);
+            directoryTextBox.Text = selectedDirectory;
+            this.LastDirectory = selectedDirectory;
+
+            var rootPath = selectedDirectory; // TraceDirectory.GetFullPath(selectedDirectory);
+            var traceDirs = TraceDirectory.SearchTraceDirectories(rootPath);
+            var sessions = TraceSession.Create(traceDirs);
+
+            fileNamesComboBox.ItemsSource = sessions;
+            fileNamesComboBox.SelectedIndex = sessions.Length - 1;
+            var selectedFile = fileNamesComboBox.SelectedItem;
+
+            ChangeSession(sessions.Last());
         }
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
             _filtersWindow.Exit();
             _filtersWindow.Close();
+        }
+
+        private bool _isSessionChangeEnabled;
+        private void fileNamesComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (!_isSessionChangeEnabled)
+                return;
+
+            var selectedSession = (TraceSession)fileNamesComboBox.SelectedItem;
+            ChangeSession(selectedSession);
+        }
+
+        private void ChangeSession(TraceSession session)
+        {
+            var entries = session.Select(x => new DisplayEntry(x)).ToList();
+            _allEntries = entries;
+            _currentlyVisible = entries;
+            ApplyCategoryFilters();
+            //listView.ItemsSource = entries;
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 
@@ -57,26 +58,7 @@ namespace SnTraceAnalyzerTests.Analysis
         /// </summary>
         public string Raw;
 
-        public Entry() { }
-        public Entry(Entry sourceEntry)
-        {
-            CopyPropertiesFrom(sourceEntry);
-        }
-
-        protected void CopyPropertiesFrom(Entry fromEntry)
-        {
-            BlockStart = fromEntry.BlockStart;
-            LineId = fromEntry.LineId;
-            Time = fromEntry.Time;
-            Category = fromEntry.Category;
-            AppDomain = fromEntry.AppDomain;
-            ThreadId = fromEntry.ThreadId;
-            OpId = fromEntry.OpId;
-            Status = fromEntry.Status;
-            Duration = fromEntry.Duration;
-            Message = fromEntry.Message;
-            Raw = fromEntry.Raw;
-        }
+        public Dictionary<string, Entry> Associations { get; set; }
 
         /// <summary>
         /// Returns a string that represents the current object.

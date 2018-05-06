@@ -82,15 +82,15 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <Label x:Name="label" Content="Directory:" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="directoryButton" Content="Directory:" HorizontalAlignment="Left" Margin="10,0,0,0" Width="61" Click="directoryButton_Click" Height="26" VerticalAlignment="Top"/>
         <TextBox x:Name="directoryTextBox" HorizontalAlignment="Left" Height="26" Margin="76,0,0,0" TextWrapping="Wrap" Text="..\..\SampleFiles" VerticalAlignment="Top" Width="560" FontSize="12pt"/>
         <Label x:Name="label1" Content="\" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="636,0,0,0"/>
-        <Button x:Name="button1" Content="&lt;&lt;" HorizontalAlignment="Left" VerticalAlignment="Top" Width="32" Margin="921,0,0,0" Height="26" />
-        <Button x:Name="button2" Content="&lt;" HorizontalAlignment="Left" VerticalAlignment="Top" Width="32" Margin="958,0,0,0" Height="26" />
-        <Button x:Name="button3" Content="&gt;" HorizontalAlignment="Left" Margin="995,0,0,0" VerticalAlignment="Top" Width="32" Height="26" />
-        <Button x:Name="button4" Content="&gt;&gt;" HorizontalAlignment="Left" Margin="1032,0,0,0" VerticalAlignment="Top" Width="32" Height="26" />
-        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="1069,5,0,0" TextWrapping="Wrap" Text="120/456" VerticalAlignment="Top" />
-        <ComboBox x:Name="fileNamesComboBox" HorizontalAlignment="Left" Margin="651,0,0,0" VerticalAlignment="Top" Width="264" Height="26" />
+        <Button x:Name="button1" Content="&lt;&lt;" VerticalAlignment="Top" Margin="0,0,209,0" Height="26" HorizontalAlignment="Right" Width="32" />
+        <Button x:Name="button2" Content="&lt;" VerticalAlignment="Top" Margin="0,0,172,0" Height="26" HorizontalAlignment="Right" Width="32" />
+        <Button x:Name="button3" Content="&gt;" Margin="0,0,135,0" VerticalAlignment="Top" Height="26" HorizontalAlignment="Right" Width="32" />
+        <Button x:Name="button4" Content="&gt;&gt;" Margin="0,0,98,0" VerticalAlignment="Top" Height="26" HorizontalAlignment="Right" Width="32" />
+        <TextBlock x:Name="textBlock" Margin="0,5,10,0" TextWrapping="Wrap" Text="120/456" VerticalAlignment="Top" HorizontalAlignment="Right" Width="83" />
+        <ComboBox x:Name="fileNamesComboBox" Margin="651,0,246,0" VerticalAlignment="Top" Height="26" SelectionChanged="fileNamesComboBox_SelectionChanged" />
         <Grid HorizontalAlignment="Left" Height="38" Margin="10,31,0,0" VerticalAlignment="Top" Width="1044">
             <Button x:Name="filterButton" Content="Filter" HorizontalAlignment="Left" Margin="4,4,0,4" Width="38" Click="filterButton_Click"/>
         </Grid>
