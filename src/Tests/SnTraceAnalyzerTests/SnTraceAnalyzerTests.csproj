@@ -63,6 +63,7 @@
   <ItemGroup>
     <Compile Include="AnalysisTests.cs" />
     <Compile Include="Analysis\Category.cs" />
+    <Compile Include="Analysis\Collector.cs" />
     <Compile Include="Analysis\DirectoryReader.cs" />
     <Compile Include="Analysis\Entry.cs" />
     <Compile Include="Analysis\EntryParser.cs" />
