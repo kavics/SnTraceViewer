@@ -88,7 +88,8 @@ namespace SenseNet.Diagnostics.Analysis2
         public override string ToString()
         {
             var now = DateTime.Now;
-            return $"{_files.Count} files | {FirstTime.ToDisplayString(now)} - {LastTime.ToDisplayString(now)}";
+            var duration = LastTime - FirstTime;
+            return $"{_files.Count} files | {FirstTime.ToDisplayString(now)} | {duration.ToDisplayString()}";
         }
     }
 }
