@@ -91,8 +91,9 @@
         <Button x:Name="button4" Content="&gt;&gt;" Margin="0,0,98,0" VerticalAlignment="Top" Height="26" HorizontalAlignment="Right" Width="32" />
         <TextBlock x:Name="textBlock" Margin="0,5,10,0" TextWrapping="Wrap" Text="120/456" VerticalAlignment="Top" HorizontalAlignment="Right" Width="83" />
         <ComboBox x:Name="fileNamesComboBox" Margin="651,0,246,0" VerticalAlignment="Top" Height="26" SelectionChanged="fileNamesComboBox_SelectionChanged" />
-        <Grid HorizontalAlignment="Left" Height="38" Margin="10,31,0,0" VerticalAlignment="Top" Width="1044">
+        <Grid Height="38" Margin="10,31,238,0" VerticalAlignment="Top">
             <Button x:Name="filterButton" Content="Filter" HorizontalAlignment="Left" Margin="4,4,0,4" Width="38" Click="filterButton_Click"/>
+            <Button x:Name="transformButton" Content="Transform" HorizontalAlignment="Left" Margin="47,4,0,4" Width="62" Click="transformButton_Click"/>
         </Grid>
     </Grid>
 </Window>

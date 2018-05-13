@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SnTraceViewer
 {
-    internal class DisplayEntry
+    public class DisplayEntry
     {
         public string BlockStart { get; set; }
         public int LineId { get; set; }

@@ -1,0 +1,34 @@
+﻿<Window x:Class="SnTraceViewer.OutputWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SnTraceViewer"
+        mc:Ignorable="d"
+        Title="OutputWindow" Height="300" Width="584.985" Closing="Window_Closing">
+    <Grid>
+        <Grid Height="38" VerticalAlignment="Top">
+            <Button Content="Button" HorizontalAlignment="Left" Width="75" Margin="4,4,0,4" IsEnabled="false"/>
+        </Grid>
+        <ListView x:Name="listView" Margin="0,43,0,0" ItemsSource="{Binding}">
+            <ListView.View>
+                <GridView>
+                    <GridView.ColumnHeaderContainerStyle>
+                        <Style TargetType="GridViewColumnHeader">
+                            <Setter Property="FontSize" Value="14"/>
+                            <Setter Property="FontWeight" Value="Bold"/>
+                            <Setter Property="HorizontalAlignment" Value="Stretch"/>
+                            <Setter Property="Background">
+                                <Setter.Value>
+                                    <SolidColorBrush Color="#DDDDDD"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </GridView.ColumnHeaderContainerStyle>
+                    <GridViewColumn Header="Duration" Width="200" DisplayMemberBinding="{Binding Duration}" />
+                    <GridViewColumn Header="Name" Width="300" DisplayMemberBinding="{Binding Name}" TextBlock.TextAlignment="Right" />
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </Grid>
+</Window>
