@@ -34,6 +34,16 @@ namespace SenseNet.Diagnostics.Analysis2
 
             return "Today " + dateTime.ToString("HH:mm:ss.fffff", ci);
         }
+        public static string ToDisplayString(this TimeSpan timespan)
+        {
+            if (timespan.TotalDays >= 1.0)
+                return timespan.ToString(@"dd\.hh\:mm\:ss");
+            if (timespan.TotalHours >= 1.0)
+                return timespan.ToString(@"hh\:mm\:ss");
+            if (timespan.TotalMinutes >= 1.0)
+                return timespan.ToString(@"mm\:ss");
+            return timespan.ToString(@"ss") + "sec";
+        }
 
         ////UNDONE: not serialized.
         //public static IEnumerable<TResult> Collect<TSource, TResult>(this IEnumerable<TSource> input, Func<TSource, Tuple<string, string>> keySelector, Func<TResult, TResult> finalizer = null) where TSource : Entry where TResult : EntryCollection<TSource>, new()
