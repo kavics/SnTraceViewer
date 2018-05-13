@@ -26,6 +26,7 @@ namespace SnTraceViewer
     public partial class MainWindow : Window
     {
         private FiltersWindow _filtersWindow;
+        private OutputWindow _outputWindow;
 
         public string LastDirectory
         {
@@ -51,38 +52,11 @@ namespace SnTraceViewer
 
             _isSessionChangeEnabled = false;
 
-            //List<DisplayEntry> entries;
-            //var directory = directoryTextBox.Text;
-            //if (!System.IO.Path.IsPathRooted(directory))
-            //    directory = System.IO.Path.GetFullPath(System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, directory));
-            //var files = System.IO.Directory.GetFiles(directory);
-            //var fileNames = files
-            //    //.OrderByDescending(x => x)
-            //    .Select(x => System.IO.Path.GetFileName(x))
-            //    .ToArray();
-
-            //fileNamesComboBox.ItemsSource = fileNames;
-            //fileNamesComboBox.SelectedIndex = 0;
-            //var selectedFile = fileNamesComboBox.SelectedItem;
-
             directoryTextBox.Text = "";
-
-            //////var file = System.IO.Path.Combine(directory, selectedFile.ToString());
-            //////using (var reader = Reader.Create(file))
-            ////using (var reader = Reader.Create(@"D:\Projects\github\space-bender\SnTraceViewer\src\SnTraceViewer\SampleFiles\session"))
-            ////    entries = reader.Select(x => new DisplayEntry(x)).ToList();
-
-            //var rootPath = TraceDirectory.GetFullPath(@"..\..\..\SnTraceViewer\SampleFiles\session");
-            //var traceDirs = TraceDirectory.SearchTraceDirectories(rootPath);
-            //var sessions = TraceSession.Create(traceDirs);
-            //entries = sessions.First().Select(x => new DisplayEntry(x)).ToList();
-
-            //_allEntries = entries;
-            //_currentlyVisible = entries;
-            //listView.ItemsSource = entries;
 
             this.CategoryVisibility = new CategoryVisibility(this);
             _filtersWindow = new FiltersWindow(this.CategoryVisibility);
+            _outputWindow = new OutputWindow();
 
             this.DataContext = this;
 
@@ -178,6 +152,10 @@ namespace SnTraceViewer
         {
             _filtersWindow.Show();
         }
+        private void transformButton_Click(object sender, RoutedEventArgs e)
+        {
+            _outputWindow.Show();
+        }
         private void directoryButton_Click(object sender, RoutedEventArgs e)
         {
             var dialog = new Microsoft.Win32.SaveFileDialog // new Microsoft.Win32.OpenFileDialog();
@@ -212,6 +190,8 @@ namespace SnTraceViewer
         {
             _filtersWindow.Exit();
             _filtersWindow.Close();
+            _outputWindow.Exit();
+            _outputWindow.Close();
         }
 
         private bool _isSessionChangeEnabled;
@@ -230,7 +210,7 @@ namespace SnTraceViewer
             _allEntries = entries;
             _currentlyVisible = entries;
             ApplyCategoryFilters();
-            //listView.ItemsSource = entries;
+            _outputWindow.SetEntries(session);
         }
     }
 }
