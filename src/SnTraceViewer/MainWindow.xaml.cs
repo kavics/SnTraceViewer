@@ -184,6 +184,8 @@ namespace SnTraceViewer
             fileNamesComboBox.ItemsSource = sessions;
             fileNamesComboBox.SelectedIndex = sessions.Length - 1;
 
+            RefreshSessionNavigatorPanel();
+
             var selectedFile = fileNamesComboBox.SelectedItem;
 
             ChangeSession(sessions.Length == 0 ? new Entry[0] : (IEnumerable<Entry>)sessions.Last());
@@ -204,6 +206,8 @@ namespace SnTraceViewer
             if (!_isSessionChangeEnabled)
                 return;
 
+            RefreshSessionNavigatorPanel();
+
             var selectedSession = (TraceSession)fileNamesComboBox.SelectedItem;
             ChangeSession(selectedSession);
         }
@@ -215,6 +219,33 @@ namespace SnTraceViewer
             _currentlyVisible = entries;
             ApplyCategoryFilters();
             _outputWindow.SetEntries(session);
+        }
+
+        private void firstSessionButton_Click(object sender, RoutedEventArgs e)
+        {
+            fileNamesComboBox.SelectedIndex = 0;
+        }
+        private void previousSessionButton_Click(object sender, RoutedEventArgs e)
+        {
+            fileNamesComboBox.SelectedIndex--;
+        }
+        private void nextSessionButton_Click(object sender, RoutedEventArgs e)
+        {
+            fileNamesComboBox.SelectedIndex++;
+        }
+        private void lastSessionButton_Click(object sender, RoutedEventArgs e)
+        {
+            fileNamesComboBox.SelectedIndex = fileNamesComboBox.Items.Count - 1;
+        }
+        private void RefreshSessionNavigatorPanel()
+        {
+            var index = fileNamesComboBox.SelectedIndex;
+            var count = fileNamesComboBox.Items.Count;
+
+            sessionsTextBlock.Text = $"{index + 1} / {count}";
+
+            firstSessionButton.IsEnabled = previousSessionButton.IsEnabled = (index > 0);
+            nextSessionButton.IsEnabled = lastSessionButton.IsEnabled = (index < count - 1);
         }
     }
 }
