@@ -20,18 +20,6 @@ namespace SnTraceViewer
     /// </summary>
     public partial class OutputWindow : Window
     {
-        //private List<DisplayEntry> _entries;
-        //internal List<DisplayEntry> Entries
-        //{
-        //    get => _entries;
-        //    set
-        //    {
-        //        _entries = value;
-        //        var transform = new TestMethodTimes(value);
-        //        listView.DataContext = transform.Output;
-        //    }
-        //}
-        
         public OutputWindow()
         {
             InitializeComponent();
@@ -53,8 +41,47 @@ namespace SnTraceViewer
 
         public void SetEntries(IEnumerable<Entry> entries)
         {
-            var transform = new TestMethodTimes(entries);
-            listView.DataContext = transform.Output;
+            var transformation = new TestMethodTimes(entries);
+
+            // https://stackoverflow.com/questions/868204/adding-columns-programatically-to-listview-in-wpf
+            DataBind(listView, transformation);
+
+            if (transformation.Output.Any())
+                listView.DataContext = transformation.Output;
+        }
+
+        private void DataBind(ListView listView, ITransformation transformation)
+        {
+            var firstObject = transformation.Output.FirstOrDefault();
+
+            var gridView = listView.View as GridView ?? new GridView();
+            gridView.AllowsColumnReorder = true;
+            gridView.ColumnHeaderToolTip = transformation.Name;
+            gridView.Columns.Clear();
+
+            if (firstObject == null)
+            {
+                var column = new GridViewColumn();
+                column.DisplayMemberBinding = new Binding("text");
+                column.Header = string.Empty;
+                column.Width = 300;
+                gridView.Columns.Add(column);
+
+                listView.View = gridView;
+
+                listView.DataContext = new[] { new { text = "There are no transformed items." } };
+            }
+
+            foreach (var columnName in transformation.ColumnNames)
+            {
+                var column = new GridViewColumn();
+                column.DisplayMemberBinding = new Binding(columnName);
+                column.Header = columnName;
+                column.Width = 100;
+                gridView.Columns.Add(column);
+            }
+
+            listView.View = gridView;
         }
     }
 }

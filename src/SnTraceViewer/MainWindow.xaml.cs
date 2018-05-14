@@ -158,6 +158,8 @@ namespace SnTraceViewer
         }
         private void directoryButton_Click(object sender, RoutedEventArgs e)
         {
+            _isSessionChangeEnabled = false;
+
             var dialog = new Microsoft.Win32.SaveFileDialog // new Microsoft.Win32.OpenFileDialog();
             {
                 FileName = "---",
@@ -181,9 +183,11 @@ namespace SnTraceViewer
 
             fileNamesComboBox.ItemsSource = sessions;
             fileNamesComboBox.SelectedIndex = sessions.Length - 1;
+
             var selectedFile = fileNamesComboBox.SelectedItem;
 
-            ChangeSession(sessions.Last());
+            ChangeSession(sessions.Length == 0 ? new Entry[0] : (IEnumerable<Entry>)sessions.Last());
+            _isSessionChangeEnabled = true;
         }
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
@@ -204,7 +208,7 @@ namespace SnTraceViewer
             ChangeSession(selectedSession);
         }
 
-        private void ChangeSession(TraceSession session)
+        private void ChangeSession(IEnumerable<Entry> session)
         {
             var entries = session.Select(x => new DisplayEntry(x)).ToList();
             _allEntries = entries;

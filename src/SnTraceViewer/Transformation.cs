@@ -24,11 +24,11 @@ namespace SnTraceViewer
         public virtual string[] ColumnNames { get => __columnNames ?? (__columnNames = GetColumnNames()); }
         protected virtual string[] GetColumnNames()
         {
-            var input = Input;
-            if (input == null)
+            var output = Output;
+            if (output == null)
                 return new string[0];
 
-            var firstItem = input.FirstOrDefault();
+            var firstItem = output.FirstOrDefault();
             if (firstItem == null)
                 return new string[0];
 
