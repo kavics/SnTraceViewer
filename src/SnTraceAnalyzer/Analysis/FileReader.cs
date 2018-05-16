@@ -3,7 +3,7 @@ using System.IO;
 
 #pragma warning disable 1591
 
-namespace SenseNet.Diagnostics.Analysis2
+namespace SenseNet.Diagnostics.Analysis
 {
     /// <summary>
     /// EXPERIMENTAL FEATURE

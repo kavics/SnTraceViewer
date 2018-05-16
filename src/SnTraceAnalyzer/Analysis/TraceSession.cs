@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SenseNet.Diagnostics.Analysis2
+namespace SenseNet.Diagnostics.Analysis
 {
     /// <summary>
     /// Represents a file section that created by one AppDomain in a row.

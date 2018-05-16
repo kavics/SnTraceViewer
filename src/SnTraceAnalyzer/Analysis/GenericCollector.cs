@@ -5,7 +5,7 @@
 //using System.Text;
 //using System.Threading.Tasks;
 
-//namespace SenseNet.Diagnostics.Analysis2
+//namespace SenseNet.Diagnostics.Analysis
 //{
 //    public abstract class EntryCollection<T>
 //    {

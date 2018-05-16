@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SenseNet.Diagnostics.Analysis2
+namespace SenseNet.Diagnostics.Analysis
 {
     [DebuggerDisplay("{FirstEntry.LineId}-{LastEntry.LineId} | {FirstEntry.Time.TimeOfDay.ToString()}-{LastEntry.Time.TimeOfDay.ToString()}: {FirstEntry.AppDomain} {Path}")]
     public class TraceFile : EntryEnumerable<Entry>

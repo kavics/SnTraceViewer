@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using SenseNet.Diagnostics.Analysis2;
+using SenseNet.Diagnostics.Analysis;
 
 namespace SnTraceViewerTests
 {

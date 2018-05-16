@@ -2,7 +2,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.IO;
 using System.Linq;
-using SenseNet.Diagnostics.Analysis2;
+using SenseNet.Diagnostics.Analysis;
 
 namespace SnTraceViewerTests
 {

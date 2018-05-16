@@ -3,7 +3,7 @@
 //using System.Collections.Generic;
 //using System.Linq;
 
-//namespace SenseNet.Diagnostics.Analysis2
+//namespace SenseNet.Diagnostics.Analysis
 //{
 //    public class Statistics<T> where T : IConvertible, IComparable
 //    {
