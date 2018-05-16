@@ -20,6 +20,7 @@ namespace SenseNet.Diagnostics.Analysis
         public override IEnumerator<Entry> GetEnumerator()
         {
             _reader = new StreamReader(_filePath);
+
             string line;
             while ((line = _reader.ReadLine()) != null)
                 if (line.Length > 0 && !line.StartsWith("--") && !line.StartsWith("MaxPdiff:"))

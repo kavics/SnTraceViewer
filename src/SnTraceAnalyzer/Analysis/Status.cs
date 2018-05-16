@@ -4,6 +4,7 @@ namespace SenseNet.Diagnostics.Analysis
 {
     /// <summary>
     /// Contains available values of the Status column.
+    /// EXPERIMENTAL FEATURE
     /// </summary>
     public static class Status
     {
