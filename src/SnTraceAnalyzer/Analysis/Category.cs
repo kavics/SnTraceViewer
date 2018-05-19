@@ -1,7 +1,8 @@
-﻿namespace SenseNet.Diagnostics.Analysis2
+﻿namespace SenseNet.Diagnostics.Analysis
 {
     /// <summary>
     /// Contains available values of the Category column.
+    /// EXPERIMENTAL FEATURE
     /// </summary>
     public static class Category
     {

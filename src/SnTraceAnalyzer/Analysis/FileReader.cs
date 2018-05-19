@@ -3,7 +3,7 @@ using System.IO;
 
 #pragma warning disable 1591
 
-namespace SenseNet.Diagnostics.Analysis2
+namespace SenseNet.Diagnostics.Analysis
 {
     /// <summary>
     /// EXPERIMENTAL FEATURE
@@ -20,6 +20,7 @@ namespace SenseNet.Diagnostics.Analysis2
         public override IEnumerator<Entry> GetEnumerator()
         {
             _reader = new StreamReader(_filePath);
+
             string line;
             while ((line = _reader.ReadLine()) != null)
                 if (line.Length > 0 && !line.StartsWith("--") && !line.StartsWith("MaxPdiff:"))

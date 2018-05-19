@@ -1,9 +1,10 @@
 ﻿#pragma warning disable 1591
 
-namespace SenseNet.Diagnostics.Analysis2
+namespace SenseNet.Diagnostics.Analysis
 {
     /// <summary>
     /// Contains available values of the Status column.
+    /// EXPERIMENTAL FEATURE
     /// </summary>
     public static class Status
     {

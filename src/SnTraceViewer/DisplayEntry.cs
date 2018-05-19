@@ -1,4 +1,4 @@
-﻿using SenseNet.Diagnostics.Analysis2;
+﻿using SenseNet.Diagnostics.Analysis;
 using System;
 using System.Collections.Generic;
 using System.Linq;
