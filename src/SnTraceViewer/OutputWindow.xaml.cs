@@ -1,6 +1,7 @@
 ﻿using SenseNet.Diagnostics.Analysis;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,6 +21,9 @@ namespace SnTraceViewer
     /// </summary>
     public partial class OutputWindow : Window
     {
+        private ITransformation _transformation;
+        private double[] _columnWidths;
+
         public OutputWindow()
         {
             InitializeComponent();
@@ -42,15 +46,18 @@ namespace SnTraceViewer
         public void SetEntries(IEnumerable<Entry> entries)
         {
             var transformation = new TestMethodTimes(entries);
+            if (_transformation == null)
+                _columnWidths = new double[transformation.ColumnNames.Length];
+            _transformation = transformation;
 
             // https://stackoverflow.com/questions/868204/adding-columns-programatically-to-listview-in-wpf
-            DataBind(listView, transformation);
+            DataBind(listView, _transformation, _columnWidths);
 
-            if (transformation.Output.Any())
-                listView.DataContext = transformation.Output;
+            if (_transformation.Output.Any())
+                listView.DataContext = _transformation.Output;
         }
 
-        private void DataBind(ListView listView, ITransformation transformation)
+        private void DataBind(ListView listView, ITransformation transformation, double[] columnWidths)
         {
             var firstObject = transformation.Output.FirstOrDefault();
 
@@ -72,16 +79,42 @@ namespace SnTraceViewer
                 listView.DataContext = new[] { new { text = "There are no transformed items." } };
             }
 
-            foreach (var columnName in transformation.ColumnNames)
+            var colNames = transformation.ColumnNames;
+            for (int i = 0; i < colNames.Length; i++)
             {
+                var columnName = colNames[i];
                 var column = new GridViewColumn();
                 column.DisplayMemberBinding = new Binding(columnName);
                 column.Header = columnName;
-                column.Width = 100;
+                column.Width = _columnWidths[i] < 1.0d ? 100 : _columnWidths[i];
+                ((INotifyPropertyChanged)column).PropertyChanged += OutputWindow_PropertyChanged;
+
                 gridView.Columns.Add(column);
             }
 
             listView.View = gridView;
         }
+
+        private void OutputWindow_PropertyChanged(object sender, PropertyChangedEventArgs e)
+        {
+            if(sender is GridViewColumn column)
+            {
+                if (e.PropertyName == "ActualWidth")
+                {
+                    if(_transformation != null)
+                    {
+                        var header = column.Header.ToString();
+                        var colNames = _transformation.ColumnNames;
+                        var i = -1;
+                        while (++i < colNames.Length && colNames[i] != header) ;
+
+                        if (i < _columnWidths.Length)
+                            _columnWidths[i] = column.ActualWidth;
+                    }
+                }
+
+            }
+        }
+
     }
 }
