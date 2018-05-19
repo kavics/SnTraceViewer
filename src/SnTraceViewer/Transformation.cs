@@ -7,21 +7,12 @@ using System.Threading.Tasks;
 
 namespace SnTraceViewer
 {
-    public interface ITransformation
+    public abstract class Transformation
     {
-        string Name { get; }
-        string[] ColumnNames { get; }
-        IEnumerable<Entry> Input { get; }
-        IEnumerable<object> Output { get; }
-    }
-
-    public abstract class NativeTransformation : ITransformation
-    {
-        private string __name;
-        public virtual string Name { get => __name ?? (__name = GetType().Name); }
+        public abstract string Name { get; }
 
         private string[] __columnNames;
-        public virtual string[] ColumnNames { get => __columnNames ?? (__columnNames = GetColumnNames()); }
+        public string[] ColumnNames { get => __columnNames ?? (__columnNames = GetColumnNames()); }
         protected virtual string[] GetColumnNames()
         {
             var output = Output;
@@ -37,20 +28,29 @@ namespace SnTraceViewer
                 .ToArray();
         }
 
-        public IEnumerable<Entry> Input { get; protected set; }
+        private IEnumerable<Entry> _input;
+        public IEnumerable<Entry> Input
+        {
+            get { return _input; }
+            set
+            {
+                _input = value;
+                Output = Transform(value);
+            }
+        }
 
-        private IEnumerable<object> _cachedOutput;
-        public IEnumerable<object> Output { get => _cachedOutput ?? (_cachedOutput = Transform(Input)); }
+        public IEnumerable<object> Output { get; private set; }
+
         protected abstract IEnumerable<object> Transform(IEnumerable<Entry> input);
+    }
+
+    public abstract class NativeTransformation : Transformation
+    {
+        public override string Name => GetType().Name;
     }
 
     public class TestMethodTimes : NativeTransformation
     {
-        public TestMethodTimes(IEnumerable<Entry> input)
-        {
-            Input = input;
-        }
-
         protected override IEnumerable<object> Transform(IEnumerable<Entry> input)
         {
             var collector = new Collector();

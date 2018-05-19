@@ -21,7 +21,7 @@ namespace SnTraceViewer
     /// </summary>
     public partial class OutputWindow : Window
     {
-        private ITransformation _transformation;
+        private Transformation _transformation;
         private double[] _columnWidths;
 
         public OutputWindow()
@@ -45,10 +45,12 @@ namespace SnTraceViewer
 
         public void SetEntries(IEnumerable<Entry> entries)
         {
-            var transformation = new TestMethodTimes(entries);
             if (_transformation == null)
-                _columnWidths = new double[transformation.ColumnNames.Length];
-            _transformation = transformation;
+                _transformation = new TestMethodTimes();
+
+            _transformation.Input = entries;
+            if (_columnWidths == null)
+                _columnWidths = new double[_transformation.ColumnNames.Length];
 
             // https://stackoverflow.com/questions/868204/adding-columns-programatically-to-listview-in-wpf
             DataBind(listView, _transformation, _columnWidths);
@@ -57,7 +59,7 @@ namespace SnTraceViewer
                 listView.DataContext = _transformation.Output;
         }
 
-        private void DataBind(ListView listView, ITransformation transformation, double[] columnWidths)
+        private void DataBind(ListView listView, Transformation transformation, double[] columnWidths)
         {
             var firstObject = transformation.Output.FirstOrDefault();
 
