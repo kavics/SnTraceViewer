@@ -1,4 +1,6 @@
 ﻿using SenseNet.Diagnostics.Analysis;
+using SnTraceViewer.Transformations;
+using SnTraceViewer.Transformations.Builtin;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,7 +23,24 @@ namespace SnTraceViewer
     /// </summary>
     public partial class OutputWindow : Window
     {
-        private Transformation _transformation;
+        private Transformation __transformation;
+        private Transformation Transformation
+        {
+            get { return __transformation; }
+            set
+            {
+                var entries = __transformation == null ? null : this.Transformation.Input;
+
+                if (value != null)
+                {
+                    __transformation = value;
+                    SelectedTransformationLabel.Content = __transformation.Name;
+                    if (entries != null)
+                        SetEntries(entries);
+                }
+            }
+        }
+
         private double[] _columnWidths;
 
         public OutputWindow()
@@ -45,18 +64,20 @@ namespace SnTraceViewer
 
         public void SetEntries(IEnumerable<Entry> entries)
         {
-            if (_transformation == null)
-                _transformation = new TestMethodTimes();
+            if (this.Transformation == null)
+            {
+                this.Transformation = new TestMethodTimes(); // new SaveContentTimes(); // new TestMethodTimes();
+            }
 
-            _transformation.Input = entries;
+            this.Transformation.Input = entries;
             if (_columnWidths == null)
-                _columnWidths = new double[_transformation.ColumnNames.Length];
+                _columnWidths = new double[this.Transformation.ColumnNames.Length];
 
             // https://stackoverflow.com/questions/868204/adding-columns-programatically-to-listview-in-wpf
-            DataBind(listView, _transformation, _columnWidths);
+            DataBind(listView, this.Transformation, _columnWidths);
 
-            if (_transformation.Output.Any())
-                listView.DataContext = _transformation.Output;
+            if (this.Transformation.Output.Any())
+                listView.DataContext = this.Transformation.Output;
         }
 
         private void DataBind(ListView listView, Transformation transformation, double[] columnWidths)
@@ -103,10 +124,10 @@ namespace SnTraceViewer
             {
                 if (e.PropertyName == "ActualWidth")
                 {
-                    if(_transformation != null)
+                    if(this.Transformation != null)
                     {
                         var header = column.Header.ToString();
-                        var colNames = _transformation.ColumnNames;
+                        var colNames = this.Transformation.ColumnNames;
                         var i = -1;
                         while (++i < colNames.Length && colNames[i] != header) ;
 
@@ -114,9 +135,14 @@ namespace SnTraceViewer
                             _columnWidths[i] = column.ActualWidth;
                     }
                 }
-
             }
         }
 
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            var window = new TransformationsWindow();
+            window.ShowDialog();
+            this.Transformation = window.SelectedTransformation;
+        }
     }
 }

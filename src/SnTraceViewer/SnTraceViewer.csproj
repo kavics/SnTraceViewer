@@ -62,7 +62,13 @@
       <DependentUpon>OutputWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="SettingKeys.cs" />
-    <Compile Include="Transformation.cs" />
+    <Compile Include="TransformationsWindow.xaml.cs">
+      <DependentUpon>TransformationsWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Transformations\Builtin\SaveContentTimes.cs" />
+    <Compile Include="Transformations\Builtin\TestMethodTimes.cs" />
+    <Compile Include="Transformations\NativeTransformation.cs" />
+    <Compile Include="Transformations\Transformation.cs" />
     <Page Include="FiltersWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -84,6 +90,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="OutputWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TransformationsWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
