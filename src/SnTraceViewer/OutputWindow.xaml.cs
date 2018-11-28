@@ -1,6 +1,9 @@
 ﻿using SenseNet.Diagnostics.Analysis;
+using SnTraceViewer.Transformations;
+using SnTraceViewer.Transformations.Builtin;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,6 +23,26 @@ namespace SnTraceViewer
     /// </summary>
     public partial class OutputWindow : Window
     {
+        private Transformation __transformation;
+        private Transformation Transformation
+        {
+            get { return __transformation; }
+            set
+            {
+                var entries = __transformation == null ? null : this.Transformation.Input;
+
+                if (value != null)
+                {
+                    __transformation = value;
+                    SelectedTransformationLabel.Content = __transformation.Name;
+                    if (entries != null)
+                        SetEntries(entries);
+                }
+            }
+        }
+
+        private double[] _columnWidths;
+
         public OutputWindow()
         {
             InitializeComponent();
@@ -41,16 +64,23 @@ namespace SnTraceViewer
 
         public void SetEntries(IEnumerable<Entry> entries)
         {
-            var transformation = new TestMethodTimes(entries);
+            if (this.Transformation == null)
+            {
+                this.Transformation = new TestMethodTimes(); // new SaveContentTimes(); // new TestMethodTimes();
+            }
+
+            this.Transformation.Input = entries;
+            if (_columnWidths == null)
+                _columnWidths = new double[this.Transformation.ColumnNames.Length];
 
             // https://stackoverflow.com/questions/868204/adding-columns-programatically-to-listview-in-wpf
-            DataBind(listView, transformation);
+            DataBind(listView, this.Transformation, _columnWidths);
 
-            if (transformation.Output.Any())
-                listView.DataContext = transformation.Output;
+            if (this.Transformation.Output.Any())
+                listView.DataContext = this.Transformation.Output;
         }
 
-        private void DataBind(ListView listView, ITransformation transformation)
+        private void DataBind(ListView listView, Transformation transformation, double[] columnWidths)
         {
             var firstObject = transformation.Output.FirstOrDefault();
 
@@ -72,16 +102,47 @@ namespace SnTraceViewer
                 listView.DataContext = new[] { new { text = "There are no transformed items." } };
             }
 
-            foreach (var columnName in transformation.ColumnNames)
+            var colNames = transformation.ColumnNames;
+            for (int i = 0; i < colNames.Length; i++)
             {
+                var columnName = colNames[i];
                 var column = new GridViewColumn();
                 column.DisplayMemberBinding = new Binding(columnName);
                 column.Header = columnName;
-                //column.Width = 100;
+                column.Width = _columnWidths[i] < 1.0d ? 100 : _columnWidths[i];
+                ((INotifyPropertyChanged)column).PropertyChanged += OutputWindow_PropertyChanged;
+
                 gridView.Columns.Add(column);
             }
 
             listView.View = gridView;
+        }
+
+        private void OutputWindow_PropertyChanged(object sender, PropertyChangedEventArgs e)
+        {
+            if(sender is GridViewColumn column)
+            {
+                if (e.PropertyName == "ActualWidth")
+                {
+                    if(this.Transformation != null)
+                    {
+                        var header = column.Header.ToString();
+                        var colNames = this.Transformation.ColumnNames;
+                        var i = -1;
+                        while (++i < colNames.Length && colNames[i] != header) ;
+
+                        if (i < _columnWidths.Length)
+                            _columnWidths[i] = column.ActualWidth;
+                    }
+                }
+            }
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            var window = new TransformationsWindow();
+            window.ShowDialog();
+            this.Transformation = window.SelectedTransformation;
         }
     }
 }

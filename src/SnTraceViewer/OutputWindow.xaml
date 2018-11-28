@@ -8,7 +8,8 @@
         Title="OutputWindow" Height="300" Width="584.985" Closing="Window_Closing">
     <Grid>
         <Grid Height="38" VerticalAlignment="Top">
-            <Button Content="Button" HorizontalAlignment="Left" Width="75" Margin="4,4,0,4" IsEnabled="false"/>
+            <Button x:Name="SelectTransformationButton" Content="Transformation: " HorizontalAlignment="Left" Width="101" Margin="4,4,0,4" Click="Button_Click"/>
+            <Label x:Name="SelectedTransformationLabel" Content="..." Margin="110,4,5,0" VerticalAlignment="Top" Height="30"/>
         </Grid>
         <ListView x:Name="listView" Margin="0,43,0,0" ItemsSource="{Binding}">
             <ListView.View>
