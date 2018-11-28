@@ -77,7 +77,7 @@ namespace SnTraceViewer
                 var column = new GridViewColumn();
                 column.DisplayMemberBinding = new Binding(columnName);
                 column.Header = columnName;
-                column.Width = 100;
+                //column.Width = 100;
                 gridView.Columns.Add(column);
             }
 
