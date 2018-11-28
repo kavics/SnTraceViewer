@@ -49,7 +49,7 @@ namespace SenseNet.Diagnostics.Analysis
                 session.AddFile(file);
             }
 
-            return sessions.ToArray();
+            return sessions.OrderBy(s=>s.FirstTime).ToArray();
         }
         private void AddFile(TraceFile file)
         {
