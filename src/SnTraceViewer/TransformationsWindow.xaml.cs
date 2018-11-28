@@ -26,15 +26,43 @@ namespace SnTraceViewer
         public TransformationsWindow()
         {
             InitializeComponent();
+
+            CreateButtons();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void CreateButtons()
+        {
+            var transformationTypes = new[] { typeof(SaveContentTimes), typeof(TestMethodTimes) };
+
+            foreach(var transformationType in transformationTypes)
+            {
+                CreateButton(transformationType);
+            }
+        }
+        private void CreateButton(Type transformationType)
+        {
+            var transformation = (Transformation)Activator.CreateInstance(transformationType);
+
+            var button = new Button
+            {
+                Margin = new Thickness(0, 0, 0, 4),
+                Tag = transformationType,
+                VerticalAlignment = VerticalAlignment.Top,
+                Height = 30,
+                Content = transformation.Name,
+                FontSize = 14,
+                FontWeight = FontWeights.Bold
+            };
+            button.Click += TransfotmButton_Click;
+
+            ButtonStack.Children.Add(button);
+        }
+
+        private void TransfotmButton_Click(object sender, RoutedEventArgs e)
         {
             var button = (Button)sender;
-            if (sender == Button1)
-                SelectedTransformation = new TestMethodTimes();
-            if (sender == Button2)
-                SelectedTransformation = new SaveContentTimes();
+            var transformationType = (Type)button.Tag;
+            SelectedTransformation = (Transformation)Activator.CreateInstance(transformationType);
             Close();
         }
 

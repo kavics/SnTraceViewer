@@ -5,10 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SnTraceViewer"
         mc:Ignorable="d"
-        Title="TransformationsWindow" Height="223.529" Width="284.314">
+        Title="TransformationsWindow" Height="301.095" Width="284.314">
     <Grid>
-        <Button x:Name="Button1" Content="Test Method Times" Margin="10,10,10,0" VerticalAlignment="Top" Height="30" FontSize="14" FontWeight="Bold" Click="Button_Click"/>
-        <Button x:Name="Button2" Content="Save Content Times" Margin="10,45,10,0" VerticalAlignment="Top" Height="30" FontSize="14" FontWeight="Bold" Click="Button_Click"/>
-        <Button x:Name="CancelButton" Content="Cancel" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="191,163,0,0" Click="CancelButton_Click"/>
+        <StackPanel x:Name="ButtonStack" Margin="10,10,10,35"/>
+        <Button x:Name="CancelButton" Content="Cancel" HorizontalAlignment="Right" Width="75" Margin="0,0,10,10" Click="CancelButton_Click" Height="20" VerticalAlignment="Bottom"/>
     </Grid>
 </Window>
