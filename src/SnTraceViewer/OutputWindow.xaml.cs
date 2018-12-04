@@ -70,8 +70,7 @@ namespace SnTraceViewer
             }
 
             this.Transformation.Input = entries;
-            if (_columnWidths == null)
-                _columnWidths = new double[this.Transformation.ColumnNames.Length];
+            _columnWidths = new double[this.Transformation.ColumnNames.Length];
 
             // https://stackoverflow.com/questions/868204/adding-columns-programatically-to-listview-in-wpf
             DataBind(listView, this.Transformation, _columnWidths);
