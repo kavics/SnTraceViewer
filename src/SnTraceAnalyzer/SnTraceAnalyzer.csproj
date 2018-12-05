@@ -64,6 +64,7 @@
     <Compile Include="Analysis\TraceSession.cs" />
     <Compile Include="AppDomainSimplifier.cs" />
     <Compile Include="Collector.cs" />
+    <Compile Include="EntryCollection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
