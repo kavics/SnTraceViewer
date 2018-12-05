@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SnTraceAnalyzerTests", "Tes
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SnTraceViewerTests", "Tests\SnTraceViewerTests\SnTraceViewerTests.csproj", "{79C475E1-9F48-4CDB-999A-17617CDFEDD3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SnTraceProcessor", "SnTraceProcessor\SnTraceProcessor.csproj", "{1B2CEB6D-CF82-43DD-B440-D21ED5DBA679}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +37,10 @@ Global
 		{79C475E1-9F48-4CDB-999A-17617CDFEDD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{79C475E1-9F48-4CDB-999A-17617CDFEDD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{79C475E1-9F48-4CDB-999A-17617CDFEDD3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B2CEB6D-CF82-43DD-B440-D21ED5DBA679}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B2CEB6D-CF82-43DD-B440-D21ED5DBA679}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B2CEB6D-CF82-43DD-B440-D21ED5DBA679}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B2CEB6D-CF82-43DD-B440-D21ED5DBA679}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
