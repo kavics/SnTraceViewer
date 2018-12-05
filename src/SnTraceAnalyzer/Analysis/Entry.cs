@@ -38,50 +38,92 @@ namespace SenseNet.Diagnostics.Analysis
             Message
         }
 
+        private bool _blockStart;
         /// <summary>
         /// True if this line is the first in the block that written to disk in one step.
         /// </summary>
-        public bool BlockStart;
+        public bool BlockStart { get => _blockStart; set { _blockStart = value; _raw = null; } }
+
+        private int _lineId;
         /// <summary>
         /// Identifier number of the line. Unique is in the AppDomain.
         /// </summary>
-        public int LineId;
+        public int LineId { get => _lineId; set { _lineId = value; _raw = null; } }
+
+        private DateTime _time;
         /// <summary>
         /// Creation time of the line.
         /// </summary>
-        public DateTime Time;
+        public DateTime Time { get => _time; set { _time = value; _raw = null; } }
+
+        private string _category;
         /// <summary>
         /// Trace category
         /// </summary>
-        public string Category;
+        public string Category { get => _category; set { _category = value; _raw = null; } }
+
+        private string _appDomain;
         /// <summary>
         /// AppDomain name
         /// </summary>
-        public string AppDomain;
+        public string AppDomain { get => _appDomain; set { _appDomain = value; _raw = null; } }
+
+        private int _threadId;
         /// <summary>
         /// Current thread id.
         /// </summary>
-        public int ThreadId;
+        public int ThreadId { get => _threadId; set { _threadId = value; _raw = null; } }
+
+        private int _opId;
         /// <summary>
         /// Id of the operation
         /// </summary>
-        public int OpId;
+        public int OpId { get => _opId; set { _opId = value; _raw = null; } }
+
+        private string _status;
         /// <summary>
         /// Value can be empty, "Start", "End", "UNTERMINATED" or "ERROR"
         /// </summary>
-        public string Status;
+        public string Status { get => _status; set { _status = value; _raw = null; } }
+
+        private TimeSpan _duration;
         /// <summary>
         /// Duration if this line is the end of an operation
         /// </summary>
-        public TimeSpan Duration;
+        public TimeSpan Duration { get => _duration; set { _duration = value; _raw = null; } }
+
+        private string _message;
         /// <summary>
         /// The subject of the line
         /// </summary>
-        public string Message;
+        public string Message { get => _message; set { _message = value; _raw = null; } }
+
+        private object _sync = new object();
+        private string _raw;
+
         /// <summary>
         /// Original line data.
         /// </summary>
-        public string Raw;
+        public string Raw
+        {
+            get
+            {
+                if (_raw == null)
+                    lock (_sync)
+                        if (_raw == null)
+                            _raw = $"{(BlockStart ? ">" : "")}" +
+                                   $"{LineId}\t" +
+                                   $"{Time:yyyy-MM-dd HH:mm:ss.fffff}\t" +
+                                   $"{Category}\t" +
+                                   $"A:{AppDomain}\t" +
+                                   $"T:{ThreadId}\t" +
+                                   $"{(OpId == 0 ? "" : "Op:" + OpId)}\t" +
+                                   $"{Status}\t" +
+                                   $"{(Duration == default(TimeSpan) ? "" : Duration.ToString())}\t" +
+                                   $"{Message}";
+                return _raw;
+            }
+        }
 
         public Dictionary<string, Entry> Associations { get; set; }
 
@@ -110,7 +152,6 @@ namespace SenseNet.Diagnostics.Analysis
 
             return new Entry
             {
-                Raw = oneLine,
                 BlockStart = ParseBlockStart(data[(int)Field.LineId]),
                 LineId = ParseLineId(data[(int)Field.LineId]),
                 Time = ParseTime(data[(int)Field.Time]),
@@ -120,7 +161,8 @@ namespace SenseNet.Diagnostics.Analysis
                 OpId = ParseOperationId(data[(int)Field.OpId]),
                 Status = data[(int)Field.Status],
                 Duration = ParseDuration(data[(int)Field.Duration]),
-                Message = string.Join("\t", data.Skip((int)Field.Message))
+                Message = string.Join("\t", data.Skip((int)Field.Message)),
+                _raw = oneLine,
             };
         }
 
@@ -165,17 +207,17 @@ namespace SenseNet.Diagnostics.Analysis
 
         protected void CopyPropertiesFrom(Entry fromEntry)
         {
-            BlockStart = fromEntry.BlockStart;
-            LineId = fromEntry.LineId;
-            Time = fromEntry.Time;
-            Category = fromEntry.Category;
-            AppDomain = fromEntry.AppDomain;
-            ThreadId = fromEntry.ThreadId;
-            OpId = fromEntry.OpId;
-            Status = fromEntry.Status;
-            Duration = fromEntry.Duration;
-            Message = fromEntry.Message;
-            Raw = fromEntry.Raw;
+            _blockStart = fromEntry.BlockStart;
+            _lineId = fromEntry.LineId;
+            _time = fromEntry.Time;
+            _category = fromEntry.Category;
+            _appDomain = fromEntry.AppDomain;
+            _threadId = fromEntry.ThreadId;
+            _opId = fromEntry.OpId;
+            _status = fromEntry.Status;
+            _duration = fromEntry.Duration;
+            _message = fromEntry.Message;
+            _raw = fromEntry.Raw;
         }
 
 

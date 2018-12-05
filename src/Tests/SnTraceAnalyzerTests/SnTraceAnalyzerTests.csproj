@@ -62,27 +62,17 @@
   </Choose>
   <ItemGroup>
     <Compile Include="AnalysisTests.cs" />
-    <Compile Include="Analysis\Category.cs" />
-    <Compile Include="Analysis\Collector.cs" />
-    <Compile Include="Analysis\DirectoryReader.cs" />
-    <Compile Include="Analysis\Entry.cs" />
-    <Compile Include="Analysis\EntryParser.cs" />
-    <Compile Include="Analysis\Extensions.cs" />
-    <Compile Include="Analysis\FileReader.cs" />
-    <Compile Include="Analysis\GenericAggregator.cs" />
-    <Compile Include="Analysis\GenericCollector.cs" />
-    <Compile Include="Analysis\GenericCollector2.cs" />
-    <Compile Include="Analysis\InMemoryEntryReader.cs" />
-    <Compile Include="Analysis\Reader.cs" />
-    <Compile Include="Analysis\SessionReader.cs" />
-    <Compile Include="Analysis\SessionReaderEnumerator.cs" />
-    <Compile Include="Analysis\Status.cs" />
     <Compile Include="OldTransformationTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RemoteLinqImpl.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\SnTraceAnalyzer\SnTraceAnalyzer.csproj">
+      <Project>{425c4b59-9811-4a3e-9789-c1d576b4d8dd}</Project>
+      <Name>SnTraceAnalyzer</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
