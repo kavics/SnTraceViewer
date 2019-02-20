@@ -48,6 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="SampleFiles\BulkInsertTimes.log" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SnTraceAnalyzer\SnTraceAnalyzer.csproj">

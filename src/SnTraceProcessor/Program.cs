@@ -12,11 +12,15 @@ namespace SnTraceProcessor
     {
         static void Main(string[] args)
         {
-            var testDirectory = @"D:\dev\github\sensenet\src\Tests";
+            //var testDirectory = @"D:\dev\github\sensenet\src\Tests";
 
-            Join(testDirectory, @"C:\Users\kavics\Desktop\trace.log");
+            //Join(testDirectory, @"C:\Users\kavics\Desktop\trace.log");
 
-            var xxxx = TestMethodTimes(testDirectory);
+            //var xxxx = TestMethodTimes(testDirectory);
+
+            BulkInsertTimes(
+                @"D:\projects\github\kavics\Gicogen\src\Gicogen\bin\Debug\App_Data\DetailedLog\withVarbinaryMax",
+                @"D:\projects\github\kavics\Gicogen\src\Gicogen\bin\Debug\App_Data\DetailedLog\withVarbinaryMax\1.table.txt");
         }
 
         private static void Join(string testRoot, string targetFile)
@@ -38,7 +42,7 @@ namespace SnTraceProcessor
                     });
 
                 foreach (var item in transformedLogFlow)
-                   writer.WriteLine(item);
+                    writer.WriteLine(item);
             }
         }
 
@@ -56,7 +60,11 @@ namespace SnTraceProcessor
 
                 var transformedLogFlow = logFlow
                     .Where(e => e.Category == Category.Test)
-                    .Select(e => { e.AppDomain = aps.Simplify(e.AppDomain); return e; })
+                    .Select(e =>
+                    {
+                        e.AppDomain = aps.Simplify(e.AppDomain);
+                        return e;
+                    })
                     .Where((e) =>
                     {
                         if (e.Message.StartsWith("START test: "))
@@ -93,6 +101,50 @@ namespace SnTraceProcessor
 
             var result = sb.ToString().Trim();
             return result;
+        }
+
+        private static void BulkInsertTimes(string inputFolder, string outputFile)
+        {
+            var collector = new Collector();
+
+            using (var writer = new StreamWriter(outputFile, false))
+            using (var logFlow = Reader.Create(inputFolder, "*.log"))
+            {
+                var theKey = "Bulk insert ";
+                var finisher = "Writing to database";
+                var transformedLogFlow = logFlow
+                    .Where((e) =>
+                    {
+                        if (e.Status == Status.End && e.Message.StartsWith(theKey))
+                        {
+                            var subKey = e.Message.Substring(theKey.Length);
+                            collector.Set(theKey, subKey, e);
+                        }
+                        if (e.Status == Status.End && e.Message == finisher)
+                        {
+                            collector.Finish(theKey, e);
+                            return true;
+                        }
+                        return false;
+                    })
+                    .Select(e => new
+                    {
+                        Nodes = e.Duration.TotalSeconds,
+                        Versions = e.Associations["Versions"].Duration.TotalSeconds,
+                        FlatProperties = e.Associations["FlatProperties"].Duration.TotalSeconds,
+                        BinaryProperties = e.Associations["BinaryProperties"].Duration.TotalSeconds,
+                        Files = e.Associations["Files"].Duration.TotalSeconds,
+                        EFEntities = e.Associations["EFEntities"].Duration.TotalSeconds,
+                    });
+
+                var id = 0;
+                writer.WriteLine("Id\tNodes\tVersions\tFlatProperties\tBinaryProperties\tFiles\tEFEntities");
+                foreach (dynamic item in transformedLogFlow)
+                {
+                    writer.WriteLine(
+                        $"{++id}\t{item.Nodes}\t{item.Versions}\t{item.FlatProperties}\t{item.BinaryProperties}\t{item.Files}\t{item.EFEntities}");
+                }
+            }
         }
     }
 }
