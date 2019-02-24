@@ -120,7 +120,7 @@ namespace SenseNet.Diagnostics.Analysis
             string line;
             using (var reader = new StreamReader(Path))
                 while ((line = reader.ReadLine()) != null)
-                    if (line.Length > 0 && !line.StartsWith("--") && !line.StartsWith("MaxPdiff:"))
+                    if (line.Length > 0 && !line.StartsWith("--") && !line.StartsWith("MaxPdiff:") && !line.StartsWith("Block size reaches"))
                         yield return Entry.Parse(line);
         }
     }

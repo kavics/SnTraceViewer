@@ -145,6 +145,8 @@ namespace SenseNet.Diagnostics.Analysis
                 return null;
             if (oneLine.StartsWith("--") || oneLine.StartsWith("MaxPdiff:", StringComparison.OrdinalIgnoreCase))
                 return null;
+            if (oneLine.StartsWith("Block size reaches", StringComparison.OrdinalIgnoreCase))
+                return null;
 
             var data = oneLine.Split('\t');
             if (data.Length < (int)Field.Message)
