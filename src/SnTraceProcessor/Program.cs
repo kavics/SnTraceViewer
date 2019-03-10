@@ -12,17 +12,32 @@ namespace SnTraceProcessor
     {
         static void Main(string[] args)
         {
+            var sampleFilesRoot = new DirectoryInfo(AppDomain.CurrentDomain.BaseDirectory).Parent.Parent.FullName + "\\SampleFiles";
+
             //var testDirectory = @"D:\dev\github\sensenet\src\Tests";
+
 
             //Join(testDirectory, @"C:\Users\kavics\Desktop\trace.log");
 
+
             //var xxxx = TestMethodTimes(testDirectory);
 
-            BulkInsertTimes(
-                @"D:\projects\github\kavics\Gicogen\src\Gicogen\bin\Debug\App_Data\DetailedLog\withVarbinaryMax",
-                @"D:\projects\github\kavics\Gicogen\src\Gicogen\bin\Debug\App_Data\DetailedLog\withVarbinaryMax\1.table.txt");
+
+            ////BulkInsertTimes(
+            ////    @"D:\projects\github\kavics\Gicogen\src\Gicogen\bin\Debug\App_Data\DetailedLog\withVarbinaryMax",
+            ////    @"D:\projects\github\kavics\Gicogen\src\Gicogen\bin\Debug\App_Data\DetailedLog\withVarbinaryMax\1.table.txt");
+            //var bulkInsertTimesRoot = sampleFilesRoot + "\\BulkInsertTimes";
+            //BulkInsertTimes(bulkInsertTimesRoot, "result.txt");
+
+
+            WebRequests(
+                //@"D:\Desktop\1GC_doc\sn-benchmark\write\1MC\1\DetailedLog\detailedlog_20190301-053505Z.log",
+                $@"{sampleFilesRoot}\WebRequests", @"result.txt");
         }
 
+        /// <summary>
+        /// Aggregates test logs to one file.
+        /// </summary>
         private static void Join(string testRoot, string targetFile)
         {
             var dirs = TraceDirectory.SearchTraceDirectories(testRoot).Select(x => x.Path).ToArray();
@@ -46,6 +61,9 @@ namespace SnTraceProcessor
             }
         }
 
+        /// <summary>
+        /// Calculates test method execution times.
+        /// </summary>
         private static string TestMethodTimes(string testRoot)
         {
             var dirs = TraceDirectory.SearchTraceDirectories(testRoot).Select(x => x.Path).ToArray();
@@ -103,8 +121,15 @@ namespace SnTraceProcessor
             return result;
         }
 
-        private static void BulkInsertTimes(string inputFolder, string outputFile)
+        /// <summary>
+        /// Collects periodical bulk insert times.
+        /// </summary>
+        /// <param name="inputFolder">Full path of the input directory containing *.log files.</param>
+        /// <param name="outputFileName">Local file name in the input directory (e.g. "result.txt").</param>
+        public static void BulkInsertTimes(string inputFolder, string outputFileName)
         {
+            var outputFile = Path.Combine(inputFolder, outputFileName);
+
             var collector = new Collector();
 
             using (var writer = new StreamWriter(outputFile, false))
@@ -143,6 +168,77 @@ namespace SnTraceProcessor
                 {
                     writer.WriteLine(
                         $"{++id}\t{item.Nodes}\t{item.Versions}\t{item.FlatProperties}\t{item.BinaryProperties}\t{item.Files}\t{item.EFEntities}");
+                }
+            }
+        }
+
+        /// <summary>
+        /// Collect webrequest times between "PCM.OnEnter" and "PCM.OnEndRequest" on the same thread.
+        /// </summary>
+        /// <param name="inputFolder">Full path of the input directory containing *.log files.</param>
+        /// <param name="outputFileName">Local file name in the input directory (e.g. "result.txt").</param>
+        public static void WebRequests(string inputFolder, string outputFileName)
+        {
+            var outputFile = Path.Combine(inputFolder, outputFileName);
+
+            // PCM.OnEnter GET http://snpc007.sn.hu/odata.svc/Root/1GC/A/A/D('g.txt')?metadata=no&$select=Id,Path,Description&benchamrkId=P37A0x
+            // PCM.OnEndRequest GET http://snpc007.sn.hu/odata.svc/Root/1GC/A/A/D('g.txt')?metadata=no&$select=Id,Path,Description&benchamrkId=P37A0x
+
+            var starter = "PCM.OnEnter ";
+            var finisher = "PCM.OnEndRequest ";
+            string GetKey(Entry entry, bool isStarter)
+            {
+                var key = entry.Message.Substring((isStarter ? starter : finisher).Length);
+                var p = key.IndexOf("?");
+                if (p < 0)
+                    p = key.Length;
+                key = key.Substring(0, p);
+
+                return $"{entry.ThreadId} {key}";
+            }
+
+            var collector = new Collector();
+            using (var writer = new StreamWriter(outputFile, false))
+            using (var logFlow = Reader.Create(inputFolder, "*.log"))
+            {
+                var transformedLogFlow = logFlow
+                    .Where((e) =>
+                    {
+                        if (e != null)
+                        {
+                            if (e.Category == Category.Web && e.Message.StartsWith(starter))
+                            {
+                                var key = GetKey(e, true);
+                                collector.Set(key, "start", e);
+                            }
+                            if (e.Category == Category.Web && e.Message.StartsWith(finisher))
+                            {
+                                var key = GetKey(e, false);
+                                collector.Finish(key, e);
+                                return true;
+                            }
+                        }
+                        return false;
+                    })
+                    .Select(e => new
+                    {
+                        Start = e.Associations?["start"].Time ?? DateTime.MinValue,
+                        End = e.Time,
+                        Thread = e.ThreadId,
+                        Request = e.Message.Substring(finisher.Length),
+                    });
+
+                var id = 0;
+                writer.WriteLine("\t\tTime\t\tTicks");
+                writer.WriteLine("Id\tThread\tStart\tDuration\tStart\tDuration\tRequest");
+
+                var first = transformedLogFlow.First();
+                var startTime = first.Start;
+                var startTicks = startTime.Ticks;
+                foreach (var item in transformedLogFlow)
+                {
+                    writer.WriteLine(
+                        $"{++id}\t{item.Thread}\t{item.Start - startTime}\t{item.End - item.Start}\t{item.Start.Ticks - startTicks}\t{item.End.Ticks - item.Start.Ticks}\t{item.Request}");
                 }
             }
         }

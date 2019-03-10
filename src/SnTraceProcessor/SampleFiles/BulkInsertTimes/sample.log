@@ -1,0 +1,340 @@
+----
+>1009	2019-02-20 04:26:41.22703	Custom	A:Gicogen.exe	T:1				Generated: 4050000 / 10000000 (40,5%)
+1010	2019-02-20 04:26:41.50226	Custom	A:Gicogen.exe	T:1				Generated: 4060000 / 10000000 (40,6%)
+1011	2019-02-20 04:26:41.76655	Custom	A:Gicogen.exe	T:1				Generated: 4070000 / 10000000 (40,7%)
+>1012	2019-02-20 04:26:42.05677	Custom	A:Gicogen.exe	T:1				Generated: 4080000 / 10000000 (40,8%)
+1013	2019-02-20 04:26:42.32306	Custom	A:Gicogen.exe	T:1				Generated: 4090000 / 10000000 (40,9%)
+1014	2019-02-20 04:26:42.58837	Custom	A:Gicogen.exe	T:1				Generated: 4100000 / 10000000 (41%)
+1015	2019-02-20 04:26:42.58837	Custom	A:Gicogen.exe	T:1	Op:283	Start		Writing to database
+1016	2019-02-20 04:26:42.58965	Custom	A:Gicogen.exe	T:1	Op:284	Start		Bulk insert Nodes
+>1017	2019-02-20 04:26:44.10364	Custom	A:Gicogen.exe	T:1	Op:284	End	00:00:01.513983	Bulk insert Nodes
+1018	2019-02-20 04:26:44.10364	Custom	A:Gicogen.exe	T:1	Op:285	Start		Bulk insert Versions
+1019	2019-02-20 04:26:44.72477	Custom	A:Gicogen.exe	T:1	Op:285	End	00:00:00.621134	Bulk insert Versions
+1020	2019-02-20 04:26:44.72477	Custom	A:Gicogen.exe	T:1	Op:286	Start		Bulk insert FlatProperties
+>1021	2019-02-20 04:26:45.86216	Custom	A:Gicogen.exe	T:1	Op:286	End	00:00:01.137389	Bulk insert FlatProperties
+1022	2019-02-20 04:26:45.86216	Custom	A:Gicogen.exe	T:1	Op:287	Start		Bulk insert BinaryProperties
+>1023	2019-02-20 04:26:46.25286	Custom	A:Gicogen.exe	T:1	Op:287	End	00:00:00.390697	Bulk insert BinaryProperties
+1024	2019-02-20 04:26:46.25286	Custom	A:Gicogen.exe	T:1	Op:288	Start		Bulk insert Files
+1025	2019-02-20 04:26:46.76731	Custom	A:Gicogen.exe	T:1	Op:288	End	00:00:00.514454	Bulk insert Files
+1026	2019-02-20 04:26:46.76731	Custom	A:Gicogen.exe	T:1	Op:289	Start		Bulk insert EFEntities
+>1027	2019-02-20 04:26:47.81930	Custom	A:Gicogen.exe	T:1	Op:289	End	00:00:01.051984	Bulk insert EFEntities
+1028	2019-02-20 04:26:47.81930	Custom	A:Gicogen.exe	T:1	Op:283	End	00:00:05.230930	Writing to database
+1029	2019-02-20 04:26:47.81930	Custom	A:Gicogen.exe	T:1				Reset memory tables.
+>1030	2019-02-20 04:26:48.16240	Custom	A:Gicogen.exe	T:1				Generated: 4110000 / 10000000 (41,1%)
+1031	2019-02-20 04:26:48.42068	Custom	A:Gicogen.exe	T:1				Generated: 4120000 / 10000000 (41,2%)
+1032	2019-02-20 04:26:48.67400	Custom	A:Gicogen.exe	T:1				Generated: 4130000 / 10000000 (41,3%)
+1033	2019-02-20 04:26:48.94826	Custom	A:Gicogen.exe	T:1				Generated: 4140000 / 10000000 (41,4%)
+>1034	2019-02-20 04:26:49.27131	Custom	A:Gicogen.exe	T:1				Generated: 4150000 / 10000000 (41,5%)
+1035	2019-02-20 04:26:49.53459	Custom	A:Gicogen.exe	T:1				Generated: 4160000 / 10000000 (41,6%)
+1036	2019-02-20 04:26:49.79689	Custom	A:Gicogen.exe	T:1				Generated: 4170000 / 10000000 (41,7%)
+>1037	2019-02-20 04:26:50.06246	Custom	A:Gicogen.exe	T:1				Generated: 4180000 / 10000000 (41,8%)
+1038	2019-02-20 04:26:50.33077	Custom	A:Gicogen.exe	T:1				Generated: 4190000 / 10000000 (41,9%)
+1039	2019-02-20 04:26:50.62522	Custom	A:Gicogen.exe	T:1				Generated: 4200000 / 10000000 (42%)
+1040	2019-02-20 04:26:50.62622	Custom	A:Gicogen.exe	T:1	Op:290	Start		Writing to database
+1041	2019-02-20 04:26:50.62622	Custom	A:Gicogen.exe	T:1	Op:291	Start		Bulk insert Nodes
+>1042	2019-02-20 04:26:56.60461	Custom	A:Gicogen.exe	T:1	Op:291	End	00:00:05.978389	Bulk insert Nodes
+1043	2019-02-20 04:26:56.60461	Custom	A:Gicogen.exe	T:1	Op:292	Start		Bulk insert Versions
+>1044	2019-02-20 04:26:57.22242	Custom	A:Gicogen.exe	T:1	Op:292	End	00:00:00.617811	Bulk insert Versions
+1045	2019-02-20 04:26:57.22242	Custom	A:Gicogen.exe	T:1	Op:293	Start		Bulk insert FlatProperties
+>1046	2019-02-20 04:26:58.38992	Custom	A:Gicogen.exe	T:1	Op:293	End	00:00:01.167506	Bulk insert FlatProperties
+1047	2019-02-20 04:26:58.39090	Custom	A:Gicogen.exe	T:1	Op:294	Start		Bulk insert BinaryProperties
+1048	2019-02-20 04:26:58.77694	Custom	A:Gicogen.exe	T:1	Op:294	End	00:00:00.386044	Bulk insert BinaryProperties
+1049	2019-02-20 04:26:58.77694	Custom	A:Gicogen.exe	T:1	Op:295	Start		Bulk insert Files
+>1050	2019-02-20 04:27:03.46044	Custom	A:Gicogen.exe	T:1	Op:295	End	00:00:04.683502	Bulk insert Files
+1051	2019-02-20 04:27:03.46044	Custom	A:Gicogen.exe	T:1	Op:296	Start		Bulk insert EFEntities
+>1052	2019-02-20 04:27:04.14594	Custom	A:Gicogen.exe	T:1	Op:296	End	00:00:00.685495	Bulk insert EFEntities
+1053	2019-02-20 04:27:04.14594	Custom	A:Gicogen.exe	T:1	Op:290	End	00:00:13.519720	Writing to database
+1054	2019-02-20 04:27:04.14594	Custom	A:Gicogen.exe	T:1				Reset memory tables.
+1055	2019-02-20 04:27:04.49500	Custom	A:Gicogen.exe	T:1				Generated: 4210000 / 10000000 (42,1%)
+1056	2019-02-20 04:27:04.75530	Custom	A:Gicogen.exe	T:1				Generated: 4220000 / 10000000 (42,2%)
+>1057	2019-02-20 04:27:05.03156	Custom	A:Gicogen.exe	T:1				Generated: 4230000 / 10000000 (42,3%)
+1058	2019-02-20 04:27:05.30486	Custom	A:Gicogen.exe	T:1				Generated: 4240000 / 10000000 (42,4%)
+1059	2019-02-20 04:27:05.60002	Custom	A:Gicogen.exe	T:1				Generated: 4250000 / 10000000 (42,5%)
+1060	2019-02-20 04:27:05.88924	Custom	A:Gicogen.exe	T:1				Generated: 4260000 / 10000000 (42,6%)
+>1061	2019-02-20 04:27:06.25825	Custom	A:Gicogen.exe	T:1				Generated: 4270000 / 10000000 (42,7%)
+1062	2019-02-20 04:27:06.61529	Custom	A:Gicogen.exe	T:1				Generated: 4280000 / 10000000 (42,8%)
+1063	2019-02-20 04:27:06.95063	Custom	A:Gicogen.exe	T:1				Generated: 4290000 / 10000000 (42,9%)
+>1064	2019-02-20 04:27:07.24584	Custom	A:Gicogen.exe	T:1				Generated: 4300000 / 10000000 (43%)
+1065	2019-02-20 04:27:07.24584	Custom	A:Gicogen.exe	T:1	Op:297	Start		Writing to database
+1066	2019-02-20 04:27:07.24684	Custom	A:Gicogen.exe	T:1	Op:298	Start		Bulk insert Nodes
+>1067	2019-02-20 04:27:12.73728	Custom	A:Gicogen.exe	T:1	Op:298	End	00:00:05.490447	Bulk insert Nodes
+1068	2019-02-20 04:27:12.73728	Custom	A:Gicogen.exe	T:1	Op:299	Start		Bulk insert Versions
+>1069	2019-02-20 04:27:13.35485	Custom	A:Gicogen.exe	T:1	Op:299	End	00:00:00.617562	Bulk insert Versions
+1070	2019-02-20 04:27:13.35485	Custom	A:Gicogen.exe	T:1	Op:300	Start		Bulk insert FlatProperties
+>1071	2019-02-20 04:27:14.53811	Custom	A:Gicogen.exe	T:1	Op:300	End	00:00:01.183267	Bulk insert FlatProperties
+1072	2019-02-20 04:27:14.53811	Custom	A:Gicogen.exe	T:1	Op:301	Start		Bulk insert BinaryProperties
+1073	2019-02-20 04:27:14.93368	Custom	A:Gicogen.exe	T:1	Op:301	End	00:00:00.395567	Bulk insert BinaryProperties
+1074	2019-02-20 04:27:14.93468	Custom	A:Gicogen.exe	T:1	Op:302	Start		Bulk insert Files
+>1075	2019-02-20 04:27:15.49740	Custom	A:Gicogen.exe	T:1	Op:302	End	00:00:00.562716	Bulk insert Files
+1076	2019-02-20 04:27:15.49740	Custom	A:Gicogen.exe	T:1	Op:303	Start		Bulk insert EFEntities
+>1077	2019-02-20 04:27:25.00230	Custom	A:Gicogen.exe	T:1	Op:303	End	00:00:09.504898	Bulk insert EFEntities
+1078	2019-02-20 04:27:25.00230	Custom	A:Gicogen.exe	T:1	Op:297	End	00:00:17.756458	Writing to database
+1079	2019-02-20 04:27:25.00330	Custom	A:Gicogen.exe	T:1				Reset memory tables.
+>1080	2019-02-20 04:27:25.36253	Custom	A:Gicogen.exe	T:1				Generated: 4310000 / 10000000 (43,1%)
+1081	2019-02-20 04:27:25.63178	Custom	A:Gicogen.exe	T:1				Generated: 4320000 / 10000000 (43,2%)
+1082	2019-02-20 04:27:25.89906	Custom	A:Gicogen.exe	T:1				Generated: 4330000 / 10000000 (43,3%)
+>1083	2019-02-20 04:27:26.16138	Custom	A:Gicogen.exe	T:1				Generated: 4340000 / 10000000 (43,4%)
+1084	2019-02-20 04:27:26.42464	Custom	A:Gicogen.exe	T:1				Generated: 4350000 / 10000000 (43,5%)
+1085	2019-02-20 04:27:26.70189	Custom	A:Gicogen.exe	T:1				Generated: 4360000 / 10000000 (43,6%)
+1086	2019-02-20 04:27:26.96721	Custom	A:Gicogen.exe	T:1				Generated: 4370000 / 10000000 (43,7%)
+>1087	2019-02-20 04:27:27.22850	Custom	A:Gicogen.exe	T:1				Generated: 4380000 / 10000000 (43,8%)
+1088	2019-02-20 04:27:27.49775	Custom	A:Gicogen.exe	T:1				Generated: 4390000 / 10000000 (43,9%)
+1089	2019-02-20 04:27:27.78161	Custom	A:Gicogen.exe	T:1				Generated: 4400000 / 10000000 (44%)
+1090	2019-02-20 04:27:27.78161	Custom	A:Gicogen.exe	T:1	Op:304	Start		Writing to database
+1091	2019-02-20 04:27:27.78261	Custom	A:Gicogen.exe	T:1	Op:305	Start		Bulk insert Nodes
+>1092	2019-02-20 04:27:29.16593	Custom	A:Gicogen.exe	T:1	Op:305	End	00:00:01.383316	Bulk insert Nodes
+1093	2019-02-20 04:27:29.16593	Custom	A:Gicogen.exe	T:1	Op:306	Start		Bulk insert Versions
+1094	2019-02-20 04:27:29.80755	Custom	A:Gicogen.exe	T:1	Op:306	End	00:00:00.641621	Bulk insert Versions
+1095	2019-02-20 04:27:29.80854	Custom	A:Gicogen.exe	T:1	Op:307	Start		Bulk insert FlatProperties
+>1096	2019-02-20 04:27:30.87558	Custom	A:Gicogen.exe	T:1	Op:307	End	00:00:01.067035	Bulk insert FlatProperties
+1097	2019-02-20 04:27:30.87558	Custom	A:Gicogen.exe	T:1	Op:308	Start		Bulk insert BinaryProperties
+>1098	2019-02-20 04:27:31.30715	Custom	A:Gicogen.exe	T:1	Op:308	End	00:00:00.431570	Bulk insert BinaryProperties
+1099	2019-02-20 04:27:31.30734	Custom	A:Gicogen.exe	T:1	Op:309	Start		Bulk insert Files
+1100	2019-02-20 04:27:31.82738	Custom	A:Gicogen.exe	T:1	Op:309	End	00:00:00.520038	Bulk insert Files
+1101	2019-02-20 04:27:31.82784	Custom	A:Gicogen.exe	T:1	Op:310	Start		Bulk insert EFEntities
+>1102	2019-02-20 04:27:32.13921	Custom	A:Gicogen.exe	T:1	Op:310	End	00:00:00.311379	Bulk insert EFEntities
+1103	2019-02-20 04:27:32.13921	Custom	A:Gicogen.exe	T:1	Op:304	End	00:00:04.357602	Writing to database
+1104	2019-02-20 04:27:32.13921	Custom	A:Gicogen.exe	T:1				Reset memory tables.
+1105	2019-02-20 04:27:32.48631	Custom	A:Gicogen.exe	T:1				Generated: 4410000 / 10000000 (44,1%)
+1106	2019-02-20 04:27:32.73765	Custom	A:Gicogen.exe	T:1				Generated: 4420000 / 10000000 (44,2%)
+1107	2019-02-20 04:27:32.99593	Custom	A:Gicogen.exe	T:1				Generated: 4430000 / 10000000 (44,3%)
+>1108	2019-02-20 04:27:33.25524	Custom	A:Gicogen.exe	T:1				Generated: 4440000 / 10000000 (44,4%)
+1109	2019-02-20 04:27:33.51750	Custom	A:Gicogen.exe	T:1				Generated: 4450000 / 10000000 (44,5%)
+1110	2019-02-20 04:27:33.77581	Custom	A:Gicogen.exe	T:1				Generated: 4460000 / 10000000 (44,6%)
+>1111	2019-02-20 04:27:34.04511	Custom	A:Gicogen.exe	T:1				Generated: 4470000 / 10000000 (44,7%)
+1112	2019-02-20 04:27:34.33334	Custom	A:Gicogen.exe	T:1				Generated: 4480000 / 10000000 (44,8%)
+1113	2019-02-20 04:27:34.61857	Custom	A:Gicogen.exe	T:1				Generated: 4490000 / 10000000 (44,9%)
+1114	2019-02-20 04:27:34.87986	Custom	A:Gicogen.exe	T:1				Generated: 4500000 / 10000000 (45%)
+1115	2019-02-20 04:27:34.87986	Custom	A:Gicogen.exe	T:1	Op:311	Start		Writing to database
+1116	2019-02-20 04:27:34.87986	Custom	A:Gicogen.exe	T:1	Op:312	Start		Bulk insert Nodes
+>1117	2019-02-20 04:27:42.92210	Custom	A:Gicogen.exe	T:1	Op:312	End	00:00:08.042234	Bulk insert Nodes
+1118	2019-02-20 04:27:42.92210	Custom	A:Gicogen.exe	T:1	Op:313	Start		Bulk insert Versions
+>1119	2019-02-20 04:27:43.53346	Custom	A:Gicogen.exe	T:1	Op:313	End	00:00:00.611360	Bulk insert Versions
+1120	2019-02-20 04:27:43.53346	Custom	A:Gicogen.exe	T:1	Op:314	Start		Bulk insert FlatProperties
+>1121	2019-02-20 04:27:44.70498	Custom	A:Gicogen.exe	T:1	Op:314	End	00:00:01.171523	Bulk insert FlatProperties
+1122	2019-02-20 04:27:44.70498	Custom	A:Gicogen.exe	T:1	Op:315	Start		Bulk insert BinaryProperties
+>1123	2019-02-20 04:27:45.08888	Custom	A:Gicogen.exe	T:1	Op:315	End	00:00:00.383898	Bulk insert BinaryProperties
+1124	2019-02-20 04:27:45.08888	Custom	A:Gicogen.exe	T:1	Op:316	Start		Bulk insert Files
+1125	2019-02-20 04:27:45.60723	Custom	A:Gicogen.exe	T:1	Op:316	End	00:00:00.518353	Bulk insert Files
+1126	2019-02-20 04:27:45.60723	Custom	A:Gicogen.exe	T:1	Op:317	Start		Bulk insert EFEntities
+1127	2019-02-20 04:27:45.93677	Custom	A:Gicogen.exe	T:1	Op:317	End	00:00:00.329540	Bulk insert EFEntities
+1128	2019-02-20 04:27:45.93677	Custom	A:Gicogen.exe	T:1	Op:311	End	00:00:11.056911	Writing to database
+1129	2019-02-20 04:27:45.93677	Custom	A:Gicogen.exe	T:1				Reset memory tables.
+>1130	2019-02-20 04:27:46.31077	Custom	A:Gicogen.exe	T:1				Generated: 4510000 / 10000000 (45,1%)
+1131	2019-02-20 04:27:46.56508	Custom	A:Gicogen.exe	T:1				Generated: 4520000 / 10000000 (45,2%)
+1132	2019-02-20 04:27:46.83533	Custom	A:Gicogen.exe	T:1				Generated: 4530000 / 10000000 (45,3%)
+>1133	2019-02-20 04:27:47.10886	Custom	A:Gicogen.exe	T:1				Generated: 4540000 / 10000000 (45,4%)
+1134	2019-02-20 04:27:47.37318	Custom	A:Gicogen.exe	T:1				Generated: 4550000 / 10000000 (45,5%)
+1135	2019-02-20 04:27:47.63547	Custom	A:Gicogen.exe	T:1				Generated: 4560000 / 10000000 (45,6%)
+1136	2019-02-20 04:27:47.92182	Custom	A:Gicogen.exe	T:1				Generated: 4570000 / 10000000 (45,7%)
+>1137	2019-02-20 04:27:48.21204	Custom	A:Gicogen.exe	T:1				Generated: 4580000 / 10000000 (45,8%)
+1138	2019-02-20 04:27:48.48533	Custom	A:Gicogen.exe	T:1				Generated: 4590000 / 10000000 (45,9%)
+1139	2019-02-20 04:27:48.74861	Custom	A:Gicogen.exe	T:1				Generated: 4600000 / 10000000 (46%)
+1140	2019-02-20 04:27:48.74959	Custom	A:Gicogen.exe	T:1	Op:318	Start		Writing to database
+1141	2019-02-20 04:27:48.75058	Custom	A:Gicogen.exe	T:1	Op:319	Start		Bulk insert Nodes
+>1142	2019-02-20 04:27:57.44580	Custom	A:Gicogen.exe	T:1	Op:319	End	00:00:08.695215	Bulk insert Nodes
+1143	2019-02-20 04:27:57.44592	Custom	A:Gicogen.exe	T:1	Op:320	Start		Bulk insert Versions
+>1144	2019-02-20 04:27:58.07695	Custom	A:Gicogen.exe	T:1	Op:320	End	00:00:00.631028	Bulk insert Versions
+1145	2019-02-20 04:27:58.07695	Custom	A:Gicogen.exe	T:1	Op:321	Start		Bulk insert FlatProperties
+>1146	2019-02-20 04:27:59.29048	Custom	A:Gicogen.exe	T:1	Op:321	End	00:00:01.213530	Bulk insert FlatProperties
+1147	2019-02-20 04:27:59.29048	Custom	A:Gicogen.exe	T:1	Op:322	Start		Bulk insert BinaryProperties
+1148	2019-02-20 04:27:59.70046	Custom	A:Gicogen.exe	T:1	Op:322	End	00:00:00.409979	Bulk insert BinaryProperties
+1149	2019-02-20 04:27:59.70046	Custom	A:Gicogen.exe	T:1	Op:323	Start		Bulk insert Files
+>1150	2019-02-20 04:28:00.20067	Custom	A:Gicogen.exe	T:1	Op:323	End	00:00:00.500206	Bulk insert Files
+1151	2019-02-20 04:28:00.20067	Custom	A:Gicogen.exe	T:1	Op:324	Start		Bulk insert EFEntities
+>1152	2019-02-20 04:28:09.41252	Custom	A:Gicogen.exe	T:1	Op:324	End	00:00:09.211855	Bulk insert EFEntities
+1153	2019-02-20 04:28:09.41252	Custom	A:Gicogen.exe	T:1	Op:318	End	00:00:20.662934	Writing to database
+1154	2019-02-20 04:28:09.41352	Custom	A:Gicogen.exe	T:1				Reset memory tables.
+1155	2019-02-20 04:28:09.75859	Custom	A:Gicogen.exe	T:1				Generated: 4610000 / 10000000 (46,1%)
+1156	2019-02-20 04:28:10.03185	Custom	A:Gicogen.exe	T:1				Generated: 4620000 / 10000000 (46,2%)
+>1157	2019-02-20 04:28:10.32410	Custom	A:Gicogen.exe	T:1				Generated: 4630000 / 10000000 (46,3%)
+1158	2019-02-20 04:28:10.58739	Custom	A:Gicogen.exe	T:1				Generated: 4640000 / 10000000 (46,4%)
+1159	2019-02-20 04:28:10.86176	Custom	A:Gicogen.exe	T:1				Generated: 4650000 / 10000000 (46,5%)
+>1160	2019-02-20 04:28:11.12901	Custom	A:Gicogen.exe	T:1				Generated: 4660000 / 10000000 (46,6%)
+1161	2019-02-20 04:28:11.39293	Custom	A:Gicogen.exe	T:1				Generated: 4670000 / 10000000 (46,7%)
+1162	2019-02-20 04:28:11.68726	Custom	A:Gicogen.exe	T:1				Generated: 4680000 / 10000000 (46,8%)
+1163	2019-02-20 04:28:11.95354	Custom	A:Gicogen.exe	T:1				Generated: 4690000 / 10000000 (46,9%)
+>1164	2019-02-20 04:28:12.22282	Custom	A:Gicogen.exe	T:1				Generated: 4700000 / 10000000 (47%)
+1165	2019-02-20 04:28:12.22382	Custom	A:Gicogen.exe	T:1	Op:325	Start		Writing to database
+1166	2019-02-20 04:28:12.22382	Custom	A:Gicogen.exe	T:1	Op:326	Start		Bulk insert Nodes
+>1167	2019-02-20 04:28:17.83800	Custom	A:Gicogen.exe	T:1	Op:326	End	00:00:05.614180	Bulk insert Nodes
+1168	2019-02-20 04:28:17.83800	Custom	A:Gicogen.exe	T:1	Op:327	Start		Bulk insert Versions
+>1169	2019-02-20 04:28:18.51648	Custom	A:Gicogen.exe	T:1	Op:327	End	00:00:00.678486	Bulk insert Versions
+1170	2019-02-20 04:28:18.51648	Custom	A:Gicogen.exe	T:1	Op:328	Start		Bulk insert FlatProperties
+>1171	2019-02-20 04:28:19.68735	Custom	A:Gicogen.exe	T:1	Op:328	End	00:00:01.170863	Bulk insert FlatProperties
+1172	2019-02-20 04:28:19.68735	Custom	A:Gicogen.exe	T:1	Op:329	Start		Bulk insert BinaryProperties
+>1173	2019-02-20 04:28:20.13908	Custom	A:Gicogen.exe	T:1	Op:329	End	00:00:00.451733	Bulk insert BinaryProperties
+1174	2019-02-20 04:28:20.14008	Custom	A:Gicogen.exe	T:1	Op:330	Start		Bulk insert Files
+>1175	2019-02-20 04:28:21.21972	Custom	A:Gicogen.exe	T:1	Op:330	End	00:00:01.079645	Bulk insert Files
+1176	2019-02-20 04:28:21.22072	Custom	A:Gicogen.exe	T:1	Op:331	Start		Bulk insert EFEntities
+1177	2019-02-20 04:28:21.54163	Custom	A:Gicogen.exe	T:1	Op:331	End	00:00:00.320911	Bulk insert EFEntities
+1178	2019-02-20 04:28:21.54163	Custom	A:Gicogen.exe	T:1	Op:325	End	00:00:09.317814	Writing to database
+1179	2019-02-20 04:28:21.54163	Custom	A:Gicogen.exe	T:1				Reset memory tables.
+1180	2019-02-20 04:28:21.89468	Custom	A:Gicogen.exe	T:1				Generated: 4710000 / 10000000 (47,1%)
+>1181	2019-02-20 04:28:22.14903	Custom	A:Gicogen.exe	T:1				Generated: 4720000 / 10000000 (47,2%)
+1182	2019-02-20 04:28:22.41029	Custom	A:Gicogen.exe	T:1				Generated: 4730000 / 10000000 (47,3%)
+1183	2019-02-20 04:28:22.67175	Custom	A:Gicogen.exe	T:1				Generated: 4740000 / 10000000 (47,4%)
+1184	2019-02-20 04:28:22.97196	Custom	A:Gicogen.exe	T:1				Generated: 4750000 / 10000000 (47,5%)
+>1185	2019-02-20 04:28:23.25370	Custom	A:Gicogen.exe	T:1				Generated: 4760000 / 10000000 (47,6%)
+1186	2019-02-20 04:28:23.54093	Custom	A:Gicogen.exe	T:1				Generated: 4770000 / 10000000 (47,7%)
+1187	2019-02-20 04:28:23.80722	Custom	A:Gicogen.exe	T:1				Generated: 4780000 / 10000000 (47,8%)
+1188	2019-02-20 04:28:24.10042	Custom	A:Gicogen.exe	T:1				Generated: 4790000 / 10000000 (47,9%)
+>1189	2019-02-20 04:28:24.36269	Custom	A:Gicogen.exe	T:1				Generated: 4800000 / 10000000 (48%)
+1190	2019-02-20 04:28:24.36369	Custom	A:Gicogen.exe	T:1	Op:332	Start		Writing to database
+1191	2019-02-20 04:28:24.36369	Custom	A:Gicogen.exe	T:1	Op:333	Start		Bulk insert Nodes
+>1192	2019-02-20 04:28:34.34948	Custom	A:Gicogen.exe	T:1	Op:333	End	00:00:09.985793	Bulk insert Nodes
+1193	2019-02-20 04:28:34.34948	Custom	A:Gicogen.exe	T:1	Op:334	Start		Bulk insert Versions
+1194	2019-02-20 04:28:34.93944	Custom	A:Gicogen.exe	T:1	Op:334	End	00:00:00.589965	Bulk insert Versions
+1195	2019-02-20 04:28:34.93944	Custom	A:Gicogen.exe	T:1	Op:335	Start		Bulk insert FlatProperties
+>1196	2019-02-20 04:28:36.08178	Custom	A:Gicogen.exe	T:1	Op:335	End	00:00:01.142334	Bulk insert FlatProperties
+1197	2019-02-20 04:28:36.08278	Custom	A:Gicogen.exe	T:1	Op:336	Start		Bulk insert BinaryProperties
+>1198	2019-02-20 04:28:36.46991	Custom	A:Gicogen.exe	T:1	Op:336	End	00:00:00.387129	Bulk insert BinaryProperties
+1199	2019-02-20 04:28:36.46991	Custom	A:Gicogen.exe	T:1	Op:337	Start		Bulk insert Files
+1200	2019-02-20 04:28:37.00529	Custom	A:Gicogen.exe	T:1	Op:337	End	00:00:00.535382	Bulk insert Files
+1201	2019-02-20 04:28:37.00529	Custom	A:Gicogen.exe	T:1	Op:338	Start		Bulk insert EFEntities
+>1202	2019-02-20 04:28:45.86346	Custom	A:Gicogen.exe	T:1	Op:338	End	00:00:08.858173	Bulk insert EFEntities
+1203	2019-02-20 04:28:45.86346	Custom	A:Gicogen.exe	T:1	Op:332	End	00:00:21.499774	Writing to database
+1204	2019-02-20 04:28:45.86446	Custom	A:Gicogen.exe	T:1				Reset memory tables.
+>1205	2019-02-20 04:28:46.20856	Custom	A:Gicogen.exe	T:1				Generated: 4810000 / 10000000 (48,1%)
+1206	2019-02-20 04:28:46.46018	Custom	A:Gicogen.exe	T:1				Generated: 4820000 / 10000000 (48,2%)
+1207	2019-02-20 04:28:46.71745	Custom	A:Gicogen.exe	T:1				Generated: 4830000 / 10000000 (48,3%)
+1208	2019-02-20 04:28:46.97277	Custom	A:Gicogen.exe	T:1				Generated: 4840000 / 10000000 (48,4%)
+>1209	2019-02-20 04:28:47.23626	Custom	A:Gicogen.exe	T:1				Generated: 4850000 / 10000000 (48,5%)
+1210	2019-02-20 04:28:47.52309	Custom	A:Gicogen.exe	T:1				Generated: 4860000 / 10000000 (48,6%)
+1211	2019-02-20 04:28:47.81643	Custom	A:Gicogen.exe	T:1				Generated: 4870000 / 10000000 (48,7%)
+1212	2019-02-20 04:28:48.07670	Custom	A:Gicogen.exe	T:1				Generated: 4880000 / 10000000 (48,8%)
+>1213	2019-02-20 04:28:48.36393	Custom	A:Gicogen.exe	T:1				Generated: 4890000 / 10000000 (48,9%)
+1214	2019-02-20 04:28:48.62326	Custom	A:Gicogen.exe	T:1				Generated: 4900000 / 10000000 (49%)
+1215	2019-02-20 04:28:48.62326	Custom	A:Gicogen.exe	T:1	Op:339	Start		Writing to database
+1216	2019-02-20 04:28:48.62326	Custom	A:Gicogen.exe	T:1	Op:340	Start		Bulk insert Nodes
+>1217	2019-02-20 04:28:50.18165	Custom	A:Gicogen.exe	T:1	Op:340	End	00:00:01.558390	Bulk insert Nodes
+1218	2019-02-20 04:28:50.18165	Custom	A:Gicogen.exe	T:1	Op:341	Start		Bulk insert Versions
+1219	2019-02-20 04:28:50.82049	Custom	A:Gicogen.exe	T:1	Op:341	End	00:00:00.638844	Bulk insert Versions
+1220	2019-02-20 04:28:50.82049	Custom	A:Gicogen.exe	T:1	Op:342	Start		Bulk insert FlatProperties
+>1221	2019-02-20 04:28:52.02432	Custom	A:Gicogen.exe	T:1	Op:342	End	00:00:01.203825	Bulk insert FlatProperties
+1222	2019-02-20 04:28:52.02432	Custom	A:Gicogen.exe	T:1	Op:343	Start		Bulk insert BinaryProperties
+>1223	2019-02-20 04:28:52.41334	Custom	A:Gicogen.exe	T:1	Op:343	End	00:00:00.389025	Bulk insert BinaryProperties
+1224	2019-02-20 04:28:52.41353	Custom	A:Gicogen.exe	T:1	Op:344	Start		Bulk insert Files
+1225	2019-02-20 04:28:52.89776	Custom	A:Gicogen.exe	T:1	Op:344	End	00:00:00.484234	Bulk insert Files
+1226	2019-02-20 04:28:52.89776	Custom	A:Gicogen.exe	T:1	Op:345	Start		Bulk insert EFEntities
+>1227	2019-02-20 04:28:53.26353	Custom	A:Gicogen.exe	T:1	Op:345	End	00:00:00.365771	Bulk insert EFEntities
+1228	2019-02-20 04:28:53.26353	Custom	A:Gicogen.exe	T:1	Op:339	End	00:00:04.640276	Writing to database
+1229	2019-02-20 04:28:53.26353	Custom	A:Gicogen.exe	T:1				Reset memory tables.
+1230	2019-02-20 04:28:53.61063	Custom	A:Gicogen.exe	T:1				Generated: 4910000 / 10000000 (49,1%)
+1231	2019-02-20 04:28:53.86093	Custom	A:Gicogen.exe	T:1				Generated: 4920000 / 10000000 (49,2%)
+1232	2019-02-20 04:28:54.11823	Custom	A:Gicogen.exe	T:1				Generated: 4930000 / 10000000 (49,3%)
+>1233	2019-02-20 04:28:54.38155	Custom	A:Gicogen.exe	T:1				Generated: 4940000 / 10000000 (49,4%)
+1234	2019-02-20 04:28:54.71477	Custom	A:Gicogen.exe	T:1				Generated: 4950000 / 10000000 (49,5%)
+1235	2019-02-20 04:28:54.99299	Custom	A:Gicogen.exe	T:1				Generated: 4960000 / 10000000 (49,6%)
+>1236	2019-02-20 04:28:55.31612	Custom	A:Gicogen.exe	T:1				Generated: 4970000 / 10000000 (49,7%)
+1237	2019-02-20 04:28:55.61033	Custom	A:Gicogen.exe	T:1				Generated: 4980000 / 10000000 (49,8%)
+1238	2019-02-20 04:28:55.92548	Custom	A:Gicogen.exe	T:1				Generated: 4990000 / 10000000 (49,9%)
+>1239	2019-02-20 04:28:56.25958	Custom	A:Gicogen.exe	T:1				Generated: 5000000 / 10000000 (50%)
+1240	2019-02-20 04:28:56.25958	Custom	A:Gicogen.exe	T:1	Op:346	Start		Writing to database
+1241	2019-02-20 04:28:56.26058	Custom	A:Gicogen.exe	T:1	Op:347	Start		Bulk insert Nodes
+>1242	2019-02-20 04:29:07.32283	Custom	A:Gicogen.exe	T:1	Op:347	End	00:00:11.062245	Bulk insert Nodes
+1243	2019-02-20 04:29:07.32283	Custom	A:Gicogen.exe	T:1	Op:348	Start		Bulk insert Versions
+1244	2019-02-20 04:29:07.92980	Custom	A:Gicogen.exe	T:1	Op:348	End	00:00:00.606975	Bulk insert Versions
+1245	2019-02-20 04:29:07.92980	Custom	A:Gicogen.exe	T:1	Op:349	Start		Bulk insert FlatProperties
+>1246	2019-02-20 04:29:09.15368	Custom	A:Gicogen.exe	T:1	Op:349	End	00:00:01.223874	Bulk insert FlatProperties
+1247	2019-02-20 04:29:09.15368	Custom	A:Gicogen.exe	T:1	Op:350	Start		Bulk insert BinaryProperties
+>1248	2019-02-20 04:29:09.56372	Custom	A:Gicogen.exe	T:1	Op:350	End	00:00:00.410049	Bulk insert BinaryProperties
+1249	2019-02-20 04:29:09.56372	Custom	A:Gicogen.exe	T:1	Op:351	Start		Bulk insert Files
+>1250	2019-02-20 04:29:10.69634	Custom	A:Gicogen.exe	T:1	Op:351	End	00:00:01.132611	Bulk insert Files
+1251	2019-02-20 04:29:10.69634	Custom	A:Gicogen.exe	T:1	Op:352	Start		Bulk insert EFEntities
+>1252	2019-02-20 04:29:22.15966	Custom	A:Gicogen.exe	T:1	Op:352	End	00:00:11.463328	Bulk insert EFEntities
+1253	2019-02-20 04:29:22.15966	Custom	A:Gicogen.exe	T:1	Op:346	End	00:00:25.900082	Writing to database
+1254	2019-02-20 04:29:22.15966	Custom	A:Gicogen.exe	T:1				Reset memory tables.
+>1255	2019-02-20 04:29:22.50975	Custom	A:Gicogen.exe	T:1				Generated: 5010000 / 10000000 (50,1%)
+1256	2019-02-20 04:29:22.77080	Custom	A:Gicogen.exe	T:1				Generated: 5020000 / 10000000 (50,2%)
+1257	2019-02-20 04:29:23.03209	Custom	A:Gicogen.exe	T:1				Generated: 5030000 / 10000000 (50,3%)
+>1258	2019-02-20 04:29:23.29714	Custom	A:Gicogen.exe	T:1				Generated: 5040000 / 10000000 (50,4%)
+1259	2019-02-20 04:29:23.55844	Custom	A:Gicogen.exe	T:1				Generated: 5050000 / 10000000 (50,5%)
+1260	2019-02-20 04:29:23.82372	Custom	A:Gicogen.exe	T:1				Generated: 5060000 / 10000000 (50,6%)
+1261	2019-02-20 04:29:24.11313	Custom	A:Gicogen.exe	T:1				Generated: 5070000 / 10000000 (50,7%)
+>1262	2019-02-20 04:29:24.43922	Custom	A:Gicogen.exe	T:1				Generated: 5080000 / 10000000 (50,8%)
+1263	2019-02-20 04:29:24.70152	Custom	A:Gicogen.exe	T:1				Generated: 5090000 / 10000000 (50,9%)
+1264	2019-02-20 04:29:25.02564	Custom	A:Gicogen.exe	T:1				Generated: 5100000 / 10000000 (51%)
+1265	2019-02-20 04:29:25.02564	Custom	A:Gicogen.exe	T:1	Op:353	Start		Writing to database
+1266	2019-02-20 04:29:25.02664	Custom	A:Gicogen.exe	T:1	Op:354	Start		Bulk insert Nodes
+>1267	2019-02-20 04:29:26.47948	Custom	A:Gicogen.exe	T:1	Op:354	End	00:00:01.452840	Bulk insert Nodes
+1268	2019-02-20 04:29:26.47948	Custom	A:Gicogen.exe	T:1	Op:355	Start		Bulk insert Versions
+1269	2019-02-20 04:29:27.12901	Custom	A:Gicogen.exe	T:1	Op:355	End	00:00:00.649526	Bulk insert Versions
+1270	2019-02-20 04:29:27.12901	Custom	A:Gicogen.exe	T:1	Op:356	Start		Bulk insert FlatProperties
+>1271	2019-02-20 04:29:28.24927	Custom	A:Gicogen.exe	T:1	Op:356	End	00:00:01.120257	Bulk insert FlatProperties
+1272	2019-02-20 04:29:28.24927	Custom	A:Gicogen.exe	T:1	Op:357	Start		Bulk insert BinaryProperties
+1273	2019-02-20 04:29:28.65803	Custom	A:Gicogen.exe	T:1	Op:357	End	00:00:00.408764	Bulk insert BinaryProperties
+1274	2019-02-20 04:29:28.65803	Custom	A:Gicogen.exe	T:1	Op:358	Start		Bulk insert Files
+1275	2019-02-20 04:29:29.14721	Custom	A:Gicogen.exe	T:1	Op:358	End	00:00:00.489176	Bulk insert Files
+1276	2019-02-20 04:29:29.14721	Custom	A:Gicogen.exe	T:1	Op:359	Start		Bulk insert EFEntities
+>1277	2019-02-20 04:29:29.61319	Custom	A:Gicogen.exe	T:1	Op:359	End	00:00:00.465985	Bulk insert EFEntities
+1278	2019-02-20 04:29:29.61319	Custom	A:Gicogen.exe	T:1	Op:353	End	00:00:04.587548	Writing to database
+1279	2019-02-20 04:29:29.61419	Custom	A:Gicogen.exe	T:1				Reset memory tables.
+1280	2019-02-20 04:29:29.96228	Custom	A:Gicogen.exe	T:1				Generated: 5110000 / 10000000 (51,1%)
+>1281	2019-02-20 04:29:30.21659	Custom	A:Gicogen.exe	T:1				Generated: 5120000 / 10000000 (51,2%)
+1282	2019-02-20 04:29:30.47989	Custom	A:Gicogen.exe	T:1				Generated: 5130000 / 10000000 (51,3%)
+1283	2019-02-20 04:29:30.75013	Custom	A:Gicogen.exe	T:1				Generated: 5140000 / 10000000 (51,4%)
+1284	2019-02-20 04:29:31.02838	Custom	A:Gicogen.exe	T:1				Generated: 5150000 / 10000000 (51,5%)
+>1285	2019-02-20 04:29:31.28968	Custom	A:Gicogen.exe	T:1				Generated: 5160000 / 10000000 (51,6%)
+1286	2019-02-20 04:29:31.55696	Custom	A:Gicogen.exe	T:1				Generated: 5170000 / 10000000 (51,7%)
+1287	2019-02-20 04:29:31.86014	Custom	A:Gicogen.exe	T:1				Generated: 5180000 / 10000000 (51,8%)
+1288	2019-02-20 04:29:32.13141	Custom	A:Gicogen.exe	T:1				Generated: 5190000 / 10000000 (51,9%)
+>1289	2019-02-20 04:29:32.40630	Custom	A:Gicogen.exe	T:1				Generated: 5200000 / 10000000 (52%)
+1290	2019-02-20 04:29:32.40730	Custom	A:Gicogen.exe	T:1	Op:360	Start		Writing to database
+1291	2019-02-20 04:29:32.40730	Custom	A:Gicogen.exe	T:1	Op:361	Start		Bulk insert Nodes
+>1292	2019-02-20 04:29:44.66144	Custom	A:Gicogen.exe	T:1	Op:361	End	00:00:12.254145	Bulk insert Nodes
+1293	2019-02-20 04:29:44.66144	Custom	A:Gicogen.exe	T:1	Op:362	Start		Bulk insert Versions
+>1294	2019-02-20 04:29:45.27587	Custom	A:Gicogen.exe	T:1	Op:362	End	00:00:00.614424	Bulk insert Versions
+1295	2019-02-20 04:29:45.27594	Custom	A:Gicogen.exe	T:1	Op:363	Start		Bulk insert FlatProperties
+>1296	2019-02-20 04:29:46.41951	Custom	A:Gicogen.exe	T:1	Op:363	End	00:00:01.143570	Bulk insert FlatProperties
+1297	2019-02-20 04:29:46.41951	Custom	A:Gicogen.exe	T:1	Op:364	Start		Bulk insert BinaryProperties
+1298	2019-02-20 04:29:46.80947	Custom	A:Gicogen.exe	T:1	Op:364	End	00:00:00.389957	Bulk insert BinaryProperties
+1299	2019-02-20 04:29:46.80947	Custom	A:Gicogen.exe	T:1	Op:365	Start		Bulk insert Files
+>1300	2019-02-20 04:29:47.31237	Custom	A:Gicogen.exe	T:1	Op:365	End	00:00:00.502897	Bulk insert Files
+1301	2019-02-20 04:29:47.31250	Custom	A:Gicogen.exe	T:1	Op:366	Start		Bulk insert EFEntities
+1302	2019-02-20 04:29:47.72248	Custom	A:Gicogen.exe	T:1	Op:366	End	00:00:00.409988	Bulk insert EFEntities
+1303	2019-02-20 04:29:47.72248	Custom	A:Gicogen.exe	T:1	Op:360	End	00:00:15.315184	Writing to database
+1304	2019-02-20 04:29:47.72248	Custom	A:Gicogen.exe	T:1				Reset memory tables.
+1305	2019-02-20 04:29:48.07284	Custom	A:Gicogen.exe	T:1				Generated: 5210000 / 10000000 (52,1%)
+>1306	2019-02-20 04:29:48.33117	Custom	A:Gicogen.exe	T:1				Generated: 5220000 / 10000000 (52,2%)
+1307	2019-02-20 04:29:48.60044	Custom	A:Gicogen.exe	T:1				Generated: 5230000 / 10000000 (52,3%)
+1308	2019-02-20 04:29:48.86174	Custom	A:Gicogen.exe	T:1				Generated: 5240000 / 10000000 (52,4%)
+1309	2019-02-20 04:29:49.13099	Custom	A:Gicogen.exe	T:1				Generated: 5250000 / 10000000 (52,5%)
+>1310	2019-02-20 04:29:49.39417	Custom	A:Gicogen.exe	T:1				Generated: 5260000 / 10000000 (52,6%)
+1311	2019-02-20 04:29:49.66311	Custom	A:Gicogen.exe	T:1				Generated: 5270000 / 10000000 (52,7%)
+1312	2019-02-20 04:29:49.94141	Custom	A:Gicogen.exe	T:1				Generated: 5280000 / 10000000 (52,8%)
+>1313	2019-02-20 04:29:50.24358	Custom	A:Gicogen.exe	T:1				Generated: 5290000 / 10000000 (52,9%)
+1314	2019-02-20 04:29:50.51086	Custom	A:Gicogen.exe	T:1				Generated: 5300000 / 10000000 (53%)
+1315	2019-02-20 04:29:50.51185	Custom	A:Gicogen.exe	T:1	Op:367	Start		Writing to database
+1316	2019-02-20 04:29:50.51249	Custom	A:Gicogen.exe	T:1	Op:368	Start		Bulk insert Nodes
+>1317	2019-02-20 04:30:03.32053	Custom	A:Gicogen.exe	T:1	Op:368	End	00:00:12.808043	Bulk insert Nodes
+1318	2019-02-20 04:30:03.32053	Custom	A:Gicogen.exe	T:1	Op:369	Start		Bulk insert Versions
+1319	2019-02-20 04:30:03.98357	Custom	A:Gicogen.exe	T:1	Op:369	End	00:00:00.663034	Bulk insert Versions
+1320	2019-02-20 04:30:03.98357	Custom	A:Gicogen.exe	T:1	Op:370	Start		Bulk insert FlatProperties
+>1321	2019-02-20 04:30:05.18678	Custom	A:Gicogen.exe	T:1	Op:370	End	00:00:01.203211	Bulk insert FlatProperties
+1322	2019-02-20 04:30:05.18678	Custom	A:Gicogen.exe	T:1	Op:371	Start		Bulk insert BinaryProperties
+>1323	2019-02-20 04:30:05.58399	Custom	A:Gicogen.exe	T:1	Op:371	End	00:00:00.397206	Bulk insert BinaryProperties
+1324	2019-02-20 04:30:05.58510	Custom	A:Gicogen.exe	T:1	Op:372	Start		Bulk insert Files
+>1325	2019-02-20 04:30:06.59061	Custom	A:Gicogen.exe	T:1	Op:372	End	00:00:01.005509	Bulk insert Files
+1326	2019-02-20 04:30:06.59093	Custom	A:Gicogen.exe	T:1	Op:373	Start		Bulk insert EFEntities
+>1327	2019-02-20 04:30:19.69051	Custom	A:Gicogen.exe	T:1	Op:373	End	00:00:13.099571	Bulk insert EFEntities
+1328	2019-02-20 04:30:19.69051	Custom	A:Gicogen.exe	T:1	Op:367	End	00:00:29.178652	Writing to database
+1329	2019-02-20 04:30:19.69151	Custom	A:Gicogen.exe	T:1				Reset memory tables.
+1330	2019-02-20 04:30:20.04972	Custom	A:Gicogen.exe	T:1				Generated: 5310000 / 10000000 (53,1%)
+>1331	2019-02-20 04:30:20.32996	Custom	A:Gicogen.exe	T:1				Generated: 5320000 / 10000000 (53,2%)
+1332	2019-02-20 04:30:20.59753	Custom	A:Gicogen.exe	T:1				Generated: 5330000 / 10000000 (53,3%)
+1333	2019-02-20 04:30:20.85382	Custom	A:Gicogen.exe	T:1				Generated: 5340000 / 10000000 (53,4%)
+1334	2019-02-20 04:30:21.12823	Custom	A:Gicogen.exe	T:1				Generated: 5350000 / 10000000 (53,5%)
+>1335	2019-02-20 04:30:21.39351	Custom	A:Gicogen.exe	T:1				Generated: 5360000 / 10000000 (53,6%)
+1336	2019-02-20 04:30:21.66082	Custom	A:Gicogen.exe	T:1				Generated: 5370000 / 10000000 (53,7%)
+1337	2019-02-20 04:30:21.92910	Custom	A:Gicogen.exe	T:1				Generated: 5380000 / 10000000 (53,8%)
+1338	2019-02-20 04:30:22.22128	Custom	A:Gicogen.exe	T:1				Generated: 5390000 / 10000000 (53,9%)
+>1339	2019-02-20 04:30:22.49059	Custom	A:Gicogen.exe	T:1				Generated: 5400000 / 10000000 (54%)
+1340	2019-02-20 04:30:22.49059	Custom	A:Gicogen.exe	T:1	Op:374	Start		Writing to database
+1341	2019-02-20 04:30:22.49158	Custom	A:Gicogen.exe	T:1	Op:375	Start		Bulk insert Nodes
+>1342	2019-02-20 04:30:24.03024	Custom	A:Gicogen.exe	T:1	Op:375	End	00:00:01.538659	Bulk insert Nodes
+1343	2019-02-20 04:30:24.03024	Custom	A:Gicogen.exe	T:1	Op:376	Start		Bulk insert Versions
+>1344	2019-02-20 04:30:24.72075	Custom	A:Gicogen.exe	T:1	Op:376	End	00:00:00.690509	Bulk insert Versions
+1345	2019-02-20 04:30:24.72075	Custom	A:Gicogen.exe	T:1	Op:377	Start		Bulk insert FlatProperties
+>1346	2019-02-20 04:30:25.84909	Custom	A:Gicogen.exe	T:1	Op:377	End	00:00:01.128334	Bulk insert FlatProperties
+1347	2019-02-20 04:30:25.84909	Custom	A:Gicogen.exe	T:1	Op:378	Start		Bulk insert BinaryProperties
