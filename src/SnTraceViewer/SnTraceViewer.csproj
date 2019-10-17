@@ -36,6 +36,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>gyeby.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -136,7 +139,9 @@
   <ItemGroup>
     <None Include="SampleFiles\session\detailedlog_20171010-011425Z.log" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="gyeby.ico" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SnTraceAnalyzer\SnTraceAnalyzer.csproj">
       <Project>{425c4b59-9811-4a3e-9789-c1d576b4d8dd}</Project>
