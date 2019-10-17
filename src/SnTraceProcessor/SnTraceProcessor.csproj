@@ -48,13 +48,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="SampleFiles\BulkInsertTimes.log" />
+    <None Include="SampleFiles\BulkInsertTimes\sample.log" />
+    <None Include="SampleFiles\WebRequests\samlple.log" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SnTraceAnalyzer\SnTraceAnalyzer.csproj">
       <Project>{425c4b59-9811-4a3e-9789-c1d576b4d8dd}</Project>
       <Name>SnTraceAnalyzer</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SampleFiles\BulkInsertTimes\result.txt" />
+    <Content Include="SampleFiles\WebRequests\result.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
