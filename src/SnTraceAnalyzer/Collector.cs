@@ -8,11 +8,12 @@ namespace SenseNet.Diagnostics.Analysis
 {
     public class Collector
     {
-        private Dictionary<string, Dictionary<string, Entry>> _storage = new Dictionary<string, Dictionary<string, Entry>>();
+        public Dictionary<string, Dictionary<string, Entry>> Items { get; } =
+            new Dictionary<string, Dictionary<string, Entry>>();
 
         public Entry Get(string key, string subKey)
         {
-            if (!_storage.TryGetValue(key, out Dictionary<string, Entry> dict))
+            if (!Items.TryGetValue(key, out Dictionary<string, Entry> dict))
                 return null;
             if (dict.TryGetValue(key, out Entry entry))
                 return entry;
@@ -20,20 +21,22 @@ namespace SenseNet.Diagnostics.Analysis
         }
         public void Set(string key, string subKey, Entry e)
         {
-            if (!_storage.TryGetValue(key, out Dictionary<string, Entry> dict))
-                _storage.Add(key, dict = new Dictionary<string, Entry>());
+            if (!Items.TryGetValue(key, out Dictionary<string, Entry> dict))
+                Items.Add(key, dict = new Dictionary<string, Entry>());
             dict[subKey] = e;
         }
-        public bool Finish(string key, Entry e)
+        public bool Finish(string key, Entry e, bool remove = true)
         {
-            if (!_storage.TryGetValue(key, out Dictionary<string, Entry> dict))
+            if (!Items.TryGetValue(key, out Dictionary<string, Entry> dict))
                 return false;
+            if (remove)
+                Items.Remove(key);
             e.Associations = dict;
             return true;
         }
         public void Remove(string key)
         {
-            _storage.Remove(key);
+            Items.Remove(key);
         }
     }
 }
