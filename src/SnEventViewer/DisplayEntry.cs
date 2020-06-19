@@ -34,15 +34,15 @@ namespace SnEventViewer
             switch (entry.Severity)
             {
                 default:
-                    StatusColor = "#FFFFFF";
+                    StatusColor = "#DDDDDD";
                     StatusWeight = "Normal";
                     break;
                 case TraceEventType.Information:
                     StatusColor = "#FFFFFF";
-                    StatusWeight = "Bold";
+                    StatusWeight = "Normal";
                     break;
                 case TraceEventType.Warning:
-                    StatusColor = "#FFFFFF";
+                    StatusColor = "#FFFF88";
                     StatusWeight = "Bold";
                     break;
                 case TraceEventType.Error:
