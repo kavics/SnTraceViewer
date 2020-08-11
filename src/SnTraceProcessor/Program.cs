@@ -15,7 +15,7 @@ namespace SnTraceProcessor
         static void Main(string[] args)
         {
             //args = new[] { "join", "-?" };
-            args = new[] { "join", "-l", "-d" };
+            args = new[] { "join", "-l", "-r", "-a", "-s:aa,bb,c:\\cc", "-p:detailedlog_*.log"};
 
             Run(args);
 
